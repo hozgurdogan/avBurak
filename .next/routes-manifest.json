@@ -153,6 +153,23 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/gizlilik(?:/)?$"
     },
     {
+      "page": "/[locale]/hesaplama-araclari",
+      "regex": "^/([^/]+?)/hesaplama\\-araclari(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/hesaplama\\-araclari(?:/)?$"
+    },
+    {
+      "page": "/[locale]/hesaplama-araclari/[slug]",
+      "regex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/hesaplama\\-araclari/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/[locale]/iletisim",
       "regex": "^/([^/]+?)/iletisim(?:/)?$",
       "routeKeys": {

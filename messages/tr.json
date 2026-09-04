@@ -14,7 +14,8 @@
     "contact": "İletişim",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
-    "skipToContent": "İçeriğe geç"
+    "skipToContent": "İçeriğe geç",
+    "tools": "Araçlar"
   },
   "locale": {
     "label": "Dil",
@@ -172,6 +173,298 @@
     "tocLabel": "İçindekiler",
     "relatedLabel": "İlgili Makaleler"
   },
+  "toolsPage": {
+    "meta": {
+      "title": "Hesaplama Araçları",
+      "description": "Kıdem tazminatı, yıllık izin, fazla çalışma, işsizlik ödeneği, kira artışı, nafaka, infaz ve miras payı için bilgilendirme amaçlı hesaplama araçları."
+    },
+    "label": "Araçlar",
+    "title": "Hukuki Hesaplama Araçları",
+    "lead": "Yürürlükteki mevzuata dayanan, genel bilgilendirme amaçlı hesaplama araçları. Girdiğiniz bilgiler tarayıcınızdan çıkmaz; hiçbir veri kaydedilmez veya iletilmez. Sonuçlar somut olayınızın değerlendirilmesinin yerine geçmez.",
+    "back": "Tüm hesaplama araçları",
+    "otherToolsLabel": "Diğer Araçlar"
+  },
+  "tools": {
+    "form": {
+      "inputsLabel": "Bilgiler",
+      "resultLabel": "Sonuç",
+      "submit": "Hesapla",
+      "reset": "Temizle",
+      "idle": "Alanları doldurup Hesapla düğmesine basın. Girdiğiniz bilgiler tarayıcınızdan çıkmaz.",
+      "parametersUnverified": "Bu araçta kullanılan yasal parametreler henüz güncellik denetiminden geçmemiştir. Sonucu esas almadan önce ilgili dönemin resmî tutarlarıyla karşılaştırın."
+    },
+    "parameters": {
+      "severanceCeilingPerYear": "Kıdem tazminatı tavanı",
+      "minimumWageGrossMonthly": "Brüt asgari ücret",
+      "stampDutyRate": "Damga vergisi oranı"
+    },
+    "errors": {
+      "missingFields": "Lütfen zorunlu alanların tümünü doldurun.",
+      "invalidAmount": "Girilen tutar veya sayı geçerli değil.",
+      "endBeforeStart": "Bitiş tarihi başlangıç tarihinden sonra olmalıdır.",
+      "serviceTooShort": "Kıdem tazminatına hak kazanmak için en az bir yıllık hizmet süresi gerekir.",
+      "leaveNotYetAccrued": "Yıllık ücretli izne hak kazanmak için en az bir yıllık hizmet süresi gerekir.",
+      "invalidContractHours": "Sözleşmedeki haftalık çalışma süresi 1 ile 45 saat arasında olmalıdır.",
+      "noOvertime": "Girilen çalışma süresi, sözleşmedeki süreyi aşmıyor. Fazla çalışma ücreti doğmaz.",
+      "premiumDaysTooLow": "Son üç yılda en az 600 gün prim ödenmiş olması gerekir.",
+      "invalidRatio": "Oran 0 ile 100 arasında olmalıdır.",
+      "invalidPeriod": "Girilen süre geçerli değil.",
+      "noHeirsInOrder": "Girilen bilgilerle bu zümrede mirasçı bulunmuyor.",
+      "estateEscheats": "Mirasçı ve sağ kalan eş bulunmadığında miras Devlete geçer (TMK m.501)."
+    },
+    "kidem-tazminati": {
+      "name": "Kıdem Tazminatı Hesaplama",
+      "summary": "İşe giriş-çıkış tarihi ve giydirilmiş brüt ücrete göre kıdem tazminatını, yürürlükteki tavan ve damga vergisiyle birlikte hesaplar.",
+      "intro": "Kıdem tazminatı, 1475 sayılı İş Kanunu'nun 4857 sayılı Kanun'un geçici 6. maddesiyle yürürlükte bırakılan 14. maddesine göre hesaplanır. Her tam hizmet yılı için 30 günlük giydirilmiş brüt ücret ödenir; artan süreler oranlanır. Ödeme gelir vergisinden istisnadır, yalnızca damga vergisi kesilir. Hesaplama, iş sözleşmesinin kıdem tazminatına hak kazandıran bir nedenle sona erdiği varsayımına dayanır.",
+      "fields": {
+        "startDate": "İşe giriş tarihi",
+        "endDate": "İşten çıkış tarihi",
+        "grossMonthlyWage": "Aylık brüt ücret",
+        "annualBenefits": "Yıllık ek ödemeler toplamı",
+        "annualBenefitsHint": "Yol, yemek, yakacak, ikramiye gibi süreklilik gösteren yıllık ödemelerin toplamı. Giydirilmiş ücrete eklenir; yoksa boş bırakın."
+      },
+      "results": {
+        "serviceDuration": "Hizmet süresi (tam yıl / artan gün)",
+        "dressedWage": "Giydirilmiş aylık brüt ücret",
+        "appliedBase": "Hesaba esas 30 günlük tutar",
+        "gross": "Brüt kıdem tazminatı",
+        "stampDuty": "Damga vergisi kesintisi",
+        "net": "Net kıdem tazminatı"
+      },
+      "notes": {
+        "ceilingApplied": "Giydirilmiş ücretiniz yürürlükteki kıdem tazminatı tavanını aştığı için hesaplama tavan tutar üzerinden yapılmıştır.",
+        "incomeTaxExempt": "Kıdem tazminatı gelir vergisinden istisnadır; tavanı aşan ödemeler bu istisnanın dışındadır."
+      }
+    },
+    "infaz-hesaplama": {
+      "name": "İnfaz (Yatar) Hesaplama",
+      "summary": "Suç tarihi, suç türü ve tekerrür durumuna göre koşullu salıverilme süresini, denetimli serbestliği ve tahmini infaz süresini gösterir.",
+      "intro": "Hesaplama, 5275 sayılı Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Kanun'un 105/A ve 107. maddeleri ile tekerrür hâlinde 108. maddesine dayanır. Sonuç yalnızca bir tahmindir: tutuklulukta geçen sürenin mahsubu, cezaların içtimaı, ağırlaştırılmış müebbet ve müebbet hapis, çocuk ve hasta hükümlülere ilişkin özel rejimler ile 3713 sayılı Kanun kapsamındaki suçlar bu araçta modellenmemiştir.",
+      "fields": {
+        "sentenceYears": "Ceza — yıl",
+        "sentenceMonths": "Ceza — ay",
+        "sentenceDays": "Ceza — gün",
+        "offencePeriod": "Suç tarihi",
+        "offencePeriodHint": "30.03.2020 tarihinden önce işlenen suçlarda denetimli serbestlik süresi geçici 6. madde uyarınca üç yıl olarak uygulanır.",
+        "offenceType": "Suç türü",
+        "offenceTypeHint": "Kasten öldürme, cinsel dokunulmazlığa karşı suçlar, uyuşturucu ticareti ve benzeri katalog suçlarda koşullu salıverilme oranı üçte ikidir.",
+        "repeatOffender": "Tekerrür"
+      },
+      "options": {
+        "offencePeriod_before2020": "30.03.2020 tarihinden önce",
+        "offencePeriod_after2020": "30.03.2020 tarihinde veya sonrasında",
+        "offenceType_general": "Genel hükümlere tabi suç",
+        "offenceType_aggravated": "Katalog suç (2/3 oranına tabi)",
+        "repeatOffender_no": "Tekerrür yok",
+        "repeatOffender_yes": "Tekerrür var"
+      },
+      "results": {
+        "totalSentence": "Toplam ceza (yıl / ay / gün)",
+        "appliedRatio": "Koşullu salıverilme oranı",
+        "paroleDuration": "Koşullu salıverilmeye kadar (yıl / ay / gün)",
+        "supervisedRelease": "Denetimli serbestlik (yıl)",
+        "estimatedTimeServed": "Tahmini cezaevi süresi (yıl / ay / gün)"
+      },
+      "notes": {
+        "paroleScopeLimits": "Cezaların içtimaı, ağırlaştırılmış müebbet ve müebbet hapis, çocuk hükümlüler, 65 yaş üstü ve hasta hükümlülere ilişkin özel rejimler hesaplamaya dâhil değildir.",
+        "paroleNoRemandCredit": "Tutuklulukta veya gözaltında geçen sürenin mahsubu dikkate alınmamıştır; bu süre fiilî infaz süresini kısaltır.",
+        "paroleSeekCounsel": "İnfaz hesabı, hükmün ve suç tarihinin somut olarak incelenmesini gerektirir. Bu sonuç bir infaz hesabı belgesi değildir."
+      }
+    },
+    "kira-artis-orani": {
+      "name": "Kira Artış Oranı Hesaplama",
+      "summary": "Sözleşme yenileme döneminde uygulanabilecek yasal azami kira artışını, TÜFE on iki aylık ortalamasına göre hesaplar.",
+      "intro": "Türk Borçlar Kanunu m.344 uyarınca kira bedelindeki artış, bir önceki kira yılında tüketici fiyat endeksindeki on iki aylık ortalamalara göre değişim oranını geçemez. Sözleşmede daha yüksek bir oran kararlaştırılmışsa bu oran, endeksi aşan kısmı bakımından geçersizdir. Konut kiralarına ilişkin yüzde 25 sınırı geçici bir düzenlemeydi ve 1 Temmuz 2024 tarihinde sona ermiştir.",
+      "fields": {
+        "currentRent": "Mevcut aylık kira bedeli",
+        "cpiRate": "TÜFE on iki aylık ortalama değişim oranı (%)",
+        "cpiRateHint": "Sözleşmenin yenilendiği aya ait oranı TÜİK'in yayımladığı resmî seriden alın. Bu değer her ay değiştiği için araca gömülü değildir.",
+        "agreedRate": "Sözleşmede kararlaştırılan artış oranı (%)",
+        "agreedRateHint": "Sözleşmenizde bir artış oranı varsa girin. Endeksin altındaysa o oran, üstündeyse endeks uygulanır. Yoksa boş bırakın."
+      },
+      "results": {
+        "currentRent": "Mevcut kira",
+        "appliedRate": "Uygulanan artış oranı",
+        "increase": "Aylık artış tutarı",
+        "newRent": "Yeni aylık kira",
+        "legalMaximum": "Yasal azami kira",
+        "annualDifference": "Yıllık fark"
+      },
+      "notes": {
+        "rentCapBasis": "Hesaplama, TBK m.344 uyarınca TÜFE on iki aylık ortalamasını üst sınır kabul eder. İşyeri kiralarında da aynı sınır uygulanır.",
+        "agreedRateCapped": "Sözleşmede kararlaştırılan oran endeksi aştığı için hesaplama endeks oranı üzerinden yapılmıştır."
+      }
+    },
+    "nafaka-artirim": {
+      "name": "Nafaka Artırım Hesaplama",
+      "summary": "Mahkeme kararındaki artış kaydına göre güncel nafaka tutarını, aylık artışı ve yıllık farkı hesaplar.",
+      "intro": "Mahkeme kararlarında nafakanın her yıl belirli bir oranda artırılmasına hükmedilmesi yaygındır. Artış bileşik işler: her yılın artışı, bir önceki yılın artışıyla ulaşılan tutar üzerinden uygulanır. Kararda oran yerine bir endekse atıf yapılmışsa, ilgili döneme ait resmî oranı girin. Nafakanın koşulların değişmesi nedeniyle yeniden belirlenmesi (TMK m.176/4) ayrı bir dava konusudur ve bu hesaplamanın kapsamı dışındadır.",
+      "fields": {
+        "currentAlimony": "Mevcut aylık nafaka",
+        "annualRate": "Yıllık artış oranı (%)",
+        "annualRateHint": "Kararda yazan oranı girin. Kararda TÜFE veya Yİ-ÜFE'ye atıf yapılmışsa ilgili dönemin resmî oranını kullanın.",
+        "years": "Artış uygulanacak yıl sayısı"
+      },
+      "results": {
+        "currentAlimony": "Mevcut nafaka",
+        "appliedRate": "Yıllık artış oranı",
+        "years": "Yıl sayısı",
+        "updatedAlimony": "Güncel aylık nafaka",
+        "monthlyIncrease": "Aylık artış tutarı",
+        "annualDifference": "Yıllık fark"
+      },
+      "notes": {
+        "alimonyCompounding": "Artış bileşik olarak uygulanmıştır; birden fazla yıl için oran her yıl önceki yılın tutarı üzerinden işletilir."
+      }
+    },
+    "is-kazasi-tazminat": {
+      "name": "İş Kazası Maluliyet Tazminatı Hesaplama",
+      "summary": "Sürekli iş göremezlik nedeniyle maddi zararı bilinen, aktif ve pasif dönemlere göre; kusur oranı ve SGK mahsubuyla birlikte hesaplar.",
+      "intro": "Sürekli iş göremezlik tazminatı, zararın bilinen dönem (kaza ile hesap tarihi arası), aktif dönem (çalışma yaşamının sonuna kadar) ve pasif dönem (bakiye ömrün sonuna kadar) olarak ayrılmasıyla hesaplanır. Aktif dönemde Yargıtay uygulamasındaki progresif rant yöntemi esas alınır; yüzde 10 artırım ve yüzde 10 iskonto birbirini karşıladığından her aktif yıl bir yıllık kazanca karşılık gelir. Bakiye ömür TRH-2010 yaşam tablosundan alınır ve bu araca elle girilir.",
+      "fields": {
+        "monthlyEarning": "Aylık net kazanç",
+        "monthlyEarningHint": "Kaza tarihindeki net aylık kazanç. Bilinen ve aktif dönem bu tutar üzerinden hesaplanır.",
+        "disabilityRatio": "Sürekli iş göremezlik oranı (%)",
+        "disabilityRatioHint": "SGK veya adli tıp raporunda belirlenen maluliyet oranı.",
+        "faultRatio": "Zarar görenin kusur oranı (%)",
+        "faultRatioHint": "Kusur bilirkişi raporunda zarar görene atfedilen oran. Tazminat bu oran kadar indirilir.",
+        "knownPeriodMonths": "Bilinen dönem (ay)",
+        "activePeriodYears": "Aktif dönem (yıl)",
+        "activePeriodYearsHint": "Hesap tarihinden çalışma yaşamının sonuna kadar kalan yıl sayısı.",
+        "passivePeriodYears": "Pasif dönem (yıl)",
+        "passivePeriodYearsHint": "Çalışma yaşamının sonundan TRH-2010 tablosundaki bakiye ömrün sonuna kadar kalan yıl sayısı.",
+        "sgkCapitalValue": "SGK gelirinin peşin sermaye değeri",
+        "sgkCapitalValueHint": "SGK tarafından bağlanan sürekli iş göremezlik gelirinin peşin sermaye değeri tazminattan mahsup edilir. Yoksa boş bırakın."
+      },
+      "results": {
+        "knownLoss": "Bilinen dönem zararı",
+        "activeLoss": "Aktif dönem zararı",
+        "passiveLoss": "Pasif dönem zararı",
+        "grossLoss": "Toplam zarar (kusur indirimi öncesi)",
+        "liabilityShare": "Sorumluluk oranı",
+        "afterFault": "Kusur indirimi sonrası",
+        "sgkDeduction": "SGK mahsubu",
+        "net": "Tahmini maddi tazminat"
+      },
+      "notes": {
+        "trh2010Source": "Bakiye ömür TRH-2010 yaşam tablosundan alınır; tablo yaşa ve cinsiyete göre değiştiğinden bu araca gömülü değildir.",
+        "progressiveRentMethod": "Aktif dönemde progresif rant yöntemi uygulanmıştır (yüzde 10 artırım, yüzde 10 iskonto).",
+        "expertReportRequired": "Bu sonuç bir aktüerya raporu değildir. Yargılamada zarar, mahkemece atanan bilirkişi tarafından hesaplanır."
+      }
+    },
+    "yillik-izin": {
+      "name": "Yıllık İzin Hesaplama",
+      "summary": "İşe giriş tarihine göre hak edilen yıllık ücretli izin süresini ve birikmiş izin bakiyesini hesaplar.",
+      "intro": "4857 sayılı İş Kanunu m.53 uyarınca yıllık ücretli izin süresi, hizmet süresi bir yıldan beş yıla kadar olanlarda on dört, beş yıldan fazla on beş yıldan az olanlarda yirmi, on beş yıl ve daha fazla olanlarda yirmi altı günden az olamaz. On sekiz yaşından küçük ve elli yaşından büyük işçilerde izin süresi yirmi günün altına düşemez. İzne hak kazanmak için en az bir yıllık hizmet süresi gerekir.",
+      "fields": {
+        "startDate": "İşe giriş tarihi",
+        "referenceDate": "Hesap tarihi",
+        "usedDays": "Kullanılan izin günü",
+        "ageGroup": "İşçinin durumu",
+        "ageGroupHint": "On sekiz yaşından küçük veya elli yaşından büyük işçilerde yıllık izin yirmi günün altına düşemez."
+      },
+      "options": {
+        "ageGroup_standard": "18-50 yaş arası",
+        "ageGroup_protected": "18 yaşından küçük veya 50 yaşından büyük"
+      },
+      "results": {
+        "completedYears": "Tamamlanan hizmet yılı",
+        "currentEntitlement": "Bu yıl hak edilen izin (gün)",
+        "accrued": "Toplam hak edilen izin (gün)",
+        "used": "Kullanılan izin (gün)",
+        "balance": "İzin bakiyesi (gün)"
+      },
+      "notes": {
+        "leaveIsMinimum": "Kanundaki süreler asgari sürelerdir; iş sözleşmesi veya toplu iş sözleşmesiyle artırılabilir.",
+        "usedExceedsAccrued": "Kullanılan izin, hak edilen izinden fazla görünüyor. Girdiğiniz değerleri kontrol edin."
+      }
+    },
+    "fazla-mesai": {
+      "name": "Fazla Mesai Ücreti Hesaplama",
+      "summary": "Haftalık 45 saati aşan çalışmaların yüzde 50, sözleşmedeki süreyi aşan çalışmaların yüzde 25 zamlı brüt karşılığını hesaplar.",
+      "intro": "4857 sayılı İş Kanunu m.41 uyarınca haftalık kırk beş saati aşan çalışmalar fazla çalışmadır ve saat ücretinin yüzde elli fazlasıyla ödenir. Haftalık çalışma süresi sözleşmeyle kırk beş saatin altında belirlenmişse, bu süre ile kırk beş saat arasındaki çalışma fazla sürelerle çalışmadır ve yüzde yirmi beş zamlı ödenir. Fazla çalışma süresi yılda iki yüz yetmiş saati aşamaz. Saat ücreti, aylık brüt ücretin 225'e bölünmesiyle bulunur.",
+      "fields": {
+        "grossMonthlyWage": "Aylık brüt ücret",
+        "contractWeeklyHours": "Sözleşmedeki haftalık çalışma süresi (saat)",
+        "contractWeeklyHoursHint": "Sözleşmede kırk beş saatten az bir süre kararlaştırılmışsa girin. Aksi hâlde 45 bırakın.",
+        "actualWeeklyHours": "Fiilen çalışılan haftalık süre (saat)",
+        "weeks": "Hafta sayısı"
+      },
+      "results": {
+        "hourlyRate": "Saatlik brüt ücret",
+        "overtimeHours": "Fazla çalışma (saat)",
+        "overtimePay": "Fazla çalışma ücreti (%50 zamlı)",
+        "extraTimeHours": "Fazla sürelerle çalışma (saat)",
+        "extraTimePay": "Fazla sürelerle çalışma ücreti (%25 zamlı)",
+        "total": "Toplam brüt alacak"
+      },
+      "notes": {
+        "grossFigures": "Tutarlar brüttür; vergi ve sigorta kesintileri düşülmemiştir.",
+        "overtimeCapExceeded": "Hesaplanan fazla çalışma süresi yıllık iki yüz yetmiş saatlik sınırı aşıyor. Sınırın aşılması ücret hakkını ortadan kaldırmaz."
+      }
+    },
+    "issizlik-maasi": {
+      "name": "İşsizlik Maaşı Hesaplama",
+      "summary": "Son dört aylık kazanca ve prim gün sayısına göre aylık işsizlik ödeneğini, tavan ve ödeme süresiyle birlikte hesaplar.",
+      "intro": "4447 sayılı İşsizlik Sigortası Kanunu m.50 uyarınca günlük işsizlik ödeneği, sigortalının son dört aylık prime esas kazançları dikkate alınarak hesaplanan günlük ortalama brüt kazancının yüzde kırkıdır. Bu tutar, brüt asgari ücretin yüzde seksenini geçemez. Ödeme süresi son üç yıldaki prim gün sayısına göre 180, 240 veya 300 gündür. Ödenekten yalnızca damga vergisi kesilir.",
+      "fields": {
+        "averageGrossMonthly": "Son dört ayın aylık brüt kazanç ortalaması",
+        "averageGrossMonthlyHint": "Son dört aya ait prime esas brüt kazançların aylık ortalaması.",
+        "premiumDays": "Son üç yıldaki prim gün sayısı",
+        "premiumDaysHint": "Ödeneğe hak kazanmak için son üç yılda en az 600 gün prim ve son 120 gün kesintisiz hizmet gerekir."
+      },
+      "results": {
+        "grossMonthly": "Aylık brüt ödenek",
+        "stampDuty": "Damga vergisi kesintisi",
+        "netMonthly": "Aylık net ödenek",
+        "benefitDays": "Ödeme süresi (gün)",
+        "benefitMonths": "Ödeme süresi (ay)",
+        "totalBenefit": "Toplam net ödenek"
+      },
+      "notes": {
+        "benefitConditions": "Ödeneğe hak kazanmak, hizmet akdinin kanunda sayılan nedenlerle sona ermiş olmasına ve süresinde başvuruya bağlıdır.",
+        "benefitCeilingApplied": "Hesaplanan ödenek brüt asgari ücretin yüzde seksenini aştığı için tavan tutar uygulanmıştır."
+      }
+    },
+    "miras-payi": {
+      "name": "Miras Payı Hesaplama",
+      "summary": "Sağ kalan eş, altsoy, ana-baba ve kardeşlerin yasal miras paylarını ve saklı payları zümre sistemine göre hesaplar.",
+      "intro": "Türk Medeni Kanunu m.495-501 uyarınca miras, zümre sistemine göre paylaşılır. Birinci zümre altsoy, ikinci zümre ana-baba ve onların altsoyu, üçüncü zümre büyük ana-babadır. Yakın zümrede mirasçı varsa uzak zümre mirastan pay alamaz. Sağ kalan eş, çağrılan zümreye göre değişen oranda birlikte mirasçı olur. Saklı pay oranları m.506'da düzenlenmiştir; kardeşlerin saklı payı 2007 yılında kaldırılmıştır.",
+      "fields": {
+        "estateValue": "Terekenin net değeri",
+        "estateValueHint": "Mal rejiminin tasfiyesinden sonra kalan, borçlar düşülmüş net tereke değeri.",
+        "spouse": "Sağ kalan eş",
+        "childCount": "Çocuk (altsoy) sayısı",
+        "parentsAlive": "Sağ olan ana-baba sayısı",
+        "parentsAliveHint": "Yalnızca altsoy yoksa dikkate alınır. Ölmüş olan ananın veya babanın payı kendi altsoyuna, yani kardeşlere geçer.",
+        "siblingCount": "Kardeş sayısı"
+      },
+      "options": {
+        "spouse_yes": "Var",
+        "spouse_no": "Yok",
+        "parentsAlive_0": "İkisi de sağ değil",
+        "parentsAlive_1": "Biri sağ",
+        "parentsAlive_2": "İkisi de sağ"
+      },
+      "results": {
+        "spouseShare": "Sağ kalan eşin payı",
+        "perChildShare": "Çocuk başına pay",
+        "childrenTotal": "Çocukların toplam payı",
+        "perParentShare": "Ana veya baba başına pay",
+        "parentsTotal": "Ana-babanın toplam payı",
+        "perSiblingShare": "Kardeş başına pay",
+        "siblingsTotal": "Kardeşlerin toplam payı",
+        "reservedTotal": "Toplam saklı pay",
+        "disposable": "Tasarruf edilebilir kısım"
+      },
+      "notes": {
+        "inheritanceMaritalRegime": "Hesaplama mal rejiminin tasfiyesinden sonraki net tereke üzerinden yapılır. Sağ kalan eşin katılma alacağı mirastan önce ayrılır ve çoğu zaman miras payından büyüktür.",
+        "inheritanceScopeLimits": "Mirastan çıkarma, mirasın reddi, evlatlık ilişkisi, tenkise tabi kazandırmalar ve kardeş altsoyunun halefiyeti hesaba dâhil değildir.",
+        "inheritanceSiblingsNoReserve": "Kardeşlerin saklı payı 5650 sayılı Kanun'la 2007 yılında kaldırılmıştır.",
+        "inheritanceSpouseAloneAssumption": "Altsoy, ana-baba ve kardeş bulunmadığından üçüncü zümrede de mirasçı olmadığı varsayılmış ve tereke tamamen sağ kalan eşe bırakılmıştır."
+      }
+    }
+  },
   "contactPage": {
     "meta": {
       "title": "İletişim",
@@ -244,7 +537,9 @@
   },
   "admin": {
     "login": {
-      "meta": { "title": "Yönetim Girişi" },
+      "meta": {
+        "title": "Yönetim Girişi"
+      },
       "eyebrow": "Yönetim Paneli",
       "title": "Giriş Yap",
       "email": "E-posta",

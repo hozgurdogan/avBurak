@@ -74,6 +74,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/[locale]/(public)/hesaplama-araclari/[slug]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/hesaplama-araclari/[slug]">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/(public)/hesaplama-araclari/[slug]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/[locale]/(public)/hesaplama-araclari/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/hesaplama-araclari">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/(public)/hesaplama-araclari/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/[locale]/(public)/iletisim/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/[locale]/iletisim">> = Specific

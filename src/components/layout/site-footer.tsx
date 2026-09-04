@@ -8,6 +8,7 @@ const siteLinks = [
   { href: '/calisma-alanlari', key: 'practiceAreas' },
   { href: '/profil', key: 'profile' },
   { href: '/makaleler', key: 'articles' },
+  { href: '/hesaplama-araclari', key: 'tools' },
   { href: '/iletisim', key: 'contact' },
 ] as const;
 
