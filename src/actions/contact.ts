@@ -5,14 +5,15 @@ import { contactFormSchema } from '@/lib/validation/contact';
 import { getClientIp, hashIp } from '@/lib/ip';
 import { checkRateLimit } from '@/lib/rate-limit';
 
+// A "use server" file may only export async functions - not a constant, not
+// even a type re-exported as a value. `ContactFormState` is a type (erased at
+// compile time, so it is exempt), but the `contactFormInitialState` object
+// that used to live here has moved to the client component that needs it.
 export type ContactFormState = {
   status: 'idle' | 'success' | 'error';
   errorCode?: 'validation' | 'consent' | 'rate-limit' | 'generic';
   fieldErrors?: Partial<Record<'name' | 'email' | 'phone' | 'subject' | 'message', string>>;
 };
-
-const initialState: ContactFormState = { status: 'idle' };
-export { initialState as contactFormInitialState };
 
 /**
  * Server Action behind the contact form. Order of checks matters: the

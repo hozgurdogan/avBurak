@@ -6,8 +6,10 @@
 import { useActionState, useId } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { submitContactForm, contactFormInitialState } from '@/actions/contact';
+import { submitContactForm, type ContactFormState } from '@/actions/contact';
 import { cn } from '@/lib/cn';
+
+const contactFormInitialState: ContactFormState = { status: 'idle' };
 
 const fieldClass =
   'w-full border-b border-rule bg-transparent px-0 py-3 text-ink placeholder:text-ink-faint ' +

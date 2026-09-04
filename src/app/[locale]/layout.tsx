@@ -6,8 +6,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { getDirection, localeTags, type Locale } from '@/i18n/locales';
 import { fontVariables } from '@/lib/fonts';
-import { SiteHeader } from '@/components/layout/site-header';
-import { SiteFooter } from '@/components/layout/site-footer';
 import { SkipLink } from '@/components/layout/skip-link';
 import '../globals.css';
 
@@ -44,6 +42,17 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * The real root layout - the one that renders `<html>`/`<body>`, because
+ * `lang`/`dir` cannot be decided before the locale segment is read.
+ *
+ * Deliberately thin: it holds only what every route under this locale needs
+ * (fonts, direction, the translation provider, the skip link). The public
+ * site's header/footer chrome lives one level down in `(public)/layout.tsx`
+ * so that `/admin` - a sibling of `(public)`, not a child of it - never
+ * inherits the public nav or footer. Route groups don't affect the URL: this
+ * is a rendering split, not a routing one.
+ */
 export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
 
@@ -67,11 +76,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       <body className="flex min-h-dvh flex-col bg-canvas text-ink antialiased">
         <NextIntlClientProvider>
           <SkipLink />
-          <SiteHeader />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

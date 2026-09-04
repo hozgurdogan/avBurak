@@ -505,7 +505,7 @@ server.js                  Passenger entry point (cPanel "Setup Node.js App")
 | 2     | Design system and shell: layout, dir handling, header/footer, monogram, i18n wiring, `messages/*.json` | done |
 | 3     | Public pages: home, practice areas, profile, contact, KVKK, privacy | done |
 | 4     | Blog: index, filters, detail, Markdown pipeline, metadata            | done — OG images not yet generated |
-| 5     | Admin: auth, middleware, CRUD, uploads, inbox                       | next |
+| 5     | Admin: auth, middleware, inbox, change-password — done. Article CRUD, cover uploads, Markdown editor — next | in progress |
 | 6     | SEO and polish: sitemap, robots, JSON-LD, a11y and motion passes    | |
 
 The repository does not build between phases 1 and 2 — Phase 1 deliberately

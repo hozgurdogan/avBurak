@@ -234,5 +234,67 @@
     "title": "An unexpected error occurred",
     "body": "The request could not be completed. You may wish to reload the page.",
     "retry": "Try again"
+  },
+  "admin": {
+    "login": {
+      "meta": { "title": "Admin Sign In" },
+      "eyebrow": "Admin Panel",
+      "title": "Sign In",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "submitting": "Signing in…",
+      "errorValidation": "Please enter your email and password.",
+      "errorRateLimit": "Too many attempts. Please try again later.",
+      "errorInvalid": "Incorrect email or password."
+    },
+    "nav": {
+      "dashboard": "Overview",
+      "messages": "Messages",
+      "articles": "Articles",
+      "password": "Change Password",
+      "logout": "Sign Out",
+      "viewSite": "View site"
+    },
+    "dashboard": {
+      "title": "Overview",
+      "welcome": "Welcome, {name}.",
+      "messagesStat": "Unread messages",
+      "articlesStat": "Published articles",
+      "translationTitle": "Translation Status",
+      "translationLead": "Shows which languages each article group has been published in.",
+      "statusPublished": "Published",
+      "statusDraft": "Draft",
+      "statusMissing": "Missing",
+      "articlesComingSoon": "Article editing will be available from this panel soon."
+    },
+    "messages": {
+      "title": "Messages",
+      "empty": "No messages yet.",
+      "statusNew": "New",
+      "statusRead": "Read",
+      "statusArchived": "Archived",
+      "markRead": "Mark as read",
+      "archive": "Archive",
+      "delete": "Delete",
+      "back": "All messages",
+      "from": "From",
+      "subject": "Subject",
+      "receivedOn": "Received",
+      "consentGiven": "KVKK consent given: {date}",
+      "deleteConfirm": "This message will be permanently deleted."
+    },
+    "password": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "New Password (again)",
+      "submit": "Update Password",
+      "submitting": "Updating…",
+      "success": "Your password has been updated.",
+      "errorValidation": "The new password must be at least 12 characters and match the confirmation.",
+      "errorCurrent": "The current password is incorrect.",
+      "errorGeneric": "The password could not be updated."
+    }
   }
 }
