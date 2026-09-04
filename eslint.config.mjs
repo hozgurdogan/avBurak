@@ -15,6 +15,10 @@ const eslintConfig = [
       'public/**',
       'next-env.d.ts',
       'src/generated/**',
+      // esbuild output, committed as a deploy artifact for hosts that can't
+      // spawn a process to run tsx (see prisma/seed.compiled.cjs's own
+      // header comment and README section 7) - not hand-written, not linted.
+      'prisma/seed.compiled.cjs',
     ],
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
