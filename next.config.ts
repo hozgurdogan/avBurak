@@ -62,6 +62,15 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['framer-motion'],
+    // Shared-hosting accounts (cPanel/CloudLinux LVE) cap how many processes
+    // an account may fork at once. `next build` normally spawns one worker
+    // per CPU core to generate static pages in parallel, and forking a
+    // second one past that cap fails with `spawn ... EAGAIN` mid-build.
+    // Running the build single-threaded is slower but is the difference
+    // between a build that completes and one that crashes on this class of
+    // host.
+    cpus: 1,
+    workerThreads: false,
   },
   async headers() {
     return [
