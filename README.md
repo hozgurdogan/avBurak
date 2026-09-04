@@ -4,8 +4,9 @@ A trilingual (TR / EN / AR) practice website for an independent attorney admitte
 in Türkiye. Next.js 15 App Router, TypeScript, Prisma + MySQL, self-hosted on
 cPanel shared hosting via Phusion Passenger — no Docker, no root access.
 
-> **Status: Phase 1 of 6 complete (foundation).** The application shell, pages,
-> blog and admin arrive in later phases. See [Build phases](#build-phases).
+> **Status: Phases 1–4 of 6 substantially complete.** Public pages and the
+> blog are live; OG image generation, admin, and SEO/sitemap polish remain.
+> See [Build phases](#build-phases).
 
 ---
 
@@ -501,10 +502,10 @@ server.js                  Passenger entry point (cPanel "Setup Node.js App")
 | Phase | Scope                                                              | Status |
 | ----- | ------------------------------------------------------------------ | ------ |
 | 1     | Foundation: config, tokens, fonts, server entry, schema, migration, seed | done |
-| 2     | Design system and shell: layout, dir handling, header/footer, monogram, i18n wiring, `messages/*.json` | next |
-| 3     | Public pages: home, practice areas, profile, contact, KVKK, privacy | |
-| 4     | Blog: index, filters, detail, Markdown pipeline, metadata, OG images | |
-| 5     | Admin: auth, middleware, CRUD, uploads, inbox                       | |
+| 2     | Design system and shell: layout, dir handling, header/footer, monogram, i18n wiring, `messages/*.json` | done |
+| 3     | Public pages: home, practice areas, profile, contact, KVKK, privacy | done |
+| 4     | Blog: index, filters, detail, Markdown pipeline, metadata            | done — OG images not yet generated |
+| 5     | Admin: auth, middleware, CRUD, uploads, inbox                       | next |
 | 6     | SEO and polish: sitemap, robots, JSON-LD, a11y and motion passes    | |
 
 The repository does not build between phases 1 and 2 — Phase 1 deliberately

@@ -16,9 +16,13 @@
  * Plain CommonJS on purpose: `package.json` has no `"type": "module"`, and
  * Passenger's Node runtime should not need an extra loader just to boot.
  */
+/* eslint-disable @typescript-eslint/no-require-imports -- Passenger runs this
+   file directly with plain Node, with no build step of its own, so it has to
+   stay CommonJS rather than the ESM `import` the rest of the app uses. */
 const { createServer } = require('node:http');
 const { parse } = require('node:url');
 const next = require('next');
+/* eslint-enable @typescript-eslint/no-require-imports */
 
 // cPanel's Node App UI lets you choose an "Environment" (development /
 // production) that Passenger exposes as NODE_ENV. Anything other than an
