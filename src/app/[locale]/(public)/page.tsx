@@ -88,7 +88,11 @@ export default async function HomePage({ params }: PageProps) {
               <ActionLink href="/iletisim" variant="solid" surface="navy">
                 {tHero('contact')}
               </ActionLink>
-              <ActionLink href="/iletisim" variant="quiet" surface="navy">
+              {/* Both CTAs lead to the same page, so the secondary one skips
+                  straight to the form rather than repeating the primary link.
+                  The offset under the sticky header comes from
+                  `scroll-padding-block-start` in globals.css. */}
+              <ActionLink href="/iletisim#form" variant="quiet" surface="navy">
                 {tHero('appointment')}
               </ActionLink>
             </div>

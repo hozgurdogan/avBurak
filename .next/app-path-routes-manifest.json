@@ -4,15 +4,15 @@
   "/[locale]/admin/page": "/[locale]/admin",
   "/[locale]/(public)/makaleler/[slug]/page": "/[locale]/makaleler/[slug]",
   "/[locale]/(public)/makaleler/page": "/[locale]/makaleler",
+  "/[locale]/(public)/calisma-alanlari/page": "/[locale]/calisma-alanlari",
   "/[locale]/(public)/calisma-alanlari/[slug]/page": "/[locale]/calisma-alanlari/[slug]",
   "/[locale]/(public)/gizlilik/page": "/[locale]/gizlilik",
-  "/[locale]/(public)/iletisim/page": "/[locale]/iletisim",
   "/[locale]/(public)/kvkk/page": "/[locale]/kvkk",
-  "/[locale]/(public)/page": "/[locale]",
-  "/[locale]/(public)/calisma-alanlari/page": "/[locale]/calisma-alanlari",
-  "/[locale]/admin/panel/sifre/page": "/[locale]/admin/panel/sifre",
-  "/[locale]/admin/panel/page": "/[locale]/admin/panel",
-  "/[locale]/admin/panel/mesajlar/page": "/[locale]/admin/panel/mesajlar",
   "/[locale]/(public)/profil/page": "/[locale]/profil",
-  "/[locale]/admin/panel/mesajlar/[id]/page": "/[locale]/admin/panel/mesajlar/[id]"
+  "/[locale]/(public)/iletisim/page": "/[locale]/iletisim",
+  "/[locale]/admin/panel/mesajlar/[id]/page": "/[locale]/admin/panel/mesajlar/[id]",
+  "/[locale]/(public)/page": "/[locale]",
+  "/[locale]/admin/panel/page": "/[locale]/admin/panel",
+  "/[locale]/admin/panel/sifre/page": "/[locale]/admin/panel/sifre",
+  "/[locale]/admin/panel/mesajlar/page": "/[locale]/admin/panel/mesajlar"
 }

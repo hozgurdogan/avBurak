@@ -165,6 +165,7 @@
   },
   "articleDetail": {
     "back": "Tüm makalelere dön",
+    "tocLabel": "İçindekiler",
     "relatedLabel": "İlgili Makaleler"
   },
   "contactPage": {

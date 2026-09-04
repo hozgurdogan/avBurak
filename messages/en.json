@@ -165,6 +165,7 @@
   },
   "articleDetail": {
     "back": "Back to all articles",
+    "tocLabel": "Contents",
     "relatedLabel": "Related Articles"
   },
   "contactPage": {

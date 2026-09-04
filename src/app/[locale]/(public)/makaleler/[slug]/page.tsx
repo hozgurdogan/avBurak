@@ -8,6 +8,7 @@ import type { Locale } from '@/i18n/locales';
 import { getArticleBySlug, getArticleAlternates, getRelatedArticles } from '@/lib/articles';
 import { renderArticleMarkdown } from '@/lib/markdown';
 import { ActionLink } from '@/components/ui/action-link';
+import { ArticleToc } from '@/components/ui/article-toc';
 import { LegalDisclaimer } from '@/components/ui/legal-disclaimer';
 import { Reveal } from '@/components/motion/reveal';
 
@@ -55,7 +56,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const [tDetail, tArticle, html, related] = await Promise.all([
+  const [tDetail, tArticle, rendered, related] = await Promise.all([
     getTranslations('articleDetail'),
     getTranslations('article'),
     renderArticleMarkdown(article.contentMd),
@@ -99,14 +100,29 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         </p>
       </header>
 
-      <div
-        className="prose-article measure mt-12 text-md leading-prose text-ink-muted"
-        // Sanitised server-side by rehype-sanitize before this ever reaches the
-        // client - see src/lib/markdown.ts.
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      {/* The outline is placed before the body in the DOM so that on a phone -
+          where it collapses out of the sidebar - it is read and seen ahead of
+          the article it describes, not stranded after it. */}
+      <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-8">
+        <aside className="lg:col-span-3 lg:col-start-10 lg:row-start-1">
+          <ArticleToc
+            headings={rendered.headings}
+            label={tDetail('tocLabel')}
+            className="lg:sticky lg:top-28"
+          />
+        </aside>
 
-      <LegalDisclaimer className="mt-16 max-w-narrow" />
+        <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
+          <div
+            className="prose-article measure text-md leading-prose text-ink-muted"
+            // Sanitised server-side by rehype-sanitize before this ever reaches
+            // the client - see src/lib/markdown.ts.
+            dangerouslySetInnerHTML={{ __html: rendered.html }}
+          />
+
+          <LegalDisclaimer className="mt-16" />
+        </div>
+      </div>
 
       {related.length > 0 ? (
         <div className="mt-16 border-t border-rule pt-10">

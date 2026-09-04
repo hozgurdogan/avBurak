@@ -165,6 +165,7 @@
   },
   "articleDetail": {
     "back": "العودة إلى جميع المقالات",
+    "tocLabel": "المحتويات",
     "relatedLabel": "مقالات ذات صلة"
   },
   "contactPage": {

@@ -42,7 +42,8 @@ export default async function ContactPage({ params }: PageProps) {
       <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
       <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-8">
-        <div className="lg:col-span-7">
+        {/* Anchor target for the home page's secondary "appointment" CTA. */}
+        <div id="form" className="lg:col-span-7">
           <ContactForm />
         </div>
 
