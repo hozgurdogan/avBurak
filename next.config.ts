@@ -13,6 +13,18 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
  * self-only policy because we ship no inline script of our own beyond
  * Next.js' hydration payload.
  */
+// Set to true only once the production domain has a real, trusted TLS
+// certificate installed and verified working end to end. Both flags below
+// force every connection (HSTS) and every sub-resource request
+// (upgrade-insecure-requests) onto HTTPS - correct once TLS genuinely works,
+// but actively hostile before that: a single response carrying
+// Strict-Transport-Security is enough for a visitor's browser to lock itself
+// out of the site over plain HTTP for up to two years (`max-age` below),
+// with no in-browser way to undo it short of clearing HSTS state manually.
+// That is exactly what happened during this deployment - see the README
+// section "Deployment" / "Before launch".
+const HTTPS_IS_LIVE = false;
+
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'X-Frame-Options', value: 'DENY' },
@@ -22,10 +34,9 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()',
   },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload',
-  },
+  ...(HTTPS_IS_LIVE
+    ? [{ key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' }]
+    : []),
   {
     key: 'Content-Security-Policy',
     value: [
@@ -42,7 +53,7 @@ const securityHeaders = [
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "object-src 'none'",
-      'upgrade-insecure-requests',
+      ...(HTTPS_IS_LIVE ? ['upgrade-insecure-requests'] : []),
     ].join('; '),
   },
 ];
