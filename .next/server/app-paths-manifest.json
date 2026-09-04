@@ -1,18 +1,17 @@
 {
-  "/api/run-seed/route": "app/api/run-seed/route.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/[locale]/admin/page": "app/[locale]/admin/page.js",
   "/[locale]/(public)/makaleler/[slug]/page": "app/[locale]/(public)/makaleler/[slug]/page.js",
   "/[locale]/(public)/makaleler/page": "app/[locale]/(public)/makaleler/page.js",
+  "/[locale]/(public)/kvkk/page": "app/[locale]/(public)/kvkk/page.js",
+  "/[locale]/(public)/calisma-alanlari/[slug]/page": "app/[locale]/(public)/calisma-alanlari/[slug]/page.js",
   "/[locale]/(public)/gizlilik/page": "app/[locale]/(public)/gizlilik/page.js",
   "/[locale]/(public)/calisma-alanlari/page": "app/[locale]/(public)/calisma-alanlari/page.js",
-  "/[locale]/admin/panel/mesajlar/[id]/page": "app/[locale]/admin/panel/mesajlar/[id]/page.js",
-  "/[locale]/(public)/kvkk/page": "app/[locale]/(public)/kvkk/page.js",
-  "/[locale]/admin/panel/page": "app/[locale]/admin/panel/page.js",
-  "/[locale]/admin/panel/sifre/page": "app/[locale]/admin/panel/sifre/page.js",
+  "/[locale]/(public)/iletisim/page": "app/[locale]/(public)/iletisim/page.js",
   "/[locale]/admin/panel/mesajlar/page": "app/[locale]/admin/panel/mesajlar/page.js",
+  "/[locale]/admin/panel/mesajlar/[id]/page": "app/[locale]/admin/panel/mesajlar/[id]/page.js",
+  "/[locale]/admin/panel/sifre/page": "app/[locale]/admin/panel/sifre/page.js",
   "/[locale]/(public)/profil/page": "app/[locale]/(public)/profil/page.js",
-  "/[locale]/(public)/page": "app/[locale]/(public)/page.js",
-  "/[locale]/(public)/calisma-alanlari/[slug]/page": "app/[locale]/(public)/calisma-alanlari/[slug]/page.js",
-  "/[locale]/(public)/iletisim/page": "app/[locale]/(public)/iletisim/page.js"
+  "/[locale]/admin/panel/page": "app/[locale]/admin/panel/page.js",
+  "/[locale]/(public)/page": "app/[locale]/(public)/page.js"
 }
