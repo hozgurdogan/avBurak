@@ -1,7 +1,16 @@
 import { z } from 'zod';
 
 export const loginSchema = z.object({
-  email: z.string().trim().min(1, 'required').email('invalid_email').max(180, 'too_long'),
+  // Lowercased to match how the seed script stores the admin's email -
+  // without this, a login typed with different casing than the stored
+  // record would fail the lookup and report "wrong credentials".
+  email: z
+    .string()
+    .trim()
+    .min(1, 'required')
+    .email('invalid_email')
+    .max(180, 'too_long')
+    .transform((value) => value.toLowerCase()),
   password: z.string().min(1, 'required').max(200, 'too_long'),
 });
 

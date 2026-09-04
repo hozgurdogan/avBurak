@@ -1,17 +1,18 @@
 {
   "/_not-found/page": "/_not-found",
+  "/api/reset-admin/route": "/api/reset-admin",
   "/[locale]/admin/page": "/[locale]/admin",
-  "/[locale]/(public)/makaleler/page": "/[locale]/makaleler",
   "/[locale]/(public)/makaleler/[slug]/page": "/[locale]/makaleler/[slug]",
-  "/[locale]/(public)/iletisim/page": "/[locale]/iletisim",
-  "/[locale]/(public)/kvkk/page": "/[locale]/kvkk",
-  "/[locale]/(public)/profil/page": "/[locale]/profil",
+  "/[locale]/(public)/makaleler/page": "/[locale]/makaleler",
   "/[locale]/(public)/gizlilik/page": "/[locale]/gizlilik",
   "/[locale]/(public)/calisma-alanlari/page": "/[locale]/calisma-alanlari",
-  "/[locale]/admin/panel/mesajlar/[id]/page": "/[locale]/admin/panel/mesajlar/[id]",
-  "/[locale]/admin/panel/page": "/[locale]/admin/panel",
-  "/[locale]/admin/panel/mesajlar/page": "/[locale]/admin/panel/mesajlar",
-  "/[locale]/admin/panel/sifre/page": "/[locale]/admin/panel/sifre",
+  "/[locale]/(public)/iletisim/page": "/[locale]/iletisim",
+  "/[locale]/(public)/kvkk/page": "/[locale]/kvkk",
   "/[locale]/(public)/calisma-alanlari/[slug]/page": "/[locale]/calisma-alanlari/[slug]",
-  "/[locale]/(public)/page": "/[locale]"
+  "/[locale]/(public)/profil/page": "/[locale]/profil",
+  "/[locale]/(public)/page": "/[locale]",
+  "/[locale]/admin/panel/mesajlar/[id]/page": "/[locale]/admin/panel/mesajlar/[id]",
+  "/[locale]/admin/panel/mesajlar/page": "/[locale]/admin/panel/mesajlar",
+  "/[locale]/admin/panel/page": "/[locale]/admin/panel",
+  "/[locale]/admin/panel/sifre/page": "/[locale]/admin/panel/sifre"
 }
