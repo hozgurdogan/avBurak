@@ -354,6 +354,42 @@
     display: none !important;
   }
 
+  /* ---- calculator fields -------------------------------------------------
+     The tools use bare underline inputs, so the browser's own furniture has to
+     be brought into line with the rest of the type system. */
+
+  /* Spin buttons change a figure on a stray scroll or a mis-tap and are of no
+     use for a wage or a sentence length; the field is typed into, not nudged. */
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* The calendar glyph is the visible affordance that a date field opens a
+     picker, so it is kept - just toned to the palette rather than the OS blue. */
+  input[type='date']::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity var(--duration-base) var(--ease-out-editorial);
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator:hover,
+  input[type='date']:focus-visible::-webkit-calendar-picker-indicator {
+    opacity: 1;
+  }
+
+  /* iOS refuses to shrink a date field to its content and leaves it looking
+     half-filled; this makes it behave like every other input in the row. */
+  input[type='date'] {
+    min-block-size: 1.5rem;
+  }
+
   /* Global motion kill-switch. Components additionally gate Framer Motion
      behind useReducedMotion(); this catches plain CSS transitions too. */
   @media (prefers-reduced-motion: reduce) {

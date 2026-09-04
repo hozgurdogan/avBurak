@@ -191,7 +191,8 @@
       "submit": "Calculate",
       "reset": "Clear",
       "idle": "Fill in the fields and press Calculate. What you type stays in your browser.",
-      "parametersUnverified": "The statutory figures used by this tool have not yet been checked against the current period. Confirm them against the official amounts before relying on the result."
+      "parametersUnverified": "The statutory figures used by this tool have not yet been checked against the current period. Confirm them against the official amounts before relying on the result.",
+      "privacyNote": "What you enter is processed in your browser only; no data is stored or sent."
     },
     "parameters": {
       "severanceCeilingPerYear": "Severance ceiling",

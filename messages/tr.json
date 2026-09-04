@@ -191,7 +191,8 @@
       "submit": "Hesapla",
       "reset": "Temizle",
       "idle": "Alanları doldurup Hesapla düğmesine basın. Girdiğiniz bilgiler tarayıcınızdan çıkmaz.",
-      "parametersUnverified": "Bu araçta kullanılan yasal parametreler henüz güncellik denetiminden geçmemiştir. Sonucu esas almadan önce ilgili dönemin resmî tutarlarıyla karşılaştırın."
+      "parametersUnverified": "Bu araçta kullanılan yasal parametreler henüz güncellik denetiminden geçmemiştir. Sonucu esas almadan önce ilgili dönemin resmî tutarlarıyla karşılaştırın.",
+      "privacyNote": "Girdiğiniz bilgiler yalnızca tarayıcınızda işlenir; hiçbir veri kaydedilmez veya gönderilmez."
     },
     "parameters": {
       "severanceCeilingPerYear": "Kıdem tazminatı tavanı",

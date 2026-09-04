@@ -23,6 +23,13 @@ export type ToolField = {
   defaultValue?: string;
   /** Renders an explanatory line under the field, from `…fields.<id>Hint`. */
   hasHint?: boolean;
+  /**
+   * Column span inside the two-column field grid. Declared rather than derived
+   * from the type, so the same tool laid out twice looks the same both times.
+   * Defaults to 'half'; selects and fields carrying a long hint default to
+   * 'full' because a wrapped hint beside a short input reads as a broken row.
+   */
+  width?: 'half' | 'full';
 };
 
 export type ResultRow = {
