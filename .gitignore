@@ -4,9 +4,18 @@ node_modules/
 .pnp.js
 
 # next.js
-/.next/
+# `.next/` is deliberately NOT ignored - see the committed copy's own note
+# and README section 7. The target host cannot run `next build` at all
+# (a hard process/thread cap on the account crashes it), so the build output
+# is produced elsewhere and shipped via git instead of built on the server.
 /out/
 next-env.d.ts
+
+# Next's own build cache (~150MB, next build's incremental-compile cache) -
+# never needed at runtime, unlike the rest of .next/ above.
+/.next/cache/
+/.next/trace
+/.next/diagnostics/
 
 # production
 /build
