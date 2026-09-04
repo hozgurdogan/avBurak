@@ -1,0 +1,475 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   Design tokens
+   --------------------------------------------------------------------------
+   Tailwind v4 is configured CSS-first. The default palette, radii and shadows
+   are deliberately reset to `initial` so that no stock utility (text-blue-500,
+   rounded-2xl, shadow-lg) can enter the codebase by accident: if a value is not
+   a token below, it does not exist.
+
+   Contrast was measured, not eyeballed. Ratios quoted against the surface the
+   colour is actually used on:
+
+     ink        #1E293B on canvas ....... 12.97:1   AAA body
+     ink-muted  #4A5568 on canvas ........ 6.67:1   AA  body
+     ink-faint  #616B7B on canvas ........ 4.78:1   AA  body (smallest allowed)
+     gold-500   #C5A059 on navy-900 ...... 7.61:1   AAA body  <- gold text lives here
+     gold-300   #D9C79A on navy-900 ..... 11.20:1   AAA body
+     gold-800   #84682F on canvas ........ 4.65:1   AA  body  <- gold text on light
+     canvas     #F4F1EA on navy-900 ..... 16.57:1   AAA body
+     mist       #C9D0DC on navy-900 ..... 12.05:1   AAA body
+     mist-muted #9AA6B8 on navy-900 ...... 7.58:1   AAA body
+
+     gold-500   #C5A059 on canvas ........ 2.18:1   FAILS even large-text (3:1)
+
+   That last line is the governing rule of this palette: on light surfaces
+   gold-500 is a decoration-only colour - hairlines, rules, underline marks, the
+   monogram stroke. It never carries text of any size on canvas or paper. Where
+   a gold-toned label is needed on light, use gold-800 (the "gold ink"). On the
+   navy field the relationship inverts and gold-500 is safe for text.
+   ========================================================================== */
+
+@theme {
+  /* ---- palette ---------------------------------------------------------- */
+  --color-*: initial;
+
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* deep field - hero, footer, admin chrome */
+  --color-navy-900: #0a1128;
+  --color-navy-800: #0f172a;
+  --color-navy-700: #16203a; /* raised surface on the navy field */
+  --color-navy-600: #223052; /* hairline on the navy field */
+
+  /* text on light */
+  --color-ink: #1e293b;
+  --color-ink-muted: #4a5568;
+  --color-ink-faint: #616b7b;
+
+  /* text on navy */
+  --color-mist: #c9d0dc;
+  --color-mist-muted: #9aa6b8;
+
+  /* surfaces */
+  --color-canvas: #f4f1ea; /* warm paper base */
+  --color-canvas-deep: #eae5d9; /* inset panels, table stripes */
+  --color-paper: #f8f9fa; /* cards lifted off the canvas */
+
+  /* accent - read the contrast note above before using these on text */
+  --color-gold-300: #d9c79a;
+  --color-gold-500: #c5a059;
+  --color-gold-800: #84682f; /* the only gold permitted on light backgrounds */
+
+  /* status - muted, never a saturated UI green/red */
+  --color-success: #2f6b4f;
+  --color-danger: #8c2f2f;
+  --color-danger-soft: #f3e4e4;
+
+  /* hairlines: the primary divider of the whole design. Borders, not shadows. */
+  --color-rule: color-mix(in srgb, #c5a059 20%, transparent);
+  --color-rule-soft: color-mix(in srgb, #c5a059 10%, transparent);
+  --color-rule-invert: color-mix(in srgb, #d9c79a 22%, transparent);
+  --color-rule-neutral: color-mix(in srgb, #1e293b 12%, transparent);
+
+  /* ---- type ------------------------------------------------------------- */
+  /* Composed stacks. Per-character fallback resolves Turkish and Arabic: the
+     unicode-range on each face (see src/lib/fonts.ts) lets the browser skip to
+     the next family when a glyph is missing. The html[lang=ar] block below
+     re-points these two variables at the Arabic faces. */
+  --font-display:
+    var(--font-display-latin), var(--font-display-latin-ext), Georgia, 'Times New Roman', serif;
+  --font-body:
+    var(--font-body-latin), var(--font-body-latin-ext), system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Editorial scale. Display sizes are fluid so headlines never wrap awkwardly
+     between 360px and 1600px without a media query. */
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1.45;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.6;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.7;
+  --text-md: 1.0625rem;
+  --text-md--line-height: 1.75;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.7;
+  --text-xl: 1.375rem;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 1.625rem;
+  --text-2xl--line-height: 1.35;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 1.25;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.18;
+  --text-5xl: 3.25rem;
+  --text-5xl--line-height: 1.1;
+
+  --text-display: clamp(2.5rem, 1.55rem + 3.9vw, 4.75rem);
+  --text-display--line-height: 1.06;
+  --text-display-sm: clamp(1.875rem, 1.35rem + 2.1vw, 3rem);
+  --text-display-sm--line-height: 1.14;
+  /* The oversized section numerals (01, 02, ...) that anchor the grid. */
+  --text-numeral: clamp(2.75rem, 1.9rem + 3.4vw, 4.5rem);
+  --text-numeral--line-height: 1;
+
+  --tracking-*: initial;
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.011em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.04em;
+  /* small-caps gold labels above serif headings */
+  --tracking-label: 0.18em;
+  --tracking-label-wide: 0.26em;
+
+  --leading-*: initial;
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+  --leading-prose: 1.8;
+  /* Arabic needs more room between lines than Latin at the same size. */
+  --leading-arabic: 1.9;
+
+  /* ---- form ------------------------------------------------------------- */
+  --radius-*: initial;
+  --radius-none: 0px;
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-full: 9999px; /* the locale-switcher dot and avatars only */
+
+  --shadow-*: initial;
+  --shadow-none: none;
+  /* The only permitted elevation: a hairline, not a glow. Used by the sticky
+     header once it has left the top of the page. */
+  --shadow-rule: 0 1px 0 0 color-mix(in srgb, #1e293b 8%, transparent);
+  --shadow-panel:
+    0 1px 2px -1px color-mix(in srgb, #0a1128 10%, transparent),
+    0 0 0 1px color-mix(in srgb, #1e293b 6%, transparent);
+
+  --blur-*: initial;
+  --blur-frost: 14px;
+
+  /* ---- layout ----------------------------------------------------------- */
+  --container-*: initial;
+  --container-prose: 68ch; /* the measure for long-form legal copy */
+  --container-narrow: 44rem;
+  --container-content: 68rem;
+  --container-wide: 82rem;
+  --container-full: 96rem;
+
+  /* Editorial vertical rhythm. */
+  --spacing-gutter: clamp(1.25rem, 0.85rem + 1.8vw, 2.5rem);
+  --spacing-section: clamp(4.5rem, 2.6rem + 7vw, 9rem);
+  --spacing-section-sm: clamp(3rem, 2rem + 4vw, 5.5rem);
+
+  /* ---- motion ------------------------------------------------------------
+     "Barely perceptible": 400-600ms, ease-out, opacity plus a short translate.
+     Nothing springs, nothing bounces - none of these curves overshoot. */
+  --ease-*: initial;
+  --ease-linear: linear;
+  --ease-out-editorial: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --duration-*: initial;
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+  --duration-slow: 440ms;
+  --duration-slower: 600ms;
+
+  --animate-*: initial;
+  --animate-rise: rise var(--duration-slow) var(--ease-out-editorial) both;
+  --animate-fade: fade var(--duration-slow) var(--ease-out-editorial) both;
+
+  /* ---- breakpoints ------------------------------------------------------- */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* Direction-aware variants, declared explicitly rather than relying on build
+   defaults so mirroring behaviour is pinned by this file. */
+@custom-variant rtl (&:where([dir='rtl'], [dir='rtl'] *));
+@custom-variant ltr (&:where([dir='ltr'], [dir='ltr'] *));
+
+/* Opt-in variants for anything that must be silent when the visitor has asked
+   for reduced motion. */
+@custom-variant motion-ok (@media (prefers-reduced-motion: no-preference));
+@custom-variant motion-reduce (@media (prefers-reduced-motion: reduce));
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-rule-neutral);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Anchor targets must not hide under the sticky header. */
+    scroll-padding-block-start: 6.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-tight);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Stops the horizontal jitter when a scrollbar appears between routes. */
+    scrollbar-gutter: stable;
+  }
+
+  /* ---- Arabic ------------------------------------------------------------
+     Swaps the whole stack, opens up the leading and, critically, zeroes the
+     Latin letter-spacing: tracking applied to Arabic breaks the joining of the
+     script, so tracking-label and friends are neutralised for AR. */
+  html[lang|='ar'] {
+    --font-display:
+      var(--font-display-ar), var(--font-display-latin), var(--font-display-latin-ext),
+      'Times New Roman', serif;
+    --font-body:
+      var(--font-body-ar), var(--font-body-latin), var(--font-body-latin-ext), system-ui,
+      sans-serif;
+
+    --tracking-tighter: 0em;
+    --tracking-tight: 0em;
+    --tracking-wide: 0em;
+    --tracking-label: 0em;
+    --tracking-label-wide: 0em;
+
+    --leading-normal: 1.9;
+    --leading-relaxed: 1.9;
+    --leading-prose: 1.9;
+    --leading-snug: 1.6;
+    --leading-tight: 1.45;
+
+    /* Western Arabic digits per the brief - stop any face from substituting
+       Eastern Arabic-Indic forms for dates and phone numbers. */
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum';
+  }
+
+  html[lang|='ar'] body {
+    letter-spacing: 0;
+    line-height: 1.9;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: var(--tracking-tight);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible focus on every interactive element. There is no `outline: none`
+     anywhere in this codebase. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-800);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  [data-surface='navy'] :focus-visible {
+    outline-color: var(--color-gold-300);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, #c5a059 30%, transparent);
+    color: var(--color-ink);
+  }
+
+  hr {
+    border: 0;
+    border-block-start: 1px solid var(--color-rule);
+  }
+
+  /* Native controls inherit the type system rather than the OS. */
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  /* Global motion kill-switch. Components additionally gate Framer Motion
+     behind useReducedMotion(); this catches plain CSS transitions too. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   Utilities
+   --------------------------------------------------------------------------
+   Repeated editorial patterns are named here so JSX stays free of magic values.
+   ========================================================================== */
+
+/* The small-caps, letter-spaced label that sits above a serif heading. Colour
+   is applied at the call site (text-gold-800 on light, text-gold-500 on navy)
+   so the contrast rule stays a conscious decision every time. */
+@utility label {
+  font-family: var(--font-body);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@utility label-lg {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* A 1px gold hairline used as a rule mark beside a label. */
+@utility rule-mark {
+  display: inline-block;
+  inline-size: 2.25rem;
+  block-size: 1px;
+  background-color: var(--color-gold-500);
+  vertical-align: middle;
+}
+
+/* Long-form measure, applied to article bodies and legal pages. */
+@utility measure {
+  max-inline-size: var(--container-prose);
+}
+
+/* Frosted paper over the navy field - the only permitted glass treatment. */
+@utility frost {
+  background-color: color-mix(in srgb, #f4f1ea 8%, transparent);
+  backdrop-filter: blur(var(--blur-frost)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--blur-frost)) saturate(140%);
+  border: 1px solid var(--color-rule-invert);
+}
+
+/* Screen-reader-only text that becomes visible on focus (skip links). */
+@utility sr-focusable {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+
+  &:focus-visible {
+    position: fixed;
+    inset-block-start: 1rem;
+    inset-inline-start: 1rem;
+    inline-size: auto;
+    block-size: auto;
+    padding: 0.75rem 1.25rem;
+    margin: 0;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    z-index: 100;
+    background-color: var(--color-navy-900);
+    color: var(--color-canvas);
+  }
+}
+
+/* Directional glyphs (chevrons, arrows) mirror in RTL. The monogram, the phone
+   icon and the map pin must not, so mirroring is opt-in per icon. */
+@utility mirror-rtl {
+  @variant rtl {
+    scale: -1 1;
+  }
+}
+
+/* The contact form's honeypot field. Identical clipping to `sr-focusable`
+   minus the focus reveal: a real visitor, sighted or on a screen reader, must
+   never be able to find or focus this field. Only a bot that fills in every
+   field in the DOM trips it. */
+@utility honeypot {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}

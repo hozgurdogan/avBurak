@@ -1,0 +1,205 @@
+// ---------------------------------------------------------------------------
+// Av. Burak Ugur Ozturk - data model
+//
+// Design notes
+// ------------
+// * Target: MySQL 8 on cPanel shared hosting (no root/Docker access, database
+//   provisioned through the panel's "MySQL Databases" tool). Every "enum" is
+//   still a String column - not MySQL's native ENUM - with the allowed values
+//   documented here and validated at the application edge by Zod (see
+//   src/lib/validation). This keeps the constraint in code rather than in the
+//   DDL, and keeps a future move to Postgres a one-line provider change.
+// * Prisma's default `String` maps to VARCHAR(191) on MySQL. Columns that can
+//   legitimately exceed that (article bodies, contact messages, long-form
+//   summaries) are annotated with `@db.Text` / `@db.LongText` below so MySQL
+//   does not silently truncate them.
+// * A logical article ("Turkish company formation") is an ArticleGroup. Each
+//   locale-specific rendering of it is an Article row inside that group. This
+//   is what makes hreflang alternates resolvable with one query instead of
+//   guessing slugs across languages.
+// * Visitor IPs are stored only as a salted hash (ipHash) - KVKK data
+//   minimisation. The raw address is never persisted.
+// ---------------------------------------------------------------------------
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// --- Auth -------------------------------------------------------------------
+
+/// role: "ADMIN" | "EDITOR"
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         String    @default("EDITOR")
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  sessions Session[]
+  articles Article[] @relation("ArticleAuthor")
+
+  @@map("users")
+}
+
+/// Server-side session records make sign-out genuinely revocable: the signed
+/// cookie only carries the session id, so deleting the row kills the session
+/// everywhere, immediately.
+model Session {
+  id         String   @id @default(cuid())
+  userId     String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @default(now())
+  /// Some user agent strings run well past 191 characters.
+  userAgent  String?  @db.VarChar(512)
+  ipHash     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+}
+
+/// Sliding-window counters for login attempts and contact-form submissions.
+/// Kept in the database rather than memory so the limit survives a restart
+/// and stays correct behind a single-container deployment.
+model RateLimit {
+  id        String   @id @default(cuid())
+  /// "login" | "contact"
+  scope     String
+  /// hashed identifier (ip hash, or ip hash + email)
+  key       String
+  count     Int      @default(0)
+  windowEnd DateTime
+  createdAt DateTime @default(now())
+
+  @@unique([scope, key])
+  @@index([windowEnd])
+  @@map("rate_limits")
+}
+
+// --- Editorial --------------------------------------------------------------
+
+/// The logical article. Holds no content itself - it exists so that the TR, EN
+/// and AR renderings of the same piece can point at each other for hreflang.
+model ArticleGroup {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  articles Article[]
+
+  @@map("article_groups")
+}
+
+/// locale: "tr" | "en" | "ar"   status: "DRAFT" | "PUBLISHED"
+model Article {
+  id      String @id @default(cuid())
+  groupId String
+  locale  String
+  slug    String
+
+  title       String
+  summary     String   @db.Text
+  contentMd   String   @db.LongText
+  coverImage  String?
+  coverAlt    String?
+  readMinutes Int      @default(1)
+
+  metaTitle       String?
+  metaDescription String? @db.VarChar(320)
+  ogImage         String?
+
+  status      String    @default("DRAFT")
+  publishedAt DateTime?
+  authorId    String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  group      ArticleGroup      @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  author     User?             @relation("ArticleAuthor", fields: [authorId], references: [id], onDelete: SetNull)
+  categories ArticleCategory[]
+
+  @@unique([locale, slug])
+  @@unique([groupId, locale])
+  @@index([status, publishedAt])
+  @@index([locale, status])
+  @@index([groupId])
+  @@map("articles")
+}
+
+model Category {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  /// Display order in filter lists.
+  position  Int      @default(0)
+  createdAt DateTime @default(now())
+
+  translations CategoryTr[]
+  articles     ArticleCategory[]
+
+  @@map("categories")
+}
+
+/// Categories are shown to visitors, so they need translating too.
+model CategoryTr {
+  id         String @id @default(cuid())
+  categoryId String
+  locale     String
+  name       String
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, locale])
+  @@index([locale])
+  @@map("category_translations")
+}
+
+model ArticleCategory {
+  articleId  String
+  categoryId String
+
+  article  Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([articleId, categoryId])
+  @@index([categoryId])
+  @@map("article_categories")
+}
+
+// --- Contact ----------------------------------------------------------------
+
+/// status: "NEW" | "READ" | "ARCHIVED"
+model ContactMessage {
+  id      String  @id @default(cuid())
+  name    String
+  email   String
+  phone   String?
+  subject String
+  message String @db.Text
+  locale  String
+
+  /// Timestamp of the explicit KVKK consent tick. Never nullable in practice:
+  /// the server action refuses submissions without it.
+  consentAt DateTime
+  /// Salted hash of the submitter's IP - used for rate limiting and abuse
+  /// review only. The raw address is not stored.
+  ipHash    String?
+
+  status    String   @default("NEW")
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  @@index([status, createdAt])
+  @@index([createdAt])
+  @@map("contact_messages")
+}

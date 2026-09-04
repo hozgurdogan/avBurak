@@ -1,0 +1,238 @@
+{
+  "site": {
+    "attorney": "Av. Burak Uğur Öztürk",
+    "attorneyShort": "Burak Uğur Öztürk",
+    "role": "Avukat",
+    "monogramLabel": "Burak Uğur Öztürk — anasayfa"
+  },
+  "nav": {
+    "primary": "Ana menü",
+    "home": "Anasayfa",
+    "practiceAreas": "Çalışma Alanları",
+    "profile": "Profil",
+    "articles": "Makaleler",
+    "contact": "İletişim",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "skipToContent": "İçeriğe geç"
+  },
+  "locale": {
+    "label": "Dil",
+    "change": "Dili değiştir",
+    "current": "Seçili dil"
+  },
+  "home": {
+    "meta": {
+      "title": "Av. Burak Uğur Öztürk",
+      "description": "Şirketler hukuku, doğrudan yabancı yatırımlar, gayrimenkul edinimi, ticari sözleşmeler ve tahkim alanlarında çalışan bağımsız avukatlık bürosu."
+    },
+    "hero": {
+      "label": "Hukuk Bürosu",
+      "title": "Kurumsal hukuk, yabancı yatırım ve uyuşmazlık çözümü.",
+      "credential": "İstanbul Barosu'na kayıtlı avukat. Çalışma dilleri Türkçe, İngilizce ve Arapça.",
+      "lead": "Büro; şirket kuruluşu ve yapılandırma, doğrudan yabancı yatırımlar, taşınmaz edinimi, ticari sözleşmeler ile tahkim ve uyuşmazlık çözümü alanlarında çalışmaktadır.",
+      "contact": "İletişim",
+      "appointment": "Randevu talebi"
+    },
+    "practice": {
+      "label": "Çalışma Alanları",
+      "title": "Çalışılan hukuk alanları",
+      "lead": "Aşağıdaki başlıklar, büronun düzenli olarak çalıştığı alanları göstermektedir.",
+      "all": "Tüm çalışma alanları"
+    },
+    "profile": {
+      "label": "Profil",
+      "title": "Büro hakkında",
+      "body": "Büro, sınırlı sayıda dosya üzerinde doğrudan çalışma esasına dayanır. Her iş, ilgili mevzuatın ve güncel yargı uygulamasının incelenmesiyle başlar; müvekkile aktarılan değerlendirme, seçeneklerin ve bunlara bağlı risklerin açıkça ortaya konulmasını içerir.",
+      "link": "Profili görüntüle"
+    },
+    "articles": {
+      "label": "Makaleler",
+      "title": "Güncel yazılar",
+      "lead": "Mevzuat ve uygulamaya ilişkin genel bilgilendirme amaçlı yazılar.",
+      "all": "Tüm makaleler"
+    },
+    "contact": {
+      "label": "İletişim",
+      "title": "Görüşme talebi",
+      "body": "Dosyanıza ilişkin bir görüşme talep etmek için iletişim sayfasındaki formu kullanabilir veya doğrudan büroya ulaşabilirsiniz.",
+      "link": "İletişim sayfası"
+    }
+  },
+  "practiceAreas": {
+    "sirketler-hukuku": {
+      "name": "Şirketler Hukuku",
+      "summary": "Şirket kuruluşu ve tür değiştirme, esas sözleşme düzenlemeleri, sermaye artırımı, pay devri, ortaklar arası sözleşmeler ve genel kurul süreçleri.",
+      "body": [
+        "Kuruluş aşamasından itibaren şirketler hukukuna ilişkin işlemlerde çalışılmaktadır; şirket türü seçimi, esas sözleşmenin hazırlanması, sermaye yapısının belirlenmesi ve tescil süreçleri bu kapsamdadır.",
+        "Kuruluş sonrasında ise sermaye artırımı ve azaltılması, pay devri, ortaklar arası sözleşmelerin hazırlanması, genel kurul ve yönetim kurulu süreçlerinin yürütülmesi ile tür değiştirme ve birleşme işlemlerinde destek verilmektedir."
+      ]
+    },
+    "yabanci-yatirim": {
+      "name": "Yabancı Yatırım",
+      "summary": "Doğrudan yabancı yatırımların yapılandırılması, şube ve irtibat bürosu kurulumu, sektörel izinler, çalışma ve oturma izni süreçleri.",
+      "body": [
+        "Doğrudan Yabancı Yatırımlar Kanunu çerçevesinde, yabancı yatırımcıların Türkiye'de şirket kurması, şube veya irtibat bürosu açması süreçlerinde çalışılmaktadır.",
+        "Sektörel izin gerektiren faaliyetlerin tespiti, yabancı ortaklı şirketlerde çalışma ve oturma izni süreçlerinin takibi ile yatırım sonrası mevzuat uyumu konularında destek sağlanmaktadır."
+      ]
+    },
+    "gayrimenkul-hukuku": {
+      "name": "Gayrimenkul Hukuku",
+      "summary": "Taşınmaz edinimi ve tapu işlemleri, devir öncesi inceleme, satış vaadi sözleşmeleri, kat irtifakı ve kat mülkiyeti ile kira ilişkileri.",
+      "body": [
+        "Taşınmaz edinimi öncesinde tapu kaydının ve imar durumunun incelenmesi, satış vaadi sözleşmelerinin hazırlanması ile devir işlemlerinin tapu müdürlüğü nezdinde takibi bu alanın kapsamındadır.",
+        "Kat irtifakı ve kat mülkiyeti tesisi, kira sözleşmelerinin düzenlenmesi ve yabancı gerçek kişilerin taşınmaz ediniminde uygulanan yasal sınırlamalar bakımından değerlendirme yapılmaktadır."
+      ]
+    },
+    "ticari-sozlesmeler": {
+      "name": "Ticari Sözleşmeler",
+      "summary": "Distribütörlük, tedarik, hizmet ve lisans sözleşmelerinin hazırlanması ve müzakeresi; sınır ötesi sözleşmelerde uygulanacak hukuk ve yetki düzenlemeleri.",
+      "body": [
+        "Distribütörlük, tedarik, hizmet, lisans ve ortak girişim sözleşmeleri başta olmak üzere ticari sözleşmelerin hazırlanması ve karşı taraf metinlerinin incelenmesi bu alanda yürütülen çalışmalardır.",
+        "Sınır ötesi sözleşmelerde uygulanacak hukukun ve yetkili mahkeme veya tahkimin belirlenmesi, temerrüt ve mücbir sebep hükümlerinin düzenlenmesi konularında destek verilmektedir."
+      ]
+    },
+    "tahkim-ve-uyusmazlik-cozumu": {
+      "name": "Tahkim ve Uyuşmazlık Çözümü",
+      "summary": "Tahkim şartlarının kurulması, kurumsal ve ad hoc tahkim yargılamaları, yabancı hakem kararlarının tenfizi, arabuluculuk ve dava süreçleri.",
+      "body": [
+        "Sözleşmelere tahkim şartının eklenmesi, tahkim yeri ve dilinin belirlenmesi ile kurumsal veya ad hoc tahkim yargılamalarının takibi bu alanın kapsamındadır.",
+        "Yabancı hakem kararlarının Türkiye'de tenfizi, arabuluculuk süreçleri ve dava yoluyla uyuşmazlık çözümü konularında da çalışılmaktadır."
+      ]
+    },
+    "kisisel-verilerin-korunmasi": {
+      "name": "Kişisel Verilerin Korunması",
+      "summary": "KVKK uyum çalışmaları, aydınlatma ve açık rıza metinleri, veri envanteri, yurt dışına aktarım ve veri ihlali bildirimleri.",
+      "body": [
+        "6698 sayılı Kanun kapsamında veri sorumlusu yükümlülüklerinin tespiti, veri envanterinin çıkarılması ile aydınlatma ve açık rıza metinlerinin hazırlanması bu alanda yürütülen çalışmalardır.",
+        "Yurt dışına veri aktarımı süreçlerinin mevzuata uygun şekilde yapılandırılması ve veri ihlali bildirim süreçlerinde destek sağlanmaktadır."
+      ]
+    }
+  },
+  "practiceAreasPage": {
+    "meta": {
+      "title": "Çalışma Alanları",
+      "description": "Şirketler hukuku, yabancı yatırım, gayrimenkul hukuku, ticari sözleşmeler, tahkim ve uyuşmazlık çözümü ile kişisel verilerin korunması alanlarında çalışılmaktadır."
+    },
+    "label": "Çalışma Alanları",
+    "title": "Çalışılan hukuk alanları",
+    "lead": "Aşağıdaki başlıklar, büronun düzenli olarak çalıştığı alanları göstermektedir.",
+    "cta": "Detayları görüntüle"
+  },
+  "practiceAreaDetail": {
+    "back": "Tüm çalışma alanları",
+    "relatedLabel": "İlgili Makaleler",
+    "relatedEmpty": "Bu alanda henüz yayımlanmış makale bulunmamaktadır.",
+    "contactCta": "İletişime geçin"
+  },
+  "profilePage": {
+    "meta": {
+      "title": "Profil",
+      "description": "Av. Burak Uğur Öztürk — İstanbul Barosu'na kayıtlı avukat. Çalışma dilleri Türkçe, İngilizce ve Arapça."
+    },
+    "label": "Profil",
+    "title": "Av. Burak Uğur Öztürk",
+    "intro": "Av. Burak Uğur Öztürk, İstanbul Barosu'na kayıtlı olarak bağımsız avukat sıfatıyla faaliyet göstermektedir. Çalışma dilleri Türkçe, İngilizce ve Arapçadır; bu sayede yabancı yatırımcılar ve çok uluslu taraflarla doğrudan iletişim kurulabilmektedir.",
+    "admissionLabel": "Baro Kaydı",
+    "languagesLabel": "Çalışma Dilleri",
+    "languages": "Türkçe, İngilizce, Arapça",
+    "approachTitle": "Çalışma Yaklaşımı",
+    "approachBody": [
+      "Her dosya, ilgili mevzuatın ve güncel yargı uygulamasının incelenmesiyle başlar. Müvekkile aktarılan değerlendirme; mevcut seçenekleri, bu seçeneklere bağlı riskleri ve olası süreleri açıkça ortaya koyacak şekilde hazırlanır.",
+      "Dosya sayısı, her işe yeterli zaman ayrılabilmesi gözetilerek sınırlı tutulur. Müvekkil ile iletişim, sürecin her aşamasında düzenli bilgilendirme esasına dayanır."
+    ],
+    "scopeTitle": "Çalışma Alanları",
+    "scopeLinkText": "Çalışma alanlarını görüntüleyin",
+    "contactCta": "İletişime geçin"
+  },
+  "articlesPage": {
+    "meta": {
+      "title": "Makaleler",
+      "description": "Şirketler hukuku, yabancı yatırım, gayrimenkul, ticari sözleşmeler, tahkim ve kişisel verilerin korunması alanlarında genel bilgilendirme amaçlı yazılar."
+    },
+    "label": "Makaleler",
+    "title": "Güncel yazılar",
+    "lead": "Mevzuat ve uygulamaya ilişkin genel bilgilendirme amaçlı yazılar. Aşağıdaki listeyi kategoriye göre filtreleyebilirsiniz.",
+    "filterAll": "Tümü",
+    "filterLabel": "Kategori",
+    "searchLabel": "Makalelerde ara",
+    "searchPlaceholder": "Anahtar kelime",
+    "searchSubmit": "Ara",
+    "empty": "Bu kritere uygun makale bulunamadı.",
+    "prevPage": "Önceki",
+    "nextPage": "Sonraki",
+    "pageLabel": "Sayfa {page} / {totalPages}"
+  },
+  "articleDetail": {
+    "back": "Tüm makalelere dön",
+    "relatedLabel": "İlgili Makaleler"
+  },
+  "contactPage": {
+    "meta": {
+      "title": "İletişim",
+      "description": "Büroya ulaşmak veya bir görüşme talep etmek için iletişim bilgileri ve form aşağıdadır."
+    },
+    "label": "İletişim",
+    "title": "Görüşme Talebi",
+    "lead": "Dosyanıza ilişkin bir görüşme talep etmek için aşağıdaki formu doldurabilir veya doğrudan büroya ulaşabilirsiniz. Form üzerinden gönderilen bilgiler yalnızca talebinizin değerlendirilmesi amacıyla kullanılır.",
+    "directLabel": "Doğrudan İletişim",
+    "officeLabel": "Büro Adresi",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon (opsiyonel)",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "consent": "<link>KVKK Aydınlatma Metni'ni</link> okudum, kişisel verilerimin bu kapsamda işlenmesini kabul ediyorum.",
+      "submit": "Gönder",
+      "submitting": "Gönderiliyor…",
+      "success": "Mesajınız alındı. En kısa sürede tarafınızla iletişime geçilecektir.",
+      "errorGeneric": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+      "errorValidation": "Lütfen formu eksiksiz ve doğru şekilde doldurun.",
+      "errorRateLimit": "Kısa süre içinde çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin.",
+      "errorConsent": "Devam etmek için KVKK Aydınlatma Metni'ni onaylamanız gerekmektedir."
+    }
+  },
+  "legalPages": {
+    "kvkk": {
+      "nav": "KVKK Aydınlatma Metni"
+    },
+    "gizlilik": {
+      "nav": "Gizlilik Politikası"
+    }
+  },
+  "article": {
+    "readingTime": "{minutes} dk okuma",
+    "publishedOn": "Yayın tarihi: {date}",
+    "categoryLabel": "Kategori"
+  },
+  "footer": {
+    "navTitle": "Site",
+    "officeTitle": "Büro",
+    "contactTitle": "İletişim",
+    "legalTitle": "Hukuki Bilgilendirme",
+    "barRegistration": "{bar} — Sicil No: {registryNo}",
+    "kvkk": "KVKK Aydınlatma Metni",
+    "privacy": "Gizlilik Politikası",
+    "rights": "© {year} Av. Burak Uğur Öztürk. Tüm hakları saklıdır.",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "whatsapp": "WhatsApp"
+  },
+  "disclaimer": {
+    "title": "Hukuki Bilgilendirme",
+    "body": "Bu sitede yer alan içerik genel bilgilendirme amacı taşır; hukuki tavsiye niteliğinde değildir ve avukat–müvekkil ilişkisi doğurmaz. Somut bir uyuşmazlık veya işlem bakımından karar vermeden önce, kendi durumunuza ilişkin hukuki görüş alınması gerekir. Mevzuat ve yargı uygulaması değişebileceğinden, içeriğin güncelliği garanti edilmez."
+  },
+  "notFound": {
+    "label": "Hata 404",
+    "title": "Aradığınız sayfa bulunamadı",
+    "body": "Bağlantı taşınmış veya kaldırılmış olabilir. Anasayfadan devam edebilirsiniz.",
+    "home": "Anasayfaya dön"
+  },
+  "error": {
+    "label": "Hata",
+    "title": "Beklenmeyen bir hata oluştu",
+    "body": "İşlem tamamlanamadı. Sayfayı yeniden yüklemeyi deneyebilirsiniz.",
+    "retry": "Yeniden dene"
+  }
+}
