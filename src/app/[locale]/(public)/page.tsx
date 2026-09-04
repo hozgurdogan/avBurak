@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/locales';
 import { practiceAreaSlugs, practiceAreaNumber } from '@/content/practice-areas';
+import { office } from '@/content/office';
 import { getLatestArticles } from '@/lib/articles';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ActionLink } from '@/components/ui/action-link';
@@ -82,8 +83,7 @@ export default async function HomePage({ params }: PageProps) {
             <h1 className="mt-6 font-display text-display font-normal text-canvas">
               {tHero('title')}
             </h1>
-            <p className="measure mt-8 text-lg text-mist">{tHero('credential')}</p>
-            <p className="measure mt-4 text-md text-mist-muted">{tHero('lead')}</p>
+            <p className="measure mt-8 text-lg text-mist">{tHero('lead')}</p>
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <ActionLink href="/iletisim" variant="solid" surface="navy">
                 {tHero('contact')}
@@ -97,6 +97,27 @@ export default async function HomePage({ params }: PageProps) {
               </ActionLink>
             </div>
           </div>
+
+          {/* The credential rail. This is the factual footing the hero used to
+              carry as a sentence of prose: bar admission, working languages and
+              the areas worked in - nothing that could read as a claim of
+              distinction, which the advertising regulation forbids. Splitting it
+              into a hairline-ruled row also gives the hero a base, so the copy
+              no longer floats in the upper-left of an empty navy field. */}
+          <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule-invert pt-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <dt className="label text-gold-500">{tHero('registrationLabel')}</dt>
+              <dd className="mt-3 text-sm text-mist">{office.bar.association}</dd>
+            </div>
+            <div>
+              <dt className="label text-gold-500">{tHero('languagesLabel')}</dt>
+              <dd className="mt-3 text-sm text-mist">{tHero('languages')}</dd>
+            </div>
+            <div>
+              <dt className="label text-gold-500">{tHero('focusLabel')}</dt>
+              <dd className="mt-3 text-sm text-mist">{tHero('focus')}</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -111,33 +132,41 @@ export default async function HomePage({ params }: PageProps) {
           lead={tPractice('lead')}
         />
 
-        <ol className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-12">
+        {/* An index, not a card grid. Six equal boxes read as a template; a
+            ruled list with the ordinal held out in the margin is how a printed
+            table of contents sets the same material, and it lets the summary
+            sit beside its heading instead of underneath it. The asymmetry is in
+            the column split (1 / 4 / 6), not in scattered start columns. */}
+        <ol className="mt-14 border-t border-rule">
           {practiceAreaSlugs.map((slug, index) => (
-            <Reveal
-              as="li"
-              key={slug}
-              index={index % 4}
-              className={
-                index % 3 === 0
-                  ? 'lg:col-span-5 lg:col-start-1'
-                  : index % 3 === 1
-                    ? 'lg:col-span-5 lg:col-start-8'
-                    : 'lg:col-span-5 lg:col-start-3'
-              }
-            >
+            <Reveal as="li" key={slug} index={index % 3}>
               <Link
                 href={`/calisma-alanlari/${slug}`}
-                className="group block border-t border-rule pt-6"
+                className="group grid items-baseline gap-x-8 gap-y-3 border-b border-rule py-8 lg:grid-cols-12"
               >
-                <span className="label text-gold-800" aria-hidden="true">
+                <span className="label text-gold-800 lg:col-span-1" aria-hidden="true">
                   {practiceAreaNumber(index)}
                 </span>
-                <h3 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800 lg:col-span-4">
                   {tPracticeAreas(`${slug}.name`)}
                 </h3>
-                <p className="mt-3 measure text-sm text-ink-muted">
+                <p className="text-sm text-ink-muted lg:col-span-6">
                   {tPracticeAreas(`${slug}.summary`)}
                 </p>
+                <span
+                  aria-hidden="true"
+                  className="hidden text-gold-800 opacity-0 transition-opacity duration-base ease-out-editorial group-hover:opacity-100 lg:col-span-1 lg:block lg:justify-self-end"
+                >
+                  <svg viewBox="0 0 24 12" width="22" height="11" focusable="false" className="mirror-rtl">
+                    <path
+                      d="M0 6h21M16 1l5 5-5 5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="square"
+                    />
+                  </svg>
+                </span>
               </Link>
             </Reveal>
           ))}

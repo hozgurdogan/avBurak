@@ -29,7 +29,11 @@
     "hero": {
       "label": "Law Practice",
       "title": "Corporate law, foreign investment and dispute resolution.",
-      "credential": "Attorney admitted to the Istanbul Bar Association. Working languages: Turkish, English and Arabic.",
+      "registrationLabel": "Admission",
+    "languagesLabel": "Working Languages",
+    "languages": "Turkish · English · Arabic",
+    "focusLabel": "Practice Focus",
+    "focus": "Corporate law, foreign investment, dispute resolution",
       "lead": "The practice works in company formation and restructuring, foreign direct investment, acquisition of immovable property, commercial contracts, and arbitration and dispute resolution.",
       "contact": "Contact",
       "appointment": "Request an appointment"
@@ -175,6 +179,8 @@
     },
     "label": "Contact",
     "title": "Request a Consultation",
+    "formLabel": "Request Form",
+    "requiredNote": "Fields marked with an asterisk are required.",
     "lead": "You may use the form below to request a consultation about your matter, or contact the office directly. Information submitted through the form is used solely to assess your request.",
     "directLabel": "Direct Contact",
     "officeLabel": "Office Address",

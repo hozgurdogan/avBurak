@@ -205,12 +205,31 @@ export function ContactForm() {
       </div>
 
       <div>
+        {/* Matches the `solid` ActionLink so the form's call to action and the
+            site's links are visibly the same control; it stays a <button>
+            because it submits rather than navigates. */}
         <button
           type="submit"
           disabled={isPending}
-          className="bg-navy-900 px-6 py-3.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base hover:bg-navy-800 disabled:opacity-60"
+          className="group inline-flex items-center gap-3 rounded-sm bg-navy-900 px-6 py-3.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800 disabled:opacity-60"
         >
           {isPending ? t('submitting') : t('submit')}
+          <svg
+            viewBox="0 0 24 12"
+            width="22"
+            height="11"
+            aria-hidden="true"
+            focusable="false"
+            className="mirror-rtl shrink-0 transition-transform duration-base ease-out-editorial group-hover:translate-x-1"
+          >
+            <path
+              d="M0 6h21M16 1l5 5-5 5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="square"
+            />
+          </svg>
         </button>
       </div>
     </form>

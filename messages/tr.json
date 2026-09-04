@@ -29,7 +29,11 @@
     "hero": {
       "label": "Hukuk Bürosu",
       "title": "Kurumsal hukuk, yabancı yatırım ve uyuşmazlık çözümü.",
-      "credential": "İstanbul Barosu'na kayıtlı avukat. Çalışma dilleri Türkçe, İngilizce ve Arapça.",
+      "registrationLabel": "Kayıt",
+      "languagesLabel": "Çalışma Dilleri",
+      "languages": "Türkçe · İngilizce · Arapça",
+      "focusLabel": "Çalışma Alanları",
+      "focus": "Kurumsal hukuk, yabancı yatırım, uyuşmazlık çözümü",
       "lead": "Büro; şirket kuruluşu ve yapılandırma, doğrudan yabancı yatırımlar, taşınmaz edinimi, ticari sözleşmeler ile tahkim ve uyuşmazlık çözümü alanlarında çalışmaktadır.",
       "contact": "İletişim",
       "appointment": "Randevu talebi"
@@ -175,6 +179,8 @@
     },
     "label": "İletişim",
     "title": "Görüşme Talebi",
+    "formLabel": "Talep Formu",
+    "requiredNote": "İşaretli alanların doldurulması zorunludur.",
     "lead": "Dosyanıza ilişkin bir görüşme talep etmek için aşağıdaki formu doldurabilir veya doğrudan büroya ulaşabilirsiniz. Form üzerinden gönderilen bilgiler yalnızca talebinizin değerlendirilmesi amacıyla kullanılır.",
     "directLabel": "Doğrudan İletişim",
     "officeLabel": "Büro Adresi",
