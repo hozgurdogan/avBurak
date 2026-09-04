@@ -5,6 +5,14 @@ import { SESSION_COOKIE_NAME, signSessionToken, verifySessionToken } from './tok
 
 const maxAgeSeconds = Number(process.env.SESSION_MAX_AGE ?? 28800);
 
+// Mirrors the HTTPS_IS_LIVE flag in next.config.ts - flip both together once
+// the production domain has a real, trusted certificate. A `Secure` cookie
+// is silently dropped by the browser over a plain-HTTP connection, which is
+// indistinguishable from "login succeeded but nothing happened": the
+// redirect to /admin/panel fires, finds no session, and bounces straight
+// back to the login page with no error shown anywhere.
+const COOKIES_REQUIRE_HTTPS = false;
+
 export type CurrentUser = {
   id: string;
   email: string;
@@ -30,7 +38,7 @@ export async function createSession(
   const store = await cookies();
   store.set(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: COOKIES_REQUIRE_HTTPS,
     sameSite: 'lax',
     path: '/',
     maxAge: maxAgeSeconds,
