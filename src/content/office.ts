@@ -1,15 +1,17 @@
 /**
  * Practice details shown in the footer, on the contact page and in the JSON-LD.
+ * The postal address is structured rather than a single string because
+ * schema.org's PostalAddress needs the parts separately.
  *
- * Contact channels come from environment variables so they can be changed
- * without a code edit. The postal address is structured rather than a single
- * string because schema.org's PostalAddress needs the parts separately.
- *
- * The office phone/WhatsApp/e-mail still come from environment variables so
- * they can be changed on the server without a code edit; the address and bar
- * registration below are set directly, since they are not expected to change
- * often and shipping them in code means the site is never one env var away
- * from showing the wrong ones.
+ * Everything below is set directly rather than read from a `NEXT_PUBLIC_*`
+ * environment variable. That was tried first and does not actually work on
+ * this host: `NEXT_PUBLIC_*` values are inlined into the built JavaScript at
+ * `next build` time, not read from the server's environment at request time,
+ * and this deployment ships a `.next` built on a dev machine rather than
+ * building on the server - so editing the server's `.env` and restarting can
+ * never change one of these values, only a rebuild-and-redeploy can. None of
+ * these are secrets (a public office phone/e-mail is meant to be shown), so
+ * shipping them as real values in code is both simpler and actually works.
  */
 export const office = {
   address: {
@@ -23,12 +25,12 @@ export const office = {
    *  builds a text-query URL from the address above) or anywhere else yet. */
   geo: { latitude: 41.034, longitude: 28.675 },
   bar: {
-    association: process.env.NEXT_PUBLIC_BAR_ASSOCIATION ?? 'İstanbul Barosu',
-    registryNo: process.env.NEXT_PUBLIC_BAR_REGISTRY_NO ?? '84442',
+    association: 'İstanbul Barosu',
+    registryNo: '84442',
   },
-  phone: process.env.NEXT_PUBLIC_OFFICE_PHONE ?? '',
-  whatsapp: process.env.NEXT_PUBLIC_OFFICE_WHATSAPP ?? '',
-  email: process.env.NEXT_PUBLIC_OFFICE_EMAIL ?? '',
+  phone: '+90 543 676 65 33',
+  whatsapp: '+90 543 676 65 33',
+  email: 'burak2504@gmail.com',
 } as const;
 
 /** Single-line address for the footer and for `tel:`-style contexts. */
