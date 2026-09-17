@@ -61,9 +61,11 @@ export default async function ProfilePage({ params }: PageProps) {
         </div>
 
         <aside className="lg:col-span-4">
-          {/* /public/images/profil.jpg - drop the real portrait there; nothing
-              else in this component needs to change. Until the file exists the
-              browser shows a broken-image icon here, which is harmless.
+          {/* /public/images/profil.jpg - the current file is a small
+              262x349 vesikalık; stretched across the full column it turns
+              visibly soft, so it is shown at close to its native size as a
+              small formal portrait instead. Swap in a higher-resolution
+              file (800x1000 or larger) and this can go back to `w-full`.
 
               Plain <img>, not next/image: the optimizer needs `sharp` at
               request time, and this cPanel/Passenger host has already shown
@@ -73,9 +75,9 @@ export default async function ProfilePage({ params }: PageProps) {
           <img
             src="/images/profil.jpg"
             alt={t('portraitAlt')}
-            width={480}
-            height={600}
-            className="aspect-[4/5] w-full border border-rule-neutral object-cover"
+            width={160}
+            height={213}
+            className="aspect-[3/4] w-40 border border-rule-neutral object-cover"
           />
 
           <dl className="mt-8 flex flex-col gap-6 border-t border-rule pt-8">

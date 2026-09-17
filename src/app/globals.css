@@ -165,7 +165,15 @@
   --container-narrow: 44rem;
   --container-content: 68rem;
   --container-wide: 82rem;
-  --container-full: 96rem;
+  /* NOT named `--container-full`: Tailwind treats "full" as the reserved
+     keyword for 100% on every w-/h-/max-w-/size-* utility, so a theme key
+     literally called "full" collides with it and silently redefines every
+     `w-full`/`h-full` in the codebase to this fixed 96rem instead of 100%.
+     That is what was making the page render far wider than the viewport on
+     phones (e.g. the header's hamburger icon lines, meant to be `w-full` of
+     a 24px box, were rendering 1536px wide). Named `widest` instead so
+     `max-w-widest` is available without shadowing the built-in keyword. */
+  --container-widest: 96rem;
 
   /* Editorial vertical rhythm. */
   --spacing-gutter: clamp(1.25rem, 0.85rem + 1.8vw, 2.5rem);
@@ -252,6 +260,13 @@
     /* Anchor targets must not hide under the sticky header. */
     scroll-padding-block-start: 6.5rem;
     -webkit-tap-highlight-color: transparent;
+    /* Belt-and-suspenders against horizontal scroll on narrow phones: Turkish
+       (and Arabic) run long unhyphenated compound words at the hero's large
+       display size, and by default CSS never breaks a word without a space
+       in it, so one long word can force the whole page wider than the
+       viewport. `overflow-wrap` on body is the real fix; this is the
+       fallback in case something new someday slips past it anyway. */
+    overflow-x: hidden;
   }
 
   body {
@@ -267,6 +282,8 @@
     -moz-osx-font-smoothing: grayscale;
     /* Stops the horizontal jitter when a scrollbar appears between routes. */
     scrollbar-gutter: stable;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
   }
 
   /* ---- Arabic ------------------------------------------------------------
