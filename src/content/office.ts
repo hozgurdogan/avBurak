@@ -45,3 +45,21 @@ export function telHref(): string | null {
   const digits = office.phone.replace(/[^\d+]/g, '');
   return digits.length > 0 ? `tel:${digits}` : null;
 }
+
+/**
+ * Key-less Google Maps embed (`/maps?q=...&output=embed`) built from the
+ * office address. No API key, no analytics, no cookie from Google until the
+ * visitor actually interacts with the iframe.
+ *
+ * NOTE ON SCOPE: the Master Build Prompt's absolute constraints list
+ * "no third-party embeds (maps, analytics, font CDN, social media)" and
+ * "no client testimonials/reviews/ratings" - both directly implicated by
+ * this embed and by `src/content/reviews.ts`. The client was told this
+ * explicitly and chose to proceed anyway (2026-09-17), so this is a
+ * deliberate, informed override of that constraint for this one feature,
+ * not an oversight. It has not been reviewed by counsel for TBB Reklam
+ * Yasağı Yönetmeliği compliance - that review should happen before launch.
+ */
+export function mapsEmbedSrc(): string {
+  return `https://www.google.com/maps?q=${encodeURIComponent(formatAddress())}&output=embed`;
+}

@@ -15,7 +15,8 @@
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
     "skipToContent": "İçeriğe geç",
-    "tools": "Araçlar"
+    "tools": "Araçlar",
+    "faq": "SSS"
   },
   "locale": {
     "label": "Dil",
@@ -25,17 +26,17 @@
   "home": {
     "meta": {
       "title": "Av. Burak Uğur Öztürk",
-      "description": "Şirketler hukuku, doğrudan yabancı yatırımlar, gayrimenkul edinimi, ticari sözleşmeler ve tahkim alanlarında çalışan bağımsız avukatlık bürosu."
+      "description": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku, kira hukuku ile tahkim ve uyuşmazlık çözümü alanlarında çalışan avukatlık bürosu."
     },
     "hero": {
       "label": "Hukuk Bürosu",
-      "title": "Kurumsal hukuk, yabancı yatırım ve uyuşmazlık çözümü.",
+      "title": "İş hukuku, icra ve boşanma uyuşmazlıklarında hukuki destek.",
       "registrationLabel": "Kayıt",
       "languagesLabel": "Çalışma Dilleri",
       "languages": "Türkçe · İngilizce · Arapça",
       "focusLabel": "Çalışma Alanları",
-      "focus": "Kurumsal hukuk, yabancı yatırım, uyuşmazlık çözümü",
-      "lead": "Büro; şirket kuruluşu ve yapılandırma, doğrudan yabancı yatırımlar, taşınmaz edinimi, ticari sözleşmeler ile tahkim ve uyuşmazlık çözümü alanlarında çalışmaktadır.",
+      "focus": "İş Hukuku, İcra Hukuku, Boşanma ve Aile Hukuku",
+      "lead": "Büro; iş hukuku, icra ve iflas takipleri, boşanma ve aile hukuku, miras hukuku ile kira uyuşmazlıkları başta olmak üzere çeşitli hukuk alanlarında çalışmaktadır.",
       "contact": "İletişim",
       "appointment": "Randevu talebi"
     },
@@ -138,6 +139,7 @@
     "label": "Profil",
     "title": "Av. Burak Uğur Öztürk",
     "intro": "Av. Burak Uğur Öztürk, İstanbul Barosu'na kayıtlı olarak bağımsız avukat sıfatıyla faaliyet göstermektedir. Çalışma dilleri Türkçe, İngilizce ve Arapçadır; bu sayede yabancı yatırımcılar ve çok uluslu taraflarla doğrudan iletişim kurulabilmektedir.",
+    "portraitAlt": "Av. Burak Uğur Öztürk",
     "admissionLabel": "Baro Kaydı",
     "languagesLabel": "Çalışma Dilleri",
     "languages": "Türkçe, İngilizce, Arapça",
@@ -478,6 +480,12 @@
     "lead": "Dosyanıza ilişkin bir görüşme talep etmek için aşağıdaki formu doldurabilir veya doğrudan büroya ulaşabilirsiniz. Form üzerinden gönderilen bilgiler yalnızca talebinizin değerlendirilmesi amacıyla kullanılır.",
     "directLabel": "Doğrudan İletişim",
     "officeLabel": "Büro Adresi",
+    "mapLabel": "Konum",
+    "mapTitle": "Büro konumu — Google Haritalar",
+    "serviceAreasLabel": "Hizmet Verilen Bölgeler",
+    "serviceAreasBody": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku ile kira hukuku alanlarında; {districts} başta olmak üzere çevre ilçelerde hizmet verilmektedir.",
+    "reviewsLabel": "Google Yorumları",
+    "reviewRating": "5 üzerinden {rating} yıldız",
     "form": {
       "name": "Ad Soyad",
       "email": "E-posta",
@@ -518,7 +526,8 @@
     "rights": "© {year} Av. Burak Uğur Öztürk. Tüm hakları saklıdır.",
     "phone": "Telefon",
     "email": "E-posta",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "serviceAreasNote": "Silivri, Çatalca, Büyükçekmece, Beylikdüzü, Esenyurt ve Avcılar başta olmak üzere çevre ilçelerde; iş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku ve kira hukuku alanlarında hizmet verilmektedir."
   },
   "disclaimer": {
     "title": "Hukuki Bilgilendirme",

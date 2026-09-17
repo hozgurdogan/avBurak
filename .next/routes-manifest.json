@@ -209,6 +209,14 @@
         "nxtPlocale": "nxtPlocale"
       },
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/profil(?:/)?$"
+    },
+    {
+      "page": "/[locale]/sss",
+      "regex": "^/([^/]+?)/sss(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/sss(?:/)?$"
     }
   ],
   "staticRoutes": [

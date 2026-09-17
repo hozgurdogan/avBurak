@@ -33,7 +33,8 @@ export default async function ProfilePage({ params }: PageProps) {
   const approachBody = t.raw('approachBody') as string[];
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <SectionHeading as="h1" label={t('label')} title={t('title')} />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-8">
@@ -60,7 +61,24 @@ export default async function ProfilePage({ params }: PageProps) {
         </div>
 
         <aside className="lg:col-span-4">
-          <dl className="flex flex-col gap-6 border-t border-rule pt-8 lg:border-t-0 lg:border-s lg:ps-8 lg:pt-0">
+          {/* /public/images/profil.jpg - drop the real portrait there; nothing
+              else in this component needs to change. Until the file exists the
+              browser shows a broken-image icon here, which is harmless.
+
+              Plain <img>, not next/image: the optimizer needs `sharp` at
+              request time, and this cPanel/Passenger host has already shown
+              process-limit failures (see next.config.ts) - not worth risking
+              for a single portrait. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/profil.jpg"
+            alt={t('portraitAlt')}
+            width={480}
+            height={600}
+            className="aspect-[4/5] w-full border border-rule-neutral object-cover"
+          />
+
+          <dl className="mt-8 flex flex-col gap-6 border-t border-rule pt-8">
             <div>
               <dt className="label text-ink-faint">{t('admissionLabel')}</dt>
               <dd className="mt-2 text-sm text-ink">{office.bar.association}</dd>
@@ -78,6 +96,7 @@ export default async function ProfilePage({ params }: PageProps) {
           </div>
         </aside>
       </div>
+    </div>
     </section>
   );
 }

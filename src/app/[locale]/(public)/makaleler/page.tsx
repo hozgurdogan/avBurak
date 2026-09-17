@@ -71,7 +71,8 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
   };
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
       <div className="mt-10 flex flex-col gap-8 border-t border-rule pt-8 lg:flex-row lg:items-start lg:justify-between">
@@ -181,6 +182,7 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
           )}
         </nav>
       ) : null}
+    </div>
     </section>
   );
 }

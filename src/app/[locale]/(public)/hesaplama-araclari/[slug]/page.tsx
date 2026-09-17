@@ -45,7 +45,8 @@ export default async function ToolPage({ params }: PageProps) {
   const others = tools.filter((tool) => tool.slug !== slug).slice(0, 3);
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <div className="mb-10">
         <ActionLink href="/hesaplama-araclari" variant="quiet">
           {tPage('back')}
@@ -87,6 +88,7 @@ export default async function ToolPage({ params }: PageProps) {
           ))}
         </ul>
       </div>
+    </div>
     </section>
   );
 }

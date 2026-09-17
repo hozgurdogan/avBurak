@@ -78,7 +78,8 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <section className="mx-auto max-w-wide px-gutter py-section">
+      <section className="bg-canvas-deep">
+      <div className="mx-auto max-w-wide px-gutter py-section">
         <div className="mb-10">
           <ActionLink href="/calisma-alanlari" variant="quiet">
             {tDetail('back')}
@@ -108,6 +109,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       <section className="bg-paper">

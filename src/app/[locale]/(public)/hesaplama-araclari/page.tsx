@@ -43,7 +43,8 @@ export default async function ToolsPage({ params }: PageProps) {
   const [t, tTools] = await Promise.all([getTranslations('toolsPage'), getTranslations('tools')]);
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
       <ol className="mt-14 border-t border-rule">
@@ -82,6 +83,7 @@ export default async function ToolsPage({ params }: PageProps) {
       </ol>
 
       <LegalDisclaimer className="mt-16 max-w-narrow" />
+    </div>
     </section>
   );
 }

@@ -15,7 +15,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "skipToContent": "Skip to content",
-    "tools": "Tools"
+    "tools": "Tools",
+    "faq": "FAQ"
   },
   "locale": {
     "label": "Language",
@@ -25,17 +26,17 @@
   "home": {
     "meta": {
       "title": "Burak Uğur Öztürk, Attorney at Law",
-      "description": "An independent law practice working in corporate law, foreign direct investment, real estate acquisition, commercial contracts and arbitration."
+      "description": "A law practice working in labour law, enforcement law, divorce and family law, inheritance law, tenancy law, and arbitration and dispute resolution."
     },
     "hero": {
       "label": "Law Practice",
-      "title": "Corporate law, foreign investment and dispute resolution.",
+      "title": "Legal support in labour, enforcement and divorce disputes.",
       "registrationLabel": "Admission",
       "languagesLabel": "Working Languages",
       "languages": "Turkish · English · Arabic",
       "focusLabel": "Practice Focus",
-      "focus": "Corporate law, foreign investment, dispute resolution",
-      "lead": "The practice works in company formation and restructuring, foreign direct investment, acquisition of immovable property, commercial contracts, and arbitration and dispute resolution.",
+      "focus": "Labour Law, Enforcement Law, Divorce and Family Law",
+      "lead": "The practice works primarily in labour law, enforcement and bankruptcy proceedings, divorce and family law, inheritance law, and tenancy disputes, among other areas.",
       "contact": "Contact",
       "appointment": "Request an appointment"
     },
@@ -138,6 +139,7 @@
     "label": "Profile",
     "title": "Burak Uğur Öztürk, Attorney at Law",
     "intro": "Burak Uğur Öztürk practises independently, admitted to the Istanbul Bar Association. The working languages are Turkish, English and Arabic, allowing direct communication with foreign investors and multinational parties.",
+    "portraitAlt": "Burak Uğur Öztürk, Attorney at Law",
     "admissionLabel": "Bar Admission",
     "languagesLabel": "Working Languages",
     "languages": "Turkish, English, Arabic",
@@ -478,6 +480,12 @@
     "lead": "You may use the form below to request a consultation about your matter, or contact the office directly. Information submitted through the form is used solely to assess your request.",
     "directLabel": "Direct Contact",
     "officeLabel": "Office Address",
+    "mapLabel": "Location",
+    "mapTitle": "Office location — Google Maps",
+    "serviceAreasLabel": "Areas Served",
+    "serviceAreasBody": "Legal services are provided in labour law, enforcement law, divorce and family law, inheritance law, and tenancy law, primarily across {districts} and the surrounding districts.",
+    "reviewsLabel": "Google Reviews",
+    "reviewRating": "{rating} out of 5 stars",
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -518,7 +526,8 @@
     "rights": "© {year} Burak Uğur Öztürk. All rights reserved.",
     "phone": "Telephone",
     "email": "E-mail",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "serviceAreasNote": "Legal services are provided across Silivri, Çatalca, Büyükçekmece, Beylikdüzü, Esenyurt, Avcılar and the surrounding districts, in labour law, enforcement law, divorce and family law, inheritance law and tenancy law."
   },
   "disclaimer": {
     "title": "Legal Notice",

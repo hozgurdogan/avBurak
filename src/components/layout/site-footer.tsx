@@ -9,6 +9,7 @@ const siteLinks = [
   { href: '/profil', key: 'profile' },
   { href: '/makaleler', key: 'articles' },
   { href: '/hesaplama-araclari', key: 'tools' },
+  { href: '/sss', key: 'faq' },
   { href: '/iletisim', key: 'contact' },
 ] as const;
 
@@ -44,6 +45,7 @@ export function SiteFooter() {
           <div className="lg:col-span-3">
             <h2 className="label text-gold-500">{t('officeTitle')}</h2>
             <address className="mt-4 text-sm not-italic text-mist">{formatAddress()}</address>
+            <p className="mt-4 text-xs leading-normal text-mist-muted">{t('serviceAreasNote')}</p>
           </div>
 
           <div className="lg:col-span-2">

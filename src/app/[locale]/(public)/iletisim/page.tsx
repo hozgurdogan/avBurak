@@ -5,7 +5,10 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ContactForm } from '@/components/forms/contact-form';
-import { office, formatAddress, telHref, whatsappHref } from '@/content/office';
+import { office, formatAddress, telHref, whatsappHref, mapsEmbedSrc } from '@/content/office';
+import { serviceAreaDistricts } from '@/content/service-areas';
+import { reviews } from '@/content/reviews';
+import type { Locale } from '@/i18n/locales';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -36,9 +39,11 @@ export default async function ContactPage({ params }: PageProps) {
 
   const tel = telHref();
   const whatsapp = whatsappHref();
+  const localeReviews = reviews[locale as Locale];
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
       <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-8">
@@ -112,8 +117,50 @@ export default async function ContactPage({ params }: PageProps) {
               })}
             </p>
           </div>
+
+          <div className="mt-6 border border-rule-neutral bg-paper p-8">
+            <h2 className="label text-gold-800">{t('mapLabel')}</h2>
+            <div className="mt-5 aspect-[4/3] w-full overflow-hidden border border-rule-neutral">
+              <iframe
+                src={mapsEmbedSrc()}
+                title={t('mapTitle')}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-full w-full border-0"
+              />
+            </div>
+          </div>
+
+          <div className="mt-6 border border-rule-neutral bg-paper p-8">
+            <h2 className="label text-gold-800">{t('serviceAreasLabel')}</h2>
+            <p className="mt-4 text-sm leading-prose text-ink-muted">
+              {t('serviceAreasBody', { districts: serviceAreaDistricts.join(', ') })}
+            </p>
+          </div>
+
+          {localeReviews.length > 0 ? (
+            <div className="mt-6 border border-rule-neutral bg-paper p-8">
+              <h2 className="label text-gold-800">{t('reviewsLabel')}</h2>
+              <ul className="mt-5 flex flex-col divide-y divide-rule-neutral">
+                {localeReviews.map((review) => (
+                  <li key={`${review.author}-${review.date}`} className="py-4 first:pt-0 last:pb-0">
+                    <p
+                      className="text-gold-500"
+                      aria-label={t('reviewRating', { rating: review.rating })}
+                    >
+                      {'★'.repeat(review.rating)}
+                      <span className="text-rule-neutral">{'★'.repeat(5 - review.rating)}</span>
+                    </p>
+                    <p className="mt-2 text-sm leading-prose text-ink-muted">{review.text}</p>
+                    <p className="label mt-3 text-ink-faint">{review.author}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </aside>
       </div>
+    </div>
     </section>
   );
 }

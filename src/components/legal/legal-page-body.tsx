@@ -7,7 +7,8 @@ import type { LegalPageContent } from '@/content/legal/kvkk';
  */
 export function LegalPageBody({ content }: { content: LegalPageContent }) {
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
+    <section className="bg-canvas-deep">
+      <div className="mx-auto max-w-wide px-gutter py-section">
       <div className="max-w-narrow">
         {/* REVIEW WITH COUNSEL: the text below is a working draft (see
             src/content/legal/kvkk.ts and privacy.ts) and must be reviewed by
@@ -24,6 +25,7 @@ export function LegalPageBody({ content }: { content: LegalPageContent }) {
             <p className="mt-3 text-md leading-prose text-ink-muted">{section.body}</p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

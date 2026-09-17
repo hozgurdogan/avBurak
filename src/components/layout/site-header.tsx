@@ -6,8 +6,8 @@
 import { Suspense, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
-import { Monogram } from '@/components/brand/monogram';
 import { LocaleSwitcher, LocaleSwitcherFallback } from './locale-switcher';
+import { office, telHref, whatsappHref } from '@/content/office';
 import { cn } from '@/lib/cn';
 
 const navItems = [
@@ -15,15 +15,19 @@ const navItems = [
   { href: '/profil', key: 'profile' },
   { href: '/makaleler', key: 'articles' },
   { href: '/hesaplama-araclari', key: 'tools' },
+  { href: '/sss', key: 'faq' },
   { href: '/iletisim', key: 'contact' },
 ] as const;
 
 export function SiteHeader() {
   const t = useTranslations('nav');
   const tSite = useTranslations('site');
+  const tFooter = useTranslations('footer');
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const tel = telHref();
+  const whatsapp = whatsappHref();
 
   // The frosted treatment appears only once the page has left the top, so the
   // header reads as part of the page at rest and as a surface in motion.
@@ -55,19 +59,41 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-4">
-        <Link
-          href="/"
-          className="flex items-center gap-4 text-ink"
-          aria-label={tSite('monogramLabel')}
-        >
-          <Monogram className="w-[3.25rem]" />
-          <span className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-lg text-ink">{tSite('attorneyShort')}</span>
-            <span className="label text-ink-faint">{tSite('role')}</span>
-          </span>
+        <Link href="/" className="flex flex-col leading-tight text-ink" aria-label={tSite('monogramLabel')}>
+          <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
+          <span className="label text-ink-faint">{tSite('role')}</span>
         </Link>
 
         <div className="flex items-center gap-6">
+          {/* Direct-contact channels next to the nav, not buried in the footer -
+              a visitor who already knows they want to call should not have to
+              scroll to the bottom of the page to do it. Renders nothing until
+              the office phone/WhatsApp env vars are set. */}
+          {tel || whatsapp ? (
+            <div className="hidden items-center gap-5 lg:flex">
+              {tel ? (
+                <a
+                  href={tel}
+                  dir="ltr"
+                  className="label text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
+                >
+                  <span className="sr-only">{tFooter('phone')}: </span>
+                  {office.phone}
+                </a>
+              ) : null}
+              {whatsapp ? (
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="label text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
+                >
+                  {tFooter('whatsapp')}
+                </a>
+              ) : null}
+            </div>
+          ) : null}
+
           <nav aria-label={t('primary')} className="hidden lg:block">
             <ul className="flex items-center gap-8">
               {navItems.map((item) => {
@@ -135,6 +161,23 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
+
+          {tel || whatsapp ? (
+            <div className="mt-6 flex flex-col gap-3 border-b border-rule-soft pb-6">
+              {tel ? (
+                <a href={tel} dir="ltr" className="label-lg text-ink">
+                  <span className="sr-only">{tFooter('phone')}: </span>
+                  {office.phone}
+                </a>
+              ) : null}
+              {whatsapp ? (
+                <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="label-lg text-ink">
+                  {tFooter('whatsapp')}
+                </a>
+              ) : null}
+            </div>
+          ) : null}
+
           <div className="mt-6 sm:hidden">
             <Suspense fallback={<LocaleSwitcherFallback />}>
               <LocaleSwitcher />

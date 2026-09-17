@@ -76,7 +76,8 @@ export default async function ArticleDetailPage({ params }: PageProps) {
   });
 
   return (
-    <article className="mx-auto max-w-wide px-gutter py-section">
+    <article className="bg-canvas-deep">
+    <div className="mx-auto max-w-wide px-gutter py-section">
       <div className="mb-10">
         <ActionLink href="/makaleler" variant="quiet">
           {tDetail('back')}
@@ -144,6 +145,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           </ul>
         </div>
       ) : null}
+    </div>
     </article>
   );
 }

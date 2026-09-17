@@ -38,24 +38,26 @@ export default async function PracticeAreasPage({ params }: PageProps) {
   ]);
 
   return (
-    <section className="mx-auto max-w-wide px-gutter py-section">
-      <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
+    <section className="bg-canvas-deep">
+      <div className="mx-auto max-w-wide px-gutter py-section">
+        <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
-      <ol className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2">
-        {practiceAreaSlugs.map((slug, index) => (
-          <Reveal as="li" key={slug} index={index % 4}>
-            <Link href={`/calisma-alanlari/${slug}`} className="group block border-t border-rule pt-6">
-              <span className="label text-gold-800" aria-hidden="true">
-                {practiceAreaNumber(index)}
-              </span>
-              <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
-                {tAreas(`${slug}.name`)}
-              </h2>
-              <p className="mt-3 measure text-sm text-ink-muted">{tAreas(`${slug}.summary`)}</p>
-            </Link>
-          </Reveal>
-        ))}
-      </ol>
+        <ol className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2">
+          {practiceAreaSlugs.map((slug, index) => (
+            <Reveal as="li" key={slug} index={index % 4}>
+              <Link href={`/calisma-alanlari/${slug}`} className="group block border-t border-rule pt-6">
+                <span className="label text-gold-800" aria-hidden="true">
+                  {practiceAreaNumber(index)}
+                </span>
+                <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                  {tAreas(`${slug}.name`)}
+                </h2>
+                <p className="mt-3 measure text-sm text-ink-muted">{tAreas(`${slug}.summary`)}</p>
+              </Link>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
