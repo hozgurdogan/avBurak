@@ -617,12 +617,20 @@
       "pageViewsToday": "Bugün Sayfa Görüntülenme",
       "pageViewsWeek": "Bu Hafta Sayfa Görüntülenme",
       "pageViewsMonth": "Bu Ay Sayfa Görüntülenme",
-      "chartTitle": "Son 30 Gün — Günlük Tekil Ziyaretçi",
+      "filterLabel": "Zaman Aralığı",
+      "filter7": "Son 7 Gün",
+      "filter30": "Son 30 Gün",
+      "filter90": "Son 90 Gün",
+      "visitorsChartTitle": "Günlük Tekil Ziyaretçi (Son {days} Gün)",
+      "pageViewsChartTitle": "Günlük Sayfa Görüntülenme (Son {days} Gün)",
+      "localeChartTitle": "Dil Dağılımı (Son {days} Gün)",
       "chartEmpty": "Henüz veri yok.",
-      "topPagesTitle": "En Çok Görüntülenen Sayfalar (Son 30 Gün)",
+      "topPagesTitle": "En Çok Görüntülenen Sayfalar (Son {days} Gün)",
       "topPagesEmpty": "Henüz veri yok.",
       "pathColumn": "Sayfa",
-      "viewsColumn": "Görüntülenme"
+      "viewsColumn": "Görüntülenme",
+      "resetButton": "Verileri Sıfırla",
+      "resetConfirm": "Tüm ziyaret istatistikleri (ziyaretçiler ve sayfa görüntülenmeleri) kalıcı olarak silinecek. Bu işlem geri alınamaz. Devam edilsin mi?"
     },
     "messages": {
       "title": "Mesajlar",

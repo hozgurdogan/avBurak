@@ -617,12 +617,20 @@
       "pageViewsToday": "Page Views Today",
       "pageViewsWeek": "Page Views This Week",
       "pageViewsMonth": "Page Views This Month",
-      "chartTitle": "Last 30 Days — Daily Unique Visitors",
+      "filterLabel": "Time Range",
+      "filter7": "Last 7 Days",
+      "filter30": "Last 30 Days",
+      "filter90": "Last 90 Days",
+      "visitorsChartTitle": "Daily Unique Visitors (Last {days} Days)",
+      "pageViewsChartTitle": "Daily Page Views (Last {days} Days)",
+      "localeChartTitle": "Traffic by Language (Last {days} Days)",
       "chartEmpty": "No data yet.",
-      "topPagesTitle": "Most Viewed Pages (Last 30 Days)",
+      "topPagesTitle": "Most Viewed Pages (Last {days} Days)",
       "topPagesEmpty": "No data yet.",
       "pathColumn": "Page",
-      "viewsColumn": "Views"
+      "viewsColumn": "Views",
+      "resetButton": "Reset Data",
+      "resetConfirm": "All visit statistics (visitors and page views) will be permanently deleted. This cannot be undone. Continue?"
     },
     "messages": {
       "title": "Messages",

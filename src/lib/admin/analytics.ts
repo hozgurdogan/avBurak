@@ -86,11 +86,56 @@ export async function getDailyVisitorCounts(days = 30): Promise<DailyVisitorCoun
   return result;
 }
 
+/** Total page views per day for the trailing `days` days, oldest first -
+ *  companion to `getDailyVisitorCounts` (that one counts unique visitors,
+ *  this one every view - the gap between the two is how much repeat
+ *  browsing is happening, not just repeat visiting). */
+export async function getDailyPageViewCounts(days = 30): Promise<DailyVisitorCount[]> {
+  const since = daysAgo(days - 1);
+
+  const rows = await prisma.$queryRaw<{ day: Date; count: bigint }[]>`
+    SELECT DATE(createdAt) AS day, COUNT(*) AS count
+    FROM page_views
+    WHERE createdAt >= ${since}
+    GROUP BY DATE(createdAt)
+  `;
+
+  const byDay = new Map(rows.map((row) => [new Date(row.day).toISOString().slice(0, 10), Number(row.count)]));
+
+  const result: DailyVisitorCount[] = [];
+  for (let i = days - 1; i >= 0; i--) {
+    const key = daysAgo(i).toISOString().slice(0, 10);
+    result.push({ date: key, count: byDay.get(key) ?? 0 });
+  }
+  return result;
+}
+
+export type LocaleCount = { locale: string; count: number };
+
+/** Page views by locale over the trailing `days` days - which of the three
+ *  editions is actually being read. Sorted in JS rather than via Prisma's
+ *  `orderBy` on an aggregate: one fewer thing that can go wrong for three
+ *  rows that get re-sorted in memory anyway. */
+export async function getLocaleBreakdown(days = 30): Promise<LocaleCount[]> {
+  const since = daysAgo(days - 1);
+
+  const grouped = await prisma.pageView.groupBy({
+    by: ['locale'],
+    where: { createdAt: { gte: since } },
+    _count: { locale: true },
+  });
+
+  return grouped
+    .map((row) => ({ locale: row.locale, count: row._count.locale }))
+    .sort((a, b) => b.count - a.count);
+}
+
 export type TopPage = { path: string; views: number };
 
 /** Most-viewed paths over the trailing `days` days. `path` already has its
  *  locale segment stripped (see PageView.path in schema.prisma), so the same
- *  page in different languages is counted together. */
+ *  page in different languages is counted together. Sorted in JS for the
+ *  same reason as `getLocaleBreakdown` above. */
 export async function getTopPages(days = 30, limit = 10): Promise<TopPage[]> {
   const since = daysAgo(days - 1);
 
@@ -98,9 +143,10 @@ export async function getTopPages(days = 30, limit = 10): Promise<TopPage[]> {
     by: ['path'],
     where: { createdAt: { gte: since } },
     _count: { path: true },
-    orderBy: { _count: { path: 'desc' } },
-    take: limit,
   });
 
-  return grouped.map((row) => ({ path: row.path, views: row._count.path }));
+  return grouped
+    .map((row) => ({ path: row.path, views: row._count.path }))
+    .sort((a, b) => b.views - a.views)
+    .slice(0, limit);
 }
