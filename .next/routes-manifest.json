@@ -111,6 +111,31 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/analiz(?:/)?$"
     },
     {
+      "page": "/[locale]/admin/panel/makaleler",
+      "regex": "^/([^/]+?)/admin/panel/makaleler(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/makaleler(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/panel/makaleler/yeni",
+      "regex": "^/([^/]+?)/admin/panel/makaleler/yeni(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/makaleler/yeni(?:/)?$"
+    },
+    {
+      "page": "/[locale]/admin/panel/makaleler/[id]",
+      "regex": "^/([^/]+?)/admin/panel/makaleler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale",
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/makaleler/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/[locale]/admin/panel/mesajlar",
       "regex": "^/([^/]+?)/admin/panel/mesajlar(?:/)?$",
       "routeKeys": {

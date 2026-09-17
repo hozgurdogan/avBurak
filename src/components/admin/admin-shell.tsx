@@ -7,6 +7,7 @@ import type { CurrentUser } from '@/lib/auth/session';
 
 const navItems = [
   { href: '/admin/panel', key: 'dashboard' },
+  { href: '/admin/panel/makaleler', key: 'articles' },
   { href: '/admin/panel/mesajlar', key: 'messages' },
   { href: '/admin/panel/analiz', key: 'analytics' },
   { href: '/admin/panel/sifre', key: 'password' },

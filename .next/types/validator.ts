@@ -173,6 +173,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/[locale]/admin/panel/makaleler/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/admin/panel/makaleler/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/admin/panel/makaleler/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/[locale]/admin/panel/makaleler/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/admin/panel/makaleler">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/admin/panel/makaleler/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/[locale]/admin/panel/makaleler/yeni/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/admin/panel/makaleler/yeni">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/admin/panel/makaleler/yeni/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/[locale]/admin/panel/mesajlar/[id]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/[locale]/admin/panel/mesajlar/[id]">> = Specific
