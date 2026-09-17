@@ -11,6 +11,18 @@ import { cn } from '@/lib/cn';
 
 const contactFormInitialState: ContactFormState = { status: 'idle' };
 
+/**
+ * `contactFormSchema` (src/lib/validation/contact.ts) sets each Zod issue's
+ * `message` to a short code, not prose - so it can't be shown to a visitor
+ * directly, and needs mapping to a translated string here.
+ */
+const fieldErrorMessageKeys = {
+  too_short: 'errorTooShort',
+  too_long: 'errorTooLong',
+  required: 'errorRequired',
+  invalid_email: 'errorInvalidEmail',
+} as const;
+
 const fieldClass =
   'w-full border-b border-rule bg-transparent px-0 py-3 text-ink placeholder:text-ink-faint ' +
   'focus:border-gold-800 focus:outline-none transition-colors duration-base';
@@ -35,6 +47,10 @@ export function ContactForm() {
   const locale = useLocale();
   const [state, formAction, isPending] = useActionState(submitContactForm, contactFormInitialState);
   const consentId = useId();
+  const fieldErrorMessage = (code?: string) =>
+    code && code in fieldErrorMessageKeys
+      ? t(fieldErrorMessageKeys[code as keyof typeof fieldErrorMessageKeys])
+      : t('errorValidation');
   // Prefix for the per-field error ids that `aria-describedby` points at, so a
   // screen reader reads the validation message as part of the field rather than
   // as loose text the visitor has to go hunting for.
@@ -75,7 +91,7 @@ export function ContactForm() {
           />
           {state.fieldErrors?.name ? (
             <p id={`${errorId}-name`} className="mt-2 text-xs text-danger">
-              {state.fieldErrors.name}
+              {fieldErrorMessage(state.fieldErrors.name)}
             </p>
           ) : null}
         </div>
@@ -97,7 +113,7 @@ export function ContactForm() {
           />
           {state.fieldErrors?.email ? (
             <p id={`${errorId}-email`} className="mt-2 text-xs text-danger">
-              {state.fieldErrors.email}
+              {fieldErrorMessage(state.fieldErrors.email)}
             </p>
           ) : null}
         </div>
@@ -134,7 +150,7 @@ export function ContactForm() {
           />
           {state.fieldErrors?.subject ? (
             <p id={`${errorId}-subject`} className="mt-2 text-xs text-danger">
-              {state.fieldErrors.subject}
+              {fieldErrorMessage(state.fieldErrors.subject)}
             </p>
           ) : null}
         </div>
@@ -157,7 +173,7 @@ export function ContactForm() {
         />
         {state.fieldErrors?.message ? (
           <p id={`${errorId}-message`} className="mt-2 text-xs text-danger">
-            {state.fieldErrors.message}
+            {fieldErrorMessage(state.fieldErrors.message)}
           </p>
         ) : null}
       </div>

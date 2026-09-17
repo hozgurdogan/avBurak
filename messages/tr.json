@@ -498,8 +498,6 @@
     "officeLabel": "Büro Adresi",
     "mapLabel": "Konum",
     "mapTitle": "Büro konumu — Google Haritalar",
-    "mapLoadCta": "Haritayı Göster",
-    "mapPrivacyNote": "Haritayı görüntülediğinizde Google'ın sunucularına istek gönderilir ve Google'ın kendi çerezleri devreye girebilir.",
     "serviceAreasLabel": "Hizmet Verilen Bölgeler",
     "serviceAreasBody": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku ile kira hukuku alanlarında; {districts} başta olmak üzere çevre ilçelerde hizmet verilmektedir.",
     "reviewsLabel": "Google Yorumları",
@@ -517,7 +515,11 @@
       "errorGeneric": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
       "errorValidation": "Lütfen formu eksiksiz ve doğru şekilde doldurun.",
       "errorRateLimit": "Kısa süre içinde çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin.",
-      "errorConsent": "Devam etmek için KVKK Aydınlatma Metni'ni onaylamanız gerekmektedir."
+      "errorConsent": "Devam etmek için KVKK Aydınlatma Metni'ni onaylamanız gerekmektedir.",
+      "errorTooShort": "Bu alan çok kısa.",
+      "errorTooLong": "Bu alan çok uzun.",
+      "errorRequired": "Bu alan zorunludur.",
+      "errorInvalidEmail": "Geçerli bir e-posta adresi girin."
     }
   },
   "legalPages": {

@@ -121,12 +121,7 @@ export default async function ContactPage({ params }: PageProps) {
 
           <div className="mt-6 border border-rule-neutral bg-paper p-8">
             <h2 className="label text-gold-800">{t('mapLabel')}</h2>
-            <OfficeMap
-              src={mapsEmbedSrc()}
-              title={t('mapTitle')}
-              loadLabel={t('mapLoadCta')}
-              privacyNote={t('mapPrivacyNote')}
-            />
+            <OfficeMap src={mapsEmbedSrc()} title={t('mapTitle')} />
           </div>
 
           <div className="mt-6 border border-rule-neutral bg-paper p-8">

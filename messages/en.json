@@ -498,8 +498,6 @@
     "officeLabel": "Office Address",
     "mapLabel": "Location",
     "mapTitle": "Office location — Google Maps",
-    "mapLoadCta": "Show Map",
-    "mapPrivacyNote": "Displaying the map sends a request to Google's servers and may set Google's own cookies.",
     "serviceAreasLabel": "Areas Served",
     "serviceAreasBody": "Legal services are provided in labour law, enforcement law, divorce and family law, inheritance law, and tenancy law, primarily across {districts} and the surrounding districts.",
     "reviewsLabel": "Google Reviews",
@@ -517,7 +515,11 @@
       "errorGeneric": "Your message could not be sent. Please try again later.",
       "errorValidation": "Please complete the form fully and correctly.",
       "errorRateLimit": "Too many attempts in a short time. Please try again later.",
-      "errorConsent": "You must accept the KVKK Information Notice to continue."
+      "errorConsent": "You must accept the KVKK Information Notice to continue.",
+      "errorTooShort": "This field is too short.",
+      "errorTooLong": "This field is too long.",
+      "errorRequired": "This field is required.",
+      "errorInvalidEmail": "Enter a valid e-mail address."
     }
   },
   "legalPages": {
