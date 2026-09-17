@@ -66,36 +66,52 @@
     }
   },
   "practiceAreas": {
+    "is-hukuku": {
+      "name": "Labour Law",
+      "summary": "Dismissal and reinstatement disputes, severance and notice pay, overtime and leave entitlements, and compensation claims arising from workplace accidents.",
+      "body": [
+        "The practice covers litigation and mediation on behalf of employees and employers in disputes over termination of the employment contract, and the calculation and pursuit of severance pay, notice pay, overtime, annual leave and other employee entitlements.",
+        "Support is also provided in material and non-material damages claims arising from workplace accidents and occupational disease, reinstatement lawsuits, and collective redundancy procedures."
+      ]
+    },
+    "icra-hukuku": {
+      "name": "Enforcement Law",
+      "summary": "Judgment-based and judgment-free enforcement proceedings, objections and their annulment, seizure procedures, and bankruptcy and composition proceedings.",
+      "body": [
+        "For both creditors and debtors, the practice covers initiating judgment-based and judgment-free enforcement proceedings, objecting to a payment order, and actions for the removal or annulment of an objection.",
+        "It also covers seizure and sale procedures, actions for negative declaration and restitution, and bankruptcy and composition (concordat) proceedings."
+      ]
+    },
+    "bosanma-aile-hukuku": {
+      "name": "Divorce and Family Law",
+      "summary": "Uncontested and contested divorce proceedings, alimony and compensation claims, division of matrimonial property, and custody and contact arrangements.",
+      "body": [
+        "The practice covers uncontested and contested divorce proceedings, drafting the divorce protocol, and pursuing alimony and material/moral compensation claims.",
+        "Support is also provided in claims for a participation receivable arising from the division of the matrimonial property regime, custody and contact arrangements, and actions to increase alimony."
+      ]
+    },
+    "miras-hukuku": {
+      "name": "Inheritance Law",
+      "summary": "Certificates of inheritance, identifying and dividing the estate, recovering an heir's share, and actions for abatement or disinheritance.",
+      "body": [
+        "The practice covers obtaining a certificate of inheritance, identifying and dividing the estate, and pursuing an heir's share against the other heirs.",
+        "It also covers actions for abatement, disinheritance, and disputes arising from inheritance contracts."
+      ]
+    },
+    "kira-hukuku": {
+      "name": "Tenancy Law",
+      "summary": "Rent determination and increase disputes, eviction proceedings, enforcement based on a vacation commitment, and drafting lease agreements.",
+      "body": [
+        "The practice covers determining and adjusting the rent, disputes over the rate of rent increase, and drafting and reviewing lease agreements.",
+        "Support is also provided in enforcement proceedings based on a vacation commitment, eviction for default, and eviction actions based on the landlord's own housing need or reconstruction."
+      ]
+    },
     "sirketler-hukuku": {
       "name": "Corporate Law",
       "summary": "Incorporation and conversion, articles of association, capital increases, share transfers, shareholders' agreements and general assembly procedure.",
       "body": [
         "Work in this area begins at incorporation: choice of corporate form, drafting the articles of association, structuring share capital and completing registration.",
         "After incorporation, the practice covers capital increases and reductions, share transfers, shareholders' agreements, general assembly and board procedures, and corporate conversions and mergers."
-      ]
-    },
-    "yabanci-yatirim": {
-      "name": "Foreign Investment",
-      "summary": "Structuring foreign direct investment, establishing branches and liaison offices, sectoral permits, and work and residence permit procedures.",
-      "body": [
-        "Under the Foreign Direct Investment Law, the practice covers foreign investors setting up a company, branch or liaison office in Türkiye.",
-        "This includes identifying activities that require sectoral permits, handling work and residence permit procedures for foreign-owned companies, and post-investment regulatory compliance."
-      ]
-    },
-    "gayrimenkul-hukuku": {
-      "name": "Real Estate Law",
-      "summary": "Acquisition of immovable property and land registry procedure, pre-transfer review, promise-to-sell agreements, construction servitude and condominium ownership, and leases.",
-      "body": [
-        "Before an acquisition, the practice covers reviewing the title deed record and zoning status, drafting promise-to-sell agreements, and following the transfer through the land registry.",
-        "It also covers establishing floor easement and condominium ownership, drafting lease agreements, and assessing the statutory limits that apply to real estate acquisition by foreign individuals."
-      ]
-    },
-    "ticari-sozlesmeler": {
-      "name": "Commercial Contracts",
-      "summary": "Drafting and negotiating distribution, supply, services and licence agreements; governing law and jurisdiction provisions in cross-border contracts.",
-      "body": [
-        "The practice covers drafting commercial contracts — distribution, supply, service, licence and joint venture agreements in particular — and reviewing counterparty drafts.",
-        "Support is provided in determining the governing law and competent court or arbitration for cross-border contracts, and in drafting default and force majeure provisions."
       ]
     },
     "tahkim-ve-uyusmazlik-cozumu": {
@@ -118,7 +134,7 @@
   "practiceAreasPage": {
     "meta": {
       "title": "Fields of Work",
-      "description": "Work is carried out in corporate law, foreign investment, real estate law, commercial contracts, arbitration and dispute resolution, and data protection."
+      "description": "Work is carried out in labour law, enforcement law, divorce and family law, inheritance law, tenancy law, corporate law, arbitration and dispute resolution, and data protection."
     },
     "label": "Fields of Work",
     "title": "Fields of work",

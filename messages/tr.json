@@ -66,36 +66,52 @@
     }
   },
   "practiceAreas": {
+    "is-hukuku": {
+      "name": "İş Hukuku",
+      "summary": "İşe iade ve fesih uyuşmazlıkları, kıdem ve ihbar tazminatı, fazla mesai ve izin alacakları, iş kazası ve meslek hastalığından doğan tazminat talepleri.",
+      "body": [
+        "İş sözleşmesinin feshine ilişkin uyuşmazlıklarda işçi ve işveren tarafında dava ve arabuluculuk süreçlerinin yürütülmesi, kıdem ve ihbar tazminatı ile fazla mesai, yıllık izin ve diğer işçilik alacaklarının hesaplanması ve takibi bu alanın kapsamındadır.",
+        "İş kazası ve meslek hastalığından doğan maddi ve manevi tazminat talepleri, işe iade davaları ve toplu işçi çıkarma süreçlerinde de destek sağlanmaktadır."
+      ]
+    },
+    "icra-hukuku": {
+      "name": "İcra Hukuku",
+      "summary": "İlamlı ve ilamsız icra takipleri, itiraz ve itirazın iptali, haciz işlemleri, iflas ve konkordato süreçleri.",
+      "body": [
+        "Alacaklı ve borçlu taraflar bakımından ilamlı ve ilamsız icra takiplerinin başlatılması, ödeme emrine itiraz, itirazın kaldırılması ve itirazın iptali davaları bu alanın kapsamındadır.",
+        "Haciz ve satış işlemlerinin takibi, menfi tespit ve istirdat davaları ile iflas ve konkordato süreçlerinde de çalışılmaktadır."
+      ]
+    },
+    "bosanma-aile-hukuku": {
+      "name": "Boşanma ve Aile Hukuku",
+      "summary": "Anlaşmalı ve çekişmeli boşanma davaları, nafaka ve tazminat talepleri, mal rejiminin tasfiyesi, velayet ve kişisel ilişki düzenlemeleri.",
+      "body": [
+        "Anlaşmalı ve çekişmeli boşanma davalarının yürütülmesi, boşanma protokolünün hazırlanması, nafaka ve maddi-manevi tazminat taleplerinin ileri sürülmesi bu alanın kapsamındadır.",
+        "Mal rejiminin tasfiyesinden doğan katılma alacağı davaları, velayet ve kişisel ilişki tesisi ile nafaka artırım davalarında da destek sağlanmaktadır."
+      ]
+    },
+    "miras-hukuku": {
+      "name": "Miras Hukuku",
+      "summary": "Mirasçılık belgesi, terekenin tespiti ve taksimi, miras payının tahsili, tenkis ve mirastan çıkarma davaları.",
+      "body": [
+        "Mirasçılık belgesinin alınması, terekenin tespiti ve taksimi, miras payının diğer mirasçılardan tahsiline ilişkin süreçlerin yürütülmesi bu alanın kapsamındadır.",
+        "Tenkis davaları, mirastan çıkarma ve miras sözleşmelerine ilişkin uyuşmazlıklarda da çalışılmaktadır."
+      ]
+    },
+    "kira-hukuku": {
+      "name": "Kira Hukuku",
+      "summary": "Kira bedeli tespiti ve artış davaları, tahliye davaları, tahliye taahhüdüne dayalı icra takipleri, kira sözleşmelerinin düzenlenmesi.",
+      "body": [
+        "Kira bedelinin tespiti ve uyarlanması, kira artış oranına ilişkin uyuşmazlıklar ile kira sözleşmelerinin hazırlanması ve gözden geçirilmesi bu alanın kapsamındadır.",
+        "Tahliye taahhüdüne dayalı icra takipleri, temerrüt nedeniyle tahliye ile ihtiyaç ve yeniden inşa nedeniyle açılan tahliye davalarında da destek sağlanmaktadır."
+      ]
+    },
     "sirketler-hukuku": {
       "name": "Şirketler Hukuku",
       "summary": "Şirket kuruluşu ve tür değiştirme, esas sözleşme düzenlemeleri, sermaye artırımı, pay devri, ortaklar arası sözleşmeler ve genel kurul süreçleri.",
       "body": [
         "Kuruluş aşamasından itibaren şirketler hukukuna ilişkin işlemlerde çalışılmaktadır; şirket türü seçimi, esas sözleşmenin hazırlanması, sermaye yapısının belirlenmesi ve tescil süreçleri bu kapsamdadır.",
         "Kuruluş sonrasında ise sermaye artırımı ve azaltılması, pay devri, ortaklar arası sözleşmelerin hazırlanması, genel kurul ve yönetim kurulu süreçlerinin yürütülmesi ile tür değiştirme ve birleşme işlemlerinde destek verilmektedir."
-      ]
-    },
-    "yabanci-yatirim": {
-      "name": "Yabancı Yatırım",
-      "summary": "Doğrudan yabancı yatırımların yapılandırılması, şube ve irtibat bürosu kurulumu, sektörel izinler, çalışma ve oturma izni süreçleri.",
-      "body": [
-        "Doğrudan Yabancı Yatırımlar Kanunu çerçevesinde, yabancı yatırımcıların Türkiye'de şirket kurması, şube veya irtibat bürosu açması süreçlerinde çalışılmaktadır.",
-        "Sektörel izin gerektiren faaliyetlerin tespiti, yabancı ortaklı şirketlerde çalışma ve oturma izni süreçlerinin takibi ile yatırım sonrası mevzuat uyumu konularında destek sağlanmaktadır."
-      ]
-    },
-    "gayrimenkul-hukuku": {
-      "name": "Gayrimenkul Hukuku",
-      "summary": "Taşınmaz edinimi ve tapu işlemleri, devir öncesi inceleme, satış vaadi sözleşmeleri, kat irtifakı ve kat mülkiyeti ile kira ilişkileri.",
-      "body": [
-        "Taşınmaz edinimi öncesinde tapu kaydının ve imar durumunun incelenmesi, satış vaadi sözleşmelerinin hazırlanması ile devir işlemlerinin tapu müdürlüğü nezdinde takibi bu alanın kapsamındadır.",
-        "Kat irtifakı ve kat mülkiyeti tesisi, kira sözleşmelerinin düzenlenmesi ve yabancı gerçek kişilerin taşınmaz ediniminde uygulanan yasal sınırlamalar bakımından değerlendirme yapılmaktadır."
-      ]
-    },
-    "ticari-sozlesmeler": {
-      "name": "Ticari Sözleşmeler",
-      "summary": "Distribütörlük, tedarik, hizmet ve lisans sözleşmelerinin hazırlanması ve müzakeresi; sınır ötesi sözleşmelerde uygulanacak hukuk ve yetki düzenlemeleri.",
-      "body": [
-        "Distribütörlük, tedarik, hizmet, lisans ve ortak girişim sözleşmeleri başta olmak üzere ticari sözleşmelerin hazırlanması ve karşı taraf metinlerinin incelenmesi bu alanda yürütülen çalışmalardır.",
-        "Sınır ötesi sözleşmelerde uygulanacak hukukun ve yetkili mahkeme veya tahkimin belirlenmesi, temerrüt ve mücbir sebep hükümlerinin düzenlenmesi konularında destek verilmektedir."
       ]
     },
     "tahkim-ve-uyusmazlik-cozumu": {
@@ -118,7 +134,7 @@
   "practiceAreasPage": {
     "meta": {
       "title": "Çalışma Alanları",
-      "description": "Şirketler hukuku, yabancı yatırım, gayrimenkul hukuku, ticari sözleşmeler, tahkim ve uyuşmazlık çözümü ile kişisel verilerin korunması alanlarında çalışılmaktadır."
+      "description": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku, kira hukuku, şirketler hukuku, tahkim ve uyuşmazlık çözümü ile kişisel verilerin korunması alanlarında çalışılmaktadır."
     },
     "label": "Çalışma Alanları",
     "title": "Çalışılan hukuk alanları",
