@@ -498,6 +498,8 @@
     "officeLabel": "Büro Adresi",
     "mapLabel": "Konum",
     "mapTitle": "Büro konumu — Google Haritalar",
+    "mapLoadCta": "Haritayı Göster",
+    "mapPrivacyNote": "Haritayı görüntülediğinizde Google'ın sunucularına istek gönderilir ve Google'ın kendi çerezleri devreye girebilir.",
     "serviceAreasLabel": "Hizmet Verilen Bölgeler",
     "serviceAreasBody": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku ile kira hukuku alanlarında; {districts} başta olmak üzere çevre ilçelerde hizmet verilmektedir.",
     "reviewsLabel": "Google Yorumları",

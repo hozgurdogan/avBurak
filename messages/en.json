@@ -498,6 +498,8 @@
     "officeLabel": "Office Address",
     "mapLabel": "Location",
     "mapTitle": "Office location — Google Maps",
+    "mapLoadCta": "Show Map",
+    "mapPrivacyNote": "Displaying the map sends a request to Google's servers and may set Google's own cookies.",
     "serviceAreasLabel": "Areas Served",
     "serviceAreasBody": "Legal services are provided in labour law, enforcement law, divorce and family law, inheritance law, and tenancy law, primarily across {districts} and the surrounding districts.",
     "reviewsLabel": "Google Reviews",

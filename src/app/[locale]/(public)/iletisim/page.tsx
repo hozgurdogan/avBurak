@@ -8,6 +8,7 @@ import { ContactForm } from '@/components/forms/contact-form';
 import { office, formatAddress, telHref, whatsappHref, mapsEmbedSrc } from '@/content/office';
 import { serviceAreaDistricts } from '@/content/service-areas';
 import { reviews } from '@/content/reviews';
+import { OfficeMap } from '@/components/contact/office-map';
 import type { Locale } from '@/i18n/locales';
 
 type PageProps = {
@@ -120,15 +121,12 @@ export default async function ContactPage({ params }: PageProps) {
 
           <div className="mt-6 border border-rule-neutral bg-paper p-8">
             <h2 className="label text-gold-800">{t('mapLabel')}</h2>
-            <div className="mt-5 aspect-[4/3] w-full overflow-hidden border border-rule-neutral">
-              <iframe
-                src={mapsEmbedSrc()}
-                title={t('mapTitle')}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full border-0"
-              />
-            </div>
+            <OfficeMap
+              src={mapsEmbedSrc()}
+              title={t('mapTitle')}
+              loadLabel={t('mapLoadCta')}
+              privacyNote={t('mapPrivacyNote')}
+            />
           </div>
 
           <div className="mt-6 border border-rule-neutral bg-paper p-8">

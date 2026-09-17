@@ -7,11 +7,19 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
  * Security headers.
  *
  * The CSP is intentionally strict: the site loads no third-party scripts,
- * no analytics, no font CDN and no map iframe (see README section
- * "Regulatory constraints"). `unsafe-inline` for styles is required by
- * Next.js' inlined critical CSS; scripts use nonce-less strict-dynamic-free
- * self-only policy because we ship no inline script of our own beyond
- * Next.js' hydration payload.
+ * no analytics and no font CDN (see README section "Regulatory
+ * constraints"). `unsafe-inline` for styles is required by Next.js' inlined
+ * critical CSS; scripts use nonce-less strict-dynamic-free self-only policy
+ * because we ship no inline script of our own beyond Next.js' hydration
+ * payload.
+ *
+ * `frame-src` allows `https://www.google.com` specifically for the contact
+ * page's Maps embed (`src/content/office.ts`, `mapsEmbedSrc`) - a deliberate,
+ * informed exception to the "no third-party embeds" rule, made at the
+ * client's request (2026-09-17). Without this, `frame-src` falls back to
+ * `default-src 'self'` and the browser blocks the iframe outright (which is
+ * what "Bu içerik engellenmiştir" was - a CSP block, not a Google-side or
+ * hosting problem).
  */
 // Set to true only once the production domain has a real, trusted TLS
 // certificate installed and verified working end to end. Both flags below
@@ -50,6 +58,7 @@ const securityHeaders = [
       "font-src 'self'",
       "connect-src 'self'",
       "form-action 'self'",
+      "frame-src https://www.google.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "object-src 'none'",

@@ -45,10 +45,18 @@ If a later instruction, ticket or design idea conflicts with this section,
 
 ### Privacy posture (KVKK)
 
-- **No third-party requests at runtime.** No analytics, no tracking pixels, no
-  Google Fonts CDN, no Google Maps iframe. Fonts are self-hosted; the contact
-  page links out to a map rather than embedding one, because an embedded map
-  sets cookies before the visitor has consented to anything.
+- **No third-party requests at page load.** No analytics, no tracking pixels,
+  no Google Fonts CDN. Fonts are self-hosted.
+- **Exception, made at the client's explicit request (2026-09-18): a Google
+  Maps embed and a Google reviews section on the contact page.** Both are a
+  deliberate departure from the "no third-party embeds / no reviews" rule
+  above - see `src/content/office.ts` (`mapsEmbedSrc`) and
+  `src/content/reviews.ts` for the full reasoning, and get this reviewed by
+  counsel before launch. The map's cookie-before-consent problem is mitigated
+  but not eliminated: `OfficeMap` (`src/components/contact/office-map.tsx`)
+  does not set the iframe's `src` - so nothing is requested from Google - until
+  the visitor clicks "Haritayı Göster" ("Show Map"), rather than loading it
+  eagerly on page load.
 - **Zero cookies by default** other than the locale preference
   (`NEXT_LOCALE`) and, inside the admin area, the session cookie. No consent
   banner is needed for those, and none is shipped. If any additional cookie is

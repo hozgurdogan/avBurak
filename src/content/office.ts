@@ -52,8 +52,10 @@ export function telHref(): string | null {
 
 /**
  * Key-less Google Maps embed (`/maps?q=...&output=embed`) built from the
- * office address. No API key, no analytics, no cookie from Google until the
- * visitor actually interacts with the iframe.
+ * office address. No API key, no analytics. The iframe itself is rendered by
+ * `OfficeMap` (src/components/contact/office-map.tsx), which does not set
+ * this as the iframe's `src` until the visitor clicks "Haritayı Göster" - so
+ * no request reaches Google, and no cookie is set, on page load.
  *
  * NOTE ON SCOPE: the Master Build Prompt's absolute constraints list
  * "no third-party embeds (maps, analytics, font CDN, social media)" and
