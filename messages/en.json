@@ -553,6 +553,12 @@
     "title": "Legal Notice",
     "body": "The content on this site is provided for general information. It does not constitute legal advice and does not create an attorney–client relationship. Before deciding on any particular dispute or transaction, legal advice on your own circumstances should be obtained. Legislation and judicial practice change, and the content is not guaranteed to be current."
   },
+  "cookieConsent": {
+    "label": "Cookie Preference",
+    "body": "May we use a cookie to keep basic visit statistics? If you decline, no visit data is recorded. See the <link>KVKK Information Notice</link> for details.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "notFound": {
     "label": "Error 404",
     "title": "The page you were looking for was not found",
@@ -584,6 +590,7 @@
       "dashboard": "Overview",
       "messages": "Messages",
       "articles": "Articles",
+      "analytics": "Visit Analytics",
       "password": "Change Password",
       "logout": "Sign Out",
       "viewSite": "View site"
@@ -599,6 +606,23 @@
       "statusDraft": "Draft",
       "statusMissing": "Missing",
       "articlesComingSoon": "Article editing will be available from this panel soon."
+    },
+    "analytics": {
+      "title": "Visit Analytics",
+      "lead": "These figures are kept in the site's own database, only for visitors who accepted the cookie banner. No Google Analytics or other third party is used.",
+      "totalVisitors": "Total Visitors",
+      "newVisitorsToday": "New Visitors Today",
+      "newVisitorsWeek": "New Visitors This Week",
+      "newVisitorsMonth": "New Visitors This Month",
+      "pageViewsToday": "Page Views Today",
+      "pageViewsWeek": "Page Views This Week",
+      "pageViewsMonth": "Page Views This Month",
+      "chartTitle": "Last 30 Days — Daily Unique Visitors",
+      "chartEmpty": "No data yet.",
+      "topPagesTitle": "Most Viewed Pages (Last 30 Days)",
+      "topPagesEmpty": "No data yet.",
+      "pathColumn": "Page",
+      "viewsColumn": "Views"
     },
     "messages": {
       "title": "Messages",

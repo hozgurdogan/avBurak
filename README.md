@@ -60,10 +60,19 @@ If a later instruction, ticket or design idea conflicts with this section,
   (nothing requested until the visitor asks to see the map) shipped briefly
   but was reverted at the client's request; if this is ever revisited, that
   is the lower-risk version to bring back.
-- **Zero cookies by default** other than the locale preference
-  (`NEXT_LOCALE`) and, inside the admin area, the session cookie. No consent
-  banner is needed for those, and none is shipped. If any additional cookie is
-  ever introduced, a consent banner becomes mandatory.
+- **Zero cookies without consent**, other than the locale preference
+  (`NEXT_LOCALE`) and, inside the admin area, the session cookie - neither
+  needs a banner. **Exception, added 2026-09-18 at the client's explicit
+  request: first-party visit analytics** (`src/lib/analytics.ts`,
+  `CookieConsentBanner`, the admin "Ziyaret Analizi" dashboard). A
+  `visitor_id` cookie and its associated `Visitor`/`PageView` rows are created
+  only after the visitor clicks "Accept" on the consent banner every public
+  page now renders; declining, or never answering, means nothing is ever
+  written to the database for that visitor. No IP address, user agent or
+  other fingerprint is stored - see the model comments in
+  `prisma/schema.prisma` - and no third-party analytics service is used.
+  KVKK §9 (`src/content/legal/kvkk.ts`) discloses this; get it reviewed by
+  counsel before launch, same as the rest of that document.
 - **IP addresses are never stored raw.** Contact submissions and rate-limit
   records keep only a salted hash (`IP_HASH_SALT`), which is enough for abuse
   control and nothing else. Rotating the salt invalidates every stored hash.

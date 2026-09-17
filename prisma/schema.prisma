@@ -203,3 +203,43 @@ model ContactMessage {
   @@index([createdAt])
   @@map("contact_messages")
 }
+
+// --- Analytics ----------------------------------------------------------------
+
+/// A first-party visitor identifier, set in the `visitor_id` cookie and only
+/// ever created after the visitor accepts the cookie-consent banner - see
+/// `src/lib/analytics.ts`. Deliberately holds no IP address, user agent or
+/// other fingerprint: the row exists only to tell a new visit from a
+/// returning one, matching the IP-minimisation practice already used for
+/// `ContactMessage.ipHash` and `Session.ipHash` above.
+model Visitor {
+  id          String   @id @default(cuid())
+  firstSeenAt DateTime @default(now())
+  lastSeenAt  DateTime @updatedAt
+
+  pageViews PageView[]
+
+  @@index([firstSeenAt])
+  @@map("visitors")
+}
+
+/// One row per page view, recorded by `PageViewBeacon` (client) through
+/// `POST /api/track` (route handler) into here. `path` is the pathname with
+/// the locale segment stripped (the locale is its own column) so the admin
+/// dashboard can group "/profil" together across languages.
+model PageView {
+  id        String   @id @default(cuid())
+  visitorId String
+  /// e.g. "/profil", "/calisma-alanlari/is-hukuku" - no query string.
+  path      String
+  /// "tr" | "en" | "ar"
+  locale    String
+  createdAt DateTime @default(now())
+
+  visitor Visitor @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+
+  @@index([visitorId])
+  @@index([createdAt])
+  @@index([path])
+  @@map("page_views")
+}

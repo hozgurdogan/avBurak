@@ -7,9 +7,11 @@ import type { Locale } from '@/i18n/locales';
  *
  * <!-- REVIEW WITH COUNSEL: this is a working draft, written to match the
  * data this codebase actually collects (contact-form fields, hashed IP,
- * locale/session cookie only). It must be reviewed by the office's own
- * counsel before launch, in every language, and updated immediately if the
- * data collected ever changes (e.g. analytics, uploads, a newsletter). -->
+ * locale/session cookie, and - as of 2026-09-18, section 9 - the optional,
+ * consent-gated visitor_id analytics cookie described in
+ * src/lib/analytics.ts). It must be reviewed by the office's own counsel
+ * before launch, in every language, and updated immediately if the data
+ * collected ever changes again (e.g. uploads, a newsletter). -->
  */
 
 export type LegalSection = { heading: string; body: string };
@@ -61,7 +63,7 @@ export const kvkkContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '9. Çerezler',
-        body: 'Bu internet sitesi; dil tercihinizi hatırlamak için gerekli, birinci taraf bir çerez dışında hiçbir çerez kullanmamaktadır. Üçüncü taraf analiz, reklam veya izleme amaçlı hiçbir çerez veya benzeri teknoloji bulunmamaktadır. Bu kapsam dışında bir çerez kullanılmaya başlanması hâlinde, ziyaretçilerden ayrıca onay alınacaktır.',
+        body: 'Dil tercihinizi hatırlamak için gerekli, birinci taraf bir çerez her zaman kullanılır ve bunun için onayınız aranmaz. Bunun dışında, sitede kaç kişinin dolaştığını ve hangi sayfaların ziyaret edildiğini görebilmemiz için isteğe bağlı, birinci taraf bir ziyaret istatistiği çerezi (visitor_id) kullanılmaktadır; bu çerez yalnızca sayfanın altında çıkan bildirimde “Kabul Et”e bastığınızda kaydedilir, “Reddet”e basmanız veya hiçbir seçim yapmamanız hâlinde hiçbir ziyaret verisi kaydedilmez. Bu çerez kapsamında yalnızca ziyaret ettiğiniz sayfalar ve ziyaret tarihleri tutulur; IP adresiniz, tarayıcı bilginiz veya kimliğinizi belirleyebilecek başka bir veri kaydedilmez ve veriler üçüncü bir tarafla (örneğin Google Analytics) paylaşılmaz - istatistikler yalnızca büronun kendi sunucusunda tutulur. Kayıtlar en fazla 13 ay saklanır, bu sürenin sonunda silinir. Onayınızı dilediğiniz zaman, tarayıcınızdan çerezleri temizleyerek geri çekebilirsiniz; bir sonraki ziyaretinizde bildirim yeniden görünür.',
       },
     ],
   },
@@ -105,7 +107,7 @@ export const kvkkContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '9. Cookies',
-        body: 'This website uses no cookie other than a necessary, first-party cookie that remembers your language preference. There is no third-party analytics, advertising or tracking cookie or similar technology. Should a cookie outside this scope ever be introduced, visitor consent will be obtained separately beforehand.',
+        body: 'A necessary, first-party cookie that remembers your language preference is always used and does not require your consent. Beyond that, an optional, first-party visit-statistics cookie (visitor_id) is used so we can see how many people browse the site and which pages are visited; it is only set once you click "Accept" on the banner shown at the bottom of the page - if you click "Decline", or make no choice, no visit data is recorded at all. This cookie records only the pages you visit and the dates of your visits; no IP address, browser information or other identifying data is recorded, and nothing is shared with a third party (such as Google Analytics) - the statistics are kept only on the office\'s own server. Records are kept for at most 13 months and are then deleted. You may withdraw your consent at any time by clearing your browser\'s cookies; the banner will appear again on your next visit.',
       },
     ],
   },
@@ -149,7 +151,7 @@ export const kvkkContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '9. ملفات تعريف الارتباط (الكوكيز)',
-        body: 'لا يستخدم هذا الموقع أي ملف تعريف ارتباط باستثناء ملف ضروري من الطرف الأول يحفظ تفضيل اللغة لديكم. لا توجد أي ملفات تعريف ارتباط أو تقنيات مشابهة من طرف ثالث لأغراض التحليل أو الإعلان أو التتبع. وفي حال البدء باستخدام أي ملف تعريف ارتباط خارج هذا النطاق مستقبلاً، ستُؤخَذ موافقة الزوار على ذلك بشكل منفصل ومسبق.',
+        body: 'يُستخدَم دائماً ملف تعريف ارتباط ضروري من الطرف الأول يحفظ تفضيل اللغة لديكم، ولا يتطلب موافقتكم. وإلى جانب ذلك، يُستخدَم ملف تعريف ارتباط اختياري من الطرف الأول لإحصائيات الزيارة (visitor_id) لتمكيننا من معرفة عدد زوار الموقع والصفحات التي تتم زيارتها؛ ولا يُسجَّل هذا الملف إلا عند الضغط على "قبول" في الإشعار الظاهر أسفل الصفحة - وفي حال الضغط على "رفض"، أو عدم اتخاذ أي قرار، لا تُسجَّل أي بيانات زيارة على الإطلاق. يُسجَّل ضمن هذا الملف فقط الصفحات التي تمت زيارتها وتواريخ الزيارة؛ ولا يُسجَّل عنوان IP أو معلومات المتصفح أو أي بيانات أخرى قد تحدد هويتكم، ولا تُشارَك البيانات مع أي طرف ثالث (مثل Google Analytics) - إذ تُحفَظ الإحصائيات فقط على خادم المكتب الخاص. تُحفَظ السجلات لمدة أقصاها 13 شهراً، ثم تُحذَف. يمكنكم سحب موافقتكم في أي وقت عبر حذف ملفات تعريف الارتباط من متصفحكم؛ وسيظهر الإشعار مجدداً في زيارتكم التالية.',
       },
     ],
   },

@@ -553,6 +553,12 @@
     "title": "Hukuki Bilgilendirme",
     "body": "Bu sitede yer alan içerik genel bilgilendirme amacı taşır; hukuki tavsiye niteliğinde değildir ve avukat–müvekkil ilişkisi doğurmaz. Somut bir uyuşmazlık veya işlem bakımından karar vermeden önce, kendi durumunuza ilişkin hukuki görüş alınması gerekir. Mevzuat ve yargı uygulaması değişebileceğinden, içeriğin güncelliği garanti edilmez."
   },
+  "cookieConsent": {
+    "label": "Çerez Tercihi",
+    "body": "Ziyaret istatistiklerini tutabilmemiz için bir çerez kullanmamıza izin verir misiniz? Kabul etmezseniz hiçbir ziyaret verisi kaydedilmez. Ayrıntılar için <link>KVKK Aydınlatma Metni'ne</link> bakabilirsiniz.",
+    "accept": "Kabul Et",
+    "decline": "Reddet"
+  },
   "notFound": {
     "label": "Hata 404",
     "title": "Aradığınız sayfa bulunamadı",
@@ -584,6 +590,7 @@
       "dashboard": "Genel Bakış",
       "messages": "Mesajlar",
       "articles": "Makaleler",
+      "analytics": "Ziyaret Analizi",
       "password": "Şifre Değiştir",
       "logout": "Çıkış Yap",
       "viewSite": "Siteyi görüntüle"
@@ -599,6 +606,23 @@
       "statusDraft": "Taslak",
       "statusMissing": "Yok",
       "articlesComingSoon": "Makale düzenleme yakında bu panelden yapılabilecek."
+    },
+    "analytics": {
+      "title": "Ziyaret Analizi",
+      "lead": "Bu rakamlar sitenin kendi veritabanında, sadece çerez onayı veren ziyaretçiler için tutulur. Google Analytics veya başka bir üçüncü taraf kullanılmaz.",
+      "totalVisitors": "Toplam Ziyaretçi",
+      "newVisitorsToday": "Bugün Yeni Ziyaretçi",
+      "newVisitorsWeek": "Bu Hafta Yeni Ziyaretçi",
+      "newVisitorsMonth": "Bu Ay Yeni Ziyaretçi",
+      "pageViewsToday": "Bugün Sayfa Görüntülenme",
+      "pageViewsWeek": "Bu Hafta Sayfa Görüntülenme",
+      "pageViewsMonth": "Bu Ay Sayfa Görüntülenme",
+      "chartTitle": "Son 30 Gün — Günlük Tekil Ziyaretçi",
+      "chartEmpty": "Henüz veri yok.",
+      "topPagesTitle": "En Çok Görüntülenen Sayfalar (Son 30 Gün)",
+      "topPagesEmpty": "Henüz veri yok.",
+      "pathColumn": "Sayfa",
+      "viewsColumn": "Görüntülenme"
     },
     "messages": {
       "title": "Mesajlar",

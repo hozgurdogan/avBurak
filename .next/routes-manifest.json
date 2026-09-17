@@ -103,6 +103,14 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel(?:/)?$"
     },
     {
+      "page": "/[locale]/admin/panel/analiz",
+      "regex": "^/([^/]+?)/admin/panel/analiz(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/analiz(?:/)?$"
+    },
+    {
       "page": "/[locale]/admin/panel/mesajlar",
       "regex": "^/([^/]+?)/admin/panel/mesajlar(?:/)?$",
       "routeKeys": {

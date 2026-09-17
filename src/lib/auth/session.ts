@@ -1,17 +1,10 @@
 import 'server-only';
 import { cookies } from 'next/headers';
 import { prisma } from '@/lib/prisma';
+import { COOKIES_REQUIRE_HTTPS } from '@/lib/cookies';
 import { SESSION_COOKIE_NAME, signSessionToken, verifySessionToken } from './token';
 
 const maxAgeSeconds = Number(process.env.SESSION_MAX_AGE ?? 28800);
-
-// Mirrors the HTTPS_IS_LIVE flag in next.config.ts - flip both together once
-// the production domain has a real, trusted certificate. A `Secure` cookie
-// is silently dropped by the browser over a plain-HTTP connection, which is
-// indistinguishable from "login succeeded but nothing happened": the
-// redirect to /admin/panel fires, finds no session, and bounces straight
-// back to the login page with no error shown anywhere.
-const COOKIES_REQUIRE_HTTPS = false;
 
 export type CurrentUser = {
   id: string;
