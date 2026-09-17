@@ -5,24 +5,26 @@
  * without a code edit. The postal address is structured rather than a single
  * string because schema.org's PostalAddress needs the parts separately.
  *
- * REVIEW WITH COUNSEL / CLIENT: every value marked PLACEHOLDER must be replaced
- * with the real registration data before launch. The bar registration line is
- * required by the TBB advertising regulation.
+ * The office phone/WhatsApp/e-mail still come from environment variables so
+ * they can be changed on the server without a code edit; the address and bar
+ * registration below are set directly, since they are not expected to change
+ * often and shipping them in code means the site is never one env var away
+ * from showing the wrong ones.
  */
 export const office = {
   address: {
-    // PLACEHOLDER - replace with the real office address.
-    streetAddress: 'PLACEHOLDER Mah. PLACEHOLDER Cad. No: 0 Kat: 0',
-    addressLocality: 'PLACEHOLDER',
+    streetAddress: 'Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, K:10 D:79',
+    addressLocality: 'Esenyurt',
     addressRegion: 'İstanbul',
-    postalCode: '34000',
+    postalCode: '34515',
     addressCountry: 'TR',
   },
-  /** Approximate coordinates for the static map link. PLACEHOLDER. */
-  geo: { latitude: 41.0082, longitude: 28.9784 },
+  /** Approximate Esenyurt coordinates - not used by the map embed (that
+   *  builds a text-query URL from the address above) or anywhere else yet. */
+  geo: { latitude: 41.034, longitude: 28.675 },
   bar: {
     association: process.env.NEXT_PUBLIC_BAR_ASSOCIATION ?? 'İstanbul Barosu',
-    registryNo: process.env.NEXT_PUBLIC_BAR_REGISTRY_NO ?? 'PLACEHOLDER',
+    registryNo: process.env.NEXT_PUBLIC_BAR_REGISTRY_NO ?? '84442',
   },
   phone: process.env.NEXT_PUBLIC_OFFICE_PHONE ?? '',
   whatsapp: process.env.NEXT_PUBLIC_OFFICE_WHATSAPP ?? '',
