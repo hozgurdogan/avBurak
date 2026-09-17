@@ -465,6 +465,41 @@ incremental ones. For an incremental change against an existing table, run
 `prisma migrate dev` locally against a disposable MySQL copy of the schema and
 commit the migration it generates instead.)
 
+### Routine redeploy (what this project actually does)
+
+The steps above describe first-time setup. In practice, `.next/` is built on
+a development machine and committed to git (this host's process limits made
+`next build` on the server itself unreliable - see the EAGAIN note in
+`next.config.ts`), so a routine redeploy is just:
+
+```bash
+cd ~/repositories/avburak-app
+git fetch origin && git reset --hard origin/main
+touch tmp/restart.txt
+```
+
+**Two things that update does *not* do, and will silently leave the app
+broken if a change needed them and this checklist is skipped:**
+
+- **`prisma/schema.prisma` changed** → the committed `.next/` build already
+  matches it, but `node_modules/@prisma/client` on the server (never
+  committed) is still generated from the *old* schema until someone runs
+  `npx prisma generate` there. The failure mode is exactly the bug fixed on
+  2026-09-18: every Prisma model added after the last `generate` reads back
+  as `undefined` (`TypeError: Cannot read properties of undefined (reading
+  'someMethod')`), even though the migration applied fine and the tables
+  exist. Run `npx prisma generate` (inside the virtual environment - see
+  "Enter to the virtual environment" above) after every pull that touches
+  the schema.
+- **A new migration was added** → run `npx prisma migrate deploy` (see
+  "Applying the schema" above) after the pull, before restarting.
+
+Both commands can hit `Error: spawn .../node EAGAIN` - this account's process
+limit, not a code bug. Prefix `prisma generate` with `CHECKPOINT_DISABLE=1`
+to remove one of the two child processes it spawns (its telemetry check),
+which was enough to clear it in practice; retrying after other Terminal
+sessions/processes end also helps.
+
 ### Running it
 
 Passenger starts `server.js` itself once the app is enabled — there is no

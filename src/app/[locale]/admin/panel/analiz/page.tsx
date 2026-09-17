@@ -14,55 +14,12 @@ export const metadata: Metadata = { robots: { index: false, follow: false } };
  * bug.
  */
 export default async function AdminAnalyticsPage() {
-  const t = await getTranslations('admin.analytics');
-
-  // TEMPORARY diagnostic (2026-09-18): the site's generic error boundary
-  // hides the real message in production, and the host's log files could
-  // not be located, so this surfaces the actual error, per query, from
-  // whichever one(s) fail - admin-only page, so this is not a public
-  // exposure. Remove once the underlying bug is found and fixed.
-  const [summaryResult, dailyCountsResult, topPagesResult] = await Promise.allSettled([
+  const [t, summary, dailyCounts, topPages] = await Promise.all([
+    getTranslations('admin.analytics'),
     getAnalyticsSummary(),
     getDailyVisitorCounts(30),
     getTopPages(30, 10),
   ]);
-
-  const failures = [
-    { name: 'getAnalyticsSummary', result: summaryResult },
-    { name: 'getDailyVisitorCounts', result: dailyCountsResult },
-    { name: 'getTopPages', result: topPagesResult },
-  ].filter((entry) => entry.result.status === 'rejected');
-
-  if (failures.length > 0) {
-    return (
-      <div className="max-w-content">
-        <h1 className="font-display text-3xl font-normal text-ink">{t('title')}</h1>
-        {failures.map(({ name, result }) => {
-          const error = result.status === 'rejected' ? result.reason : null;
-          return (
-            <div key={name} className="mt-10 border-t border-danger pt-6">
-              <p className="label text-danger">Debug - {name} hata verdi</p>
-              <pre className="mt-4 overflow-x-auto whitespace-pre-wrap break-all text-xs text-ink">
-                {error instanceof Error
-                  ? `${error.name}: ${error.message}\n\n${error.stack}`
-                  : String(error)}
-              </pre>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-
-  // TypeScript can't see the `failures.length > 0` check above as narrowing
-  // these to fulfilled, so this asserts what is already guaranteed at runtime.
-  const summary = (summaryResult as PromiseFulfilledResult<Awaited<ReturnType<typeof getAnalyticsSummary>>>)
-    .value;
-  const dailyCounts = (
-    dailyCountsResult as PromiseFulfilledResult<Awaited<ReturnType<typeof getDailyVisitorCounts>>>
-  ).value;
-  const topPages = (topPagesResult as PromiseFulfilledResult<Awaited<ReturnType<typeof getTopPages>>>)
-    .value;
 
   const statRows: Array<{ label: string; value: number }> = [
     { label: t('totalVisitors'), value: summary.totalVisitors },
