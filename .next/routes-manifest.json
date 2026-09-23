@@ -161,6 +161,23 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/admin/panel/sifre(?:/)?$"
     },
     {
+      "page": "/[locale]/bolgeler",
+      "regex": "^/([^/]+?)/bolgeler(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/bolgeler(?:/)?$"
+    },
+    {
+      "page": "/[locale]/bolgeler/[slug]",
+      "regex": "^/([^/]+?)/bolgeler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/bolgeler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/[locale]/calisma-alanlari",
       "regex": "^/([^/]+?)/calisma\\-alanlari(?:/)?$",
       "routeKeys": {
@@ -258,6 +275,18 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
     }
   ],
   "dataRoutes": [],
