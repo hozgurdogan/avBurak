@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/locales';
-import { practiceAreaSlugs, practiceAreaNumber } from '@/content/practice-areas';
+import { serviceRegionSlugs, serviceRegionNumber } from '@/content/service-regions';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/motion/reveal';
 import { pageMetadata } from '@/lib/seo';
@@ -20,17 +20,21 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'practiceAreasPage.meta' });
+  const t = await getTranslations({ locale, namespace: 'serviceRegionsPage.meta' });
   return pageMetadata({
     locale: locale as Locale,
-    path: 'calisma-alanlari',
+    path: 'bolgeler',
     title: t('title'),
     description: t('description'),
   });
 }
 
-/** The index of all six fields of work, each linking to its own detail page. */
-export default async function PracticeAreasPage({ params }: PageProps) {
+/**
+ * The index of the three regional pages the SEO audit recommends
+ * (rapor/, 2026-09-18, section 08) - a handful of genuinely distinct pages,
+ * not one templated page per district. See `src/content/service-regions.ts`.
+ */
+export default async function ServiceRegionsPage({ params }: PageProps) {
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -39,9 +43,9 @@ export default async function PracticeAreasPage({ params }: PageProps) {
 
   setRequestLocale(locale);
 
-  const [t, tAreas] = await Promise.all([
-    getTranslations('practiceAreasPage'),
-    getTranslations('practiceAreas'),
+  const [t, tRegions] = await Promise.all([
+    getTranslations('serviceRegionsPage'),
+    getTranslations('serviceRegions'),
   ]);
 
   return (
@@ -49,17 +53,17 @@ export default async function PracticeAreasPage({ params }: PageProps) {
       <div className="mx-auto max-w-wide px-gutter py-section">
         <SectionHeading as="h1" label={t('label')} title={t('title')} lead={t('lead')} />
 
-        <ol className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2">
-          {practiceAreaSlugs.map((slug, index) => (
-            <Reveal as="li" key={slug} index={index % 4}>
-              <Link href={`/calisma-alanlari/${slug}`} className="group block border-t border-rule pt-6">
+        <ol className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-3">
+          {serviceRegionSlugs.map((slug, index) => (
+            <Reveal as="li" key={slug} index={index}>
+              <Link href={`/bolgeler/${slug}`} className="group block border-t border-rule pt-6">
                 <span className="label text-gold-800" aria-hidden="true">
-                  {practiceAreaNumber(index)}
+                  {serviceRegionNumber(index)}
                 </span>
                 <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
-                  {tAreas(`${slug}.name`)}
+                  {tRegions(`${slug}.name`)}
                 </h2>
-                <p className="mt-3 measure text-sm text-ink-muted">{tAreas(`${slug}.summary`)}</p>
+                <p className="mt-3 measure text-sm text-ink-muted">{tRegions(`${slug}.summary`)}</p>
               </Link>
             </Reveal>
           ))}

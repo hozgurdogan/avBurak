@@ -16,7 +16,8 @@
     "closeMenu": "Close menu",
     "skipToContent": "Skip to content",
     "tools": "Tools",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "regions": "Regions"
   },
   "locale": {
     "label": "Language",
@@ -26,17 +27,19 @@
   "home": {
     "meta": {
       "title": "Burak Uğur Öztürk, Attorney at Law",
-      "description": "A law practice working in labour law, enforcement law, divorce and family law, inheritance law, tenancy law, and arbitration and dispute resolution."
+      "homeTitle": "Burak Uğur Öztürk, Attorney at Law | Esenyurt & Büyükçekmece Law Office",
+      "description": "A law practice in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance and corporate law; based in Esenyurt, serving Büyükçekmece and Beylikdüzü, in Turkish, English and Arabic."
     },
     "hero": {
-      "label": "Law Practice",
-      "title": "Legal support in labour, enforcement and divorce disputes.",
+      "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
+      "title": "Legal support for individual and corporate disputes in and around Büyükçekmece.",
       "registrationLabel": "Admission",
       "languagesLabel": "Working Languages",
       "languages": "Turkish · English · Arabic",
       "focusLabel": "Practice Focus",
       "focus": "Labour Law, Enforcement Law, Divorce and Family Law",
-      "lead": "The practice works primarily in labour law, enforcement and bankruptcy proceedings, divorce and family law, inheritance law, and tenancy disputes, among other areas.",
+      "regionsLabel": "Areas Served",
+      "lead": "Legal advice and litigation in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance and corporate law - based in Esenyurt, in Turkish, English and Arabic.",
       "contact": "Contact",
       "appointment": "Request an appointment"
     },
@@ -71,7 +74,9 @@
       "summary": "Dismissal and reinstatement disputes, severance and notice pay, overtime and leave entitlements, and compensation claims arising from workplace accidents.",
       "body": [
         "The practice covers litigation and mediation on behalf of employees and employers in disputes over termination of the employment contract, and the calculation and pursuit of severance pay, notice pay, overtime, annual leave and other employee entitlements.",
-        "Support is also provided in material and non-material damages claims arising from workplace accidents and occupational disease, reinstatement lawsuits, and collective redundancy procedures."
+        "Support is also provided in material and non-material damages claims arising from workplace accidents and occupational disease, reinstatement lawsuits, and collective redundancy procedures.",
+        "For an employee's reinstatement claim on grounds of unjust dismissal, an application to mediation is mandatory within the statutory period after the termination notice is served; if no settlement is reached, litigation may follow. On the employer's side, care is needed to observe procedural requirements such as taking the employee's defence, keeping minutes, and serving a proper termination notice.",
+        "Proof of overtime, annual leave and other employee entitlements generally rests on written records, witness statements and workplace records; the severance, annual leave, overtime and unemployment-benefit calculators on this site can be used for an initial estimate of the amounts involved."
       ]
     },
     "icra-hukuku": {
@@ -79,7 +84,9 @@
       "summary": "Judgment-based and judgment-free enforcement proceedings, objections and their annulment, seizure procedures, and bankruptcy and composition proceedings.",
       "body": [
         "For both creditors and debtors, the practice covers initiating judgment-based and judgment-free enforcement proceedings, objecting to a payment order, and actions for the removal or annulment of an objection.",
-        "It also covers seizure and sale procedures, actions for negative declaration and restitution, and bankruptcy and composition (concordat) proceedings."
+        "It also covers seizure and sale procedures, actions for negative declaration and restitution, and bankruptcy and composition (concordat) proceedings.",
+        "On the debtor's side, objecting to the enforcement office within the statutory period after service of the payment order halts the proceeding; the creditor may then pursue either removal of the objection (before the enforcement court) or its annulment (before the general court) to continue enforcement.",
+        "Seizure generally applies to the debtor's attachable movable and immovable property and receivables; certain assets and rights listed in law are exempt. Preparing the documents underlying the claim (contract, invoice, cheque/promissory note, judgment, etc.) in full at the outset is recommended."
       ]
     },
     "bosanma-aile-hukuku": {
@@ -87,7 +94,9 @@
       "summary": "Uncontested and contested divorce proceedings, alimony and compensation claims, division of matrimonial property, and custody and contact arrangements.",
       "body": [
         "The practice covers uncontested and contested divorce proceedings, drafting the divorce protocol, and pursuing alimony and material/moral compensation claims.",
-        "Support is also provided in claims for a participation receivable arising from the division of the matrimonial property regime, custody and contact arrangements, and actions to increase alimony."
+        "Support is also provided in claims for a participation receivable arising from the division of the matrimonial property regime, custody and contact arrangements, and actions to increase alimony.",
+        "In an uncontested divorce, the court must approve the protocol agreed between the parties on custody, alimony, compensation and property division; in a contested divorce, the claims must be supported by written evidence, witness statements and any other available evidence.",
+        "Custody and contact arrangements are decided in the child's best interest; the participation-receivable calculation in dividing the matrimonial property regime is based on assets acquired during the marriage. Drafting a power of attorney specific to the divorce process and planning the process in advance are recommended."
       ]
     },
     "miras-hukuku": {
@@ -95,7 +104,9 @@
       "summary": "Certificates of inheritance, identifying and dividing the estate, recovering an heir's share, and actions for abatement or disinheritance.",
       "body": [
         "The practice covers obtaining a certificate of inheritance, identifying and dividing the estate, and pursuing an heir's share against the other heirs.",
-        "It also covers actions for abatement, disinheritance, and disputes arising from inheritance contracts."
+        "It also covers actions for abatement, disinheritance, and disputes arising from inheritance contracts.",
+        "Disclaiming an inheritance is possible by applying to the civil court of peace within three months of learning of one's status as an heir; if that period is missed, the inheritance is, as a rule, deemed accepted unconditionally by the legal heirs.",
+        "Claims of collusive transfer to circumvent inheritance rights (\"muris muvazaası\"), actions for abatement, and requests among heirs for termination of co-ownership are also handled within this scope; the competent court and time limits depend on the specific facts of the file."
       ]
     },
     "kira-hukuku": {
@@ -103,7 +114,9 @@
       "summary": "Rent determination and increase disputes, eviction proceedings, enforcement based on a vacation commitment, and drafting lease agreements.",
       "body": [
         "The practice covers determining and adjusting the rent, disputes over the rate of rent increase, and drafting and reviewing lease agreements.",
-        "Support is also provided in enforcement proceedings based on a vacation commitment, eviction for default, and eviction actions based on the landlord's own housing need or reconstruction."
+        "Support is also provided in enforcement proceedings based on a vacation commitment, eviction for default, and eviction actions based on the landlord's own housing need or reconstruction.",
+        "Eviction may be sought through enforcement, by first putting the tenant in default or relying on a vacation commitment, or through litigation on grounds set out in law such as the landlord's or a close relative's need for housing, or reconstruction/redevelopment - each ground has its own procedure and time limits.",
+        "In rent-adjustment and rent-determination cases, the twelve-month average CPI for the preceding period is assessed together with the lease terms; the rent-increase calculator on this site can be used to work out the applicable rate."
       ]
     },
     "sirketler-hukuku": {
@@ -145,6 +158,53 @@
     "back": "All fields of work",
     "relatedLabel": "Related Articles",
     "relatedEmpty": "No articles have been published in this field yet.",
+    "relatedToolsLabel": "Related Calculators",
+    "contactCta": "Get in touch"
+  },
+  "serviceRegions": {
+    "buyukcekmece": {
+      "name": "Büyükçekmece",
+      "summary": "Court process, the most common case types, and the documents worth preparing before a meeting, for disputes in and around Büyükçekmece.",
+      "body": [
+        "For many legal disputes arising in Esenyurt, Beylikdüzü, Çatalca and Büyükçekmece itself, the court with jurisdiction is generally the Büyükçekmece Courthouse; the competent court can vary by case type, so this is always confirmed for the specific matter.",
+        "The most common disputes from this area include employee entitlement and reinstatement claims, objections to enforcement proceedings and seizure, divorce and custody cases, rent-determination and eviction claims, and disputes arising from inheritance division.",
+        "Before a meeting, having identification, any existing contract or notice document, employment-related records (payslips, entry/exit declarations), or matter-specific documents such as title deeds or lease agreements ready makes the initial assessment faster."
+      ],
+      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku"]
+    },
+    "beylikduzu": {
+      "name": "Beylikdüzü",
+      "summary": "Disputes arising from residential and workplace relationships in Beylikdüzü, and meeting options.",
+      "body": [
+        "With its dense residential and workplace population, Beylikdüzü is an area where tenancy relationships, employment contract disputes and family-law matters are frequently seen; disputes arising here are also generally within the jurisdiction of the Büyükçekmece Courthouse.",
+        "As a tenant or landlord: eviction, rent-determination and deposit disputes; as an employee or employer: severance/notice pay and overtime claims; and objections to enforcement proceedings and seizure are among the matters most often raised from this area.",
+        "Meetings can be arranged in person at the office or remotely by video/phone call, depending on preference; preparing the relevant documents (lease agreement, payment records, employment contract, etc.) before the first meeting improves efficiency."
+      ],
+      "relatedAreas": ["kira-hukuku", "is-hukuku", "bosanma-aile-hukuku", "icra-hukuku"]
+    },
+    "esenyurt": {
+      "name": "Esenyurt",
+      "summary": "The office's actual Esenyurt address, access information, and individual and corporate client intake across every practice area.",
+      "body": [
+        "The office operates from Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/Istanbul; individual and corporate clients are received by appointment, in person at the office or, on request, by video/phone call.",
+        "Across labour law, enforcement law, divorce and family law, tenancy law, inheritance law, corporate law, arbitration and data protection alike, both individual and corporate/foreign clients are served in Turkish, English and Arabic.",
+        "The address is reachable by public transport and by car; for the exact appointment time and directions, contacting the office beforehand by phone or WhatsApp (see the contact page) is recommended."
+      ],
+      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku", "sirketler-hukuku"]
+    }
+  },
+  "serviceRegionsPage": {
+    "meta": {
+      "title": "Areas Served",
+      "description": "Legal support in Esenyurt, Büyükçekmece and Beylikdüzü, in labour law, enforcement law, divorce and family law, tenancy law and inheritance law."
+    },
+    "label": "Regions",
+    "title": "Areas served",
+    "lead": "The office's actual address is in Esenyurt; clients in Büyükçekmece and Beylikdüzü are served in the same practice areas."
+  },
+  "serviceRegionDetail": {
+    "back": "All regions",
+    "relatedAreasLabel": "Related Practice Areas",
     "contactCta": "Get in touch"
   },
   "profilePage": {
@@ -533,6 +593,8 @@
   "article": {
     "readingTime": "{minutes} min read",
     "publishedOn": "Published {date}",
+    "updatedOn": "Updated {date}",
+    "byAuthor": "By {name}",
     "categoryLabel": "Category"
   },
   "footer": {

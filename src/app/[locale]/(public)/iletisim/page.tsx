@@ -10,6 +10,7 @@ import { serviceAreaDistricts } from '@/content/service-areas';
 import { reviews } from '@/content/reviews';
 import { OfficeMap } from '@/components/contact/office-map';
 import type { Locale } from '@/i18n/locales';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -22,7 +23,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'contactPage.meta' });
-  return { title: t('title'), description: t('description') };
+  return pageMetadata({ locale: locale as Locale, path: 'iletisim', title: t('title'), description: t('description') });
 }
 
 export default async function ContactPage({ params }: PageProps) {

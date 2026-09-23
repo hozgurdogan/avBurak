@@ -9,6 +9,7 @@ import { getArticles, getCategories } from '@/lib/articles';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/motion/reveal';
 import { cn } from '@/lib/cn';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -20,7 +21,12 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'articlesPage.meta' });
-  return { title: t('title'), description: t('description') };
+  return pageMetadata({
+    locale: locale as Locale,
+    path: 'makaleler',
+    title: t('title'),
+    description: t('description'),
+  });
 }
 
 /**

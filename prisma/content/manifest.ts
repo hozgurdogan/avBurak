@@ -93,6 +93,56 @@ export const seedCategories: SeedCategory[] = [
       ar: 'حماية البيانات الشخصية',
     },
   },
+  // Added 2026-09-23 alongside the practice-area repositioning in
+  // src/content/practice-areas.ts (see that file's comment for why the
+  // three categories above are kept rather than removed). Slugs match
+  // `practiceAreaSlugs` exactly so `getArticlesByCategory` in
+  // src/lib/articles.ts resolves without a mapping table.
+  {
+    slug: 'is-hukuku',
+    position: 7,
+    names: {
+      tr: 'İş Hukuku',
+      en: 'Labour Law',
+      ar: 'قانون العمل',
+    },
+  },
+  {
+    slug: 'icra-hukuku',
+    position: 8,
+    names: {
+      tr: 'İcra Hukuku',
+      en: 'Enforcement Law',
+      ar: 'قانون التنفيذ',
+    },
+  },
+  {
+    slug: 'bosanma-aile-hukuku',
+    position: 9,
+    names: {
+      tr: 'Boşanma ve Aile Hukuku',
+      en: 'Divorce and Family Law',
+      ar: 'قانون الطلاق والأسرة',
+    },
+  },
+  {
+    slug: 'kira-hukuku',
+    position: 10,
+    names: {
+      tr: 'Kira Hukuku',
+      en: 'Tenancy Law',
+      ar: 'قانون الإيجار',
+    },
+  },
+  {
+    slug: 'miras-hukuku',
+    position: 11,
+    names: {
+      tr: 'Miras Hukuku',
+      en: 'Inheritance Law',
+      ar: 'قانون الإرث',
+    },
+  },
 ];
 
 export const seedArticleGroups: SeedArticleGroup[] = [
@@ -195,6 +245,214 @@ export const seedArticleGroups: SeedArticleGroup[] = [
         metaTitle: 'شروط التحكيم في العقود العابرة للحدود',
         metaDescription:
           'صياغة شرط التحكيم في عقد متصل بالقانون التركي: قابلية النزاع للتحكيم، ومقر التحكيم، وعدد المحكَّمين، واللغة، واستقلال الشرط، والحماية المؤقتة، ودعوى البطلان، وتنفيذ الأحكام الأجنبية.',
+      },
+    },
+  },
+  // Added 2026-09-23: first six B2C/local-SEO articles from the report's
+  // content plan, one per practice-area cluster (İş, İcra, Aile, Kira,
+  // Miras clusters — İş covered twice). Dates are staggered ~2/week to
+  // mirror the recommended publishing cadence.
+  {
+    key: 'ise-iade-basvuru',
+    categories: ['is-hukuku'],
+    publishedAt: '2026-09-23T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'ise-iade-davasi-basvuru-suresi-ve-arabuluculuk',
+        title: 'İşe İade Davası: Başvuru Süresi ve Zorunlu Arabuluculuk',
+        summary:
+          'İş güvencesi kapsamındaki bir işçi için bir aylık zorunlu arabuluculuk başvuru süresi, arabuluculuk sürecinin işleyişi ve anlaşma sağlanamazsa dava açma süresi.',
+        metaTitle: 'İşe İade Davası: Başvuru Süresi ve Zorunlu Arabuluculuk',
+        metaDescription:
+          'İşe iade davasında bir aylık arabuluculuk başvuru süresi, arabuluculuk süreci, anlaşma sağlanamazsa iki haftalık dava açma süresi ve sık yapılan usul hataları.',
+      },
+      en: {
+        slug: 'reinstatement-lawsuit-deadlines-and-mandatory-mediation',
+        title: 'Reinstatement Lawsuit: Deadlines and Mandatory Mediation',
+        summary:
+          'The one-month deadline to apply for mandatory mediation for an employee covered by job security, how mediation works, and the deadline to sue if no settlement is reached.',
+        metaTitle: 'Reinstatement Lawsuit: Deadlines and Mandatory Mediation',
+        metaDescription:
+          'The one-month mediation application deadline in a reinstatement case, how mediation works, the two-week deadline to sue if no settlement is reached, and common procedural mistakes.',
+      },
+      ar: {
+        slug: 'dawa-al-awda-ila-al-amal-al-muhal-wa-al-wasata-al-ilzamiya',
+        title: 'دعوى العودة إلى العمل: المهل والوساطة الإلزامية',
+        summary:
+          'مهلة الشهر الواحد للتقدم بطلب الوساطة الإلزامية للعامل المشمول بضمان الوظيفة، وسير عملية الوساطة، ومهلة رفع الدعوى في حال عدم التوصل إلى اتفاق.',
+        metaTitle: 'دعوى العودة إلى العمل: المهل والوساطة الإلزامية',
+        metaDescription:
+          'مهلة الشهر الواحد للتقدم بطلب الوساطة في دعوى العودة إلى العمل، وسير عملية الوساطة، ومهلة الأسبوعين لرفع الدعوى، والأخطاء الإجرائية الشائعة.',
+      },
+    },
+  },
+  {
+    key: 'odeme-emrine-itiraz',
+    categories: ['icra-hukuku'],
+    publishedAt: '2026-09-26T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'odeme-emrine-itiraz-suresi-ve-sonuclari',
+        title: 'Ödeme Emrine İtiraz: Süre ve Sonuçları',
+        summary:
+          'İlamsız icra takibinde ödeme emrine itirazın yedi günlük süresi, itirazın takibi kendiliğinden durdurma etkisi ve alacaklının itirazın kaldırılması ile itirazın iptali yolları.',
+        metaTitle: 'Ödeme Emrine İtiraz: Süre ve Sonuçları',
+        metaDescription:
+          'Ödeme emrine yedi gün içinde itiraz etmenin sonuçları, takibin kendiliğinden durması, alacaklının itirazın kaldırılması ve itirazın iptali davası seçenekleri.',
+      },
+      en: {
+        slug: 'objecting-to-a-payment-order-deadline-and-effects',
+        title: 'Objecting to a Payment Order: Deadline and Effects',
+        summary:
+          'The seven-day deadline to object to a payment order in an enforcement proceeding without a judgment, the automatic-stay effect of an objection, and the creditor\'s two routes to overcome it.',
+        metaTitle: 'Objecting to a Payment Order: Deadline and Effects',
+        metaDescription:
+          'The seven-day deadline to object to a payment order, the effect of an objection on enforcement, and the creditor\'s options: setting the objection aside or an action to annul it.',
+      },
+      ar: {
+        slug: 'al-itirad-ala-amr-al-daf-al-muhla-wa-al-nataij',
+        title: 'الاعتراض على أمر الدفع: المهلة والنتائج',
+        summary:
+          'مهلة الأيام السبعة للاعتراض على أمر الدفع في التنفيذ بدون حكم، وأثر الاعتراض في وقف التنفيذ تلقائيًا، والطريقان اللذان يمكن للدائن اتباعهما.',
+        metaTitle: 'الاعتراض على أمر الدفع: المهلة والنتائج',
+        metaDescription:
+          'مهلة الأيام السبعة للاعتراض على أمر الدفع، وأثر الاعتراض في وقف إجراءات التنفيذ، وخيارا الدائن: رفع الاعتراض أو دعوى إبطال الاعتراض.',
+      },
+    },
+  },
+  {
+    key: 'anlasmali-bosanma-protokolu',
+    categories: ['bosanma-aile-hukuku'],
+    publishedAt: '2026-09-30T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'anlasmali-bosanma-protokolunde-bulunmasi-gerekenler',
+        title: 'Anlaşmalı Boşanma Protokolünde Bulunması Gerekenler',
+        summary:
+          'Anlaşmalı boşanmanın bir yıllık evlilik süresi şartı, protokolde yer alması gereken yedi unsur (velayet, nafaka, tazminat, mal rejimi dahil) ve duruşmanın işleyişi.',
+        metaTitle: 'Anlaşmalı Boşanma Protokolünde Bulunması Gerekenler',
+        metaDescription:
+          'Anlaşmalı boşanma şartları, protokolde bulunması gereken velayet, nafaka, tazminat ve mal rejimi hükümleri, duruşma süreci ve sık yapılan hatalar.',
+      },
+      en: {
+        slug: 'what-an-uncontested-divorce-protocol-must-include',
+        title: 'What an Uncontested Divorce Protocol Must Include',
+        summary:
+          'The one-year marriage requirement for an uncontested divorce, the seven elements a protocol must cover (custody, alimony, compensation, and property regime included), and how the hearing proceeds.',
+        metaTitle: 'What an Uncontested Divorce Protocol Must Include',
+        metaDescription:
+          'Conditions for an uncontested divorce, the custody, alimony, compensation and property-regime terms a protocol must include, how the court hearing proceeds, and common mistakes.',
+      },
+      ar: {
+        slug: 'ma-yajib-an-yatadamanahu-brotokol-al-talaq-bil-taradi',
+        title: 'ما يجب أن يتضمنه بروتوكول الطلاق بالتراضي',
+        summary:
+          'شرط استمرار الزواج لمدة سنة واحدة للطلاق بالتراضي، والعناصر السبعة الواجب تضمينها في البروتوكول (الحضانة والنفقة والتعويض وتصفية النظام المالي)، وسير الجلسة.',
+        metaTitle: 'ما يجب أن يتضمنه بروتوكول الطلاق بالتراضي',
+        metaDescription:
+          'شروط الطلاق بالتراضي، وأحكام الحضانة والنفقة والتعويض وتصفية النظام المالي الواجب توفرها في البروتوكول، وسير جلسة المحكمة، والأخطاء الشائعة.',
+      },
+    },
+  },
+  {
+    key: 'tahliye-taahhudu',
+    categories: ['kira-hukuku'],
+    publishedAt: '2026-10-03T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'tahliye-taahhudu-ne-zaman-gecerlidir',
+        title: 'Tahliye Taahhüdü Ne Zaman Geçerlidir?',
+        summary:
+          'Tahliye taahhüdünün geçerli sayılması için kira sözleşmesi kurulduktan sonra imzalanması gerekliliği, bir aylık başvuru süresi ve icra ile dava yoluyla tahliye seçenekleri.',
+        metaTitle: 'Tahliye Taahhüdü Ne Zaman Geçerlidir?',
+        metaDescription:
+          'Tahliye taahhüdünün geçerlilik şartı olan imza zamanlaması, bir aylık tahliye başvuru süresi, icra yoluyla ve dava yoluyla tahliye seçenekleri ile sık yapılan hatalar.',
+      },
+      en: {
+        slug: 'when-is-a-vacation-commitment-valid',
+        title: 'When Is a Vacation Commitment Valid?',
+        summary:
+          'Why a vacation commitment must be signed after the lease is formed to be valid, the one-month deadline to apply for eviction, and the two available eviction routes.',
+        metaTitle: 'When Is a Vacation Commitment Valid?',
+        metaDescription:
+          'The timing requirement for a valid vacation commitment, the one-month deadline to apply for eviction, eviction through enforcement versus litigation, and common mistakes.',
+      },
+      ar: {
+        slug: 'mata-yakun-tahhud-al-ikhla-sahihan',
+        title: 'متى يكون تعهد الإخلاء صحيحًا؟',
+        summary:
+          'ضرورة توقيع تعهد الإخلاء بعد إنشاء عقد الإيجار لكي يكون صحيحًا، ومهلة الشهر الواحد للتقدم بطلب الإخلاء، وطريقا الإخلاء عن طريق التنفيذ والدعوى.',
+        metaTitle: 'متى يكون تعهد الإخلاء صحيحًا؟',
+        metaDescription:
+          'شرط توقيت توقيع تعهد الإخلاء الصحيح، ومهلة الشهر الواحد للتقدم بطلب الإخلاء، والإخلاء عن طريق التنفيذ أو الدعوى، والأخطاء الشائعة.',
+      },
+    },
+  },
+  {
+    key: 'kidem-tazminati-sartlari',
+    categories: ['is-hukuku'],
+    publishedAt: '2026-10-07T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'kidem-tazminati-hangi-hallerde-alinir',
+        title: 'Kıdem Tazminatı Hangi Hallerde Alınır?',
+        summary:
+          'Kıdem tazminatına hak kazanmanın bir yıllık kıdem şartı, tazminatın ödendiği fesih halleri (haklı fesih, emeklilik, evlilik, askerlik dahil) ve ödenmeyen haller.',
+        metaTitle: 'Kıdem Tazminatı Hangi Hallerde Alınır?',
+        metaDescription:
+          'Kıdem tazminatı şartları: bir yıllık kıdem, hangi fesih hallerinde ödendiği, hangi hallerde ödenmediği, hesaplamanın esası ve tavan uygulaması.',
+      },
+      en: {
+        slug: 'when-is-severance-pay-owed',
+        title: 'When Is Severance Pay Owed?',
+        summary:
+          'The one-year service requirement for severance pay, the terminations that trigger it (just-cause termination, retirement, marriage, military service included), and when it is not owed.',
+        metaTitle: 'When Is Severance Pay Owed?',
+        metaDescription:
+          'Severance pay conditions: the one-year service requirement, which terminations trigger it, when it is not owed, and the basis of calculation and statutory cap.',
+      },
+      ar: {
+        slug: 'mata-yustahaqq-tawidh-nihayat-al-khidma',
+        title: 'متى يُستحق تعويض نهاية الخدمة؟',
+        summary:
+          'شرط الخدمة لمدة سنة واحدة لاستحقاق تعويض نهاية الخدمة، وحالات الإنهاء التي تُستحق فيها (الإنهاء لسبب مشروع والتقاعد والزواج والخدمة العسكرية)، والحالات التي لا يُستحق فيها.',
+        metaTitle: 'متى يُستحق تعويض نهاية الخدمة؟',
+        metaDescription:
+          'شروط تعويض نهاية الخدمة: خدمة سنة واحدة، وحالات الإنهاء التي يُستحق فيها التعويض، والحالات التي لا يُستحق فيها، وأساس الاحتساب والحد الأقصى القانوني.',
+      },
+    },
+  },
+  {
+    key: 'mirasin-reddi',
+    categories: ['miras-hukuku'],
+    publishedAt: '2026-10-10T09:00:00.000Z',
+    translations: {
+      tr: {
+        slug: 'mirasin-reddi-uc-aylik-sure-ve-sonuclari',
+        title: 'Mirasın Reddi: Üç Aylık Süre ve Sonuçları',
+        summary:
+          'Mirasın reddi için üç aylık hak düşürücü sürenin başlangıcı, ret usulü, kimlerin reddedebileceği ve hükmen ret hâli.',
+        metaTitle: 'Mirasın Reddi: Üç Aylık Süre ve Sonuçları',
+        metaDescription:
+          'Mirasın reddi için üç aylık süre, sürenin başlangıcı, ret usulü, kimlerin reddedebileceği, hükmen ret hâli ve sık yapılan hatalar.',
+      },
+      en: {
+        slug: 'disclaiming-an-inheritance-the-three-month-deadline',
+        title: 'Disclaiming an Inheritance: The Three-Month Deadline',
+        summary:
+          'When the three-month deadline to disclaim an inheritance starts, how to disclaim, who may disclaim, and deemed disclaimer by operation of law.',
+        metaTitle: 'Disclaiming an Inheritance: The Three-Month Deadline',
+        metaDescription:
+          'The three-month deadline to disclaim an inheritance, when it starts, how to disclaim, who may disclaim, deemed disclaimer, and common mistakes.',
+      },
+      ar: {
+        slug: 'rad-al-tarika-mahlat-al-thalatha-ashhur-wa-nataijuha',
+        title: 'رد التركة: مهلة الأشهر الثلاثة ونتائجها',
+        summary:
+          'بداية مهلة الأشهر الثلاثة السقوطية لرد التركة، وكيفية الرد، ومن يحق له الرد، وحالة الرد الحكمي بحكم القانون.',
+        metaTitle: 'رد التركة: مهلة الأشهر الثلاثة ونتائجها',
+        metaDescription:
+          'مهلة الأشهر الثلاثة لرد التركة، وبداية احتسابها، وكيفية الرد، ومن يحق له الرد، وحالة الرد الحكمي، والأخطاء الشائعة.',
       },
     },
   },

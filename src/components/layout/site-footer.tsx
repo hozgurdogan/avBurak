@@ -6,6 +6,7 @@ import { office, formatAddress, telHref, whatsappHref } from '@/content/office';
 
 const siteLinks = [
   { href: '/calisma-alanlari', key: 'practiceAreas' },
+  { href: '/bolgeler', key: 'regions' },
   { href: '/profil', key: 'profile' },
   { href: '/makaleler', key: 'articles' },
   { href: '/hesaplama-araclari', key: 'tools' },

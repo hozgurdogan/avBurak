@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import type { Locale } from '@/i18n/locales';
 import { faqContent } from '@/content/faq';
 import { SectionHeading } from '@/components/ui/section-heading';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -19,7 +20,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const content = faqContent[locale as Locale];
-  return { title: content.meta.title, description: content.meta.description };
+  return pageMetadata({
+    locale: locale as Locale,
+    path: 'sss',
+    title: content.meta.title,
+    description: content.meta.description,
+  });
 }
 
 /**

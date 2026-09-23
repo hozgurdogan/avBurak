@@ -26,6 +26,7 @@ export type ArticleDetail = ArticleCard & {
   metaTitle: string | null;
   metaDescription: string | null;
   groupId: string;
+  updatedAt: Date;
 };
 
 const cardSelect = {
@@ -54,6 +55,7 @@ const detailSelect = {
   metaTitle: true,
   metaDescription: true,
   groupId: true,
+  updatedAt: true,
 } as const;
 
 type RawCard = {
@@ -74,6 +76,7 @@ type RawDetail = RawCard & {
   metaTitle: string | null;
   metaDescription: string | null;
   groupId: string;
+  updatedAt: Date;
 };
 
 function toCard(row: RawCard, locale: Locale): ArticleCard {
@@ -166,6 +169,7 @@ export async function getArticleBySlug(locale: Locale, slug: string): Promise<Ar
     metaTitle: row.metaTitle,
     metaDescription: row.metaDescription,
     groupId: row.groupId,
+    updatedAt: row.updatedAt,
   };
 }
 

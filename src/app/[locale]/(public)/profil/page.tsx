@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ActionLink } from '@/components/ui/action-link';
 import { office } from '@/content/office';
+import type { Locale } from '@/i18n/locales';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -18,7 +20,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'profilePage.meta' });
-  return { title: t('title'), description: t('description') };
+  return pageMetadata({ locale: locale as Locale, path: 'profil', title: t('title'), description: t('description') });
 }
 
 export default async function ProfilePage({ params }: PageProps) {

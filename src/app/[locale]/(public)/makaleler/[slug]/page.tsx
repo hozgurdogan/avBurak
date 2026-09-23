@@ -11,6 +11,9 @@ import { ActionLink } from '@/components/ui/action-link';
 import { ArticleToc } from '@/components/ui/article-toc';
 import { LegalDisclaimer } from '@/components/ui/legal-disclaimer';
 import { Reveal } from '@/components/motion/reveal';
+import { pageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/seo/json-ld';
+import { buildBreadcrumbSchema, buildArticleSchema } from '@/lib/structured-data';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -25,15 +28,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const alternates = await getArticleAlternates(article.groupId);
 
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: `makaleler/${slug}`,
     title: article.metaTitle ?? article.title,
     description: article.metaDescription ?? article.summary,
-    alternates: {
-      languages: Object.fromEntries(
-        Object.entries(alternates).map(([l, s]) => [l, `/${l}/makaleler/${s}`]),
-      ),
-    },
-  };
+    languages: Object.fromEntries(
+      Object.entries(alternates).map(([l, s]) => [l, `/${l}/makaleler/${s}`]),
+    ),
+    ogType: 'article',
+  });
 }
 
 /**
@@ -56,9 +60,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const [tDetail, tArticle, rendered, related] = await Promise.all([
+  const [tDetail, tArticle, tNav, rendered, related] = await Promise.all([
     getTranslations('articleDetail'),
     getTranslations('article'),
+    getTranslations('nav'),
     renderArticleMarkdown(article.contentMd),
     getRelatedArticles(
       typedLocale,
@@ -76,6 +81,24 @@ export default async function ArticleDetailPage({ params }: PageProps) {
   });
 
   return (
+    <>
+    <JsonLd
+      data={buildBreadcrumbSchema(typedLocale, [
+        { name: tNav('home'), path: '' },
+        { name: tNav('articles'), path: 'makaleler' },
+        { name: article.title, path: `makaleler/${slug}` },
+      ])}
+    />
+    <JsonLd
+      data={buildArticleSchema({
+        locale: typedLocale,
+        path: `makaleler/${slug}`,
+        title: article.title,
+        description: article.summary,
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt,
+      })}
+    />
     <article className="bg-canvas-deep">
     <div className="mx-auto max-w-wide px-gutter py-section">
       <div className="mb-10">
@@ -98,6 +121,13 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             : null}
           {' · '}
           {tArticle('readingTime', { minutes: article.readMinutes })}
+          {article.publishedAt && article.updatedAt.getTime() !== article.publishedAt.getTime() ? (
+            <> · {tArticle('updatedOn', { date: dateFormatter.format(article.updatedAt) })}</>
+          ) : null}
+          {' · '}
+          <Link href="/profil" className="transition-colors duration-base hover:text-gold-800">
+            {tArticle('byAuthor', { name: 'Burak Uğur Öztürk' })}
+          </Link>
         </p>
       </header>
 
@@ -147,5 +177,6 @@ export default async function ArticleDetailPage({ params }: PageProps) {
       ) : null}
     </div>
     </article>
+    </>
   );
 }

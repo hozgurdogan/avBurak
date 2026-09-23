@@ -5,7 +5,9 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/locales';
+import { pageMetadata } from '@/lib/seo';
 import { practiceAreaSlugs, practiceAreaNumber } from '@/content/practice-areas';
+import { serviceRegionSlugs } from '@/content/service-regions';
 import { office } from '@/content/office';
 import { getLatestArticles } from '@/lib/articles';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -24,7 +26,17 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home.meta' });
-  return { title: t('title'), description: t('description') };
+  const homeTitle = t('homeTitle');
+
+  return {
+    ...pageMetadata({ locale: locale as Locale, path: '', title: homeTitle, description: t('description') }),
+    // Bypasses the layout's `%s — <default>` template: without this, the
+    // home page's own title (even though it differs from the default) still
+    // gets the suffix appended, which is what produced the audit's flagged
+    // "Av. Burak Uğur Öztürk — Av. Burak Uğur Öztürk" duplication before
+    // `homeTitle` existed as a distinct string.
+    title: { absolute: homeTitle },
+  };
 }
 
 /**
@@ -42,7 +54,7 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
   const typedLocale = locale as Locale;
 
-  const [tHero, tPractice, tProfile, tArticles, tContact, tPracticeAreas, tArticle] =
+  const [tHero, tPractice, tProfile, tArticles, tContact, tPracticeAreas, tArticle, tRegions] =
     await Promise.all([
       getTranslations({ locale, namespace: 'home.hero' }),
       getTranslations({ locale, namespace: 'home.practice' }),
@@ -51,6 +63,7 @@ export default async function HomePage({ params }: PageProps) {
       getTranslations({ locale, namespace: 'home.contact' }),
       getTranslations({ locale, namespace: 'practiceAreas' }),
       getTranslations({ locale, namespace: 'article' }),
+      getTranslations({ locale, namespace: 'serviceRegions' }),
     ]);
 
   const latestArticles = await getLatestArticles(typedLocale, 3);
@@ -104,7 +117,7 @@ export default async function HomePage({ params }: PageProps) {
               distinction, which the advertising regulation forbids. Splitting it
               into a hairline-ruled row also gives the hero a base, so the copy
               no longer floats in the upper-left of an empty navy field. */}
-          <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule-invert pt-8 sm:grid-cols-2 lg:grid-cols-3">
+          <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule-invert pt-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <dt className="label text-gold-500">{tHero('registrationLabel')}</dt>
               <dd className="mt-3 text-sm text-mist">{office.bar.association}</dd>
@@ -116,6 +129,20 @@ export default async function HomePage({ params }: PageProps) {
             <div>
               <dt className="label text-gold-500">{tHero('focusLabel')}</dt>
               <dd className="mt-3 text-sm text-mist">{tHero('focus')}</dd>
+            </div>
+            <div>
+              <dt className="label text-gold-500">{tHero('regionsLabel')}</dt>
+              <dd className="mt-3 flex flex-col gap-1 text-sm">
+                {serviceRegionSlugs.map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/bolgeler/${slug}`}
+                    className="text-mist underline decoration-mist-muted underline-offset-2 transition-colors duration-base hover:text-canvas"
+                  >
+                    {tRegions(`${slug}.name`)}
+                  </Link>
+                ))}
+              </dd>
             </div>
           </dl>
         </div>

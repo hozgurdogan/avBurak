@@ -16,7 +16,8 @@
     "closeMenu": "Menüyü kapat",
     "skipToContent": "İçeriğe geç",
     "tools": "Araçlar",
-    "faq": "SSS"
+    "faq": "SSS",
+    "regions": "Bölgeler"
   },
   "locale": {
     "label": "Dil",
@@ -26,17 +27,19 @@
   "home": {
     "meta": {
       "title": "Av. Burak Uğur Öztürk",
-      "description": "İş hukuku, icra hukuku, boşanma ve aile hukuku, miras hukuku, kira hukuku ile tahkim ve uyuşmazlık çözümü alanlarında çalışan avukatlık bürosu."
+      "homeTitle": "Av. Burak Uğur Öztürk | Esenyurt ve Büyükçekmece Hukuk Bürosu",
+      "description": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras ve şirketler hukukunda; Esenyurt merkezli, Büyükçekmece ve Beylikdüzü çevresine Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi."
     },
     "hero": {
-      "label": "Hukuk Bürosu",
-      "title": "İş hukuku, icra ve boşanma uyuşmazlıklarında hukuki destek.",
+      "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
+      "title": "Büyükçekmece ve çevresinde bireysel ve kurumsal uyuşmazlıklara hukuki destek.",
       "registrationLabel": "Kayıt",
       "languagesLabel": "Çalışma Dilleri",
       "languages": "Türkçe · İngilizce · Arapça",
       "focusLabel": "Çalışma Alanları",
       "focus": "İş Hukuku, İcra Hukuku, Boşanma ve Aile Hukuku",
-      "lead": "Büro; iş hukuku, icra ve iflas takipleri, boşanma ve aile hukuku, miras hukuku ile kira uyuşmazlıkları başta olmak üzere çeşitli hukuk alanlarında çalışmaktadır.",
+      "regionsLabel": "Hizmet Bölgeleri",
+      "lead": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras ve şirketler hukukunda; Esenyurt merkezli, Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi.",
       "contact": "İletişim",
       "appointment": "Randevu talebi"
     },
@@ -71,7 +74,9 @@
       "summary": "İşe iade ve fesih uyuşmazlıkları, kıdem ve ihbar tazminatı, fazla mesai ve izin alacakları, iş kazası ve meslek hastalığından doğan tazminat talepleri.",
       "body": [
         "İş sözleşmesinin feshine ilişkin uyuşmazlıklarda işçi ve işveren tarafında dava ve arabuluculuk süreçlerinin yürütülmesi, kıdem ve ihbar tazminatı ile fazla mesai, yıllık izin ve diğer işçilik alacaklarının hesaplanması ve takibi bu alanın kapsamındadır.",
-        "İş kazası ve meslek hastalığından doğan maddi ve manevi tazminat talepleri, işe iade davaları ve toplu işçi çıkarma süreçlerinde de destek sağlanmaktadır."
+        "İş kazası ve meslek hastalığından doğan maddi ve manevi tazminat talepleri, işe iade davaları ve toplu işçi çıkarma süreçlerinde de destek sağlanmaktadır.",
+        "İşçi tarafında iş sözleşmesinin haksız feshi iddiasıyla işe iade talebi için, fesih bildiriminin tebliğinden itibaren kanunda öngörülen süre içinde arabuluculuğa başvurulması zorunludur; arabuluculukta anlaşma sağlanamaması hâlinde dava süreci işletilir. İşveren tarafında ise savunma alma, tutanak düzenleme ve fesih bildirimi gibi usul şartlarına uyulmasına özen gösterilmesi gerekir.",
+        "Fazla mesai, yıllık izin ve diğer işçilik alacaklarının ispatında yazılı belgeler, tanık beyanları ve işyeri kayıtları belirleyicidir; alacak miktarının önceden değerlendirilmesi için sitedeki kıdem tazminatı, yıllık izin, fazla mesai ve işsizlik maaşı hesaplama araçlarından yararlanılabilir."
       ]
     },
     "icra-hukuku": {
@@ -79,7 +84,9 @@
       "summary": "İlamlı ve ilamsız icra takipleri, itiraz ve itirazın iptali, haciz işlemleri, iflas ve konkordato süreçleri.",
       "body": [
         "Alacaklı ve borçlu taraflar bakımından ilamlı ve ilamsız icra takiplerinin başlatılması, ödeme emrine itiraz, itirazın kaldırılması ve itirazın iptali davaları bu alanın kapsamındadır.",
-        "Haciz ve satış işlemlerinin takibi, menfi tespit ve istirdat davaları ile iflas ve konkordato süreçlerinde de çalışılmaktadır."
+        "Haciz ve satış işlemlerinin takibi, menfi tespit ve istirdat davaları ile iflas ve konkordato süreçlerinde de çalışılmaktadır.",
+        "Borçlu tarafında ödeme emrinin tebliğinden itibaren yasal süre içinde icra dairesine itiraz edilmesi takibi durdurur; alacaklı tarafında ise itirazın kaldırılması (icra mahkemesi) veya itirazın iptali (genel mahkeme) yollarından biri izlenerek takibin devamı sağlanabilir.",
+        "Haciz işlemleri kural olarak borçlunun haczedilebilir taşınır ve taşınmaz malları ile alacaklarına uygulanır; kanunda sayılan belirli mal ve haklar haciz dışında tutulmuştur. Sürecin başında alacağın dayanağı olan belgelerin (sözleşme, fatura, çek/senet, ilam vb.) eksiksiz hazırlanması önerilir."
       ]
     },
     "bosanma-aile-hukuku": {
@@ -87,7 +94,9 @@
       "summary": "Anlaşmalı ve çekişmeli boşanma davaları, nafaka ve tazminat talepleri, mal rejiminin tasfiyesi, velayet ve kişisel ilişki düzenlemeleri.",
       "body": [
         "Anlaşmalı ve çekişmeli boşanma davalarının yürütülmesi, boşanma protokolünün hazırlanması, nafaka ve maddi-manevi tazminat taleplerinin ileri sürülmesi bu alanın kapsamındadır.",
-        "Mal rejiminin tasfiyesinden doğan katılma alacağı davaları, velayet ve kişisel ilişki tesisi ile nafaka artırım davalarında da destek sağlanmaktadır."
+        "Mal rejiminin tasfiyesinden doğan katılma alacağı davaları, velayet ve kişisel ilişki tesisi ile nafaka artırım davalarında da destek sağlanmaktadır.",
+        "Anlaşmalı boşanmada taraflar arasında velayet, nafaka, tazminat ve mal paylaşımı konularında düzenlenen protokolün mahkemece uygun bulunması aranır; çekişmeli boşanmada ise iddiaların yazılı belge, tanık beyanı ve varsa diğer delillerle desteklenmesi gerekir.",
+        "Velayet ve kişisel ilişki düzenlemelerinde çocuğun üstün yararı esas alınır; mal rejiminin tasfiyesinde katılma alacağı hesaplaması evlilik süresince edinilen mallara göre yapılır. Boşanma sürecine özgü vekâletname düzenlenmesi ve süreç akışının önceden planlanması önerilir."
       ]
     },
     "miras-hukuku": {
@@ -95,7 +104,9 @@
       "summary": "Mirasçılık belgesi, terekenin tespiti ve taksimi, miras payının tahsili, tenkis ve mirastan çıkarma davaları.",
       "body": [
         "Mirasçılık belgesinin alınması, terekenin tespiti ve taksimi, miras payının diğer mirasçılardan tahsiline ilişkin süreçlerin yürütülmesi bu alanın kapsamındadır.",
-        "Tenkis davaları, mirastan çıkarma ve miras sözleşmelerine ilişkin uyuşmazlıklarda da çalışılmaktadır."
+        "Tenkis davaları, mirastan çıkarma ve miras sözleşmelerine ilişkin uyuşmazlıklarda da çalışılmaktadır.",
+        "Mirasın reddi, mirasçı olduğunu öğrenme tarihinden itibaren üç aylık süre içinde sulh hukuk mahkemesine yapılan başvuruyla mümkündür; bu süre kaçırıldığında miras kural olarak kanuni mirasçılar tarafından kayıtsız şartsız kazanılmış sayılır.",
+        "Muris muvazaası (mirastan mal kaçırma) iddiası, tenkis davaları ve mirasçılar arasında ortaklığın giderilmesi (izale-i şüyu) talepleri de bu kapsamda değerlendirilir; görevli mahkeme ve süreler dosyanın somut niteliğine göre belirlenir."
       ]
     },
     "kira-hukuku": {
@@ -103,7 +114,9 @@
       "summary": "Kira bedeli tespiti ve artış davaları, tahliye davaları, tahliye taahhüdüne dayalı icra takipleri, kira sözleşmelerinin düzenlenmesi.",
       "body": [
         "Kira bedelinin tespiti ve uyarlanması, kira artış oranına ilişkin uyuşmazlıklar ile kira sözleşmelerinin hazırlanması ve gözden geçirilmesi bu alanın kapsamındadır.",
-        "Tahliye taahhüdüne dayalı icra takipleri, temerrüt nedeniyle tahliye ile ihtiyaç ve yeniden inşa nedeniyle açılan tahliye davalarında da destek sağlanmaktadır."
+        "Tahliye taahhüdüne dayalı icra takipleri, temerrüt nedeniyle tahliye ile ihtiyaç ve yeniden inşa nedeniyle açılan tahliye davalarında da destek sağlanmaktadır.",
+        "Kiracı temerrüde düşürülerek veya tahliye taahhüdüne dayanılarak icra yoluyla tahliye talep edilebileceği gibi; kiraya verenin veya yakınlarının konut/işyeri ihtiyacı ya da yeniden inşa/imar gereği gibi kanunda sayılan sebeplerle dava yoluyla da tahliye istenebilir. Her sebep için ayrı usul ve süre şartları uygulanır.",
+        "Kira bedelinin uyarlanması ve kira tespiti davalarında, önceki dönem TÜFE ortalaması ve sözleşme hükümleri birlikte değerlendirilir; kira artış oranının hesaplanmasında sitedeki kira artış oranı hesaplama aracından yararlanılabilir."
       ]
     },
     "sirketler-hukuku": {
@@ -145,6 +158,53 @@
     "back": "Tüm çalışma alanları",
     "relatedLabel": "İlgili Makaleler",
     "relatedEmpty": "Bu alanda henüz yayımlanmış makale bulunmamaktadır.",
+    "relatedToolsLabel": "İlgili Hesaplama Araçları",
+    "contactCta": "İletişime geçin"
+  },
+  "serviceRegions": {
+    "buyukcekmece": {
+      "name": "Büyükçekmece",
+      "summary": "Büyükçekmece ve çevresindeki uyuşmazlıklarda adliye süreci, en sık karşılaşılan dava türleri ve başvuru öncesi hazırlanması gereken belgeler.",
+      "body": [
+        "Esenyurt, Beylikdüzü, Çatalca ve Büyükçekmece'nin kendisinde ortaya çıkan birçok hukuki uyuşmazlıkta görevli ve yetkili merci genellikle Büyükçekmece Adliyesi'dir; somut dosyanın türüne göre görevli mahkeme değişebileceğinden bu husus her olayda ayrıca değerlendirilmelidir.",
+        "Bölgede en sık karşılaşılan uyuşmazlıklar arasında işçilik alacakları ve işe iade talepleri, icra takibine itiraz ve haciz işlemleri, boşanma ve velayet davaları, kira tespiti ile tahliye talepleri ve miras paylaşımından doğan anlaşmazlıklar yer almaktadır.",
+        "Bir görüşme öncesinde kimlik belgesi, varsa mevcut sözleşme veya tebligat evrakı, iş ilişkisine dair belgeler (bordro, işe giriş-çıkış bildirgesi) veya tapu/kira sözleşmesi gibi dosyaya özgü belgelerin hazır bulundurulması, ilk değerlendirmenin daha hızlı yapılmasını sağlar."
+      ],
+      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku"]
+    },
+    "beylikduzu": {
+      "name": "Beylikdüzü",
+      "summary": "Beylikdüzü'ndeki konut ve işyeri ilişkilerinden doğan uyuşmazlıklar ile görüşme seçenekleri.",
+      "body": [
+        "Beylikdüzü, yoğun konut ve işyeri nüfusuyla kira ilişkileri, iş sözleşmesi uyuşmazlıkları ve aile hukukuna ilişkin başvuruların sık görüldüğü bir bölgedir; bölgede ortaya çıkan uyuşmazlıklarda da çoğunlukla Büyükçekmece Adliyesi görevli ve yetkili mercidir.",
+        "Kiracı veya kiraya veren sıfatıyla tahliye, kira tespiti ve depozito uyuşmazlıkları; işçi veya işveren sıfatıyla kıdem-ihbar tazminatı ve fazla mesai alacakları; icra takibine itiraz ve haciz süreçleri bölgeden gelen başvurularda öne çıkan konular arasındadır.",
+        "Görüşmeler talebe göre büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk görüşme öncesinde dosyaya ilişkin belgelerin (kira sözleşmesi, ödeme dekontları, iş sözleşmesi vb.) hazırlanması sürecin verimliliğini artırır."
+      ],
+      "relatedAreas": ["kira-hukuku", "is-hukuku", "bosanma-aile-hukuku", "icra-hukuku"]
+    },
+    "esenyurt": {
+      "name": "Esenyurt",
+      "summary": "Büronun Esenyurt'taki gerçek adresi, ulaşım bilgileri ve tüm çalışma alanlarında bireysel ve kurumsal müvekkil kabulü.",
+      "body": [
+        "Büro, Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/İstanbul adresinde hizmet vermektedir; bireysel ve kurumsal müvekkiller randevu alarak ofiste yüz yüze veya talep hâlinde görüntülü/telefon görüşmesi yoluyla kabul edilmektedir.",
+        "İş hukuku, icra hukuku, boşanma ve aile hukuku, kira hukuku, miras hukuku ile şirketler hukuku, tahkim ve kişisel verilerin korunması alanlarının tamamında; hem bireysel hem kurumsal/yabancı müvekkillere Türkçe, İngilizce ve Arapça hizmet sunulmaktadır.",
+        "Adrese toplu taşıma ve özel araçla ulaşım mümkündür; kesin randevu saati ve ulaşım yönlendirmesi için iletişim sayfasındaki telefon veya WhatsApp hattı üzerinden önceden bilgi alınması önerilir."
+      ],
+      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku", "sirketler-hukuku"]
+    }
+  },
+  "serviceRegionsPage": {
+    "meta": {
+      "title": "Hizmet Verilen Bölgeler",
+      "description": "Esenyurt, Büyükçekmece ve Beylikdüzü'nde iş hukuku, icra hukuku, boşanma ve aile hukuku, kira hukuku ve miras hukuku alanlarında hukuki destek."
+    },
+    "label": "Bölgeler",
+    "title": "Hizmet verilen bölgeler",
+    "lead": "Büronun gerçek adresi Esenyurt'tadır; Büyükçekmece ve Beylikdüzü'ndeki müvekkillere de aynı çalışma alanlarında hizmet verilmektedir."
+  },
+  "serviceRegionDetail": {
+    "back": "Tüm bölgeler",
+    "relatedAreasLabel": "İlgili Çalışma Alanları",
     "contactCta": "İletişime geçin"
   },
   "profilePage": {
@@ -533,6 +593,8 @@
   "article": {
     "readingTime": "{minutes} dk okuma",
     "publishedOn": "Yayın tarihi: {date}",
+    "updatedOn": "Güncelleme: {date}",
+    "byAuthor": "Yazar: {name}",
     "categoryLabel": "Kategori"
   },
   "footer": {

@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import type { Locale } from '@/i18n/locales';
 import { kvkkContent } from '@/content/legal/kvkk';
 import { LegalPageBody } from '@/components/legal/legal-page-body';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
   const content = kvkkContent[locale as Locale];
-  return { title: content.title, description: content.intro };
+  return pageMetadata({ locale: locale as Locale, path: 'kvkk', title: content.title, description: content.intro });
 }
 
 export default async function KvkkPage({ params }: PageProps) {

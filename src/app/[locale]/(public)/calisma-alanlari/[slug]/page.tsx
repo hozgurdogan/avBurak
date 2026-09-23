@@ -11,9 +11,13 @@ import {
   type PracticeAreaSlug,
 } from '@/content/practice-areas';
 import { getArticlesByCategory } from '@/lib/articles';
+import { practiceAreaToolSlugs } from '@/content/practice-area-tools';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ActionLink } from '@/components/ui/action-link';
 import { Reveal } from '@/components/motion/reveal';
+import { pageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/seo/json-ld';
+import { buildBreadcrumbSchema } from '@/lib/structured-data';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -34,17 +38,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isPracticeAreaSlug(slug)) return {};
 
   const t = await getTranslations({ locale, namespace: 'practiceAreas' });
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: `calisma-alanlari/${slug}`,
     title: t(`${slug}.name`),
     description: t(`${slug}.summary`),
-    alternates: {
-      // Turkish path segments stay identical across locales (see i18n/routing.ts),
-      // so the slug does not change between languages.
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `/${l}/calisma-alanlari/${slug}`]),
-      ),
-    },
-  };
+  });
 }
 
 /** Detail page for a single field of work, with its related published articles. */
@@ -59,15 +58,18 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
   const typedLocale = locale as Locale;
   const index = practiceAreaSlugs.indexOf(slug);
 
-  const [tAreas, tAreasPage, tDetail, tArticle, related] = await Promise.all([
+  const [tAreas, tAreasPage, tDetail, tArticle, tNav, tTools, related] = await Promise.all([
     getTranslations({ locale, namespace: 'practiceAreas' }),
     getTranslations({ locale, namespace: 'practiceAreasPage' }),
     getTranslations({ locale, namespace: 'practiceAreaDetail' }),
     getTranslations({ locale, namespace: 'article' }),
+    getTranslations({ locale, namespace: 'nav' }),
+    getTranslations({ locale, namespace: 'tools' }),
     getArticlesByCategory(typedLocale, slug, 3),
   ]);
 
   const body = tAreas.raw(`${slug}.body`) as string[];
+  const relatedTools = practiceAreaToolSlugs[slug] ?? [];
 
   const dateFormatter = new Intl.DateTimeFormat(locale, {
     day: 'numeric',
@@ -78,6 +80,13 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbSchema(typedLocale, [
+          { name: tNav('home'), path: '' },
+          { name: tAreasPage('label'), path: 'calisma-alanlari' },
+          { name: tAreas(`${slug}.name`), path: `calisma-alanlari/${slug}` },
+        ])}
+      />
       <section className="bg-canvas-deep">
       <div className="mx-auto max-w-wide px-gutter py-section">
         <div className="mb-10">
@@ -108,6 +117,26 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
               </ActionLink>
             </div>
           </div>
+
+          {relatedTools.length > 0 ? (
+            <aside className="lg:col-span-4">
+              <div className="border-t border-rule pt-8">
+                <h2 className="label text-ink-faint">{tDetail('relatedToolsLabel')}</h2>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {relatedTools.map((toolSlug) => (
+                    <li key={toolSlug}>
+                      <Link
+                        href={`/hesaplama-araclari/${toolSlug}`}
+                        className="text-sm text-ink transition-colors duration-base hover:text-gold-800"
+                      >
+                        {tTools(`${toolSlug}.name`)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          ) : null}
         </div>
       </div>
       </section>

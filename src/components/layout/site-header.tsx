@@ -12,6 +12,7 @@ import { cn } from '@/lib/cn';
 
 const navItems = [
   { href: '/calisma-alanlari', key: 'practiceAreas' },
+  { href: '/bolgeler', key: 'regions' },
   { href: '/profil', key: 'profile' },
   { href: '/makaleler', key: 'articles' },
   { href: '/hesaplama-araclari', key: 'tools' },

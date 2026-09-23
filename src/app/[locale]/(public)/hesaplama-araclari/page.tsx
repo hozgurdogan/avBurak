@@ -4,10 +4,12 @@ import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/locales';
 import { tools, toolNumber } from '@/lib/tools/registry';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { LegalDisclaimer } from '@/components/ui/legal-disclaimer';
 import { Reveal } from '@/components/motion/reveal';
+import { pageMetadata } from '@/lib/seo';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -20,7 +22,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'toolsPage.meta' });
-  return { title: t('title'), description: t('description') };
+  return pageMetadata({
+    locale: locale as Locale,
+    path: 'hesaplama-araclari',
+    title: t('title'),
+    description: t('description'),
+  });
 }
 
 /**

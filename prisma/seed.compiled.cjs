@@ -1827,6 +1827,56 @@ var seedCategories = [
       en: "Data Protection",
       ar: "\u062D\u0645\u0627\u064A\u0629 \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0634\u062E\u0635\u064A\u0629"
     }
+  },
+  // Added 2026-09-23 alongside the practice-area repositioning in
+  // src/content/practice-areas.ts (see that file's comment for why the
+  // three categories above are kept rather than removed). Slugs match
+  // `practiceAreaSlugs` exactly so `getArticlesByCategory` in
+  // src/lib/articles.ts resolves without a mapping table.
+  {
+    slug: "is-hukuku",
+    position: 7,
+    names: {
+      tr: "\u0130\u015F Hukuku",
+      en: "Labour Law",
+      ar: "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0639\u0645\u0644"
+    }
+  },
+  {
+    slug: "icra-hukuku",
+    position: 8,
+    names: {
+      tr: "\u0130cra Hukuku",
+      en: "Enforcement Law",
+      ar: "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u062A\u0646\u0641\u064A\u0630"
+    }
+  },
+  {
+    slug: "bosanma-aile-hukuku",
+    position: 9,
+    names: {
+      tr: "Bo\u015Fanma ve Aile Hukuku",
+      en: "Divorce and Family Law",
+      ar: "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0637\u0644\u0627\u0642 \u0648\u0627\u0644\u0623\u0633\u0631\u0629"
+    }
+  },
+  {
+    slug: "kira-hukuku",
+    position: 10,
+    names: {
+      tr: "Kira Hukuku",
+      en: "Tenancy Law",
+      ar: "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0625\u064A\u062C\u0627\u0631"
+    }
+  },
+  {
+    slug: "miras-hukuku",
+    position: 11,
+    names: {
+      tr: "Miras Hukuku",
+      en: "Inheritance Law",
+      ar: "\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0625\u0631\u062B"
+    }
   }
 ];
 var seedArticleGroups = [
@@ -1911,6 +1961,178 @@ var seedArticleGroups = [
         summary: "\u0642\u0627\u0628\u0644\u064A\u0629 \u0627\u0644\u0646\u0632\u0627\u0639 \u0644\u0644\u062A\u062D\u0643\u064A\u0645\u060C \u0648\u0627\u0644\u0645\u0636\u0645\u0648\u0646 \u0627\u0644\u0623\u062F\u0646\u0649 \u0644\u0644\u0634\u0631\u0637\u060C \u0648\u0627\u0644\u0634\u0631\u0648\u0637 \u0645\u062A\u0639\u062F\u062F\u0629 \u0627\u0644\u0645\u0631\u0627\u062D\u0644\u060C \u0648\u062F\u0639\u0648\u0649 \u0627\u0644\u0628\u0637\u0644\u0627\u0646 \u0648\u0627\u0644\u062A\u0646\u0641\u064A\u0630\u060C \u0648\u0627\u0644\u0634\u0631\u0648\u0637 \u0627\u0644\u0645\u0639\u064A\u0628\u0629 \u0627\u0644\u0634\u0627\u0626\u0639\u0629\u060C \u0641\u064A \u0625\u0637\u0627\u0631 \u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u062A\u062D\u0643\u064A\u0645 \u0627\u0644\u062F\u0648\u0644\u064A \u0648\u0627\u062A\u0641\u0627\u0642\u064A\u0629 \u0646\u064A\u0648\u064A\u0648\u0631\u0643.",
         metaTitle: "\u0634\u0631\u0648\u0637 \u0627\u0644\u062A\u062D\u0643\u064A\u0645 \u0641\u064A \u0627\u0644\u0639\u0642\u0648\u062F \u0627\u0644\u0639\u0627\u0628\u0631\u0629 \u0644\u0644\u062D\u062F\u0648\u062F",
         metaDescription: "\u0635\u064A\u0627\u063A\u0629 \u0634\u0631\u0637 \u0627\u0644\u062A\u062D\u0643\u064A\u0645 \u0641\u064A \u0639\u0642\u062F \u0645\u062A\u0635\u0644 \u0628\u0627\u0644\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u062A\u0631\u0643\u064A: \u0642\u0627\u0628\u0644\u064A\u0629 \u0627\u0644\u0646\u0632\u0627\u0639 \u0644\u0644\u062A\u062D\u0643\u064A\u0645\u060C \u0648\u0645\u0642\u0631 \u0627\u0644\u062A\u062D\u0643\u064A\u0645\u060C \u0648\u0639\u062F\u062F \u0627\u0644\u0645\u062D\u0643\u064E\u0651\u0645\u064A\u0646\u060C \u0648\u0627\u0644\u0644\u063A\u0629\u060C \u0648\u0627\u0633\u062A\u0642\u0644\u0627\u0644 \u0627\u0644\u0634\u0631\u0637\u060C \u0648\u0627\u0644\u062D\u0645\u0627\u064A\u0629 \u0627\u0644\u0645\u0624\u0642\u062A\u0629\u060C \u0648\u062F\u0639\u0648\u0649 \u0627\u0644\u0628\u0637\u0644\u0627\u0646\u060C \u0648\u062A\u0646\u0641\u064A\u0630 \u0627\u0644\u0623\u062D\u0643\u0627\u0645 \u0627\u0644\u0623\u062C\u0646\u0628\u064A\u0629."
+      }
+    }
+  },
+  // Added 2026-09-23: first six B2C/local-SEO articles from the report's
+  // content plan, one per practice-area cluster (İş, İcra, Aile, Kira,
+  // Miras clusters — İş covered twice). Dates are staggered ~2/week to
+  // mirror the recommended publishing cadence.
+  {
+    key: "ise-iade-basvuru",
+    categories: ["is-hukuku"],
+    publishedAt: "2026-09-23T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+        title: "\u0130\u015Fe \u0130ade Davas\u0131: Ba\u015Fvuru S\xFCresi ve Zorunlu Arabuluculuk",
+        summary: "\u0130\u015F g\xFCvencesi kapsam\u0131ndaki bir i\u015F\xE7i i\xE7in bir ayl\u0131k zorunlu arabuluculuk ba\u015Fvuru s\xFCresi, arabuluculuk s\xFCrecinin i\u015Fleyi\u015Fi ve anla\u015Fma sa\u011Flanamazsa dava a\xE7ma s\xFCresi.",
+        metaTitle: "\u0130\u015Fe \u0130ade Davas\u0131: Ba\u015Fvuru S\xFCresi ve Zorunlu Arabuluculuk",
+        metaDescription: "\u0130\u015Fe iade davas\u0131nda bir ayl\u0131k arabuluculuk ba\u015Fvuru s\xFCresi, arabuluculuk s\xFCreci, anla\u015Fma sa\u011Flanamazsa iki haftal\u0131k dava a\xE7ma s\xFCresi ve s\u0131k yap\u0131lan usul hatalar\u0131."
+      },
+      en: {
+        slug: "reinstatement-lawsuit-deadlines-and-mandatory-mediation",
+        title: "Reinstatement Lawsuit: Deadlines and Mandatory Mediation",
+        summary: "The one-month deadline to apply for mandatory mediation for an employee covered by job security, how mediation works, and the deadline to sue if no settlement is reached.",
+        metaTitle: "Reinstatement Lawsuit: Deadlines and Mandatory Mediation",
+        metaDescription: "The one-month mediation application deadline in a reinstatement case, how mediation works, the two-week deadline to sue if no settlement is reached, and common procedural mistakes."
+      },
+      ar: {
+        slug: "dawa-al-awda-ila-al-amal-al-muhal-wa-al-wasata-al-ilzamiya",
+        title: "\u062F\u0639\u0648\u0649 \u0627\u0644\u0639\u0648\u062F\u0629 \u0625\u0644\u0649 \u0627\u0644\u0639\u0645\u0644: \u0627\u0644\u0645\u0647\u0644 \u0648\u0627\u0644\u0648\u0633\u0627\u0637\u0629 \u0627\u0644\u0625\u0644\u0632\u0627\u0645\u064A\u0629",
+        summary: "\u0645\u0647\u0644\u0629 \u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0648\u0627\u062D\u062F \u0644\u0644\u062A\u0642\u062F\u0645 \u0628\u0637\u0644\u0628 \u0627\u0644\u0648\u0633\u0627\u0637\u0629 \u0627\u0644\u0625\u0644\u0632\u0627\u0645\u064A\u0629 \u0644\u0644\u0639\u0627\u0645\u0644 \u0627\u0644\u0645\u0634\u0645\u0648\u0644 \u0628\u0636\u0645\u0627\u0646 \u0627\u0644\u0648\u0638\u064A\u0641\u0629\u060C \u0648\u0633\u064A\u0631 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u0648\u0633\u0627\u0637\u0629\u060C \u0648\u0645\u0647\u0644\u0629 \u0631\u0641\u0639 \u0627\u0644\u062F\u0639\u0648\u0649 \u0641\u064A \u062D\u0627\u0644 \u0639\u062F\u0645 \u0627\u0644\u062A\u0648\u0635\u0644 \u0625\u0644\u0649 \u0627\u062A\u0641\u0627\u0642.",
+        metaTitle: "\u062F\u0639\u0648\u0649 \u0627\u0644\u0639\u0648\u062F\u0629 \u0625\u0644\u0649 \u0627\u0644\u0639\u0645\u0644: \u0627\u0644\u0645\u0647\u0644 \u0648\u0627\u0644\u0648\u0633\u0627\u0637\u0629 \u0627\u0644\u0625\u0644\u0632\u0627\u0645\u064A\u0629",
+        metaDescription: "\u0645\u0647\u0644\u0629 \u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0648\u0627\u062D\u062F \u0644\u0644\u062A\u0642\u062F\u0645 \u0628\u0637\u0644\u0628 \u0627\u0644\u0648\u0633\u0627\u0637\u0629 \u0641\u064A \u062F\u0639\u0648\u0649 \u0627\u0644\u0639\u0648\u062F\u0629 \u0625\u0644\u0649 \u0627\u0644\u0639\u0645\u0644\u060C \u0648\u0633\u064A\u0631 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u0648\u0633\u0627\u0637\u0629\u060C \u0648\u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u0633\u0628\u0648\u0639\u064A\u0646 \u0644\u0631\u0641\u0639 \u0627\u0644\u062F\u0639\u0648\u0649\u060C \u0648\u0627\u0644\u0623\u062E\u0637\u0627\u0621 \u0627\u0644\u0625\u062C\u0631\u0627\u0626\u064A\u0629 \u0627\u0644\u0634\u0627\u0626\u0639\u0629."
+      }
+    }
+  },
+  {
+    key: "odeme-emrine-itiraz",
+    categories: ["icra-hukuku"],
+    publishedAt: "2026-09-26T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "odeme-emrine-itiraz-suresi-ve-sonuclari",
+        title: "\xD6deme Emrine \u0130tiraz: S\xFCre ve Sonu\xE7lar\u0131",
+        summary: "\u0130lams\u0131z icra takibinde \xF6deme emrine itiraz\u0131n yedi g\xFCnl\xFCk s\xFCresi, itiraz\u0131n takibi kendili\u011Finden durdurma etkisi ve alacakl\u0131n\u0131n itiraz\u0131n kald\u0131r\u0131lmas\u0131 ile itiraz\u0131n iptali yollar\u0131.",
+        metaTitle: "\xD6deme Emrine \u0130tiraz: S\xFCre ve Sonu\xE7lar\u0131",
+        metaDescription: "\xD6deme emrine yedi g\xFCn i\xE7inde itiraz etmenin sonu\xE7lar\u0131, takibin kendili\u011Finden durmas\u0131, alacakl\u0131n\u0131n itiraz\u0131n kald\u0131r\u0131lmas\u0131 ve itiraz\u0131n iptali davas\u0131 se\xE7enekleri."
+      },
+      en: {
+        slug: "objecting-to-a-payment-order-deadline-and-effects",
+        title: "Objecting to a Payment Order: Deadline and Effects",
+        summary: "The seven-day deadline to object to a payment order in an enforcement proceeding without a judgment, the automatic-stay effect of an objection, and the creditor's two routes to overcome it.",
+        metaTitle: "Objecting to a Payment Order: Deadline and Effects",
+        metaDescription: "The seven-day deadline to object to a payment order, the effect of an objection on enforcement, and the creditor's options: setting the objection aside or an action to annul it."
+      },
+      ar: {
+        slug: "al-itirad-ala-amr-al-daf-al-muhla-wa-al-nataij",
+        title: "\u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0639\u0644\u0649 \u0623\u0645\u0631 \u0627\u0644\u062F\u0641\u0639: \u0627\u0644\u0645\u0647\u0644\u0629 \u0648\u0627\u0644\u0646\u062A\u0627\u0626\u062C",
+        summary: "\u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u064A\u0627\u0645 \u0627\u0644\u0633\u0628\u0639\u0629 \u0644\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0639\u0644\u0649 \u0623\u0645\u0631 \u0627\u0644\u062F\u0641\u0639 \u0641\u064A \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u0628\u062F\u0648\u0646 \u062D\u0643\u0645\u060C \u0648\u0623\u062B\u0631 \u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0641\u064A \u0648\u0642\u0641 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u062A\u0644\u0642\u0627\u0626\u064A\u064B\u0627\u060C \u0648\u0627\u0644\u0637\u0631\u064A\u0642\u0627\u0646 \u0627\u0644\u0644\u0630\u0627\u0646 \u064A\u0645\u0643\u0646 \u0644\u0644\u062F\u0627\u0626\u0646 \u0627\u062A\u0628\u0627\u0639\u0647\u0645\u0627.",
+        metaTitle: "\u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0639\u0644\u0649 \u0623\u0645\u0631 \u0627\u0644\u062F\u0641\u0639: \u0627\u0644\u0645\u0647\u0644\u0629 \u0648\u0627\u0644\u0646\u062A\u0627\u0626\u062C",
+        metaDescription: "\u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u064A\u0627\u0645 \u0627\u0644\u0633\u0628\u0639\u0629 \u0644\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0639\u0644\u0649 \u0623\u0645\u0631 \u0627\u0644\u062F\u0641\u0639\u060C \u0648\u0623\u062B\u0631 \u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0641\u064A \u0648\u0642\u0641 \u0625\u062C\u0631\u0627\u0621\u0627\u062A \u0627\u0644\u062A\u0646\u0641\u064A\u0630\u060C \u0648\u062E\u064A\u0627\u0631\u0627 \u0627\u0644\u062F\u0627\u0626\u0646: \u0631\u0641\u0639 \u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636 \u0623\u0648 \u062F\u0639\u0648\u0649 \u0625\u0628\u0637\u0627\u0644 \u0627\u0644\u0627\u0639\u062A\u0631\u0627\u0636."
+      }
+    }
+  },
+  {
+    key: "anlasmali-bosanma-protokolu",
+    categories: ["bosanma-aile-hukuku"],
+    publishedAt: "2026-09-30T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+        title: "Anla\u015Fmal\u0131 Bo\u015Fanma Protokol\xFCnde Bulunmas\u0131 Gerekenler",
+        summary: "Anla\u015Fmal\u0131 bo\u015Fanman\u0131n bir y\u0131ll\u0131k evlilik s\xFCresi \u015Fart\u0131, protokolde yer almas\u0131 gereken yedi unsur (velayet, nafaka, tazminat, mal rejimi dahil) ve duru\u015Fman\u0131n i\u015Fleyi\u015Fi.",
+        metaTitle: "Anla\u015Fmal\u0131 Bo\u015Fanma Protokol\xFCnde Bulunmas\u0131 Gerekenler",
+        metaDescription: "Anla\u015Fmal\u0131 bo\u015Fanma \u015Fartlar\u0131, protokolde bulunmas\u0131 gereken velayet, nafaka, tazminat ve mal rejimi h\xFCk\xFCmleri, duru\u015Fma s\xFCreci ve s\u0131k yap\u0131lan hatalar."
+      },
+      en: {
+        slug: "what-an-uncontested-divorce-protocol-must-include",
+        title: "What an Uncontested Divorce Protocol Must Include",
+        summary: "The one-year marriage requirement for an uncontested divorce, the seven elements a protocol must cover (custody, alimony, compensation, and property regime included), and how the hearing proceeds.",
+        metaTitle: "What an Uncontested Divorce Protocol Must Include",
+        metaDescription: "Conditions for an uncontested divorce, the custody, alimony, compensation and property-regime terms a protocol must include, how the court hearing proceeds, and common mistakes."
+      },
+      ar: {
+        slug: "ma-yajib-an-yatadamanahu-brotokol-al-talaq-bil-taradi",
+        title: "\u0645\u0627 \u064A\u062C\u0628 \u0623\u0646 \u064A\u062A\u0636\u0645\u0646\u0647 \u0628\u0631\u0648\u062A\u0648\u0643\u0648\u0644 \u0627\u0644\u0637\u0644\u0627\u0642 \u0628\u0627\u0644\u062A\u0631\u0627\u0636\u064A",
+        summary: "\u0634\u0631\u0637 \u0627\u0633\u062A\u0645\u0631\u0627\u0631 \u0627\u0644\u0632\u0648\u0627\u062C \u0644\u0645\u062F\u0629 \u0633\u0646\u0629 \u0648\u0627\u062D\u062F\u0629 \u0644\u0644\u0637\u0644\u0627\u0642 \u0628\u0627\u0644\u062A\u0631\u0627\u0636\u064A\u060C \u0648\u0627\u0644\u0639\u0646\u0627\u0635\u0631 \u0627\u0644\u0633\u0628\u0639\u0629 \u0627\u0644\u0648\u0627\u062C\u0628 \u062A\u0636\u0645\u064A\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0628\u0631\u0648\u062A\u0648\u0643\u0648\u0644 (\u0627\u0644\u062D\u0636\u0627\u0646\u0629 \u0648\u0627\u0644\u0646\u0641\u0642\u0629 \u0648\u0627\u0644\u062A\u0639\u0648\u064A\u0636 \u0648\u062A\u0635\u0641\u064A\u0629 \u0627\u0644\u0646\u0638\u0627\u0645 \u0627\u0644\u0645\u0627\u0644\u064A)\u060C \u0648\u0633\u064A\u0631 \u0627\u0644\u062C\u0644\u0633\u0629.",
+        metaTitle: "\u0645\u0627 \u064A\u062C\u0628 \u0623\u0646 \u064A\u062A\u0636\u0645\u0646\u0647 \u0628\u0631\u0648\u062A\u0648\u0643\u0648\u0644 \u0627\u0644\u0637\u0644\u0627\u0642 \u0628\u0627\u0644\u062A\u0631\u0627\u0636\u064A",
+        metaDescription: "\u0634\u0631\u0648\u0637 \u0627\u0644\u0637\u0644\u0627\u0642 \u0628\u0627\u0644\u062A\u0631\u0627\u0636\u064A\u060C \u0648\u0623\u062D\u0643\u0627\u0645 \u0627\u0644\u062D\u0636\u0627\u0646\u0629 \u0648\u0627\u0644\u0646\u0641\u0642\u0629 \u0648\u0627\u0644\u062A\u0639\u0648\u064A\u0636 \u0648\u062A\u0635\u0641\u064A\u0629 \u0627\u0644\u0646\u0638\u0627\u0645 \u0627\u0644\u0645\u0627\u0644\u064A \u0627\u0644\u0648\u0627\u062C\u0628 \u062A\u0648\u0641\u0631\u0647\u0627 \u0641\u064A \u0627\u0644\u0628\u0631\u0648\u062A\u0648\u0643\u0648\u0644\u060C \u0648\u0633\u064A\u0631 \u062C\u0644\u0633\u0629 \u0627\u0644\u0645\u062D\u0643\u0645\u0629\u060C \u0648\u0627\u0644\u0623\u062E\u0637\u0627\u0621 \u0627\u0644\u0634\u0627\u0626\u0639\u0629."
+      }
+    }
+  },
+  {
+    key: "tahliye-taahhudu",
+    categories: ["kira-hukuku"],
+    publishedAt: "2026-10-03T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "tahliye-taahhudu-ne-zaman-gecerlidir",
+        title: "Tahliye Taahh\xFCd\xFC Ne Zaman Ge\xE7erlidir?",
+        summary: "Tahliye taahh\xFCd\xFCn\xFCn ge\xE7erli say\u0131lmas\u0131 i\xE7in kira s\xF6zle\u015Fmesi kurulduktan sonra imzalanmas\u0131 gereklili\u011Fi, bir ayl\u0131k ba\u015Fvuru s\xFCresi ve icra ile dava yoluyla tahliye se\xE7enekleri.",
+        metaTitle: "Tahliye Taahh\xFCd\xFC Ne Zaman Ge\xE7erlidir?",
+        metaDescription: "Tahliye taahh\xFCd\xFCn\xFCn ge\xE7erlilik \u015Fart\u0131 olan imza zamanlamas\u0131, bir ayl\u0131k tahliye ba\u015Fvuru s\xFCresi, icra yoluyla ve dava yoluyla tahliye se\xE7enekleri ile s\u0131k yap\u0131lan hatalar."
+      },
+      en: {
+        slug: "when-is-a-vacation-commitment-valid",
+        title: "When Is a Vacation Commitment Valid?",
+        summary: "Why a vacation commitment must be signed after the lease is formed to be valid, the one-month deadline to apply for eviction, and the two available eviction routes.",
+        metaTitle: "When Is a Vacation Commitment Valid?",
+        metaDescription: "The timing requirement for a valid vacation commitment, the one-month deadline to apply for eviction, eviction through enforcement versus litigation, and common mistakes."
+      },
+      ar: {
+        slug: "mata-yakun-tahhud-al-ikhla-sahihan",
+        title: "\u0645\u062A\u0649 \u064A\u0643\u0648\u0646 \u062A\u0639\u0647\u062F \u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0635\u062D\u064A\u062D\u064B\u0627\u061F",
+        summary: "\u0636\u0631\u0648\u0631\u0629 \u062A\u0648\u0642\u064A\u0639 \u062A\u0639\u0647\u062F \u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0628\u0639\u062F \u0625\u0646\u0634\u0627\u0621 \u0639\u0642\u062F \u0627\u0644\u0625\u064A\u062C\u0627\u0631 \u0644\u0643\u064A \u064A\u0643\u0648\u0646 \u0635\u062D\u064A\u062D\u064B\u0627\u060C \u0648\u0645\u0647\u0644\u0629 \u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0648\u0627\u062D\u062F \u0644\u0644\u062A\u0642\u062F\u0645 \u0628\u0637\u0644\u0628 \u0627\u0644\u0625\u062E\u0644\u0627\u0621\u060C \u0648\u0637\u0631\u064A\u0642\u0627 \u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0639\u0646 \u0637\u0631\u064A\u0642 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u0648\u0627\u0644\u062F\u0639\u0648\u0649.",
+        metaTitle: "\u0645\u062A\u0649 \u064A\u0643\u0648\u0646 \u062A\u0639\u0647\u062F \u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0635\u062D\u064A\u062D\u064B\u0627\u061F",
+        metaDescription: "\u0634\u0631\u0637 \u062A\u0648\u0642\u064A\u062A \u062A\u0648\u0642\u064A\u0639 \u062A\u0639\u0647\u062F \u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0627\u0644\u0635\u062D\u064A\u062D\u060C \u0648\u0645\u0647\u0644\u0629 \u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0648\u0627\u062D\u062F \u0644\u0644\u062A\u0642\u062F\u0645 \u0628\u0637\u0644\u0628 \u0627\u0644\u0625\u062E\u0644\u0627\u0621\u060C \u0648\u0627\u0644\u0625\u062E\u0644\u0627\u0621 \u0639\u0646 \u0637\u0631\u064A\u0642 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u0623\u0648 \u0627\u0644\u062F\u0639\u0648\u0649\u060C \u0648\u0627\u0644\u0623\u062E\u0637\u0627\u0621 \u0627\u0644\u0634\u0627\u0626\u0639\u0629."
+      }
+    }
+  },
+  {
+    key: "kidem-tazminati-sartlari",
+    categories: ["is-hukuku"],
+    publishedAt: "2026-10-07T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "kidem-tazminati-hangi-hallerde-alinir",
+        title: "K\u0131dem Tazminat\u0131 Hangi Hallerde Al\u0131n\u0131r?",
+        summary: "K\u0131dem tazminat\u0131na hak kazanman\u0131n bir y\u0131ll\u0131k k\u0131dem \u015Fart\u0131, tazminat\u0131n \xF6dendi\u011Fi fesih halleri (hakl\u0131 fesih, emeklilik, evlilik, askerlik dahil) ve \xF6denmeyen haller.",
+        metaTitle: "K\u0131dem Tazminat\u0131 Hangi Hallerde Al\u0131n\u0131r?",
+        metaDescription: "K\u0131dem tazminat\u0131 \u015Fartlar\u0131: bir y\u0131ll\u0131k k\u0131dem, hangi fesih hallerinde \xF6dendi\u011Fi, hangi hallerde \xF6denmedi\u011Fi, hesaplaman\u0131n esas\u0131 ve tavan uygulamas\u0131."
+      },
+      en: {
+        slug: "when-is-severance-pay-owed",
+        title: "When Is Severance Pay Owed?",
+        summary: "The one-year service requirement for severance pay, the terminations that trigger it (just-cause termination, retirement, marriage, military service included), and when it is not owed.",
+        metaTitle: "When Is Severance Pay Owed?",
+        metaDescription: "Severance pay conditions: the one-year service requirement, which terminations trigger it, when it is not owed, and the basis of calculation and statutory cap."
+      },
+      ar: {
+        slug: "mata-yustahaqq-tawidh-nihayat-al-khidma",
+        title: "\u0645\u062A\u0649 \u064A\u064F\u0633\u062A\u062D\u0642 \u062A\u0639\u0648\u064A\u0636 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u062E\u062F\u0645\u0629\u061F",
+        summary: "\u0634\u0631\u0637 \u0627\u0644\u062E\u062F\u0645\u0629 \u0644\u0645\u062F\u0629 \u0633\u0646\u0629 \u0648\u0627\u062D\u062F\u0629 \u0644\u0627\u0633\u062A\u062D\u0642\u0627\u0642 \u062A\u0639\u0648\u064A\u0636 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u062E\u062F\u0645\u0629\u060C \u0648\u062D\u0627\u0644\u0627\u062A \u0627\u0644\u0625\u0646\u0647\u0627\u0621 \u0627\u0644\u062A\u064A \u062A\u064F\u0633\u062A\u062D\u0642 \u0641\u064A\u0647\u0627 (\u0627\u0644\u0625\u0646\u0647\u0627\u0621 \u0644\u0633\u0628\u0628 \u0645\u0634\u0631\u0648\u0639 \u0648\u0627\u0644\u062A\u0642\u0627\u0639\u062F \u0648\u0627\u0644\u0632\u0648\u0627\u062C \u0648\u0627\u0644\u062E\u062F\u0645\u0629 \u0627\u0644\u0639\u0633\u0643\u0631\u064A\u0629)\u060C \u0648\u0627\u0644\u062D\u0627\u0644\u0627\u062A \u0627\u0644\u062A\u064A \u0644\u0627 \u064A\u064F\u0633\u062A\u062D\u0642 \u0641\u064A\u0647\u0627.",
+        metaTitle: "\u0645\u062A\u0649 \u064A\u064F\u0633\u062A\u062D\u0642 \u062A\u0639\u0648\u064A\u0636 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u062E\u062F\u0645\u0629\u061F",
+        metaDescription: "\u0634\u0631\u0648\u0637 \u062A\u0639\u0648\u064A\u0636 \u0646\u0647\u0627\u064A\u0629 \u0627\u0644\u062E\u062F\u0645\u0629: \u062E\u062F\u0645\u0629 \u0633\u0646\u0629 \u0648\u0627\u062D\u062F\u0629\u060C \u0648\u062D\u0627\u0644\u0627\u062A \u0627\u0644\u0625\u0646\u0647\u0627\u0621 \u0627\u0644\u062A\u064A \u064A\u064F\u0633\u062A\u062D\u0642 \u0641\u064A\u0647\u0627 \u0627\u0644\u062A\u0639\u0648\u064A\u0636\u060C \u0648\u0627\u0644\u062D\u0627\u0644\u0627\u062A \u0627\u0644\u062A\u064A \u0644\u0627 \u064A\u064F\u0633\u062A\u062D\u0642 \u0641\u064A\u0647\u0627\u060C \u0648\u0623\u0633\u0627\u0633 \u0627\u0644\u0627\u062D\u062A\u0633\u0627\u0628 \u0648\u0627\u0644\u062D\u062F \u0627\u0644\u0623\u0642\u0635\u0649 \u0627\u0644\u0642\u0627\u0646\u0648\u0646\u064A."
+      }
+    }
+  },
+  {
+    key: "mirasin-reddi",
+    categories: ["miras-hukuku"],
+    publishedAt: "2026-10-10T09:00:00.000Z",
+    translations: {
+      tr: {
+        slug: "mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+        title: "Miras\u0131n Reddi: \xDC\xE7 Ayl\u0131k S\xFCre ve Sonu\xE7lar\u0131",
+        summary: "Miras\u0131n reddi i\xE7in \xFC\xE7 ayl\u0131k hak d\xFC\u015F\xFCr\xFCc\xFC s\xFCrenin ba\u015Flang\u0131c\u0131, ret usul\xFC, kimlerin reddedebilece\u011Fi ve h\xFCkmen ret h\xE2li.",
+        metaTitle: "Miras\u0131n Reddi: \xDC\xE7 Ayl\u0131k S\xFCre ve Sonu\xE7lar\u0131",
+        metaDescription: "Miras\u0131n reddi i\xE7in \xFC\xE7 ayl\u0131k s\xFCre, s\xFCrenin ba\u015Flang\u0131c\u0131, ret usul\xFC, kimlerin reddedebilece\u011Fi, h\xFCkmen ret h\xE2li ve s\u0131k yap\u0131lan hatalar."
+      },
+      en: {
+        slug: "disclaiming-an-inheritance-the-three-month-deadline",
+        title: "Disclaiming an Inheritance: The Three-Month Deadline",
+        summary: "When the three-month deadline to disclaim an inheritance starts, how to disclaim, who may disclaim, and deemed disclaimer by operation of law.",
+        metaTitle: "Disclaiming an Inheritance: The Three-Month Deadline",
+        metaDescription: "The three-month deadline to disclaim an inheritance, when it starts, how to disclaim, who may disclaim, deemed disclaimer, and common mistakes."
+      },
+      ar: {
+        slug: "rad-al-tarika-mahlat-al-thalatha-ashhur-wa-nataijuha",
+        title: "\u0631\u062F \u0627\u0644\u062A\u0631\u0643\u0629: \u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u0634\u0647\u0631 \u0627\u0644\u062B\u0644\u0627\u062B\u0629 \u0648\u0646\u062A\u0627\u0626\u062C\u0647\u0627",
+        summary: "\u0628\u062F\u0627\u064A\u0629 \u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u0634\u0647\u0631 \u0627\u0644\u062B\u0644\u0627\u062B\u0629 \u0627\u0644\u0633\u0642\u0648\u0637\u064A\u0629 \u0644\u0631\u062F \u0627\u0644\u062A\u0631\u0643\u0629\u060C \u0648\u0643\u064A\u0641\u064A\u0629 \u0627\u0644\u0631\u062F\u060C \u0648\u0645\u0646 \u064A\u062D\u0642 \u0644\u0647 \u0627\u0644\u0631\u062F\u060C \u0648\u062D\u0627\u0644\u0629 \u0627\u0644\u0631\u062F \u0627\u0644\u062D\u0643\u0645\u064A \u0628\u062D\u0643\u0645 \u0627\u0644\u0642\u0627\u0646\u0648\u0646.",
+        metaTitle: "\u0631\u062F \u0627\u0644\u062A\u0631\u0643\u0629: \u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u0634\u0647\u0631 \u0627\u0644\u062B\u0644\u0627\u062B\u0629 \u0648\u0646\u062A\u0627\u0626\u062C\u0647\u0627",
+        metaDescription: "\u0645\u0647\u0644\u0629 \u0627\u0644\u0623\u0634\u0647\u0631 \u0627\u0644\u062B\u0644\u0627\u062B\u0629 \u0644\u0631\u062F \u0627\u0644\u062A\u0631\u0643\u0629\u060C \u0648\u0628\u062F\u0627\u064A\u0629 \u0627\u062D\u062A\u0633\u0627\u0628\u0647\u0627\u060C \u0648\u0643\u064A\u0641\u064A\u0629 \u0627\u0644\u0631\u062F\u060C \u0648\u0645\u0646 \u064A\u062D\u0642 \u0644\u0647 \u0627\u0644\u0631\u062F\u060C \u0648\u062D\u0627\u0644\u0629 \u0627\u0644\u0631\u062F \u0627\u0644\u062D\u0643\u0645\u064A\u060C \u0648\u0627\u0644\u0623\u062E\u0637\u0627\u0621 \u0627\u0644\u0634\u0627\u0626\u0639\u0629."
       }
     }
   }

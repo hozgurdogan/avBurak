@@ -36,8 +36,6 @@ export async function generateMetadata({
       template: `%s — ${t('title')}`,
     },
     description: t('description'),
-    // No indexing directives beyond the defaults; robots.txt and per-route
-    // metadata arrive in Phase 6.
     formatDetection: { telephone: false, address: false, email: false },
   };
 }
