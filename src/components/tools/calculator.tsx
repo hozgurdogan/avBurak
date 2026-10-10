@@ -190,7 +190,7 @@ export function Calculator({ slug }: { slug: string }) {
                 )}
 
                 {field.hasHint ? (
-                  <p id={hintId} className="mt-2 text-xs leading-normal text-ink-faint">
+                  <p id={hintId} className="mt-2 text-sm leading-normal text-ink-faint">
                     {t(`${slug}.fields.${field.id}Hint`)}
                   </p>
                 ) : null}
@@ -202,7 +202,7 @@ export function Calculator({ slug }: { slug: string }) {
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-rule pt-6">
           <button
             type="submit"
-            className="group inline-flex items-center gap-3 rounded-sm bg-navy-900 px-6 py-3.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800"
+            className="group inline-flex items-center gap-3 rounded-sm bg-navy-900 px-6 py-3.5 text-sm font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800"
           >
             {t('form.submit')}
             <svg
@@ -229,7 +229,7 @@ export function Calculator({ slug }: { slug: string }) {
           >
             {t('form.reset')}
           </button>
-          <p className="basis-full text-xs text-ink-faint">{t('form.privacyNote')}</p>
+          <p className="basis-full text-sm text-ink-faint">{t('form.privacyNote')}</p>
         </div>
       </form>
 
@@ -250,7 +250,7 @@ export function Calculator({ slug }: { slug: string }) {
           <div aria-live="polite">
             <div className="mt-8 border border-rule-neutral bg-paper p-6 sm:p-8">
               {result === null ? (
-                <p className="text-sm text-ink-faint">{t('form.idle')}</p>
+                <p className="text-md text-ink-faint">{t('form.idle')}</p>
               ) : result.ok ? (
                 <>
                   <dl className="flex flex-col divide-y divide-rule-neutral">
@@ -262,13 +262,13 @@ export function Calculator({ slug }: { slug: string }) {
                           row.emphasis && 'border-t border-rule',
                         )}
                       >
-                        <dt className={cn('text-sm', row.emphasis ? 'text-ink' : 'text-ink-muted')}>
+                        <dt className={cn('text-md', row.emphasis ? 'text-ink' : 'text-ink-muted')}>
                           {t(`${slug}.results.${row.id}`)}
                         </dt>
                         <dd
                           className={cn(
                             'tabular-nums',
-                            row.emphasis ? 'font-display text-2xl text-ink' : 'text-sm text-ink',
+                            row.emphasis ? 'font-display text-2xl text-ink' : 'text-md text-ink',
                           )}
                           dir="ltr"
                         >
@@ -281,7 +281,7 @@ export function Calculator({ slug }: { slug: string }) {
                   {result.noteIds && result.noteIds.length > 0 ? (
                     <ul className="mt-6 flex flex-col gap-3 border-t border-rule pt-6">
                       {result.noteIds.map((noteId) => (
-                        <li key={noteId} className="text-xs leading-normal text-ink-muted">
+                        <li key={noteId} className="text-sm leading-normal text-ink-muted">
                           {t(`${slug}.notes.${noteId}`)}
                         </li>
                       ))}
@@ -289,7 +289,7 @@ export function Calculator({ slug }: { slug: string }) {
                   ) : null}
                 </>
               ) : (
-                <p role="alert" className="text-sm text-danger">
+                <p role="alert" className="text-md text-danger">
                   {t(`errors.${result.errorId}`)}
                 </p>
               )}
@@ -303,8 +303,8 @@ export function Calculator({ slug }: { slug: string }) {
             <dl className="mt-6 flex flex-col gap-3 border-t border-rule pt-6">
               {tool.usesParameters.map((key) => (
                 <div key={key} className="flex flex-wrap items-baseline justify-between gap-x-4">
-                  <dt className="text-xs text-ink-faint">{t(`parameters.${key}`)}</dt>
-                  <dd className="text-xs text-ink-muted" dir="ltr">
+                  <dt className="text-sm text-ink-faint">{t(`parameters.${key}`)}</dt>
+                  <dd className="text-sm text-ink-muted" dir="ltr">
                     {key === 'stampDutyRate'
                       ? format.percent(parameters[key].value)
                       : format.money(parameters[key].value)}
@@ -317,7 +317,7 @@ export function Calculator({ slug }: { slug: string }) {
           ) : null}
 
           {!PARAMETERS_VERIFIED ? (
-            <p className="mt-6 border-s-2 border-danger bg-danger-soft p-4 text-xs leading-normal text-ink">
+            <p className="mt-6 border-s-2 border-danger bg-danger-soft p-4 text-sm leading-normal text-ink">
               {t('form.parametersUnverified')}
             </p>
           ) : null}

@@ -85,11 +85,11 @@ export default async function ProfilePage({ params }: PageProps) {
           <dl className="mt-8 flex flex-col gap-6 border-t border-rule pt-8">
             <div>
               <dt className="label text-ink-faint">{t('admissionLabel')}</dt>
-              <dd className="mt-2 text-sm text-ink">{office.bar.association}</dd>
+              <dd className="mt-2 text-md text-ink">{office.bar.association}</dd>
             </div>
             <div>
               <dt className="label text-ink-faint">{t('languagesLabel')}</dt>
-              <dd className="mt-2 text-sm text-ink">{t('languages')}</dd>
+              <dd className="mt-2 text-md text-ink">{t('languages')}</dd>
             </div>
           </dl>
 

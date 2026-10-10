@@ -37,7 +37,7 @@ export function LegalDisclaimer({
       </h2>
       <p
         className={cn(
-          'measure text-sm',
+          'measure text-md',
           surface === 'navy' ? 'text-mist-muted' : 'text-ink-muted',
         )}
       >

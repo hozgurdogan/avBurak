@@ -45,13 +45,13 @@ export function SiteFooter() {
 
           <div className="lg:col-span-3">
             <h2 className="label text-gold-500">{t('officeTitle')}</h2>
-            <address className="mt-4 text-sm not-italic text-mist">{formatAddress()}</address>
-            <p className="mt-4 text-xs leading-normal text-mist-muted">{t('serviceAreasNote')}</p>
+            <address className="mt-4 text-md not-italic text-mist">{formatAddress()}</address>
+            <p className="mt-4 text-md leading-normal text-mist-muted">{t('serviceAreasNote')}</p>
           </div>
 
           <div className="lg:col-span-2">
             <h2 className="label text-gold-500">{t('contactTitle')}</h2>
-            <ul className="mt-4 flex flex-col gap-2 text-sm">
+            <ul className="mt-4 flex flex-col gap-2 text-md">
               {tel ? (
                 <li>
                   <a href={tel} className="hover:text-gold-300" dir="ltr">
@@ -85,7 +85,7 @@ export function SiteFooter() {
 
           <div className="lg:col-span-3">
             <h2 className="label text-gold-500">{t('navTitle')}</h2>
-            <ul className="mt-4 flex flex-col gap-2 text-sm">
+            <ul className="mt-4 flex flex-col gap-2 text-md">
               {siteLinks.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-gold-300">
@@ -109,7 +109,7 @@ export function SiteFooter() {
 
         <LegalDisclaimer surface="navy" className="mt-14 border-rule-invert" />
 
-        <p className="mt-10 text-xs text-mist-muted">{t('rights', { year: new Date().getFullYear() })}</p>
+        <p className="mt-10 text-sm text-mist-muted">{t('rights', { year: new Date().getFullYear() })}</p>
       </div>
     </footer>
   );

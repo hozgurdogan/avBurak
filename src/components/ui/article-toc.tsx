@@ -36,7 +36,7 @@ export function ArticleToc({ headings, label, className }: ArticleTocProps) {
           <li key={heading.id} className={heading.level === 3 ? 'ps-4' : undefined}>
             <a
               href={`#${heading.id}`}
-              className="text-sm leading-snug text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
+              className="text-md leading-snug text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
             >
               {heading.text}
             </a>

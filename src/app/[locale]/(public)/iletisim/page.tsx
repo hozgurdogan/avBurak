@@ -53,7 +53,7 @@ export default async function ContactPage({ params }: PageProps) {
         <div id="form" className="lg:col-span-7">
           <div className="flex flex-wrap items-baseline justify-between gap-4 border-t border-rule pt-6">
             <h2 className="label text-gold-800">{t('formLabel')}</h2>
-            <p className="text-xs text-ink-faint">{t('requiredNote')}</p>
+            <p className="text-sm text-ink-faint">{t('requiredNote')}</p>
           </div>
           <div className="mt-8">
             <ContactForm />
@@ -66,7 +66,7 @@ export default async function ContactPage({ params }: PageProps) {
         <aside className="lg:col-span-4 lg:col-start-9">
           <div className="border border-rule-neutral bg-paper p-8">
             <h2 className="label text-gold-800">{t('directLabel')}</h2>
-            <ul className="mt-5 flex flex-col divide-y divide-rule-neutral text-sm text-ink">
+            <ul className="mt-5 flex flex-col divide-y divide-rule-neutral text-md text-ink">
               {tel ? (
                 <li className="pb-3">
                   <a
@@ -108,7 +108,7 @@ export default async function ContactPage({ params }: PageProps) {
             <h2 className="label mt-8 border-t border-rule pt-8 text-gold-800">
               {t('officeLabel')}
             </h2>
-            <address className="mt-4 text-sm not-italic leading-prose text-ink">
+            <address className="mt-4 text-md not-italic leading-prose text-ink">
               {formatAddress()}
             </address>
 
@@ -127,7 +127,7 @@ export default async function ContactPage({ params }: PageProps) {
 
           <div className="mt-6 border border-rule-neutral bg-paper p-8">
             <h2 className="label text-gold-800">{t('serviceAreasLabel')}</h2>
-            <p className="mt-4 text-sm leading-prose text-ink-muted">
+            <p className="mt-4 text-md leading-prose text-ink-muted">
               {t('serviceAreasBody', { districts: serviceAreaDistricts.join(', ') })}
             </p>
           </div>
@@ -145,7 +145,7 @@ export default async function ContactPage({ params }: PageProps) {
                       {'★'.repeat(review.rating)}
                       <span className="text-rule-neutral">{'★'.repeat(5 - review.rating)}</span>
                     </p>
-                    <p className="mt-2 text-sm leading-prose text-ink-muted">{review.text}</p>
+                    <p className="mt-2 text-md leading-prose text-ink-muted">{review.text}</p>
                     <p className="label mt-3 text-ink-faint">{review.author}</p>
                   </li>
                 ))}

@@ -22,11 +22,11 @@ export default function RootNotFound() {
         <h1 className="mt-4 font-display text-display-sm font-normal text-ink">
           Aradığınız sayfa bulunamadı
         </h1>
-        <p className="mt-3 text-sm text-ink-muted">Page not found.</p>
+        <p className="mt-3 text-md text-ink-muted">Page not found.</p>
         <div className="mt-10">
           <Link
             href="/"
-            className="border-b border-current pb-0.5 text-xs font-medium uppercase tracking-label text-gold-800 hover:text-ink"
+            className="border-b border-current pb-0.5 text-sm font-medium uppercase tracking-label text-gold-800 hover:text-ink"
           >
             Anasayfaya dön — Home
           </Link>

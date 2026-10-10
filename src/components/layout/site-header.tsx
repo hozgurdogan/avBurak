@@ -61,83 +61,88 @@ export function SiteHeader() {
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-4">
-        <div className="flex flex-col gap-2">
-          <Link
-            href="/"
-            className="flex items-center gap-3 leading-tight text-ink"
-            aria-label={tSite('monogramLabel')}
-          >
-            <Monogram className="h-8 w-auto text-ink" />
-            <span className="flex flex-col">
-              <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
-              <span className="label text-ink-faint">{tSite('role')}</span>
-            </span>
-          </Link>
-          <ActionLink
-            href="/iletisim"
-            variant="outline"
-            className="self-start px-3 py-1.5 text-[10px]"
-          >
-            {t('getInTouch')}
-          </ActionLink>
+      {/* Slim utility strip: direct-contact channels and the locale switcher,
+          kept off the main row so the logo and primary nav never have to
+          compete with a phone number for space. Desktop only - the mobile
+          menu carries the same links in its own, roomier layout. */}
+      {tel || whatsapp ? (
+        <div className="hidden border-b border-rule-soft lg:block">
+          <div className="mx-auto flex max-w-wide items-center justify-end gap-6 px-gutter py-2">
+            {tel ? (
+              <a
+                href={tel}
+                dir="ltr"
+                className="label text-ink-faint transition-colors duration-base ease-out-editorial hover:text-gold-800"
+              >
+                <span className="sr-only">{tFooter('phone')}: </span>
+                {office.phone}
+              </a>
+            ) : null}
+            {whatsapp ? (
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label text-ink-faint transition-colors duration-base ease-out-editorial hover:text-gold-800"
+              >
+                {tFooter('whatsapp')}
+              </a>
+            ) : null}
+            <Suspense fallback={<LocaleSwitcherFallback />}>
+              <LocaleSwitcher />
+            </Suspense>
+          </div>
         </div>
+      ) : null}
 
-        <div className="flex items-center gap-6">
-          {/* Direct-contact channels next to the nav, not buried in the footer -
-              a visitor who already knows they want to call should not have to
-              scroll to the bottom of the page to do it. Renders nothing until
-              the office phone/WhatsApp env vars are set. */}
-          {tel || whatsapp ? (
-            <div className="hidden items-center gap-5 lg:flex">
-              {tel ? (
-                <a
-                  href={tel}
-                  dir="ltr"
-                  className="label text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
-                >
-                  <span className="sr-only">{tFooter('phone')}: </span>
-                  {office.phone}
-                </a>
-              ) : null}
-              {whatsapp ? (
-                <a
-                  href={whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="label text-ink-muted transition-colors duration-base ease-out-editorial hover:text-gold-800"
-                >
-                  {tFooter('whatsapp')}
-                </a>
-              ) : null}
-            </div>
-          ) : null}
+      <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-5">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-3 leading-tight text-ink"
+          aria-label={tSite('monogramLabel')}
+        >
+          <Monogram className="h-9 w-auto shrink-0 text-ink" />
+          <span className="flex flex-col whitespace-nowrap">
+            <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
+            <span className="label text-ink-faint">{tSite('role')}</span>
+          </span>
+        </Link>
 
-          <nav aria-label={t('primary')} className="hidden lg:block">
-            <ul className="flex items-center gap-8">
-              {navItems.map((item) => {
-                const isActive = pathname.startsWith(item.href);
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      aria-current={isActive ? 'page' : undefined}
-                      className={cn(
-                        'label-lg pb-1 transition-colors duration-base ease-out-editorial',
-                        isActive
-                          ? 'border-b border-gold-500 text-ink'
-                          : 'border-b border-transparent text-ink-muted hover:text-ink',
-                      )}
-                    >
-                      {t(item.key)}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+        <nav aria-label={t('primary')} className="hidden lg:block">
+          <ul className="flex items-center gap-7 whitespace-nowrap">
+            {navItems.map((item) => {
+              const isActive = pathname.startsWith(item.href);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={cn(
+                      'label-lg pb-1 transition-colors duration-base ease-out-editorial',
+                      isActive
+                        ? 'border-b border-gold-500 text-ink'
+                        : 'border-b border-transparent text-ink-muted hover:text-ink',
+                    )}
+                  >
+                    {t(item.key)}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
 
-          <div className="hidden sm:block">
+        <div className="flex shrink-0 items-center gap-5">
+          <div className="hidden lg:block">
+            <ActionLink href="/iletisim" variant="outline" className="whitespace-nowrap">
+              {t('getInTouch')}
+            </ActionLink>
+          </div>
+
+          {/* Shown whenever the utility strip above is hidden (no phone/
+              WhatsApp configured, or below the lg breakpoint where that
+              strip never renders) so the switcher is never lost entirely. */}
+          <div className={cn('hidden sm:block', tel || whatsapp ? 'lg:hidden' : undefined)}>
             <Suspense fallback={<LocaleSwitcherFallback />}>
               <LocaleSwitcher />
             </Suspense>

@@ -90,7 +90,7 @@ export function ContactForm() {
             className={cn(fieldClass, 'mt-2')}
           />
           {state.fieldErrors?.name ? (
-            <p id={`${errorId}-name`} className="mt-2 text-xs text-danger">
+            <p id={`${errorId}-name`} className="mt-2 text-sm text-danger">
               {fieldErrorMessage(state.fieldErrors.name)}
             </p>
           ) : null}
@@ -112,7 +112,7 @@ export function ContactForm() {
             className={cn(fieldClass, 'mt-2')}
           />
           {state.fieldErrors?.email ? (
-            <p id={`${errorId}-email`} className="mt-2 text-xs text-danger">
+            <p id={`${errorId}-email`} className="mt-2 text-sm text-danger">
               {fieldErrorMessage(state.fieldErrors.email)}
             </p>
           ) : null}
@@ -149,7 +149,7 @@ export function ContactForm() {
             className={cn(fieldClass, 'mt-2')}
           />
           {state.fieldErrors?.subject ? (
-            <p id={`${errorId}-subject`} className="mt-2 text-xs text-danger">
+            <p id={`${errorId}-subject`} className="mt-2 text-sm text-danger">
               {fieldErrorMessage(state.fieldErrors.subject)}
             </p>
           ) : null}
@@ -172,7 +172,7 @@ export function ContactForm() {
           className={cn(fieldClass, 'mt-2 resize-y')}
         />
         {state.fieldErrors?.message ? (
-          <p id={`${errorId}-message`} className="mt-2 text-xs text-danger">
+          <p id={`${errorId}-message`} className="mt-2 text-sm text-danger">
             {fieldErrorMessage(state.fieldErrors.message)}
           </p>
         ) : null}
@@ -189,7 +189,7 @@ export function ContactForm() {
           aria-describedby={state.errorCode === 'consent' ? `${errorId}-consent` : undefined}
           className="mt-1 h-4 w-4 shrink-0 border border-rule accent-gold-800"
         />
-        <label htmlFor={consentId} className="text-sm text-ink-muted">
+        <label htmlFor={consentId} className="text-md text-ink-muted">
           {t.rich('consent', {
             link: (chunks) => (
               <Link href="/kvkk" className="underline hover:text-ink">
@@ -205,18 +205,18 @@ export function ContactForm() {
           silence and no idea why nothing happened. */}
       <div role="alert">
         {state.errorCode === 'consent' ? (
-          <p id={`${errorId}-consent`} className="text-xs text-danger">
+          <p id={`${errorId}-consent`} className="text-sm text-danger">
             {t('errorConsent')}
           </p>
         ) : null}
         {state.errorCode === 'rate-limit' ? (
-          <p className="text-sm text-danger">{t('errorRateLimit')}</p>
+          <p className="text-md text-danger">{t('errorRateLimit')}</p>
         ) : null}
         {state.errorCode === 'generic' ? (
-          <p className="text-sm text-danger">{t('errorGeneric')}</p>
+          <p className="text-md text-danger">{t('errorGeneric')}</p>
         ) : null}
         {state.errorCode === 'validation' && !state.fieldErrors ? (
-          <p className="text-sm text-danger">{t('errorValidation')}</p>
+          <p className="text-md text-danger">{t('errorValidation')}</p>
         ) : null}
       </div>
 
@@ -227,7 +227,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="group inline-flex items-center gap-3 rounded-sm bg-navy-900 px-6 py-3.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800 disabled:opacity-60"
+          className="group inline-flex items-center gap-3 rounded-sm bg-navy-900 px-6 py-3.5 text-sm font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800 disabled:opacity-60"
         >
           {isPending ? t('submitting') : t('submit')}
           <svg

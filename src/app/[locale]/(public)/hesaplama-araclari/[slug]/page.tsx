@@ -82,7 +82,7 @@ export default async function ToolPage({ params }: PageProps) {
         </h1>
         <p className="measure mt-6 text-md leading-prose text-ink-muted">{t(`${slug}.intro`)}</p>
         {relatedAreas.length > 0 ? (
-          <p className="mt-4 text-sm text-ink-muted">
+          <p className="mt-4 text-md text-ink-muted">
             {relatedAreas.map((areaSlug, i) => (
               <span key={areaSlug}>
                 {i > 0 ? ' · ' : null}
@@ -113,10 +113,10 @@ export default async function ToolPage({ params }: PageProps) {
                 href={`/hesaplama-araclari/${tool.slug}`}
                 className="group flex h-full flex-col border-t border-rule pt-6"
               >
-                <h3 className="font-display text-xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800">
+                <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800">
                   {t(`${tool.slug}.name`)}
                 </h3>
-                <p className="mt-3 flex-1 text-sm text-ink-muted">{t(`${tool.slug}.summary`)}</p>
+                <p className="mt-3 flex-1 text-md text-ink-muted">{t(`${tool.slug}.summary`)}</p>
               </Link>
             </li>
           ))}

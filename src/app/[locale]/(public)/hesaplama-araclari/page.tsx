@@ -64,10 +64,10 @@ export default async function ToolsPage({ params }: PageProps) {
               <span className="label text-gold-800 lg:col-span-1" aria-hidden="true">
                 {toolNumber(index)}
               </span>
-              <h2 className="font-display text-2xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800 lg:col-span-4">
+              <h2 className="font-display text-3xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800 lg:col-span-4">
                 {tTools(`${tool.slug}.name`)}
               </h2>
-              <p className="text-sm text-ink-muted lg:col-span-6">
+              <p className="text-md text-ink-muted lg:col-span-6">
                 {tTools(`${tool.slug}.summary`)}
               </p>
               <span

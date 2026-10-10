@@ -12,7 +12,6 @@ import { office } from '@/content/office';
 import { getLatestArticles } from '@/lib/articles';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ActionLink } from '@/components/ui/action-link';
-import { Monogram } from '@/components/brand/monogram';
 import { Reveal } from '@/components/motion/reveal';
 
 type PageProps = {
@@ -39,11 +38,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-/**
- * The home page is the one place the monogram appears at watermark scale - the
- * single restrained signature element the brief allows. It sits behind the
- * hero copy at very low opacity rather than as a photograph or a gradient.
- */
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
 
@@ -83,10 +77,6 @@ export default async function HomePage({ params }: PageProps) {
       {/* Hero                                                              */}
       {/* ---------------------------------------------------------------- */}
       <section data-surface="navy" className="relative overflow-hidden bg-navy-900">
-        <Monogram
-          variant="watermark"
-          className="pointer-events-none absolute -end-16 -top-24 w-[34rem] text-canvas opacity-[0.04] sm:w-[42rem]"
-        />
         <div className="relative mx-auto max-w-wide px-gutter py-section">
           <div className="max-w-narrow">
             <p className="label flex items-center gap-3 text-gold-500">
@@ -120,19 +110,19 @@ export default async function HomePage({ params }: PageProps) {
           <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule-invert pt-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <dt className="label text-gold-500">{tHero('registrationLabel')}</dt>
-              <dd className="mt-3 text-sm text-mist">{office.bar.association}</dd>
+              <dd className="mt-3 text-md text-mist">{office.bar.association}</dd>
             </div>
             <div>
               <dt className="label text-gold-500">{tHero('languagesLabel')}</dt>
-              <dd className="mt-3 text-sm text-mist">{tHero('languages')}</dd>
+              <dd className="mt-3 text-md text-mist">{tHero('languages')}</dd>
             </div>
             <div>
               <dt className="label text-gold-500">{tHero('focusLabel')}</dt>
-              <dd className="mt-3 text-sm text-mist">{tHero('focus')}</dd>
+              <dd className="mt-3 text-md text-mist">{tHero('focus')}</dd>
             </div>
             <div>
               <dt className="label text-gold-500">{tHero('regionsLabel')}</dt>
-              <dd className="mt-3 flex flex-col gap-1 text-sm">
+              <dd className="mt-3 flex flex-col gap-1 text-md">
                 {serviceRegionSlugs.map((slug) => (
                   <Link
                     key={slug}
@@ -253,7 +243,7 @@ export default async function HomePage({ params }: PageProps) {
                     {article.title}
                   </h3>
                   <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
-                  <p className="mt-4 text-xs text-ink-faint">
+                  <p className="mt-4 text-sm text-ink-faint">
                     {article.publishedAt
                       ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })
                       : null}

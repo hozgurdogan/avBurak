@@ -135,12 +135,12 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
               type="search"
               defaultValue={q}
               placeholder={t('searchPlaceholder')}
-              className="mt-2 w-48 border-b border-rule bg-transparent px-0 py-2 text-sm text-ink placeholder:text-ink-faint focus:border-gold-800 focus:outline-none"
+              className="mt-2 w-48 border-b border-rule bg-transparent px-0 py-2 text-md text-ink placeholder:text-ink-faint focus:border-gold-800 focus:outline-none"
             />
           </div>
           <button
             type="submit"
-            className="border-b border-rule pb-2 text-xs font-medium uppercase tracking-label text-ink-muted hover:border-gold-500 hover:text-ink"
+            className="border-b border-rule pb-2 text-sm font-medium uppercase tracking-label text-ink-muted hover:border-gold-500 hover:text-ink"
           >
             {t('searchSubmit')}
           </button>
@@ -162,7 +162,7 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
                   {article.title}
                 </h2>
                 <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
-                <p className="mt-4 text-xs text-ink-faint">
+                <p className="mt-4 text-sm text-ink-faint">
                   {article.publishedAt
                     ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })
                     : null}
@@ -174,7 +174,7 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
           ))}
         </ul>
       ) : (
-        <p className="mt-12 border-t border-rule pt-8 text-sm text-ink-muted">{t('empty')}</p>
+        <p className="mt-12 border-t border-rule pt-8 text-md text-ink-muted">{t('empty')}</p>
       )}
 
       {result.totalPages > 1 ? (
@@ -189,7 +189,7 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
           ) : (
             <span aria-hidden="true" />
           )}
-          <span className="text-xs text-ink-faint">
+          <span className="text-sm text-ink-faint">
             {t('pageLabel', { page: result.page, totalPages: result.totalPages })}
           </span>
           {result.page < result.totalPages ? (

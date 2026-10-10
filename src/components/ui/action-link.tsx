@@ -26,7 +26,7 @@ type ActionLinkProps = {
  * monogram, the telephone glyph and the map pin deliberately do not.
  */
 const base =
-  'group inline-flex items-center gap-3 text-xs font-medium uppercase tracking-label ' +
+  'group inline-flex items-center gap-3 text-sm font-medium uppercase tracking-label ' +
   'transition-colors duration-base ease-out-editorial';
 
 const styles: Record<Variant, Record<Surface, string>> = {

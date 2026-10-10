@@ -50,7 +50,7 @@ export function CookieConsentBanner() {
       style={{ paddingBottom: 'calc(1.25rem + env(safe-area-inset-bottom, 0px))' }}
     >
       <div className="mx-auto flex max-w-wide flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="max-w-2xl text-sm text-ink-muted">
+        <p className="max-w-2xl text-md text-ink-muted">
           {t.rich('body', {
             link: (chunks) => (
               <Link href="/kvkk" className="underline hover:text-ink">
@@ -72,7 +72,7 @@ export function CookieConsentBanner() {
             type="button"
             onClick={() => respond(true)}
             disabled={isPending}
-            className="inline-flex items-center gap-2 rounded-sm bg-navy-900 px-5 py-2.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800 disabled:opacity-60"
+            className="inline-flex items-center gap-2 rounded-sm bg-navy-900 px-5 py-2.5 text-sm font-medium uppercase tracking-label text-canvas transition-colors duration-base ease-out-editorial hover:bg-navy-800 disabled:opacity-60"
           >
             {t('accept')}
           </button>

@@ -31,7 +31,7 @@ export default async function LocaleNotFound() {
           <div className="mt-10">
             <Link
               href="/"
-              className="group inline-flex items-center gap-3 border-b border-current pb-0.5 text-xs font-medium uppercase tracking-label text-gold-800 hover:text-ink"
+              className="group inline-flex items-center gap-3 border-b border-current pb-0.5 text-sm font-medium uppercase tracking-label text-gold-800 hover:text-ink"
             >
               {t('home')}
             </Link>

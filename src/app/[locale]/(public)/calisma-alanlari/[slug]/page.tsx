@@ -127,7 +127,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
                     <li key={toolSlug}>
                       <Link
                         href={`/hesaplama-araclari/${toolSlug}`}
-                        className="text-sm text-ink transition-colors duration-base hover:text-gold-800"
+                        className="text-md text-ink transition-colors duration-base hover:text-gold-800"
                       >
                         {tTools(`${toolSlug}.name`)}
                       </Link>
@@ -153,11 +153,11 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
                     href={`/makaleler/${article.slug}`}
                     className="group flex h-full flex-col border-t border-rule pt-6"
                   >
-                    <h3 className="font-display text-xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                    <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                       {article.title}
                     </h3>
-                    <p className="mt-3 flex-1 text-sm text-ink-muted">{article.summary}</p>
-                    <p className="mt-4 text-xs text-ink-faint">
+                    <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
+                    <p className="mt-4 text-sm text-ink-faint">
                       {article.publishedAt
                         ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })
                         : null}
@@ -169,7 +169,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
               ))}
             </ul>
           ) : (
-            <p className="mt-6 text-sm text-ink-muted">{tDetail('relatedEmpty')}</p>
+            <p className="mt-6 text-md text-ink-muted">{tDetail('relatedEmpty')}</p>
           )}
         </div>
       </section>

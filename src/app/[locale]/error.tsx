@@ -32,7 +32,7 @@ export default function LocaleError({ error, reset }: { error: Error & { digest?
             <button
               type="button"
               onClick={reset}
-              className="bg-navy-900 px-6 py-3.5 text-xs font-medium uppercase tracking-label text-canvas transition-colors duration-base hover:bg-navy-800"
+              className="bg-navy-900 px-6 py-3.5 text-sm font-medium uppercase tracking-label text-canvas transition-colors duration-base hover:bg-navy-800"
             >
               {t('retry')}
             </button>

@@ -116,7 +116,7 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
                     <li key={areaSlug}>
                       <Link
                         href={`/calisma-alanlari/${areaSlug}`}
-                        className="text-sm text-ink transition-colors duration-base hover:text-gold-800"
+                        className="text-md text-ink transition-colors duration-base hover:text-gold-800"
                       >
                         {tAreas(`${areaSlug}.name`)}
                       </Link>

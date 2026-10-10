@@ -63,7 +63,7 @@ export default async function FaqPage({ params }: PageProps) {
                         +
                       </span>
                     </summary>
-                    <dd className="measure mt-3 text-sm leading-prose text-ink-muted">
+                    <dd className="measure mt-3 text-md leading-prose text-ink-muted">
                       {item.answer}
                     </dd>
                   </details>
@@ -73,7 +73,7 @@ export default async function FaqPage({ params }: PageProps) {
           ))}
         </div>
 
-        <p className="mt-16 max-w-narrow border-t border-rule pt-6 text-xs leading-normal text-ink-faint">
+        <p className="mt-16 max-w-narrow border-t border-rule pt-6 text-sm leading-normal text-ink-faint">
           {content.note}
         </p>
       </div>

@@ -115,7 +115,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           </p>
         ) : null}
         <h1 className="mt-6 font-display text-display-sm font-normal text-ink">{article.title}</h1>
-        <p className="mt-6 text-xs text-ink-faint">
+        <p className="mt-6 text-sm text-ink-faint">
           {article.publishedAt
             ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })
             : null}
@@ -165,10 +165,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                   href={`/makaleler/${item.slug}`}
                   className="group flex h-full flex-col border-t border-rule pt-6"
                 >
-                  <h3 className="font-display text-xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                  <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                     {item.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm text-ink-muted">{item.summary}</p>
+                  <p className="mt-3 flex-1 text-md text-ink-muted">{item.summary}</p>
                 </Link>
               </Reveal>
             ))}
