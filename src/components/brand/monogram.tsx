@@ -13,14 +13,14 @@ type MonogramProps = {
 };
 
 /**
- * The BÜÖ lockup.
+ * The BUÖ lockup (Burak Uğur Öztürk's initials).
  *
  * The letterforms are set in the display serif rather than traced as bezier
  * paths: the site already self-hosts Cormorant Garamond, so using it here keeps
  * the monogram identical to the headings it sits above, stays crisp at any size
  * because SVG text is vector, and cannot drift out of sync if the typeface is
- * ever changed. The diaereses on Ü and Ö come from the font's own glyphs, which
- * is why they are correctly positioned rather than drawn as separate dots.
+ * ever changed. The diaeresis on Ö comes from the font's own glyph, which is
+ * why it is correctly positioned rather than drawn as a separate mark.
  *
  * The lockup itself - the proportions, the letter-spacing, the gold hairline
  * rule beneath and the two short flanking strokes - is composed here.
@@ -52,7 +52,7 @@ export function Monogram({ className, variant = 'mark', title }: MonogramProps) 
         letterSpacing="2.5"
         fill="currentColor"
       >
-        BÜÖ
+        BUÖ
       </text>
 
       {/* Gold hairline underscore, inset from the letters. */}

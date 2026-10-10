@@ -17,7 +17,8 @@
     "skipToContent": "Skip to content",
     "tools": "Tools",
     "faq": "FAQ",
-    "regions": "Regions"
+    "regions": "Regions",
+    "getInTouch": "Get in Touch"
   },
   "locale": {
     "label": "Language",
@@ -32,14 +33,14 @@
     },
     "hero": {
       "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
-      "title": "Legal support for individual and corporate disputes in and around Büyükçekmece.",
+      "title": "Burak Uğur Öztürk, Attorney at Law",
       "registrationLabel": "Admission",
       "languagesLabel": "Working Languages",
       "languages": "Turkish · English · Arabic",
       "focusLabel": "Practice Focus",
       "focus": "Labour Law, Enforcement Law, Divorce and Family Law",
       "regionsLabel": "Areas Served",
-      "lead": "Legal advice and litigation in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance and corporate law - based in Esenyurt, in Turkish, English and Arabic.",
+      "lead": "Legal advice and litigation in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance, consumer law, expropriation, compensation and administrative law, and corporate law - based in Esenyurt, in Turkish, English and Arabic.",
       "contact": "Contact",
       "appointment": "Request an appointment"
     },
@@ -119,6 +120,36 @@
         "In rent-adjustment and rent-determination cases, the twelve-month average CPI for the preceding period is assessed together with the lease terms; the rent-increase calculator on this site can be used to work out the applicable rate."
       ]
     },
+    "tazminat-hukuku": {
+      "name": "Compensation Law",
+      "summary": "Material and non-material (moral) damages claims arising from tort and breach of contract, traffic accident and bodily injury cases.",
+      "body": [
+        "Where a person suffers loss through an unlawful act or a breach of contract, the injured party may claim material and non-material (moral) damages under the tort and breach-of-contract provisions of Turkish Code of Obligations No. 6098.",
+        "In traffic accidents, bodily injury, loss of support following death, unfair competition and violations of personality rights, determining the amount of compensation requires establishing, with concrete evidence, the causal link between the fault and the loss and the scope of the loss itself.",
+        "In compensation cases, the injured party's own contributory fault, the duty to mitigate loss and insurance coverage directly affect the amount awarded; detailed documentation of each head of loss before making a claim is therefore important.",
+        "Limitation periods for compensation claims vary by the type of incident, and a claim must be filed within the applicable period to avoid losing the right; for work-accident compensation claims, the work-accident compensation calculator on this site can be used for an initial estimate."
+      ]
+    },
+    "kentsel-donusum-hukuku": {
+      "name": "Urban Transformation Law",
+      "summary": "Risky-building determinations under Law No. 6306, urban transformation processes, and resolving disputes between stakeholders.",
+      "body": [
+        "Urban transformation law covers a building’s designation as a risky structure under Law No. 6306 on the Transformation of Areas Under Disaster Risk, the eviction and demolition process, and drafting construction-in-exchange-for-flats or revenue-sharing agreements.",
+        "Objecting to a risky-building determination, the procedure that applies when owners cannot reach the statutory majority agreement, and the conditions for rent assistance and other state support are among the disputes most often encountered.",
+        "In construction-in-exchange-for-flats agreements signed between the contractor and the owners, clearly setting out each owner's share, the delivery date, penalty clauses and additional costs is important to prevent disputes that can arise later in the process.",
+        "Support is also provided to owners, tenants or holders of a limited right in rem who are party to an urban transformation process, on matters including eviction, cancellation and re-registration of title, and compensation claims."
+      ]
+    },
+    "tuketici-hukuku": {
+      "name": "Consumer Law",
+      "summary": "Claims arising from defective goods and services, consumer arbitration committee and consumer court proceedings, subscription and distance-sales contracts.",
+      "body": [
+        "Under Law No. 6502 on the Protection of Consumers, this area covers defective goods or services, the right of withdrawal from distance-sales contracts, termination of subscription contracts, and compensation for loss a consumer suffers due to unfair contract terms.",
+        "Disputes below the monetary threshold are filed with the Consumer Arbitration Committee; for disputes above that threshold, or where the Committee’s decision is appealed, the competent court is the consumer court (where none exists, the civil court of first instance sits in that capacity).",
+        "In the sale of defective goods, which of the consumer's optional remedies to pursue – free repair, replacement with a defect-free equivalent, a price reduction, or rescission of the contract – and, in distance sales, the length and manner of exercising the right of withdrawal, are the points most often disputed.",
+        "Keeping the contract, invoice, warranty document and correspondence before applying significantly eases proving the claim in both the Arbitration Committee and court proceedings."
+      ]
+    },
     "sirketler-hukuku": {
       "name": "Corporate Law",
       "summary": "Incorporation and conversion, articles of association, capital increases, share transfers, shareholders' agreements and general assembly procedure.",
@@ -164,33 +195,57 @@
   "serviceRegions": {
     "buyukcekmece": {
       "name": "Büyükçekmece",
+      "pageTitle": "Büyükçekmece Lawyer and Legal Consultancy",
+      "h1": "Dispute resolution and consultancy in Büyükçekmece",
       "summary": "Court process, the most common case types, and the documents worth preparing before a meeting, for disputes in and around Büyükçekmece.",
       "body": [
         "For many legal disputes arising in Esenyurt, Beylikdüzü, Çatalca and Büyükçekmece itself, the court with jurisdiction is generally the Büyükçekmece Courthouse; the competent court can vary by case type, so this is always confirmed for the specific matter.",
         "The most common disputes from this area include employee entitlement and reinstatement claims, objections to enforcement proceedings and seizure, divorce and custody cases, rent-determination and eviction claims, and disputes arising from inheritance division.",
         "Before a meeting, having identification, any existing contract or notice document, employment-related records (payslips, entry/exit declarations), or matter-specific documents such as title deeds or lease agreements ready makes the initial assessment faster."
       ],
-      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku"]
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
+      ]
     },
     "beylikduzu": {
       "name": "Beylikdüzü",
+      "pageTitle": "Beylikdüzü Lawyer and Legal Consultancy",
+      "h1": "Tenancy, labour and family law support in Beylikdüzü",
       "summary": "Disputes arising from residential and workplace relationships in Beylikdüzü, and meeting options.",
       "body": [
         "With its dense residential and workplace population, Beylikdüzü is an area where tenancy relationships, employment contract disputes and family-law matters are frequently seen; disputes arising here are also generally within the jurisdiction of the Büyükçekmece Courthouse.",
         "As a tenant or landlord: eviction, rent-determination and deposit disputes; as an employee or employer: severance/notice pay and overtime claims; and objections to enforcement proceedings and seizure are among the matters most often raised from this area.",
         "Meetings can be arranged in person at the office or remotely by video/phone call, depending on preference; preparing the relevant documents (lease agreement, payment records, employment contract, etc.) before the first meeting improves efficiency."
       ],
-      "relatedAreas": ["kira-hukuku", "is-hukuku", "bosanma-aile-hukuku", "icra-hukuku"]
+      "relatedAreas": [
+        "kira-hukuku",
+        "is-hukuku",
+        "bosanma-aile-hukuku",
+        "icra-hukuku"
+      ]
     },
     "esenyurt": {
       "name": "Esenyurt",
-      "summary": "The office's actual Esenyurt address, access information, and individual and corporate client intake across every practice area.",
+      "pageTitle": "Esenyurt Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Esenyurt",
+      "summary": "The Esenyurt office, access information, and individual and corporate client intake across every practice area.",
       "body": [
         "The office operates from Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/Istanbul; individual and corporate clients are received by appointment, in person at the office or, on request, by video/phone call.",
         "Across labour law, enforcement law, divorce and family law, tenancy law, inheritance law, corporate law, arbitration and data protection alike, both individual and corporate/foreign clients are served in Turkish, English and Arabic.",
         "The address is reachable by public transport and by car; for the exact appointment time and directions, contacting the office beforehand by phone or WhatsApp (see the contact page) is recommended."
       ],
-      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku", "sirketler-hukuku"]
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku",
+        "sirketler-hukuku"
+      ]
     }
   },
   "serviceRegionsPage": {
@@ -693,7 +748,7 @@
       "slugHint": "The part that appears in the page's web address. Turkish characters are corrected automatically (ş→s, ğ→g, and so on); for an Arabic title, type the slug yourself using Latin letters.",
       "summary": "Summary",
       "content": "Content (Markdown)",
-      "contentHint": "Markdown formatting is supported - # for headings, **bold** for bold, and so on.",
+      "contentHint": "Markdown formatting is supported - ## (H2) or ### (H3) for section headings, **bold** for bold, and so on. Do not use a single # (H1) - the page's only H1 is the article title, and a heading written with a single # will not appear in the table of contents.",
       "categories": "Categories",
       "create": "Create Article",
       "save": "Save",
@@ -705,7 +760,11 @@
       "errorTooShort": "This field is too short.",
       "errorTooLong": "This field is too long.",
       "errorRequired": "This field is required.",
-      "errorSlugTaken": "This slug is already used by another article in this language."
+      "errorSlugTaken": "This slug is already used by another article in this language.",
+      "translationOf": "Which article is this a translation of?",
+      "translationOfNone": "— Standalone (new) article —",
+      "translationOfHint": "If you pick one, this article joins that article's group so the cross-language links (hreflang) work correctly. Saving is refused if the group already has a translation in this language.",
+      "errorTranslationConflict": "The selected article's group already has a translation in this language."
     },
     "analytics": {
       "title": "Visit Analytics",

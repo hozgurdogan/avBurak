@@ -17,7 +17,8 @@
     "skipToContent": "İçeriğe geç",
     "tools": "Araçlar",
     "faq": "SSS",
-    "regions": "Bölgeler"
+    "regions": "Bölgeler",
+    "getInTouch": "İletişime Geç"
   },
   "locale": {
     "label": "Dil",
@@ -32,14 +33,14 @@
     },
     "hero": {
       "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
-      "title": "Büyükçekmece ve çevresinde bireysel ve kurumsal uyuşmazlıklara hukuki destek.",
+      "title": "Av. Burak Uğur Öztürk",
       "registrationLabel": "Kayıt",
       "languagesLabel": "Çalışma Dilleri",
       "languages": "Türkçe · İngilizce · Arapça",
       "focusLabel": "Çalışma Alanları",
       "focus": "İş Hukuku, İcra Hukuku, Boşanma ve Aile Hukuku",
       "regionsLabel": "Hizmet Bölgeleri",
-      "lead": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras ve şirketler hukukunda; Esenyurt merkezli, Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi.",
+      "lead": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras, tüketici, kamulaştırma, tazminat ve idare hukuku ile şirketler hukukunda; Esenyurt merkezli, Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi.",
       "contact": "İletişim",
       "appointment": "Randevu talebi"
     },
@@ -119,6 +120,36 @@
         "Kira bedelinin uyarlanması ve kira tespiti davalarında, önceki dönem TÜFE ortalaması ve sözleşme hükümleri birlikte değerlendirilir; kira artış oranının hesaplanmasında sitedeki kira artış oranı hesaplama aracından yararlanılabilir."
       ]
     },
+    "tazminat-hukuku": {
+      "name": "Tazminat Hukuku",
+      "summary": "Haksız fiil ve sözleşmeye aykırılıktan doğan maddi ve manevi tazminat talepleri, trafik kazası ve cismani zarar davaları.",
+      "body": [
+        "Bir kişinin hukuka aykırı bir fiil veya sözleşmeye aykırı davranışla zarara uğraması hâlinde, zarar gören taraf 6098 sayılı Türk Borçlar Kanunu'nun haksız fiil ve sözleşmeye aykırılık hükümleri çerçevesinde maddi ve manevi tazminat talep edebilir.",
+        "Trafik kazaları, cismani zarar, ölüm nedeniyle destekten yoksun kalma, haksız rekabet ve kişilik haklarına saldırı gibi hâllerde tazminat miktarının belirlenmesi, zarar ile kusur arasındaki bağın ve zararın kapsamının somut delillerle ortaya konmasını gerektirir.",
+        "Tazminat davalarında zarar görenin kusuru, müterafık kusur, zararın azaltılması yükümlülüğü ve sigorta kapsamı gibi hususlar tazminat miktarını doğrudan etkiler; bu nedenle talep öncesinde zarar kalemlerinin ayrıntılı biçimde belgelendirilmesi önemlidir.",
+        "Tazminat taleplerinde zamanaşımı süreleri olay türüne göre değişmekte olup, hak kaybına uğramamak için süresi içinde başvuru yapılması gerekir; iş kazası kaynaklı tazminat talepleri için sitedeki iş kazası tazminat hesaplama aracından yararlanılabilir."
+      ]
+    },
+    "kentsel-donusum-hukuku": {
+      "name": "Kentsel Dönüşüm Hukuku",
+      "summary": "6306 sayılı Kanun kapsamında riskli yapı tespiti, kentsel dönüşüm süreçleri ve paydaşlar arası anlaşmazlıkların çözümü.",
+      "body": [
+        "6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun çerçevesinde bir yapının riskli yapı olarak tespit edilmesi, tahliye ve yıkım süreçleri ile kat karşılığı veya hasılat paylaşımı sözleşmelerinin hazırlanması kentsel dönüşüm hukukunun kapsamına girer.",
+        "Riskli yapı tespitine itiraz, maliklerin kanunda öngörülen çoğunlukla anlaşma sağlayamaması hâlinde uygulanacak usul ve kira yardımı ile diğer devlet desteklerinden yararlanma şartları sık karşılaşılan uyuşmazlık konuları arasındadır.",
+        "Müteahhit ile malikler arasında imzalanan kat karşılığı inşaat sözleşmelerinde payların, teslim tarihinin, cezai şartın ve ek maliyetlerin açık biçimde düzenlenmesi, sürecin ilerleyen aşamalarında ortaya çıkabilecek anlaşmazlıkların önüne geçilmesi açısından önemlidir.",
+        "Kentsel dönüşüm sürecinde malik, kiracı veya sınırlı ayni hak sahibi sıfatıyla taraf olan kişilere, tahliye, tapu iptali-tescili ve tazminat talepleri konusunda da destek sağlanmaktadır."
+      ]
+    },
+    "tuketici-hukuku": {
+      "name": "Tüketici Hukuku",
+      "summary": "Ayıplı mal ve hizmetten doğan talepler, tüketici hakem heyeti ve tüketici mahkemesi süreçleri, abonelik ve mesafeli satış sözleşmeleri.",
+      "body": [
+        "6502 sayılı Tüketicinin Korunması Hakkında Kanun kapsamında ayıplı mal veya hizmet, mesafeli satış sözleşmelerinden cayma hakkı, abonelik sözleşmelerinin feshi ve haksız şartlar nedeniyle tüketicinin uğradığı zararların tazmini bu alanın kapsamındadır.",
+        "Parasal sınırın altında kalan uyuşmazlıklarda başvuru tüketici hakem heyetine yapılır; sınırı aşan veya hakem heyeti kararına itiraz edilen uyuşmazlıklarda görevli mahkeme tüketici mahkemesidir (tüketici mahkemesi bulunmayan yerlerde asliye hukuk mahkemesi bu sıfatla görev yapar).",
+        "Ayıplı mal satışında tüketicinin ücretsiz onarım, malın ayıpsız misliyle değişimi, bedel indirimi veya sözleşmeden dönme seçimlik haklarından hangisini kullanacağını belirlemesi; mesafeli satışlarda cayma hakkının süresi ve kullanım şekli uyuşmazlıkların en sık görüldüğü noktalardır.",
+        "Başvuru öncesinde sözleşme, fatura, garanti belgesi ve yazışmaların saklanması, hem hakem heyeti hem de mahkeme sürecinde talebin ispatını önemli ölçüde kolaylaştırır."
+      ]
+    },
     "sirketler-hukuku": {
       "name": "Şirketler Hukuku",
       "summary": "Şirket kuruluşu ve tür değiştirme, esas sözleşme düzenlemeleri, sermaye artırımı, pay devri, ortaklar arası sözleşmeler ve genel kurul süreçleri.",
@@ -164,33 +195,57 @@
   "serviceRegions": {
     "buyukcekmece": {
       "name": "Büyükçekmece",
+      "pageTitle": "Büyükçekmece Avukat ve Hukuki Danışmanlık",
+      "h1": "Büyükçekmece'de avukat: dava ve danışmanlık süreçleri",
       "summary": "Büyükçekmece ve çevresindeki uyuşmazlıklarda adliye süreci, en sık karşılaşılan dava türleri ve başvuru öncesi hazırlanması gereken belgeler.",
       "body": [
         "Esenyurt, Beylikdüzü, Çatalca ve Büyükçekmece'nin kendisinde ortaya çıkan birçok hukuki uyuşmazlıkta görevli ve yetkili merci genellikle Büyükçekmece Adliyesi'dir; somut dosyanın türüne göre görevli mahkeme değişebileceğinden bu husus her olayda ayrıca değerlendirilmelidir.",
         "Bölgede en sık karşılaşılan uyuşmazlıklar arasında işçilik alacakları ve işe iade talepleri, icra takibine itiraz ve haciz işlemleri, boşanma ve velayet davaları, kira tespiti ile tahliye talepleri ve miras paylaşımından doğan anlaşmazlıklar yer almaktadır.",
         "Bir görüşme öncesinde kimlik belgesi, varsa mevcut sözleşme veya tebligat evrakı, iş ilişkisine dair belgeler (bordro, işe giriş-çıkış bildirgesi) veya tapu/kira sözleşmesi gibi dosyaya özgü belgelerin hazır bulundurulması, ilk değerlendirmenin daha hızlı yapılmasını sağlar."
       ],
-      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku"]
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
+      ]
     },
     "beylikduzu": {
       "name": "Beylikdüzü",
+      "pageTitle": "Beylikdüzü Avukat ve Hukuki Danışmanlık",
+      "h1": "Beylikdüzü'nde avukat: kira, iş ve aile hukuku uyuşmazlıkları",
       "summary": "Beylikdüzü'ndeki konut ve işyeri ilişkilerinden doğan uyuşmazlıklar ile görüşme seçenekleri.",
       "body": [
         "Beylikdüzü, yoğun konut ve işyeri nüfusuyla kira ilişkileri, iş sözleşmesi uyuşmazlıkları ve aile hukukuna ilişkin başvuruların sık görüldüğü bir bölgedir; bölgede ortaya çıkan uyuşmazlıklarda da çoğunlukla Büyükçekmece Adliyesi görevli ve yetkili mercidir.",
         "Kiracı veya kiraya veren sıfatıyla tahliye, kira tespiti ve depozito uyuşmazlıkları; işçi veya işveren sıfatıyla kıdem-ihbar tazminatı ve fazla mesai alacakları; icra takibine itiraz ve haciz süreçleri bölgeden gelen başvurularda öne çıkan konular arasındadır.",
         "Görüşmeler talebe göre büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk görüşme öncesinde dosyaya ilişkin belgelerin (kira sözleşmesi, ödeme dekontları, iş sözleşmesi vb.) hazırlanması sürecin verimliliğini artırır."
       ],
-      "relatedAreas": ["kira-hukuku", "is-hukuku", "bosanma-aile-hukuku", "icra-hukuku"]
+      "relatedAreas": [
+        "kira-hukuku",
+        "is-hukuku",
+        "bosanma-aile-hukuku",
+        "icra-hukuku"
+      ]
     },
     "esenyurt": {
       "name": "Esenyurt",
-      "summary": "Büronun Esenyurt'taki gerçek adresi, ulaşım bilgileri ve tüm çalışma alanlarında bireysel ve kurumsal müvekkil kabulü.",
+      "pageTitle": "Esenyurt Avukat ve Hukuki Danışmanlık",
+      "h1": "Esenyurt'ta avukat: hukuki danışmanlık ve dava takibi",
+      "summary": "Esenyurt'taki büro, ulaşım bilgileri ve tüm çalışma alanlarında bireysel ve kurumsal müvekkil kabulü.",
       "body": [
         "Büro, Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/İstanbul adresinde hizmet vermektedir; bireysel ve kurumsal müvekkiller randevu alarak ofiste yüz yüze veya talep hâlinde görüntülü/telefon görüşmesi yoluyla kabul edilmektedir.",
         "İş hukuku, icra hukuku, boşanma ve aile hukuku, kira hukuku, miras hukuku ile şirketler hukuku, tahkim ve kişisel verilerin korunması alanlarının tamamında; hem bireysel hem kurumsal/yabancı müvekkillere Türkçe, İngilizce ve Arapça hizmet sunulmaktadır.",
         "Adrese toplu taşıma ve özel araçla ulaşım mümkündür; kesin randevu saati ve ulaşım yönlendirmesi için iletişim sayfasındaki telefon veya WhatsApp hattı üzerinden önceden bilgi alınması önerilir."
       ],
-      "relatedAreas": ["is-hukuku", "icra-hukuku", "bosanma-aile-hukuku", "kira-hukuku", "miras-hukuku", "sirketler-hukuku"]
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku",
+        "sirketler-hukuku"
+      ]
     }
   },
   "serviceRegionsPage": {
@@ -693,7 +748,7 @@
       "slugHint": "Sayfanın adres çubuğunda görünecek kısım. Türkçe karakterler otomatik düzeltilir (ş→s, ğ→g gibi); Arapça başlıklarda kendiniz İngilizce harflerle yazın.",
       "summary": "Özet",
       "content": "İçerik (Markdown)",
-      "contentHint": "Başlıklar için #, kalın için **kalın** gibi Markdown biçimlendirmesi kullanabilirsiniz.",
+      "contentHint": "Ara başlıklar için ## (H2) veya ### (H3), kalın için **kalın** gibi Markdown biçimlendirmesi kullanabilirsiniz. Tek # (H1) kullanmayın - sayfanın tek H1'i makale başlığıdır ve tek # ile yazılan başlıklar içindekiler tablosunda görünmez.",
       "categories": "Kategoriler",
       "create": "Makaleyi Oluştur",
       "save": "Kaydet",
@@ -705,7 +760,11 @@
       "errorTooShort": "Bu alan çok kısa.",
       "errorTooLong": "Bu alan çok uzun.",
       "errorRequired": "Bu alan zorunludur.",
-      "errorSlugTaken": "Bu adres (slug) bu dilde başka bir makale tarafından kullanılıyor."
+      "errorSlugTaken": "Bu adres (slug) bu dilde başka bir makale tarafından kullanılıyor.",
+      "translationOf": "Bu makale hangi makalenin çevirisi?",
+      "translationOfNone": "— Bağımsız (yeni) makale —",
+      "translationOfHint": "Seçerseniz bu makale, seçilen makaleyle aynı gruba eklenir; böylece diller arası bağlantılar (hreflang) doğru çalışır. Grupta aynı dilde zaten bir çeviri varsa kayıt reddedilir.",
+      "errorTranslationConflict": "Seçilen makalenin grubunda bu dilde zaten bir çeviri var."
     },
     "analytics": {
       "title": "Ziyaret Analizi",

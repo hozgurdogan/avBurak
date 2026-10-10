@@ -36,7 +36,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return pageMetadata({
     locale: locale as Locale,
     path: `bolgeler/${slug}`,
-    title: t(`${slug}.name`),
+    // A bare district name as the title/H1 was flagged by the SEO audit
+    // (rapor/, 10 Ekim 2026) as unhelpfully thin - `pageTitle`/`h1` below
+    // are the fuller, district + "avukat" phrased copy it recommended.
+    title: t(`${slug}.pageTitle`),
     description: t(`${slug}.summary`),
   });
 }
@@ -86,7 +89,7 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
             as="h1"
             number={serviceRegionNumber(index)}
             label={tRegionsPage('label')}
-            title={tRegions(`${slug}.name`)}
+            title={tRegions(`${slug}.h1`)}
             lead={tRegions(`${slug}.summary`)}
           />
 

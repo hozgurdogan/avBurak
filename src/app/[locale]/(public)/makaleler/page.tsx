@@ -18,12 +18,25 @@ type PageProps = {
   searchParams: Promise<{ kategori?: string; sayfa?: string; q?: string }>;
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { locale } = await params;
+  const { kategori, sayfa } = await searchParams;
   const t = await getTranslations({ locale, namespace: 'articlesPage.meta' });
+
+  // Category and page are genuinely different content per the SEO audit
+  // (rapor/, 10 Ekim 2026): the list page's canonical must self-reference
+  // each one instead of always pointing back at the unfiltered first page.
+  // `q` (free-text search) is left out deliberately - an unbounded set of
+  // query strings is not worth asking Google to index separately.
+  const query = new URLSearchParams();
+  if (kategori) query.set('kategori', kategori);
+  const page = Math.max(1, Number.parseInt(sayfa ?? '1', 10) || 1);
+  if (page > 1) query.set('sayfa', String(page));
+  const qs = query.toString();
+
   return pageMetadata({
     locale: locale as Locale,
-    path: 'makaleler',
+    path: qs ? `makaleler?${qs}` : 'makaleler',
     title: t('title'),
     description: t('description'),
   });

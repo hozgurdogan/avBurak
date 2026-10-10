@@ -8,6 +8,8 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LocaleSwitcher, LocaleSwitcherFallback } from './locale-switcher';
 import { office, telHref, whatsappHref } from '@/content/office';
+import { Monogram } from '@/components/brand/monogram';
+import { ActionLink } from '@/components/ui/action-link';
 import { cn } from '@/lib/cn';
 
 const navItems = [
@@ -60,10 +62,26 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-4">
-        <Link href="/" className="flex flex-col leading-tight text-ink" aria-label={tSite('monogramLabel')}>
-          <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
-          <span className="label text-ink-faint">{tSite('role')}</span>
-        </Link>
+        <div className="flex flex-col gap-2">
+          <Link
+            href="/"
+            className="flex items-center gap-3 leading-tight text-ink"
+            aria-label={tSite('monogramLabel')}
+          >
+            <Monogram className="h-8 w-auto text-ink" />
+            <span className="flex flex-col">
+              <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
+              <span className="label text-ink-faint">{tSite('role')}</span>
+            </span>
+          </Link>
+          <ActionLink
+            href="/iletisim"
+            variant="outline"
+            className="self-start px-3 py-1.5 text-[10px]"
+          >
+            {t('getInTouch')}
+          </ActionLink>
+        </div>
 
         <div className="flex items-center gap-6">
           {/* Direct-contact channels next to the nav, not buried in the footer -

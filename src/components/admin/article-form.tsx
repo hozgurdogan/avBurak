@@ -22,6 +22,8 @@ const fieldErrorMessageKeys = {
   slug_taken: 'errorSlugTaken',
 } as const;
 
+export type TranslationCandidate = { id: string; locale: string; title: string };
+
 const fieldClass =
   'w-full border-b border-rule bg-transparent px-0 py-3 text-ink placeholder:text-ink-faint ' +
   'focus:border-gold-800 focus:outline-none transition-colors duration-base';
@@ -42,12 +44,16 @@ export function ArticleForm({
   categories,
   defaultValues,
   submitLabel,
+  translationCandidates,
 }: {
   action: (prevState: ArticleFormState, formData: FormData) => Promise<ArticleFormState>;
   locales: readonly Locale[];
   categories: Array<{ id: string; name: string }>;
   defaultValues?: ArticleFormDefaults;
   submitLabel: string;
+  /** Only passed on the create form - editing an existing article's group
+   *  membership afterwards isn't supported, to keep this change small. */
+  translationCandidates?: TranslationCandidate[];
 }) {
   const t = useTranslations('admin.articleForm');
   const [state, formAction, isPending] = useActionState(action, initialState);
@@ -93,6 +99,28 @@ export function ArticleForm({
           </select>
         </div>
       </div>
+
+      {translationCandidates && translationCandidates.length > 0 ? (
+        <div>
+          <label htmlFor="translationOfId" className="label text-ink-faint">
+            {t('translationOf')}
+          </label>
+          <select
+            id="translationOfId"
+            name="translationOfId"
+            defaultValue=""
+            className={cn(fieldClass, 'mt-2')}
+          >
+            <option value="">{t('translationOfNone')}</option>
+            {translationCandidates.map((candidate) => (
+              <option key={candidate.id} value={candidate.id}>
+                {candidate.locale.toUpperCase()} — {candidate.title}
+              </option>
+            ))}
+          </select>
+          <p className="mt-2 text-xs leading-normal text-ink-faint">{t('translationOfHint')}</p>
+        </div>
+      ) : null}
 
       <div>
         <label htmlFor="title" className="label text-ink-faint">
@@ -189,6 +217,9 @@ export function ArticleForm({
 
       <div role="alert">
         {state.errorCode === 'generic' ? <p className="text-sm text-danger">{t('errorGeneric')}</p> : null}
+        {state.errorCode === 'translation-conflict' ? (
+          <p className="text-sm text-danger">{t('errorTranslationConflict')}</p>
+        ) : null}
         {state.errorCode === 'validation' && !state.fieldErrors ? (
           <p className="text-sm text-danger">{t('errorValidation')}</p>
         ) : null}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales, type Locale } from '@/i18n/locales';
-import { getCategoryOptions } from '@/lib/admin/articles';
+import { getCategoryOptions, getAdminArticles } from '@/lib/admin/articles';
 import { createArticle } from '@/actions/articles';
 import { ArticleForm } from '@/components/admin/article-form';
 
@@ -14,10 +14,12 @@ type PageProps = {
 
 export default async function NewArticlePage({ params }: PageProps) {
   const { locale } = await params;
-  const [t, categories] = await Promise.all([
+  const [t, categories, articles] = await Promise.all([
     getTranslations('admin.articleForm'),
     getCategoryOptions(locale as Locale),
+    getAdminArticles(),
   ]);
+  const translationCandidates = articles.map((a) => ({ id: a.id, locale: a.locale, title: a.title }));
 
   return (
     <div className="max-w-narrow">
@@ -30,7 +32,13 @@ export default async function NewArticlePage({ params }: PageProps) {
       <h1 className="font-display text-2xl font-normal text-ink">{t('newTitle')}</h1>
 
       <div className="mt-8">
-        <ArticleForm action={createArticle} locales={locales} categories={categories} submitLabel={t('create')} />
+        <ArticleForm
+          action={createArticle}
+          locales={locales}
+          categories={categories}
+          submitLabel={t('create')}
+          translationCandidates={translationCandidates}
+        />
       </div>
     </div>
   );

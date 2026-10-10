@@ -15,6 +15,12 @@
  * practice's public focus from corporate/foreign-investment work to labour,
  * enforcement, family and tenancy matters) - their DB categories and any
  * articles under them are untouched, just no longer linked from here.
+ *
+ * `tazminat-hukuku`, `kentsel-donusum-hukuku` and `tuketici-hukuku` were
+ * added (2026-10-10, at the client's request) the same way the five
+ * mid-list areas were: no seeded DB category yet, so their "related
+ * articles" section stays empty until something is published under a
+ * matching category.
  */
 export const practiceAreaSlugs = [
   'is-hukuku',
@@ -22,6 +28,9 @@ export const practiceAreaSlugs = [
   'bosanma-aile-hukuku',
   'miras-hukuku',
   'kira-hukuku',
+  'tazminat-hukuku',
+  'kentsel-donusum-hukuku',
+  'tuketici-hukuku',
   'sirketler-hukuku',
   'tahkim-ve-uyusmazlik-cozumu',
   'kisisel-verilerin-korunmasi',

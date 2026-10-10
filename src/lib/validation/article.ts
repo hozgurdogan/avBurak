@@ -12,6 +12,13 @@ export const articleSchema = z.object({
   // required, an article with no category is valid, just absent from every
   // "related articles" list.
   categoryIds: z.array(z.string()),
+  // Empty string (the form's "standalone article" option) means "start a new
+  // ArticleGroup" - only a non-empty id means "join this article's group as
+  // its translation". See `createArticle` in `src/actions/articles.ts`.
+  translationOfId: z
+    .string()
+    .optional()
+    .transform((value) => (value && value.length > 0 ? value : undefined)),
 });
 
 export type ArticleFormValues = z.infer<typeof articleSchema>;

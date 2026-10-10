@@ -20,7 +20,7 @@ async function requireAdmin() {
 
 export type ArticleFormState = {
   status: 'idle' | 'error';
-  errorCode?: 'validation' | 'slug-taken' | 'generic';
+  errorCode?: 'validation' | 'slug-taken' | 'generic' | 'translation-conflict';
   fieldErrors?: Partial<Record<'title' | 'slug' | 'summary' | 'contentMd', string>>;
 };
 
@@ -33,6 +33,7 @@ function parseForm(formData: FormData) {
     contentMd: formData.get('contentMd'),
     status: formData.get('status'),
     categoryIds: formData.getAll('categoryIds'),
+    translationOfId: formData.get('translationOfId'),
   });
 }
 
@@ -63,6 +64,29 @@ export async function createArticle(
   const data = parsed.data;
   const readMinutes = readingTimeMinutes(data.contentMd, isLocale(data.locale) ? data.locale : 'tr');
 
+  // "Translation of" joins this article to an existing ArticleGroup instead
+  // of starting a new one, so hreflang/`getArticleAlternates` can find it as
+  // a sibling rendering of the same piece. Resolved here (not trusted from
+  // the form) so a tampered groupId can't be posted directly.
+  let groupId: string | undefined;
+  if (data.translationOfId) {
+    const target = await prisma.article.findUnique({
+      where: { id: data.translationOfId },
+      select: { groupId: true },
+    });
+    if (!target) {
+      return { status: 'error', errorCode: 'generic' };
+    }
+    const conflict = await prisma.article.findFirst({
+      where: { groupId: target.groupId, locale: data.locale },
+      select: { id: true },
+    });
+    if (conflict) {
+      return { status: 'error', errorCode: 'translation-conflict' };
+    }
+    groupId = target.groupId;
+  }
+
   let articleId: string;
   try {
     const article = await prisma.article.create({
@@ -75,7 +99,7 @@ export async function createArticle(
         status: data.status,
         publishedAt: data.status === 'PUBLISHED' ? new Date() : null,
         readMinutes,
-        group: { create: {} },
+        group: groupId ? { connect: { id: groupId } } : { create: {} },
         categories: { create: data.categoryIds.map((categoryId) => ({ categoryId })) },
       },
     });
@@ -145,10 +169,10 @@ export async function updateArticle(
 
 /**
  * Deletes the article and, if that was the only rendering left in its
- * group, the now-empty `ArticleGroup` too. This editor creates one article
- * per group (see `createArticle` above - `group: { create: {} }`), so
- * without this cleanup every deletion would leave an orphaned, invisible
- * group row behind forever.
+ * group, the now-empty `ArticleGroup` too - otherwise every deletion of a
+ * standalone (non-translated) article would leave an orphaned, invisible
+ * group row behind forever. A group with other locales still in it
+ * (created via "translation of", see `createArticle` above) is left intact.
  */
 export async function deleteArticle(id: string): Promise<void> {
   await requireAdmin();
