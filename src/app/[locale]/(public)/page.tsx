@@ -48,13 +48,12 @@ export default async function HomePage({ params }: PageProps) {
   setRequestLocale(locale);
   const typedLocale = locale as Locale;
 
-  const [tHero, tPractice, tProfile, tArticles, tContact, tPracticeAreas, tArticle, tRegions] =
+  const [tHero, tPractice, tProfile, tArticles, tPracticeAreas, tArticle, tRegions] =
     await Promise.all([
       getTranslations({ locale, namespace: 'home.hero' }),
       getTranslations({ locale, namespace: 'home.practice' }),
       getTranslations({ locale, namespace: 'home.profile' }),
       getTranslations({ locale, namespace: 'home.articles' }),
-      getTranslations({ locale, namespace: 'home.contact' }),
       getTranslations({ locale, namespace: 'practiceAreas' }),
       getTranslations({ locale, namespace: 'article' }),
       getTranslations({ locale, namespace: 'serviceRegions' }),
@@ -262,32 +261,6 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </section>
       ) : null}
-
-      {/* ---------------------------------------------------------------- */}
-      {/* Contact                                                           */}
-      {/* ---------------------------------------------------------------- */}
-      <section data-surface="navy" className="bg-navy-900">
-        <div className="mx-auto max-w-wide px-gutter py-section-sm">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
-            <div className="lg:col-span-6">
-              <SectionHeading
-                number="04"
-                label={tContact('label')}
-                title={tContact('title')}
-                surface="navy"
-              />
-            </div>
-            <div className="lg:col-span-5 lg:col-start-8">
-              <p className="measure text-md text-mist">{tContact('body')}</p>
-              <div className="mt-8">
-                <ActionLink href="/iletisim" variant="outline" surface="navy">
-                  {tContact('link')}
-                </ActionLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

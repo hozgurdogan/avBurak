@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
+import { ContactCtaBand } from '@/components/layout/contact-cta-band';
 import { PageViewBeacon } from '@/components/analytics/page-view-beacon';
 import { CookieConsentBanner } from '@/components/analytics/cookie-consent-banner';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -39,6 +40,7 @@ export default async function PublicLayout({ children, params }: LayoutProps) {
       <main id="main" className="flex-1">
         {children}
       </main>
+      <ContactCtaBand />
       <SiteFooter />
       <PageViewBeacon />
       <CookieConsentBanner />
