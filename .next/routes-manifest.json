@@ -253,6 +253,14 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/makaleler/(?<nxtPslug>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/[locale]/opengraph-image",
+      "regex": "^/([^/]+?)/opengraph\\-image(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/opengraph\\-image(?:/)?$"
+    },
+    {
       "page": "/[locale]/profil",
       "regex": "^/([^/]+?)/profil(?:/)?$",
       "routeKeys": {
@@ -275,6 +283,12 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/icon",
+      "regex": "^/icon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon(?:/)?$"
     },
     {
       "page": "/icon.svg",

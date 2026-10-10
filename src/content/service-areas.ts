@@ -15,4 +15,5 @@ export const serviceAreaDistricts = [
   'Beylikdüzü',
   'Esenyurt',
   'Avcılar',
+  'Küçükçekmece',
 ] as const;

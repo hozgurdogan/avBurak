@@ -193,6 +193,25 @@
     "contactCta": "Get in touch"
   },
   "serviceRegions": {
+    "esenyurt": {
+      "name": "Esenyurt",
+      "pageTitle": "Esenyurt Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Esenyurt",
+      "summary": "The Esenyurt office, access information, and individual and corporate client intake across every practice area.",
+      "body": [
+        "The office operates from Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/Istanbul; individual and corporate clients are received by appointment, in person at the office or, on request, by video/phone call.",
+        "Across labour law, enforcement law, divorce and family law, tenancy law, inheritance law, corporate law, arbitration and data protection alike, both individual and corporate/foreign clients are served in Turkish, English and Arabic.",
+        "The address is reachable by public transport and by car; for the exact appointment time and directions, contacting the office beforehand by phone or WhatsApp (see the contact page) is recommended."
+      ],
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku",
+        "sirketler-hukuku"
+      ]
+    },
     "buyukcekmece": {
       "name": "Büyükçekmece",
       "pageTitle": "Büyükçekmece Lawyer and Legal Consultancy",
@@ -228,23 +247,94 @@
         "icra-hukuku"
       ]
     },
-    "esenyurt": {
-      "name": "Esenyurt",
-      "pageTitle": "Esenyurt Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Esenyurt",
-      "summary": "The Esenyurt office, access information, and individual and corporate client intake across every practice area.",
+    "avcilar": {
+      "name": "Avcılar",
+      "pageTitle": "Avcılar Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Avcılar",
+      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Avcılar.",
       "body": [
-        "The office operates from Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/Istanbul; individual and corporate clients are received by appointment, in person at the office or, on request, by video/phone call.",
-        "Across labour law, enforcement law, divorce and family law, tenancy law, inheritance law, corporate law, arbitration and data protection alike, both individual and corporate/foreign clients are served in Turkish, English and Arabic.",
-        "The address is reachable by public transport and by car; for the exact appointment time and directions, contacting the office beforehand by phone or WhatsApp (see the contact page) is recommended."
+        "The competent court for a dispute arising in Avcılar depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
+        "The matters most often raised by clients from this area include wage and reinstatement claims, objecting to enforcement proceedings, rent-assessment and eviction cases, divorce and custody disputes, and inheritance-sharing matters.",
+        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
       ],
       "relatedAreas": [
         "is-hukuku",
         "icra-hukuku",
         "bosanma-aile-hukuku",
         "kira-hukuku",
-        "miras-hukuku",
-        "sirketler-hukuku"
+        "miras-hukuku"
+      ]
+    },
+    "kucukcekmece": {
+      "name": "Küçükçekmece",
+      "pageTitle": "Küçükçekmece Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Küçükçekmece",
+      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Küçükçekmece.",
+      "body": [
+        "The competent court for a dispute arising in Küçükçekmece depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
+        "The matters most often raised by clients from this area include rent-assessment and eviction cases, objecting to enforcement proceedings and seizure, wage claims, divorce and family-law disputes, and inheritance-sharing matters.",
+        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+      ],
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
+      ]
+    },
+    "silivri": {
+      "name": "Silivri",
+      "pageTitle": "Silivri Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Silivri",
+      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Silivri.",
+      "body": [
+        "The competent court for a dispute arising in Silivri depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
+        "The matters most often raised by clients from this area include tenancy and eviction disputes, objecting to enforcement proceedings, wage claims, divorce and custody cases, and inheritance-sharing matters.",
+        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+      ],
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
+      ]
+    },
+    "catalca": {
+      "name": "Çatalca",
+      "pageTitle": "Çatalca Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Çatalca",
+      "summary": "Legal consultancy and litigation support in Çatalca, generally under the jurisdiction of Büyükçekmece Courthouse.",
+      "body": [
+        "For many disputes arising in Çatalca, Büyükçekmece Courthouse is generally the competent court; the competent court can vary by the specifics of the case, so this should be assessed separately each time.",
+        "The matters most often raised by clients from this area include wage and reinstatement claims, objecting to enforcement proceedings, rent-assessment and eviction claims, divorce and custody cases, and disputes arising from inheritance sharing.",
+        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+      ],
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
+      ]
+    },
+    "mimaroba": {
+      "name": "Mimaroba",
+      "pageTitle": "Mimaroba Lawyer and Legal Consultancy",
+      "h1": "Legal consultancy and litigation support in Mimaroba",
+      "summary": "Legal consultancy and litigation support for clients in Mimaroba, a neighbourhood of Büyükçekmece.",
+      "body": [
+        "Mimaroba is a neighbourhood within the Büyükçekmece district, and Büyükçekmece Courthouse is generally the competent court for disputes arising there too; this depends on the specifics of the case.",
+        "The matters most often raised by clients from this area include rent-assessment and eviction cases, wage and reinstatement claims, objecting to enforcement proceedings, divorce and family-law disputes, and inheritance-sharing matters.",
+        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+      ],
+      "relatedAreas": [
+        "is-hukuku",
+        "icra-hukuku",
+        "bosanma-aile-hukuku",
+        "kira-hukuku",
+        "miras-hukuku"
       ]
     }
   },
@@ -255,7 +345,7 @@
     },
     "label": "Regions",
     "title": "Areas served",
-    "lead": "The office's actual address is in Esenyurt; clients in Büyükçekmece and Beylikdüzü are served in the same practice areas."
+    "lead": "The Esenyurt-based office also serves clients in Büyükçekmece and Beylikdüzü in the same practice areas."
   },
   "serviceRegionDetail": {
     "back": "All regions",
@@ -664,7 +754,7 @@
     "phone": "Telephone",
     "email": "E-mail",
     "whatsapp": "WhatsApp",
-    "serviceAreasNote": "Legal services are provided across Silivri, Çatalca, Büyükçekmece, Beylikdüzü, Esenyurt, Avcılar and the surrounding districts, in labour law, enforcement law, divorce and family law, inheritance law and tenancy law."
+    "serviceAreasNote": "Legal services are provided across Silivri, Çatalca, Büyükçekmece, Beylikdüzü, Esenyurt, Avcılar, Küçükçekmece and the surrounding districts, in labour law, enforcement law, divorce and family law, inheritance law and tenancy law."
   },
   "disclaimer": {
     "title": "Legal Notice",
