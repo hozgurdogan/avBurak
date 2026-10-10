@@ -60,10 +60,10 @@ export default async function ServiceRegionsPage({ params }: PageProps) {
                 <span className="label text-gold-800" aria-hidden="true">
                   {serviceRegionNumber(index)}
                 </span>
-                <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                <h2 className="mt-3 font-display text-3xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                   {tRegions(`${slug}.name`)}
                 </h2>
-                <p className="mt-3 measure text-sm text-ink-muted">{tRegions(`${slug}.summary`)}</p>
+                <p className="mt-3 measure text-md text-ink-muted">{tRegions(`${slug}.summary`)}</p>
               </Link>
             </Reveal>
           ))}

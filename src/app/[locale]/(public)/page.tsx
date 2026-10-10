@@ -174,10 +174,10 @@ export default async function HomePage({ params }: PageProps) {
                 <span className="label text-gold-800 lg:col-span-1" aria-hidden="true">
                   {practiceAreaNumber(index)}
                 </span>
-                <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800 lg:col-span-4">
+                <h3 className="font-display text-3xl font-normal text-ink transition-colors duration-base ease-out-editorial group-hover:text-gold-800 lg:col-span-4">
                   {tPracticeAreas(`${slug}.name`)}
                 </h3>
-                <p className="text-sm text-ink-muted lg:col-span-6">
+                <p className="text-md text-ink-muted lg:col-span-6">
                   {tPracticeAreas(`${slug}.summary`)}
                 </p>
                 <span
@@ -249,10 +249,10 @@ export default async function HomePage({ params }: PageProps) {
                   {article.categories[0] ? (
                     <span className="label text-gold-800">{article.categories[0].name}</span>
                   ) : null}
-                  <h3 className="mt-3 font-display text-xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                  <h3 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                     {article.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm text-ink-muted">{article.summary}</p>
+                  <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
                   <p className="mt-4 text-xs text-ink-faint">
                     {article.publishedAt
                       ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })

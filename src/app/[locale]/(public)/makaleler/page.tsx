@@ -158,10 +158,10 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
                 {article.categories[0] ? (
                   <span className="label text-gold-800">{article.categories[0].name}</span>
                 ) : null}
-                <h2 className="mt-3 font-display text-xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                   {article.title}
                 </h2>
-                <p className="mt-3 flex-1 text-sm text-ink-muted">{article.summary}</p>
+                <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
                 <p className="mt-4 text-xs text-ink-faint">
                   {article.publishedAt
                     ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })

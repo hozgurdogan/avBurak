@@ -56,10 +56,10 @@ export default async function PracticeAreasPage({ params }: PageProps) {
                 <span className="label text-gold-800" aria-hidden="true">
                   {practiceAreaNumber(index)}
                 </span>
-                <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
+                <h2 className="mt-3 font-display text-3xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                   {tAreas(`${slug}.name`)}
                 </h2>
-                <p className="mt-3 measure text-sm text-ink-muted">{tAreas(`${slug}.summary`)}</p>
+                <p className="mt-3 measure text-md text-ink-muted">{tAreas(`${slug}.summary`)}</p>
               </Link>
             </Reveal>
           ))}
