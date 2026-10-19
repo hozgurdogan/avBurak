@@ -18,7 +18,8 @@
     "tools": "Tools",
     "faq": "FAQ",
     "regions": "Regions",
-    "getInTouch": "Get in Touch"
+    "getInTouch": "Get in Touch",
+    "breadcrumb": "Breadcrumb"
   },
   "locale": {
     "label": "Language",
@@ -29,7 +30,7 @@
     "meta": {
       "title": "Burak Uğur Öztürk, Attorney at Law",
       "homeTitle": "Burak Uğur Öztürk, Attorney at Law | Esenyurt & Büyükçekmece Law Office",
-      "description": "A law practice in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance and corporate law; based in Esenyurt, serving Büyükçekmece and Beylikdüzü, in Turkish, English and Arabic."
+      "description": "Esenyurt-based legal practice: labour, enforcement, divorce and family, tenancy, inheritance and corporate law in Turkish, English and Arabic."
     },
     "hero": {
       "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
@@ -208,9 +209,14 @@
         "is-hukuku",
         "icra-hukuku",
         "bosanma-aile-hukuku",
-        "kira-hukuku",
         "miras-hukuku",
-        "sirketler-hukuku"
+        "kira-hukuku",
+        "tazminat-hukuku",
+        "kentsel-donusum-hukuku",
+        "tuketici-hukuku",
+        "sirketler-hukuku",
+        "tahkim-ve-uyusmazlik-cozumu",
+        "kisisel-verilerin-korunmasi"
       ]
     },
     "buyukcekmece": {

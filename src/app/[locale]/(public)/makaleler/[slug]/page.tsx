@@ -13,6 +13,7 @@ import { LegalDisclaimer } from '@/components/ui/legal-disclaimer';
 import { Reveal } from '@/components/motion/reveal';
 import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema, buildArticleSchema } from '@/lib/structured-data';
 
 type PageProps = {
@@ -80,15 +81,15 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     numberingSystem: 'latn',
   });
 
+  const breadcrumbItems = [
+    { name: tNav('home'), path: '' },
+    { name: tNav('articles'), path: 'makaleler' },
+    { name: article.title, path: `makaleler/${slug}` },
+  ];
+
   return (
     <>
-    <JsonLd
-      data={buildBreadcrumbSchema(typedLocale, [
-        { name: tNav('home'), path: '' },
-        { name: tNav('articles'), path: 'makaleler' },
-        { name: article.title, path: `makaleler/${slug}` },
-      ])}
-    />
+    <JsonLd data={buildBreadcrumbSchema(typedLocale, breadcrumbItems)} />
     <JsonLd
       data={buildArticleSchema({
         locale: typedLocale,
@@ -102,6 +103,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     <article className="bg-canvas-deep">
     <div className="mx-auto max-w-wide px-gutter py-section">
       <div className="mb-10">
+        <Breadcrumb items={breadcrumbItems} label={tNav('breadcrumb')} />
         <ActionLink href="/makaleler" variant="quiet">
           {tDetail('back')}
         </ActionLink>

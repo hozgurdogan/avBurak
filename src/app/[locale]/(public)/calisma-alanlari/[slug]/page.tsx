@@ -17,6 +17,7 @@ import { ActionLink } from '@/components/ui/action-link';
 import { Reveal } from '@/components/motion/reveal';
 import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema } from '@/lib/structured-data';
 
 type PageProps = {
@@ -78,18 +79,19 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
     numberingSystem: 'latn',
   });
 
+  const breadcrumbItems = [
+    { name: tNav('home'), path: '' },
+    { name: tAreasPage('label'), path: 'calisma-alanlari' },
+    { name: tAreas(`${slug}.name`), path: `calisma-alanlari/${slug}` },
+  ];
+
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbSchema(typedLocale, [
-          { name: tNav('home'), path: '' },
-          { name: tAreasPage('label'), path: 'calisma-alanlari' },
-          { name: tAreas(`${slug}.name`), path: `calisma-alanlari/${slug}` },
-        ])}
-      />
+      <JsonLd data={buildBreadcrumbSchema(typedLocale, breadcrumbItems)} />
       <section className="bg-canvas-deep">
       <div className="mx-auto max-w-wide px-gutter py-section">
         <div className="mb-10">
+          <Breadcrumb items={breadcrumbItems} label={tNav('breadcrumb')} />
           <ActionLink href="/calisma-alanlari" variant="quiet">
             {tDetail('back')}
           </ActionLink>

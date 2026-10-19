@@ -61,7 +61,10 @@ export function pageMetadata({
         .map((l) => localeTags[l as Locale].replace('-', '_')),
     },
     twitter: {
-      card: 'summary',
+      // 'summary_large_image' now that every locale has a real share image
+      // (src/app/[locale]/opengraph-image.tsx) - 'summary' renders it as a
+      // small thumbnail, wasting the card.
+      card: 'summary_large_image',
       title,
       description,
     },

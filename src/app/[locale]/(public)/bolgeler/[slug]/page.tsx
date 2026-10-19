@@ -14,6 +14,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 import { ActionLink } from '@/components/ui/action-link';
 import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema } from '@/lib/structured-data';
 
 type PageProps = {
@@ -68,18 +69,19 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
   const body = tRegions.raw(`${slug}.body`) as string[];
   const relatedAreas = tRegions.raw(`${slug}.relatedAreas`) as string[];
 
+  const breadcrumbItems = [
+    { name: tNav('home'), path: '' },
+    { name: tRegionsPage('label'), path: 'bolgeler' },
+    { name: tRegions(`${slug}.name`), path: `bolgeler/${slug}` },
+  ];
+
   return (
     <>
-      <JsonLd
-        data={buildBreadcrumbSchema(typedLocale, [
-          { name: tNav('home'), path: '' },
-          { name: tRegionsPage('label'), path: 'bolgeler' },
-          { name: tRegions(`${slug}.name`), path: `bolgeler/${slug}` },
-        ])}
-      />
+      <JsonLd data={buildBreadcrumbSchema(typedLocale, breadcrumbItems)} />
       <section className="bg-canvas-deep">
         <div className="mx-auto max-w-wide px-gutter py-section">
           <div className="mb-10">
+            <Breadcrumb items={breadcrumbItems} label={tNav('breadcrumb')} />
             <ActionLink href="/bolgeler" variant="quiet">
               {tDetail('back')}
             </ActionLink>

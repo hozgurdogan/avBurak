@@ -18,7 +18,8 @@
     "tools": "الأدوات",
     "faq": "الأسئلة الشائعة",
     "regions": "المناطق",
-    "getInTouch": "تواصل معنا"
+    "getInTouch": "تواصل معنا",
+    "breadcrumb": "مسار التنقل"
   },
   "locale": {
     "label": "اللغة",
@@ -29,7 +30,7 @@
     "meta": {
       "title": "المحامي بوراك أوغور أوزتورك",
       "homeTitle": "المحامي بوراك أوغور أوزتورك | مكتب محاماة في إسنيورت وبيوك تشكمجة",
-      "description": "مكتب محاماة في قانون العمل والتنفيذ والإفلاس وقانون الطلاق والأسرة والإيجار والإرث والشركات؛ مقرّه إسنيورت، يخدم بيوك تشكمجة وبيليك دوزو، باللغات التركية والإنجليزية والعربية."
+      "description": "مكتب محاماة في إسنيورت: قانون العمل والتنفيذ والطلاق والأسرة والإيجار والإرث والشركات. استشارات ومتابعة قضايا بالتركية والإنجليزية والعربية."
     },
     "hero": {
       "label": "إسنيورت · بيوك تشكمجة · بيليك دوزو",
@@ -208,9 +209,14 @@
         "is-hukuku",
         "icra-hukuku",
         "bosanma-aile-hukuku",
-        "kira-hukuku",
         "miras-hukuku",
-        "sirketler-hukuku"
+        "kira-hukuku",
+        "tazminat-hukuku",
+        "kentsel-donusum-hukuku",
+        "tuketici-hukuku",
+        "sirketler-hukuku",
+        "tahkim-ve-uyusmazlik-cozumu",
+        "kisisel-verilerin-korunmasi"
       ]
     },
     "buyukcekmece": {

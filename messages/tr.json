@@ -18,7 +18,8 @@
     "tools": "Araçlar",
     "faq": "SSS",
     "regions": "Bölgeler",
-    "getInTouch": "İletişime Geç"
+    "getInTouch": "İletişime Geç",
+    "breadcrumb": "Gezinme yolu"
   },
   "locale": {
     "label": "Dil",
@@ -29,7 +30,7 @@
     "meta": {
       "title": "Av. Burak Uğur Öztürk",
       "homeTitle": "Av. Burak Uğur Öztürk | Esenyurt ve Büyükçekmece Hukuk Bürosu",
-      "description": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras ve şirketler hukukunda; Esenyurt merkezli, Büyükçekmece ve Beylikdüzü çevresine Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi."
+      "description": "Esenyurt merkezli; iş, icra, boşanma ve aile, kira, miras ve şirketler hukukunda Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi."
     },
     "hero": {
       "label": "Esenyurt · Büyükçekmece · Beylikdüzü",
@@ -208,9 +209,14 @@
         "is-hukuku",
         "icra-hukuku",
         "bosanma-aile-hukuku",
-        "kira-hukuku",
         "miras-hukuku",
-        "sirketler-hukuku"
+        "kira-hukuku",
+        "tazminat-hukuku",
+        "kentsel-donusum-hukuku",
+        "tuketici-hukuku",
+        "sirketler-hukuku",
+        "tahkim-ve-uyusmazlik-cozumu",
+        "kisisel-verilerin-korunmasi"
       ]
     },
     "buyukcekmece": {
