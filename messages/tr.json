@@ -40,9 +40,10 @@
       "focusLabel": "Çalışma Alanları",
       "focus": "İş Hukuku, İcra Hukuku, Boşanma ve Aile Hukuku",
       "regionsLabel": "Hizmet Bölgeleri",
-      "lead": "İş hukuku, icra ve iflas, boşanma ve aile hukuku, kira, miras, tüketici, kamulaştırma, tazminat ve idare hukuku ile şirketler hukukunda; Esenyurt merkezli, Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi.",
+      "lead": "Esenyurt merkezli hukuk büromuz; iş hukuku, icra ve iflas hukuku, aile ve boşanma hukuku, kira hukuku, miras hukuku, tüketici hukuku, kamulaştırma, tazminat hukuku, idare hukuku ve şirketler hukuku alanlarında faaliyet göstermektedir.",
       "contact": "İletişim",
-      "appointment": "Randevu talebi"
+      "appointment": "Randevu talebi",
+      "leadSecondary": "Müvekkillerimize Türkçe, İngilizce ve Arapça dillerinde; hukuki danışmanlık, uyuşmazlıkların çözümü ve dava süreçlerinin takibi konularında, hak ve menfaatlerin korunmasını esas alan, titiz, şeffaf ve çözüm odaklı bir hukuki hizmet sunmaktayız."
     },
     "practice": {
       "label": "Çalışma Alanları",
@@ -376,7 +377,7 @@
   "articlesPage": {
     "meta": {
       "title": "Makaleler",
-      "description": "Şirketler hukuku, yabancı yatırım, gayrimenkul, ticari sözleşmeler, tahkim ve kişisel verilerin korunması alanlarında genel bilgilendirme amaçlı yazılar."
+      "description": "İş, icra, boşanma ve aile, kira, miras, tazminat ve şirketler hukukunda sık sorulan sorulara ilişkin Av. Burak Uğur Öztürk'ün bilgilendirici yazıları."
     },
     "label": "Makaleler",
     "title": "Güncel yazılar",

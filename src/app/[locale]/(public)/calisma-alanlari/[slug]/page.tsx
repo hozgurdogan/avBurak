@@ -156,7 +156,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
                     <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                       {article.title}
                     </h3>
-                    <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
+                    <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{article.summary}</p>
                     <p className="mt-4 text-sm text-ink-faint">
                       {article.publishedAt
                         ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })

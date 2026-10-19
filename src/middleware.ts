@@ -4,6 +4,8 @@ import { routing } from '@/i18n/routing';
 import { locales } from '@/i18n/locales';
 import { SESSION_COOKIE_NAME, verifySessionToken } from '@/lib/auth/token';
 
+// `alternateLinks: false` is set on `routing` itself (src/i18n/routing.ts)
+// - see the comment there for why.
 const intlMiddleware = createMiddleware(routing);
 
 // /{locale}/admin/panel/... - everything under the admin shell except the

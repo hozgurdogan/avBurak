@@ -28,4 +28,17 @@ export const routing = defineRouting({
     sameSite: 'lax',
     maxAge: 60 * 60 * 24 * 365,
   },
+  // Default true makes the middleware itself emit an HTTP `Link:
+  // rel="alternate"` header, built by swapping the locale prefix on the
+  // *current* pathname - correct for a route whose path is identical
+  // across locales, wrong for an article's `/makaleler/<slug>`, since each
+  // locale has its own, different slug. The SEO review (16 Ekim 2026)
+  // found exactly this: a Turkish article's response header advertised
+  // EN/AR article URLs built from its own TR slug, which 404 because no
+  // such URL was ever published. `pageMetadata()` (src/lib/seo.ts) already
+  // emits the correct, per-page HTML `<link rel="alternate">` set (real
+  // translated slugs for articles, via `getArticleAlternates`; the shared
+  // path for every static page) - disabling this stops the two
+  // mechanisms from disagreeing.
+  alternateLinks: false,
 });

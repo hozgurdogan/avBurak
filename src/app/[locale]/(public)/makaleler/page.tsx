@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/locales';
 import { getArticles, getCategories } from '@/lib/articles';
+import { practiceAreaSlugs, type PracticeAreaSlug } from '@/content/practice-areas';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { Reveal } from '@/components/motion/reveal';
 import { cn } from '@/lib/cn';
@@ -17,6 +18,10 @@ type PageProps = {
   // (kategori = category, sayfa = page): kategori=<slug>, sayfa=<n>, q=<text>.
   searchParams: Promise<{ kategori?: string; sayfa?: string; q?: string }>;
 };
+
+function isPracticeAreaSlug(value: string): value is PracticeAreaSlug {
+  return (practiceAreaSlugs as readonly string[]).includes(value);
+}
 
 export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -34,11 +39,25 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   if (page > 1) query.set('sayfa', String(page));
   const qs = query.toString();
 
+  // A category filter is genuinely different content from the unfiltered
+  // list, so it gets its own title/description instead of reusing the
+  // generic one - the SEO plan (16 Ekim 2026) flagged the İş Hukuku filter
+  // (and every other) as showing the same corporate-law-era copy. Reusing
+  // `practiceAreas.<slug>.name/summary` avoids hand-writing eleven more
+  // near-duplicate strings.
+  let title = t('title');
+  let description = t('description');
+  if (kategori && isPracticeAreaSlug(kategori)) {
+    const tAreas = await getTranslations({ locale, namespace: 'practiceAreas' });
+    title = tAreas(`${kategori}.name`);
+    description = tAreas(`${kategori}.summary`);
+  }
+
   return pageMetadata({
     locale: locale as Locale,
     path: qs ? `makaleler?${qs}` : 'makaleler',
-    title: t('title'),
-    description: t('description'),
+    title,
+    description,
   });
 }
 
@@ -161,7 +180,7 @@ export default async function ArticlesIndexPage({ params, searchParams }: PagePr
                 <h2 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                   {article.title}
                 </h2>
-                <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
+                <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{article.summary}</p>
                 <p className="mt-4 text-sm text-ink-faint">
                   {article.publishedAt
                     ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })

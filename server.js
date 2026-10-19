@@ -55,3 +55,4 @@ app
     console.error('Failed to start Next.js:', err);
     process.exit(1);
   });
+

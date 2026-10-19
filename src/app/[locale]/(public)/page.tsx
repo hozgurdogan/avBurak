@@ -86,6 +86,7 @@ export default async function HomePage({ params }: PageProps) {
               {tHero('title')}
             </h1>
             <p className="measure mt-8 text-lg text-mist">{tHero('lead')}</p>
+            <p className="measure mt-5 text-lg text-mist">{tHero('leadSecondary')}</p>
             <div className="mt-10 flex flex-wrap items-center gap-8">
               <ActionLink href="/iletisim" variant="solid" surface="navy">
                 {tHero('contact')}
@@ -241,7 +242,7 @@ export default async function HomePage({ params }: PageProps) {
                   <h3 className="mt-3 font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                     {article.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-md text-ink-muted">{article.summary}</p>
+                  <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{article.summary}</p>
                   <p className="mt-4 text-sm text-ink-faint">
                     {article.publishedAt
                       ? tArticle('publishedOn', { date: dateFormatter.format(article.publishedAt) })

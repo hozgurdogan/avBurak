@@ -121,7 +121,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             : null}
           {' · '}
           {tArticle('readingTime', { minutes: article.readMinutes })}
-          {article.publishedAt && article.updatedAt.getTime() !== article.publishedAt.getTime() ? (
+          {/* Guards against showing a "güncelleme" date earlier than the
+              publish date - the same data inconsistency the Article JSON-LD
+              clamps in `buildArticleSchema` (src/lib/structured-data.ts). */}
+          {article.publishedAt && article.updatedAt.getTime() > article.publishedAt.getTime() ? (
             <> · {tArticle('updatedOn', { date: dateFormatter.format(article.updatedAt) })}</>
           ) : null}
           {' · '}
@@ -168,7 +171,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                   <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                     {item.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-md text-ink-muted">{item.summary}</p>
+                  <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{item.summary}</p>
                 </Link>
               </Reveal>
             ))}

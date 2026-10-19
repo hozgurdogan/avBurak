@@ -40,9 +40,10 @@
       "focusLabel": "Practice Focus",
       "focus": "Labour Law, Enforcement Law, Divorce and Family Law",
       "regionsLabel": "Areas Served",
-      "lead": "Legal advice and litigation in labour law, enforcement and bankruptcy, divorce and family law, tenancy, inheritance, consumer law, expropriation, compensation and administrative law, and corporate law - based in Esenyurt, in Turkish, English and Arabic.",
+      "lead": "Our Esenyurt-based law office is active in labour law, enforcement and bankruptcy law, family and divorce law, tenancy law, inheritance law, consumer law, expropriation, compensation law, administrative law and corporate law.",
       "contact": "Contact",
-      "appointment": "Request an appointment"
+      "appointment": "Request an appointment",
+      "leadSecondary": "We provide our clients, in Turkish, English and Arabic, with meticulous, transparent and solution-focused legal services centred on protecting their rights and interests, covering legal consultancy, dispute resolution and the conduct of litigation."
     },
     "practice": {
       "label": "Practice Areas",
@@ -376,7 +377,7 @@
   "articlesPage": {
     "meta": {
       "title": "Articles",
-      "description": "General informational articles on corporate law, foreign investment, real estate, commercial contracts, arbitration and data protection."
+      "description": "Informative articles by Av. Burak Uğur Öztürk on frequently asked questions in labour, enforcement, divorce and family, tenancy, inheritance, compensation and corporate law."
     },
     "label": "Articles",
     "title": "Latest writing",

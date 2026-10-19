@@ -1,4 +1,5 @@
 import { office, formatAddress } from '@/content/office';
+import { serviceAreaDistricts } from '@/content/service-areas';
 import type { Locale } from '@/i18n/locales';
 
 /**
@@ -39,7 +40,9 @@ export function buildLegalServiceSchema(locale: Locale) {
       latitude: office.geo.latitude,
       longitude: office.geo.longitude,
     },
-    areaServed: ['Esenyurt', 'Büyükçekmece', 'Beylikdüzü', 'Çatalca', 'Silivri', 'Avcılar'],
+    // Single source of truth with the footer/contact-page district list and
+    // the `/bolgeler` pages - see `src/content/service-areas.ts`.
+    areaServed: [...serviceAreaDistricts],
     availableLanguage: ['tr', 'en', 'ar'],
     employee: {
       '@type': 'Person',
@@ -89,6 +92,15 @@ export function buildArticleSchema({
   datePublished: Date | null;
   dateModified: Date;
 }) {
+  // A `dateModified` earlier than `datePublished` is a contradiction no
+  // reader or crawler should see (flagged live, 16 Ekim 2026, on an article
+  // whose stored `updatedAt` predated its own `publishedAt`) - clamp it
+  // rather than ship the inconsistency into the page's JSON-LD. This masks
+  // the symptom, not the underlying data-entry issue; the article's actual
+  // dates still need checking in the admin panel.
+  const safeDateModified =
+    datePublished && dateModified < datePublished ? datePublished : dateModified;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -97,7 +109,7 @@ export function buildArticleSchema({
     url: `${SITE_URL}/${locale}/${path}`,
     inLanguage: locale,
     ...(datePublished ? { datePublished: datePublished.toISOString() } : {}),
-    dateModified: dateModified.toISOString(),
+    dateModified: safeDateModified.toISOString(),
     author: {
       '@type': 'Person',
       name: 'Burak Uğur Öztürk',
