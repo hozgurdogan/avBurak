@@ -241,20 +241,29 @@ components additionally gate Framer Motion behind `useReducedMotion()`.
 
 ## 5. Typography
 
-Nine self-hosted `.woff2` files in `src/assets/fonts`, 466 kB in total, loaded
+Nine self-hosted `.woff2` files in `src/assets/fonts`, ~551 kB in total, loaded
 through `next/font/local` in `src/lib/fonts.ts`.
 
 | Family                | Role              | Subsets loaded    | Preloaded |
 | --------------------- | ----------------- | ----------------- | --------- |
-| Cormorant Garamond    | Latin headings    | latin, latin-ext  | yes       |
+| EB Garamond           | Latin headings    | latin, latin-ext  | yes       |
 | Inter                 | Latin body        | latin, latin-ext  | latin only |
 | Noto Naskh Arabic     | Arabic headings   | arabic            | no        |
 | IBM Plex Sans Arabic  | Arabic body       | arabic (4 weights) | no       |
 
-Cormorant Garamond, Inter and Noto Naskh Arabic are variable fonts, so one file
-covers the whole weight axis per subset; the Cormorant axis is capped at
+EB Garamond, Inter and Noto Naskh Arabic are variable fonts, so one file
+covers the whole weight axis per subset; the EB Garamond axis is capped at
 `300 500` because the brief forbids bold display weights. IBM Plex Sans Arabic
 ships as static weights, hence four files.
+
+EB Garamond replaced Cormorant Garamond on 22 Ekim 2026: a client-reported
+"bold-looking Turkish characters" bug traced to Cormorant Garamond's own
+latin-ext subset drawing ğ/ş noticeably heavier than its latin subset at every
+weight in the 300-500 range - a defect in that particular Google Fonts build,
+confirmed with an isolated `@font-face` test page outside the site entirely,
+not a bug in this site's font-loading code or CSS. EB Garamond's latin/latin-ext
+pair passed the same isolated test cleanly, so it replaces Cormorant Garamond
+here (see `src/lib/fonts.ts` for the full account).
 
 **Why one loader call per subset.** `next/font/local` emits a single
 `@font-face` per call and cannot vary `unicode-range` across the entries of a
@@ -273,7 +282,7 @@ spacing applied to Arabic breaks the joining of the script. Latin characters
 inside Arabic copy (proper nouns, "KVKK", digits) fall through to the Latin
 faces via the same stack, so nothing needs to be tagged manually.
 
-Preload budget: the two Cormorant faces and Inter latin are preloaded (119 kB),
+Preload budget: the two EB Garamond faces and Inter latin are preloaded (202 kB),
 since a heading is the LCP element on nearly every route. Inter latin-ext
 (85 kB) is fetched on demand; `adjustFontFallback` generates size-adjusted
 Arial/Times fallbacks so the swap does not move the layout.

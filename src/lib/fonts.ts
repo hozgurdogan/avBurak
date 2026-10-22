@@ -25,13 +25,26 @@ import localFont from 'next/font/local';
  */
 
 /* -------------------------------------------------------------------------- */
-/* Latin display - Cormorant Garamond, variable axis clamped to 300-500.       */
+/* Latin display - EB Garamond, variable axis clamped to 300-500.              */
 /* The brief forbids bold display weights, so the axis is capped here and no    */
 /* stylesheet can reach for 700.                                               */
+/*                                                                              */
+/* Was Cormorant Garamond until 22 Ekim 2026. Dropped after a client-reported  */
+/* "bold-looking Turkish characters" bug turned out to be real and traced, with*/
+/* isolated reproductions outside the site entirely (a bare @font-face test    */
+/* page, both Edge and Chrome), to the font file itself: Cormorant Garamond's  */
+/* latin-ext subset draws ğ/ş (and to a lesser extent ö/ü) at a visibly heavier */
+/* stroke weight than its latin subset at every weight in the 300-500 range -  */
+/* a mismatch baked into that particular Google Fonts build, not a bug in this */
+/* site's CSS, font-loading code or any browser's variable-font interpolation. */
+/* EB Garamond's latin/latin-ext pair passed the same isolated test cleanly at */
+/* 300-600, so it replaces Cormorant Garamond here. Its native axis starts at  */
+/* 400, not 300, but renders perceptibly thinner at 300 in testing anyway, so  */
+/* the clamp is left unchanged rather than lightening the design's brief.      */
 /* -------------------------------------------------------------------------- */
 
 export const displayLatin = localFont({
-  src: '../assets/fonts/cormorant-garamond-latin.woff2',
+  src: '../assets/fonts/eb-garamond-latin.woff2',
   weight: '300 500',
   style: 'normal',
   display: 'swap',
@@ -51,7 +64,7 @@ export const displayLatin = localFont({
 
 /** Carries the Turkish letters that the `latin` subset does not. */
 export const displayLatinExt = localFont({
-  src: '../assets/fonts/cormorant-garamond-latin-ext.woff2',
+  src: '../assets/fonts/eb-garamond-latin-ext.woff2',
   weight: '300 500',
   style: 'normal',
   display: 'swap',
@@ -60,7 +73,7 @@ export const displayLatinExt = localFont({
     {
       prop: 'unicode-range',
       value:
-        'U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF',
+        'U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF',
     },
   ],
   adjustFontFallback: 'Times New Roman',

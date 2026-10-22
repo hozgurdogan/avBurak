@@ -16,7 +16,7 @@ type MonogramProps = {
  * The BUÖ lockup (Burak Uğur Öztürk's initials).
  *
  * The letterforms are set in the display serif rather than traced as bezier
- * paths: the site already self-hosts Cormorant Garamond, so using it here keeps
+ * paths: the site already self-hosts EB Garamond, so using it here keeps
  * the monogram identical to the headings it sits above, stays crisp at any size
  * because SVG text is vector, and cannot drift out of sync if the typeface is
  * ever changed. The diaeresis on Ö comes from the font's own glyph, which is
