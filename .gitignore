@@ -33,9 +33,17 @@ next-env.d.ts
 !/public/uploads/.gitkeep
 
 # env
+# Broad on purpose, after `.env.bak.1788525796` (a one-off manual backup
+# copy, outside the three specific patterns below) was committed in the
+# repo's first commit and sat in this public GitHub repo for weeks before
+# being caught (22 Ekim 2026) - see the security note in README section 1.
+# `!.env.example` is the one deliberate exception: it is a template with no
+# real secrets, meant to be committed.
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
 
 # misc
 .DS_Store
