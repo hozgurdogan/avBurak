@@ -10,6 +10,16 @@ import { join } from 'node:path';
  * Shipping both gives every consumer - browsers, Google, anything else -
  * a format it is guaranteed to handle.
  *
+ * Named `icon1.tsx`, not `icon.tsx`: Next.js's file-convention metadata
+ * resolver treats every `icon[.N].<ext>` file as the *same* icon slot and
+ * only one wins when two collide on the same base name, static or dynamic
+ * (the 22 Ekim 2026 structural audit caught this - this route built fine
+ * and was reachable directly, but no `<link rel="icon">` for it ever made
+ * it into any page's `<head>`, since `icon.svg` silently won the slot).
+ * The numeric suffix (`icon0`-`icon9` are all valid - see
+ * `is-metadata-route.js`'s `variantsMatcher`) is what actually registers
+ * it as an additional, independent icon.
+ *
  * `src/assets/fonts/og/ibm-plex-sans-arabic-600.ttf` is a one-off,
  * build-time-only decompression of the site's own self-hosted WOFF2 file
  * (via `wawoff2`, not committed as a dependency - see the commit that

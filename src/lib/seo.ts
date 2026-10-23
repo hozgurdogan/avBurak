@@ -33,6 +33,22 @@ export function pageMetadata({
 }): Metadata {
   const canonicalPath = `/${locale}${path ? `/${path}` : ''}`;
 
+  // The file-convention `[locale]/opengraph-image.tsx` route is only picked
+  // up automatically when a segment has *no* `generateMetadata` of its own -
+  // every public page here does, and Next replaces (rather than merges) the
+  // inherited `openGraph`/`twitter` objects once a page returns its own. The
+  // 22 Ekim 2026 structural audit caught this: `twitter:card` was already
+  // `summary_large_image`, but no page actually shipped an `og:image`, since
+  // this object was never pointed at the route. Pointing every page at the
+  // same shared, per-locale image (rather than per-page OG images) matches
+  // the simpler scope that route was built for.
+  const ogImage = {
+    url: `/${locale}/opengraph-image`,
+    width: 1200,
+    height: 630,
+    alt: 'Av. Burak Uğur Öztürk',
+  };
+
   // Static pages keep the same Turkish path segment in every locale (see
   // `src/i18n/routing.ts`), so the hreflang set can be derived from `path`
   // alone. A page whose path genuinely differs per locale - only articles,
@@ -59,6 +75,7 @@ export function pageMetadata({
       alternateLocale: routing.locales
         .filter((l) => l !== locale)
         .map((l) => localeTags[l as Locale].replace('-', '_')),
+      images: [ogImage],
     },
     twitter: {
       // 'summary_large_image' now that every locale has a real share image
@@ -67,6 +84,7 @@ export function pageMetadata({
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImage.url],
     },
   };
 }

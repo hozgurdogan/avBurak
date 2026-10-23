@@ -285,16 +285,16 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
-      "page": "/icon",
-      "regex": "^/icon(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/icon(?:/)?$"
-    },
-    {
       "page": "/icon.svg",
       "regex": "^/icon\\.svg(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/icon\\.svg(?:/)?$"
+    },
+    {
+      "page": "/icon1",
+      "regex": "^/icon1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/icon1(?:/)?$"
     },
     {
       "page": "/robots.txt",
