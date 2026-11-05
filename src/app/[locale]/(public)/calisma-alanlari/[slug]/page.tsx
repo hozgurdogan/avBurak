@@ -24,6 +24,9 @@ type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+// Related articles come from the live database, unavailable on the build machine.
+export const dynamic = 'force-dynamic';
+
 function isPracticeAreaSlug(value: string): value is PracticeAreaSlug {
   return (practiceAreaSlugs as readonly string[]).includes(value);
 }

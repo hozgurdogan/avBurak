@@ -1,4 +1,4 @@
-// File: C:\Users\hasan\Desktop\burakWebSite\src\app\api\consent\route.ts
+// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\api\consent\route.ts
 import * as entry from '../../../../../src/app/api/consent/route.js'
 import type { NextRequest } from 'next/server.js'
 

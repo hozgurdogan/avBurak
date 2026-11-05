@@ -1,4 +1,4 @@
-// File: C:\Users\hasan\Desktop\burakWebSite\src\app\[locale]\admin\panel\sifre\page.tsx
+// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\[locale]\admin\panel\sifre\page.tsx
 import * as entry from '../../../../../../../src/app/[locale]/admin/panel/sifre/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

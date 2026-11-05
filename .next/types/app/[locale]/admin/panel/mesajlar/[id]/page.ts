@@ -1,4 +1,4 @@
-// File: C:\Users\hasan\Desktop\burakWebSite\src\app\[locale]\admin\panel\mesajlar\[id]\page.tsx
+// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\[locale]\admin\panel\mesajlar\[id]\page.tsx
 import * as entry from '../../../../../../../../src/app/[locale]/admin/panel/mesajlar/[id]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

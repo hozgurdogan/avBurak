@@ -18,6 +18,9 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
+// Published articles come from the live database, unavailable on the build machine.
+export const dynamic = 'force-dynamic';
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
