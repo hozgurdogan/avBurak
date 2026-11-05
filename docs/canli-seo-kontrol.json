@@ -1,0 +1,1359 @@
+{
+  "checkedAt": "2026-11-05T15:07:13.704Z",
+  "sitemap": {
+    "status": 200,
+    "urlCount": 163,
+    "hasXhtmlAlternates": true,
+    "hasXDefault": true
+  },
+  "pages": [
+    {
+      "url": "https://burakugurozturk.av.tr/tr",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr",
+      "title": "Av. Burak Uğur Öztürk | Esenyurt ve Büyükçekmece Hukuk Bürosu",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/sss",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/sss",
+      "title": "Sıkça Sorulan Sorular — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/sss",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en",
+      "title": "Burak Uğur Öztürk, Attorney at Law | Esenyurt & Büyükçekmece Law Office",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/sss",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/sss",
+      "title": "Frequently Asked Questions — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/sss",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar",
+      "title": "المحامي بوراك أوغور أوزتورك | مكتب محاماة في إسنيورت وبيوك تشكمجة",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/sss",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/sss",
+      "title": "الأسئلة الشائعة — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/sss",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "FAQPage"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/esenyurt",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/esenyurt",
+      "title": "Esenyurt Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/bolgeler/esenyurt",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/mimaroba",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/mimaroba",
+      "title": "محامي في ميماروبا واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/bolgeler/mimaroba",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "title": "Yabancı Yatırımcılar İçin Türkiye’de Şirket Kuruluşu — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-02-11T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:58.082Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 30753,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/company-formation-in-turkiye-for-foreign-investors",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/company-formation-in-turkiye-for-foreign-investors",
+      "title": "Company Formation in Türkiye for Foreign Investors — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-02-11T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:55.069Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/company-formation-in-turkiye-for-foreign-investors/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 30965,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/tasis-al-sharikat-fi-turkiya-lil-mustathmirin-al-ajanib",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/tasis-al-sharikat-fi-turkiya-lil-mustathmirin-al-ajanib",
+      "title": "تأسيس الشركات في تركيا للمستثمرين الأجانب — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-02-11T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:53.298Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/tasis-al-sharikat-fi-turkiya-lil-mustathmirin-al-ajanib/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 26888,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci",
+      "title": "Yabancıların Türkiye’de Taşınmaz Edinimi ve Tapu Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-04-08T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:51.548Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27900,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/real-estate-acquisition-and-title-deed-process-for-non-residents",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/real-estate-acquisition-and-title-deed-process-for-non-residents",
+      "title": "Real Estate Acquisition in Türkiye for Non-Residents — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-04-08T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:49.753Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/real-estate-acquisition-and-title-deed-process-for-non-residents/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 36502,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/tamalluk-al-ajanib-lil-aqarat-wa-ijraat-al-tabu",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/tamalluk-al-ajanib-lil-aqarat-wa-ijraat-al-tabu",
+      "title": "تملّك الأجانب للعقارات في تركيا وإجراءات السجل العقاري — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/yabancilarin-tasinmaz-edinimi-ve-tapu-sureci",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-04-08T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:47.746Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/tamalluk-al-ajanib-lil-aqarat-wa-ijraat-al-tabu/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27613,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari",
+      "title": "Sınır Ötesi Sözleşmelerde Tahkim Şartları — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-06-17T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:45.856Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27731,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/arbitration-clauses-in-cross-border-contracts",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/arbitration-clauses-in-cross-border-contracts",
+      "title": "Arbitration Clauses in Cross-Border Contracts — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-06-17T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:43.960Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/arbitration-clauses-in-cross-border-contracts/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 28696,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/shurut-al-tahkim-fi-al-uqud-abr-al-hudud",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/shurut-al-tahkim-fi-al-uqud-abr-al-hudud",
+      "title": "شروط التحكيم في العقود العابرة للحدود — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/sinir-otesi-sozlesmelerde-tahkim-sartlari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-06-17T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:41.860Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/shurut-al-tahkim-fi-al-uqud-abr-al-hudud/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 25586,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+      "title": "İşe İade Davası: Başvuru Süresi ve Zorunlu Arabuluculuk — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-23T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:39.658Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 32171,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/reinstatement-lawsuit-deadlines-and-mandatory-mediation",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/reinstatement-lawsuit-deadlines-and-mandatory-mediation",
+      "title": "Reinstatement Lawsuit: Deadlines and Mandatory Mediation — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-23T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:37.830Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/reinstatement-lawsuit-deadlines-and-mandatory-mediation/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 34325,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/dawa-al-awda-ila-al-amal-al-muhal-wa-al-wasata-al-ilzamiya",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/dawa-al-awda-ila-al-amal-al-muhal-wa-al-wasata-al-ilzamiya",
+      "title": "دعوى العودة إلى العمل: المهل والوساطة الإلزامية — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/ise-iade-davasi-basvuru-suresi-ve-arabuluculuk",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-23T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:35.571Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/dawa-al-awda-ila-al-amal-al-muhal-wa-al-wasata-al-ilzamiya/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27048,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-nasil-yapilir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-nasil-yapilir",
+      "title": "Anlaşmalı Boşanma Nasıl Yapılır? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-nasil-yapilir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-25T13:59:37.531Z",
+      "dateModified": "2026-10-02T14:56:40.494Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-nasil-yapilir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 24542,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/isten-cikarildim-ne-yapmaliyim",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/isten-cikarildim-ne-yapmaliyim",
+      "title": "İşten Çıkarıldım, Ne Yapmalıyım? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/isten-cikarildim-ne-yapmaliyim",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-25T13:59:44.225Z",
+      "dateModified": "2026-10-02T14:56:38.692Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/isten-cikarildim-ne-yapmaliyim/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 24653,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/nafaka-artirim-davasi-nasil-acilir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/nafaka-artirim-davasi-nasil-acilir",
+      "title": "Nafakamı Artırmak İstiyorum, Ne Yapmalıyım? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/nafaka-artirim-davasi-nasil-acilir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-25T14:05:35.548Z",
+      "dateModified": "2026-10-02T14:56:34.410Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/nafaka-artirim-davasi-nasil-acilir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 29909,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "title": "Ödeme Emrine İtiraz: Süre ve Sonuçları — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-26T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:23.073Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 25768,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/objecting-to-a-payment-order-deadline-and-effects",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/objecting-to-a-payment-order-deadline-and-effects",
+      "title": "Objecting to a Payment Order: Deadline and Effects — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-26T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:21.260Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/objecting-to-a-payment-order-deadline-and-effects/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 31256,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/al-itirad-ala-amr-al-daf-al-muhla-wa-al-nataij",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/al-itirad-ala-amr-al-daf-al-muhla-wa-al-nataij",
+      "title": "الاعتراض على أمر الدفع: المهلة والنتائج — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-26T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:19.400Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/al-itirad-ala-amr-al-daf-al-muhla-wa-al-nataij/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 25288,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/tr-makaleler-kira-bedelinin-tespiti-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/tr-makaleler-kira-bedelinin-tespiti-davasi",
+      "title": "Kiramı nasıl artırabilirim? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/tr-makaleler-kira-bedelinin-tespiti-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-28T07:53:09.704Z",
+      "dateModified": "2026-10-02T14:56:36.670Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/tr-makaleler-kira-bedelinin-tespiti-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 21687,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "title": "Anlaşmalı Boşanma Protokolünde Bulunması Gerekenler — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-30T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:17.413Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 33291,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/what-an-uncontested-divorce-protocol-must-include",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/what-an-uncontested-divorce-protocol-must-include",
+      "title": "What an Uncontested Divorce Protocol Must Include — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-30T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:15.518Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/what-an-uncontested-divorce-protocol-must-include/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 31456,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/ma-yajib-an-yatadamanahu-brotokol-al-talaq-bil-taradi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/ma-yajib-an-yatadamanahu-brotokol-al-talaq-bil-taradi",
+      "title": "ما يجب أن يتضمنه بروتوكول الطلاق بالتراضي — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-09-30T09:00:00.000Z",
+      "dateModified": "2026-10-02T14:57:13.833Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/ma-yajib-an-yatadamanahu-brotokol-al-talaq-bil-taradi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27138,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/kamulastirmasiz-el-atma-fiili-hukuki-el-atma",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/kamulastirmasiz-el-atma-fiili-hukuki-el-atma",
+      "title": "Kamulaştırmasız El Atma Nedir? Fiili ve Hukuki El Atma, Tazminat ve Dava Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kamulastirmasiz-el-atma-fiili-hukuki-el-atma",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-02T14:47:13.263Z",
+      "dateModified": "2026-10-02T14:47:13.268Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/kamulastirmasiz-el-atma-fiili-hukuki-el-atma/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 39968,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/kullanilmayan-yillik-izin-ucreti",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/kullanilmayan-yillik-izin-ucreti",
+      "title": "Kullanılmayan Yıllık İzin Ücreti Nasıl Alınır? Süre, Hesaplama ve Dava Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kullanilmayan-yillik-izin-ucreti",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-02T14:47:48.778Z",
+      "dateModified": "2026-10-02T14:47:48.779Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/kullanilmayan-yillik-izin-ucreti/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 37674,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/ayipli-mal-tuketici-haklari",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/ayipli-mal-tuketici-haklari",
+      "title": "Ayıplı Mal Aldım, Ne Yapmalıyım? İade, Değişim ve Tüketici Hakları — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/ayipli-mal-tuketici-haklari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-02T14:48:20.611Z",
+      "dateModified": "2026-10-02T14:51:24.493Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/ayipli-mal-tuketici-haklari/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 36886,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir",
+      "title": "Tahliye Taahhüdü Ne Zaman Geçerlidir? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-03T09:00:00.000Z",
+      "dateModified": "2026-10-03T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 27090,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/when-is-a-vacation-commitment-valid",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/when-is-a-vacation-commitment-valid",
+      "title": "When Is a Vacation Commitment Valid? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-03T09:00:00.000Z",
+      "dateModified": "2026-10-03T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/when-is-a-vacation-commitment-valid/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 25476,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/mata-yakun-tahhud-al-ikhla-sahihan",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/mata-yakun-tahhud-al-ikhla-sahihan",
+      "title": "متى يكون تعهد الإخلاء صحيحًا؟ — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/tahliye-taahhudu-ne-zaman-gecerlidir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-03T09:00:00.000Z",
+      "dateModified": "2026-10-03T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/mata-yakun-tahhud-al-ikhla-sahihan/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 22303,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/is-kazasi-tazminat-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/is-kazasi-tazminat-davasi",
+      "title": "İş Kazası Geçirdim, Ne Yapmalıyım? Tazminat, SGK Bildirimi ve Dava Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/is-kazasi-tazminat-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-05T09:16:29.528Z",
+      "dateModified": "2026-10-05T09:16:29.532Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/is-kazasi-tazminat-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 39090,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/ortakligin-giderilmesi-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/ortakligin-giderilmesi-davasi",
+      "title": "Ortaklığın Giderilmesi Davası (İzale-i Şuyu) Nasıl Açılır? Arabuluculuk, Aynen Taksim ve Satış — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/ortakligin-giderilmesi-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-05T09:16:31.546Z",
+      "dateModified": "2026-10-05T09:16:31.548Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/ortakligin-giderilmesi-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 44461,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/bosanmada-mal-paylasimi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/bosanmada-mal-paylasimi",
+      "title": "Boşanmada Mal Paylaşımı Nasıl Yapılır? Edinilmiş Mal, Kişisel Mal ve Katılma Alacağı — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/bosanmada-mal-paylasimi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-05T09:16:33.038Z",
+      "dateModified": "2026-10-05T09:16:33.040Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/bosanmada-mal-paylasimi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 44031,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir",
+      "title": "Kıdem Tazminatı Hangi Hallerde Alınır? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-07T09:00:00.000Z",
+      "dateModified": "2026-10-07T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 26124,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/when-is-severance-pay-owed",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/when-is-severance-pay-owed",
+      "title": "When Is Severance Pay Owed? — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-07T09:00:00.000Z",
+      "dateModified": "2026-10-07T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/when-is-severance-pay-owed/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 23741,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/mata-yustahaqq-tawidh-nihayat-al-khidma",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/mata-yustahaqq-tawidh-nihayat-al-khidma",
+      "title": "متى يُستحق تعويض نهاية الخدمة؟ — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kidem-tazminati-hangi-hallerde-alinir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-07T09:00:00.000Z",
+      "dateModified": "2026-10-07T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/mata-yustahaqq-tawidh-nihayat-al-khidma/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 23185,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/velayetin-degistirilmesi-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/velayetin-degistirilmesi-davasi",
+      "title": "Velayetin Değiştirilmesi Davası Nasıl Açılır? Şartları, Çocuğun Üstün Yararı ve Yetkili Mahkeme — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/velayetin-degistirilmesi-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-08T08:11:14.125Z",
+      "dateModified": "2026-10-08T08:11:14.146Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/velayetin-degistirilmesi-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 46099,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/mirastan-mal-kacirma-muris-muvazaasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/mirastan-mal-kacirma-muris-muvazaasi",
+      "title": "Babam Evi Kardeşime Satmış, Ne Yapabilirim? Mirastan Mal Kaçırma (Muris Muvazaası) Davası — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/mirastan-mal-kacirma-muris-muvazaasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-08T08:13:06.315Z",
+      "dateModified": "2026-10-08T08:13:06.318Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/mirastan-mal-kacirma-muris-muvazaasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 46839,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/kira-depozitosu-iadesi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/kira-depozitosu-iadesi",
+      "title": "Ev Sahibi Depozitomu Geri Vermiyor, Ne Yapmalıyım? Kira Depozitosunun İadesi, Arabuluculuk ve Dava Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kira-depozitosu-iadesi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-09T08:53:32.536Z",
+      "dateModified": "2026-10-09T08:53:32.541Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/kira-depozitosu-iadesi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 41893,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+      "title": "Mirasın Reddi: Üç Aylık Süre ve Sonuçları — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-10T09:00:00.000Z",
+      "dateModified": "2026-10-10T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 28496,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/makaleler/disclaiming-an-inheritance-the-three-month-deadline",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/en/makaleler/disclaiming-an-inheritance-the-three-month-deadline",
+      "title": "Disclaiming an Inheritance: The Three-Month Deadline — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-10T09:00:00.000Z",
+      "dateModified": "2026-10-10T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/en/makaleler/disclaiming-an-inheritance-the-three-month-deadline/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 31560,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/makaleler/rad-al-tarika-mahlat-al-thalatha-ashhur-wa-nataijuha",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/ar/makaleler/rad-al-tarika-mahlat-al-thalatha-ashhur-wa-nataijuha",
+      "title": "رد التركة: مهلة الأشهر الثلاثة ونتائجها — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/mirasin-reddi-uc-aylik-sure-ve-sonuclari",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-10T09:00:00.000Z",
+      "dateModified": "2026-10-10T09:00:00.000Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/ar/makaleler/rad-al-tarika-mahlat-al-thalatha-ashhur-wa-nataijuha/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 24851,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/sufa-onalim-hakki-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/sufa-onalim-hakki-davasi",
+      "title": "Hisseli Tapuda Önalım (Şufa) Hakkı Davası Nasıl Açılır? 2026'da Değişen Süreler ve Rayiç Bedel — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/sufa-onalim-hakki-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:05:46.518Z",
+      "dateModified": "2026-10-16T12:05:46.524Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/sufa-onalim-hakki-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 47500,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/dugun-takilari-kime-ait-ziynet-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/dugun-takilari-kime-ait-ziynet-davasi",
+      "title": "Düğün Takıları Kime Aittir? Boşanmada Ziynet Alacağı Davası ve 2026 Yargıtay Kararları — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/dugun-takilari-kime-ait-ziynet-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:07:10.810Z",
+      "dateModified": "2026-10-16T12:07:10.813Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/dugun-takilari-kime-ait-ziynet-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 44397,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/miras-kalan-ev-ecrimisil-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/miras-kalan-ev-ecrimisil-davasi",
+      "title": "Kardeşim Miras Kalan Evde Oturuyor, Kira İsteyebilir miyim? Ecrimisil Davası, İntifadan Men ve 5 Yıllık Süre — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/miras-kalan-ev-ecrimisil-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:08:15.681Z",
+      "dateModified": "2026-10-16T12:08:15.684Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/miras-kalan-ev-ecrimisil-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 40236,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/maas-haczi-ne-kadar-kesilir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/maas-haczi-ne-kadar-kesilir",
+      "title": "Maaşıma Haciz Geldi, Ne Kadar Kesilir? 2026’da Dörtte Bir Kuralı, Nafaka ve Şikâyet Yolu — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/maas-haczi-ne-kadar-kesilir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:08:49.405Z",
+      "dateModified": "2026-10-16T12:08:49.407Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/maas-haczi-ne-kadar-kesilir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 44827,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/isim-soyisim-degistirme-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/isim-soyisim-degistirme-davasi",
+      "title": "İsim ve Soyisim Değiştirme Davası Nasıl Açılır? 2026 Şartları, Haklı Sebep ve Yetkili Mahkeme — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/isim-soyisim-degistirme-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:09:34.797Z",
+      "dateModified": "2026-10-16T12:09:34.799Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/isim-soyisim-degistirme-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 45364,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/arac-deger-kaybi-nasil-alinir",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/arac-deger-kaybi-nasil-alinir",
+      "title": "Trafik Kazasında Araç Değer Kaybı Nasıl Alınır? 2026 Sigorta Başvurusu, Tahkim ve Dava Rehberi — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/arac-deger-kaybi-nasil-alinir",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-16T12:10:27.922Z",
+      "dateModified": "2026-10-16T12:10:27.923Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/arac-deger-kaybi-nasil-alinir/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 47094,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/kiraci-erken-cikarsa-kalan-kira",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/kiraci-erken-cikarsa-kalan-kira",
+      "title": "Kiracı Evi Erken Boşaltırsa Kalan Kiraları Öder mi? 2026'da Makul Süre, Anahtar Teslimi ve Dava Süreci — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/kiraci-erken-cikarsa-kalan-kira",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-19T11:27:48.923Z",
+      "dateModified": "2026-10-19T11:27:48.926Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/kiraci-erken-cikarsa-kalan-kira/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 38113,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/tuketici-hakem-heyeti-kararina-itiraz",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/tuketici-hakem-heyeti-kararina-itiraz",
+      "title": "Tüketici Hakem Heyeti Kararına Nasıl İtiraz Edilir? 2026'da Süre, Görevli Mahkeme ve İcranın Durdurulması — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/tuketici-hakem-heyeti-kararina-itiraz",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-19T11:28:11.406Z",
+      "dateModified": "2026-10-19T11:28:11.409Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/tuketici-hakem-heyeti-kararina-itiraz/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 40706,
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/makaleler/sigortasiz-calistim-hizmet-tespiti-davasi",
+      "status": 200,
+      "canonical": "https://burakugurozturk.av.tr/tr/makaleler/sigortasiz-calistim-hizmet-tespiti-davasi",
+      "title": "Sigortasız Çalıştım, Ne Yapmalıyım? 2026 Hizmet Tespiti Davası, 5 Yıllık Süre ve İspat Rehberi — Av. Burak Uğur Öztürk",
+      "titleMatchesOg": true,
+      "xDefault": "https://burakugurozturk.av.tr/tr/makaleler/sigortasiz-calistim-hizmet-tespiti-davasi",
+      "hsts": "max-age=31536000",
+      "schemaTypes": [
+        "LegalService",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "datePublished": "2026-10-19T11:28:33.873Z",
+      "dateModified": "2026-10-19T11:28:33.876Z",
+      "datesConsistent": true,
+      "image": "https://burakugurozturk.av.tr/tr/makaleler/sigortasiz-calistim-hizmet-tespiti-davasi/share-image",
+      "imageResult": {
+        "status": 200,
+        "type": "image/png",
+        "bytes": 45871,
+        "width": 1200,
+        "height": 630
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "url": "http://burakugurozturk.av.tr",
+      "status": 301,
+      "location": "https://burakugurozturk.av.tr/"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/",
+      "status": 301,
+      "location": "/tr"
+    },
+    {
+      "url": "https://www.burakugurozturk.av.tr",
+      "status": 301,
+      "location": "https://burakugurozturk.av.tr/tr"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/",
+      "status": 301,
+      "location": "/tr"
+    }
+  ]
+}
