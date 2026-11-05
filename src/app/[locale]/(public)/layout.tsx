@@ -4,6 +4,7 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { ContactCtaBand } from '@/components/layout/contact-cta-band';
 import { PageViewBeacon } from '@/components/analytics/page-view-beacon';
 import { ConversionBeacon } from '@/components/analytics/conversion-beacon';
+import { Ga4Beacon } from '@/components/analytics/ga4-beacon';
 import { CookieConsentBanner } from '@/components/analytics/cookie-consent-banner';
 import { JsonLd } from '@/components/seo/json-ld';
 import { buildLegalServiceSchema } from '@/lib/structured-data';
@@ -24,7 +25,7 @@ type LayoutProps = {
  * business listing.
  *
  * `CookieConsentBanner` decides its own visibility client-side (reads
- * `document.cookie` after mount) rather than this layout checking the cookie
+ * the consent API after mount) rather than this layout checking the cookie
  * server-side with `cookies()` - calling that dynamic API here would force
  * every page under this layout out of static generation, which is a much
  * larger cost than the banner's brief post-hydration appearance on a first
@@ -45,6 +46,7 @@ export default async function PublicLayout({ children, params }: LayoutProps) {
       <SiteFooter />
       <PageViewBeacon />
       <ConversionBeacon />
+      <Ga4Beacon />
       <CookieConsentBanner />
     </>
   );

@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\api\events\route.ts
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-release-2a54a89c292b4baab2c567dc435d50a2\src\app\api\events\route.ts
 import * as entry from '../../../../../src/app/api/events/route.js'
 import type { NextRequest } from 'next/server.js'
 

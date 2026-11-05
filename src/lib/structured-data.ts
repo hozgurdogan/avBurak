@@ -2,6 +2,7 @@ import { office, formatAddress } from '@/content/office';
 import { serviceAreaDistricts } from '@/content/service-areas';
 import type { Locale } from '@/i18n/locales';
 import { articleModifiedAt, SITE_URL } from '@/lib/site';
+import { businessProfile } from '@/lib/business-profile';
 
 /**
  * JSON-LD builders (schema.org). Plain objects, not components - kept
@@ -19,6 +20,7 @@ import { articleModifiedAt, SITE_URL } from '@/lib/site';
  * identity does not change page to page.
  */
 export function buildLegalServiceSchema(locale: Locale) {
+  const profile = businessProfile();
   return {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -26,7 +28,7 @@ export function buildLegalServiceSchema(locale: Locale) {
     name: 'Av. Burak Uğur Öztürk',
     url: `${SITE_URL}/${locale}`,
     image: `${SITE_URL}/${locale}/opengraph-image`,
-    telephone: office.phone,
+    telephone: office.phone.replace(/[^+\d]/g, ''),
     email: office.email,
     address: {
       '@type': 'PostalAddress',
@@ -36,11 +38,14 @@ export function buildLegalServiceSchema(locale: Locale) {
       postalCode: office.address.postalCode,
       addressCountry: office.address.addressCountry,
     },
-    geo: {
+    ...(profile.geo ? { geo: {
       '@type': 'GeoCoordinates',
-      latitude: office.geo.latitude,
-      longitude: office.geo.longitude,
-    },
+      ...profile.geo,
+    } } : {}),
+    ...(profile.sameAs.length ? { sameAs: profile.sameAs } : {}),
+    ...(profile.hours.length ? { openingHoursSpecification: profile.hours.map((hours) => ({
+      '@type': 'OpeningHoursSpecification', dayOfWeek: hours.days, opens: hours.opens, closes: hours.closes,
+    })) } : {}),
     // Single source of truth with the footer/contact-page district list and
     // the `/bolgeler` pages - see `src/content/service-areas.ts`.
     areaServed: [...serviceAreaDistricts],

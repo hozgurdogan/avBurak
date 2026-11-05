@@ -10,7 +10,8 @@ RewriteRule ^$ https://burakugurozturk.av.tr/tr [R=301,L,NE]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?burakugurozturk\.av\.tr$ [NC]
 RewriteRule ^(.+?)/+$ https://burakugurozturk.av.tr/$1 [R=301,L,NE]
 
-RewriteCond %{HTTP_HOST} ^www\.burakugurozturk\.av\.tr$ [NC,OR]
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} ^(?:www\.)?burakugurozturk\.av\.tr$ [NC]
+RewriteCond %{HTTP_HOST} ^www\.burakugurozturk\.av\.tr$ [NC]
 RewriteRule ^(.+)$ https://burakugurozturk.av.tr/$1 [R=301,L,NE]
+
+# Keep the host's existing HTTP -> HTTPS rule for other bare-host paths.
+# Avoid testing %{HTTPS}: TLS can terminate at a proxy before Apache.

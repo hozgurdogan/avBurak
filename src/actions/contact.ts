@@ -12,6 +12,7 @@ import { recordConversion } from '@/lib/conversions';
 // that used to live here has moved to the client component that needs it.
 export type ContactFormState = {
   status: 'idle' | 'success' | 'error';
+  recorded?: boolean;
   errorCode?: 'validation' | 'consent' | 'rate-limit' | 'generic';
   fieldErrors?: Partial<Record<'name' | 'email' | 'phone' | 'subject' | 'message', string>>;
 };
@@ -93,5 +94,5 @@ export async function submitContactForm(
   }
 
   await recordConversion('contact_submit', parsed.data.locale, '/iletisim').catch(() => undefined);
-  return { status: 'success' };
+  return { status: 'success', recorded: true };
 }

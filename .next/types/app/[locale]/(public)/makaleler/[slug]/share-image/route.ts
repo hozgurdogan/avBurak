@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\[locale]\(public)\makaleler\[slug]\share-image\route.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-release-2a54a89c292b4baab2c567dc435d50a2\src\app\[locale]\(public)\makaleler\[slug]\share-image\route.tsx
 import * as entry from '../../../../../../../../src/app/[locale]/(public)/makaleler/[slug]/share-image/route.js'
 import type { NextRequest } from 'next/server.js'
 

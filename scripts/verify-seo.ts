@@ -6,8 +6,18 @@ import { renderArticleMarkdown } from '../src/lib/markdown';
 import { slugify } from '../src/lib/slug';
 import { prisma } from '../src/lib/prisma';
 import sitemap from '../src/app/sitemap';
+import { businessProfile } from '../src/lib/business-profile';
 
 async function main() {
+  assert.equal(businessProfile({}).geo, null, 'Do not publish approximate office coordinates');
+  assert.deepEqual(businessProfile({ GOOGLE_BUSINESS_PROFILE_URL: 'https://google.com.evil.example/business' }).sameAs, []);
+  const verified = businessProfile({ GOOGLE_BUSINESS_PROFILE_URL: 'https://maps.app.goo.gl/test',
+    BUSINESS_LATITUDE: '41.034', BUSINESS_LONGITUDE: '28.675',
+    BUSINESS_HOURS_JSON: '[{"days":["Monday"],"opens":"09:00","closes":"18:00"}]' });
+  assert.equal(verified.hours.length, 1);
+  assert.equal(verified.sameAs.length, 1);
+  assert.equal(verified.geo?.latitude, 41.034);
+  assert.equal(businessProfile({ BUSINESS_LATITUDE: '999', BUSINESS_LONGITUDE: '28' }).geo, null);
   assert.equal(slugify('İlgili Hesaplama Aracı'), 'ilgili-hesaplama-araci');
   const markdown = '## İlgili Hesaplama Aracı\n\n## Aynı\n\n## Aynı\n\n## Ayni-1\n\n## مقدمة\n\n## مقدمة';
   const rendered = await renderArticleMarkdown(markdown);

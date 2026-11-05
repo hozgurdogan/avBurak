@@ -2,6 +2,7 @@ import 'server-only';
 import { cookies } from 'next/headers';
 import { prisma } from '@/lib/prisma';
 import { COOKIES_REQUIRE_HTTPS } from '@/lib/cookies';
+import { ga4Configuration } from '@/lib/ga4-config';
 
 /**
  * First-party, cookie-based visit tracking - no third-party script, no
@@ -21,6 +22,7 @@ import { COOKIES_REQUIRE_HTTPS } from '@/lib/cookies';
 
 export const CONSENT_COOKIE = 'cookie_consent';
 export const VISITOR_COOKIE = 'visitor_id';
+export const GA4_CONSENT_COOKIE = 'ga4_consent';
 
 const CONSENT_MAX_AGE = 60 * 60 * 24 * 365; // 1 year
 // ~13 months: long enough for year-over-year comparison, short enough that
@@ -34,9 +36,18 @@ export async function getConsentChoice(): Promise<'accepted' | 'declined' | null
   return value === 'accepted' || value === 'declined' ? value : null;
 }
 
+export async function getAnalyticsConsent() {
+  const choice = await getConsentChoice();
+  const externalChoice = (await cookies()).get(GA4_CONSENT_COOKIE)?.value;
+  const config = ga4Configuration();
+  const ga4Allowed = config.enabled && choice === 'accepted' && externalChoice === 'accepted';
+  return { choice, ga4Enabled: config.enabled, ga4Answered: externalChoice === 'accepted' || externalChoice === 'declined',
+    ga4Allowed, measurementId: ga4Allowed ? config.measurementId : null };
+}
+
 /** Only callable from a Server Action or a Route Handler - both are allowed
  *  to call `cookies().set()`. */
-export async function setConsent(accepted: boolean): Promise<void> {
+export async function setConsent(accepted: boolean, ga4Accepted = false): Promise<void> {
   const store = await cookies();
   store.set(CONSENT_COOKIE, accepted ? 'accepted' : 'declined', {
     httpOnly: true,
@@ -45,6 +56,12 @@ export async function setConsent(accepted: boolean): Promise<void> {
     path: '/',
     maxAge: CONSENT_MAX_AGE,
   });
+  // Old first-party consent never silently opts a visitor into Google Analytics.
+  if (ga4Configuration().enabled || !accepted) {
+    store.set(GA4_CONSENT_COOKIE, accepted && ga4Accepted ? 'accepted' : 'declined', {
+      httpOnly: true, secure: COOKIES_REQUIRE_HTTPS, sameSite: 'lax', path: '/', maxAge: CONSENT_MAX_AGE,
+    });
+  }
   if (!accepted) {
     store.delete(VISITOR_COOKIE);
   }

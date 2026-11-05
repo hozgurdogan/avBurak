@@ -3,7 +3,8 @@
 // Client component: useActionState needs the client runtime to track pending
 // state and the server action's returned errors between submits.
 
-import { useActionState, useId } from 'react';
+import { useActionState, useId, useEffect, useRef } from 'react';
+import { trackGa4 } from '@/lib/ga4-client';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { submitContactForm, type ContactFormState } from '@/actions/contact';
@@ -47,6 +48,13 @@ export function ContactForm() {
   const locale = useLocale();
   const [state, formAction, isPending] = useActionState(submitContactForm, contactFormInitialState);
   const consentId = useId();
+  const reported = useRef(false);
+  useEffect(() => {
+    if (state.status === 'success' && state.recorded && !reported.current) {
+      reported.current = true;
+      trackGa4('contact_submit', `/${locale}/iletisim`, locale);
+    }
+  }, [state.status, state.recorded, locale]);
   const fieldErrorMessage = (code?: string) =>
     code && code in fieldErrorMessageKeys
       ? t(fieldErrorMessageKeys[code as keyof typeof fieldErrorMessageKeys])

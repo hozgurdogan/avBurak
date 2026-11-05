@@ -76,9 +76,16 @@ If a later instruction, ticket or design idea conflicts with this section,
 - **IP addresses are never stored raw.** Contact submissions and rate-limit
   records keep only a salted hash (`IP_HASH_SALT`), which is enough for abuse
   control and nothing else. Rotating the salt invalidates every stored hash.
-- The Content-Security-Policy in `next.config.ts` blocks outbound connections to
-  any origin other than the site itself, so a third-party script cannot be
-  introduced by accident.
+- At the user's request to complete the technical SEO report (2026-11-05),
+  optional GA4 integration is available behind `GA4_ENABLED=true` and a real
+  `GA4_MEASUREMENT_ID`. It stays off by default. An existing first-party
+  analytics consent never enables Google: a fresh notice and explicit GA4
+  consent are required. No tag loads before consent; advertising permissions
+  stay denied. Cookie preferences in the footer allow withdrawal. See
+  [hosting and analytics setup](docs/hosting-ve-analiz-tamamlama.md).
+- The Content-Security-Policy in `next.config.ts` permits the site's own
+  resources, Google Maps frames and the narrowly scoped optional GA4 tag and
+  collection endpoints. Fonts remain self-hosted.
 
 ### Deliberate deviation from the brief
 

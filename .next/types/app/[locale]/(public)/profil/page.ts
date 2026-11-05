@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\OneDrive\Masaüstü\Webside\avBurak\src\app\[locale]\(public)\profil\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-release-2a54a89c292b4baab2c567dc435d50a2\src\app\[locale]\(public)\profil\page.tsx
 import * as entry from '../../../../../../src/app/[locale]/(public)/profil/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

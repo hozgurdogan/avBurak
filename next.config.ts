@@ -6,9 +6,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /**
  * Security headers.
  *
- * The CSP is intentionally strict: the site loads no third-party scripts,
- * no analytics and no font CDN (see README section "Regulatory
- * constraints"). `unsafe-inline` for styles is required by Next.js' inlined
+ * The CSP permits the optional consent-gated GA4 integration and Google Maps.
+ * No Google analytics script is loaded without an enabled measurement ID and
+ * fresh consent. Fonts stay local. `unsafe-inline` supports Next.js' inlined
  * critical CSS; scripts use nonce-less strict-dynamic-free self-only policy
  * because we ship no inline script of our own beyond Next.js' hydration
  * payload.
@@ -51,12 +51,12 @@ const securityHeaders = [
       "default-src 'self'",
       // Next.js injects inline bootstrap scripts; 'unsafe-inline' is ignored by
       // browsers that honour 'strict-dynamic', and required by those that do not.
-      "script-src 'self' 'unsafe-inline'" +
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com" +
         (process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''),
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob:",
+      "img-src 'self' data: blob: https://*.google-analytics.com",
       "font-src 'self'",
-      "connect-src 'self'",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com",
       "form-action 'self'",
       "frame-src https://www.google.com",
       "frame-ancestors 'none'",

@@ -20,11 +20,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
     sections: [
       {
         heading: '1. Kapsam',
-        body: 'Bu politika, bu internet sitesinin tüm sayfaları için geçerlidir. Site, ziyaretçi davranışını profilleme, reklam hedefleme veya üçüncü taraflarla veri paylaşımı amacı gütmemektedir.',
+        body: 'Bu politika, internet sitesinin tüm sayfaları için geçerlidir. İletişim talepleri ve isteğe bağlı ziyaret istatistikleri için veri işlenir; reklam hedefleme veya yeniden pazarlama yapılmaz.',
       },
       {
         heading: '2. Çerezler ve İzleme',
-        body: 'Dil tercihi ve yönetici oturumu için gerekli çerezler kullanılır. İsteğe bağlı ziyaret istatistikleri ile telefon, WhatsApp bağlantısı tıklamaları ve başarılı form gönderimi sayıları yalnızca analiz onayı sonrasında büronun kendi sunucusunda tutulur. Etkileşim kayıtlarında mesaj, telefon numarası veya IP adresi saklanmaz. Google Analytics veya reklam pikselleri kullanılmaz.',
+        body: 'Dil tercihi ve yönetici oturumu için gerekli çerezler kullanılır. İzin verirseniz ziyaretler ile telefon, WhatsApp tıklamaları ve başarılı form gönderimi sayıları kendi sunucumuzda tutulur. GA4 ayrıca etkinleştirilmişse, Google’a aktarımın açıklandığı bildirimde yeni onayınız alınmadan Google etiketi yüklenmez. Eski birinci taraf analiz onayı GA4 onayı sayılmaz. GA4 sayfa, dil, etkileşim ve analiz çerezi bilgilerini Google’a iletebilir; bağlantı sırasında IP adresiniz Google tarafından görülebilir ve veriler yurt dışındaki sunucularda işlenebilir. Form içeriği, e-posta, telefon numarası ve URL sorgu parametreleri GA4 olaylarına eklenmez. Sayfa altındaki Çerez tercihleri düğmesiyle izninizi geri çekebilirsiniz.',
       },
       {
         heading: '3. Yazı Tipleri ve Üçüncü Taraf Kaynaklar',
@@ -56,11 +56,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
     sections: [
       {
         heading: '1. Scope',
-        body: 'This policy applies to every page of this website. The site does not profile visitor behaviour, does not target advertising, and does not share data with third parties.',
+        body: 'This policy applies to all pages of this website. Data supports contact requests and optional visit statistics; advertising targeting and remarketing are not used.',
       },
       {
         heading: '2. Cookies and Tracking',
-        body: 'Necessary cookies support language preferences and administrator sessions. Optional visit statistics and counts of phone clicks, WhatsApp clicks and successful form submissions are recorded on the office’s own server only after analytics consent. Interaction records contain no messages, phone numbers or IP addresses. Google Analytics and advertising pixels are not used.',
+        body: 'Necessary cookies support language preferences and administrator sessions. With permission, visits, phone and WhatsApp clicks, and successful form counts are stored on our server. If GA4 is enabled, its Google tag loads only after fresh consent to the notice explaining Google data sharing; existing first-party consent does not authorise GA4. GA4 may send page, language, interaction and analytics-cookie information to Google; Google can see your IP address during the connection and may process data on servers abroad. Form contents, email addresses, phone numbers and URL query parameters are not included in GA4 events. You can withdraw permission using Cookie preferences in the footer.',
       },
       {
         heading: '3. Fonts and Third-Party Resources',
@@ -92,11 +92,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
     sections: [
       {
         heading: '1. النطاق',
-        body: 'تنطبق هذه السياسة على جميع صفحات هذا الموقع. لا يقوم الموقع بتحليل سلوك الزوار، ولا يستهدفهم بإعلانات، ولا يشارك بياناتهم مع أطراف ثالثة.',
+        body: 'تسري هذه السياسة على جميع صفحات الموقع. تُعالج البيانات لطلبات التواصل وإحصاءات الزيارة الاختيارية، دون استهداف إعلاني أو إعادة تسويق.',
       },
       {
         heading: '2. ملفات تعريف الارتباط والتتبع',
-        body: 'تُستخدم ملفات ضرورية لتفضيل اللغة وجلسة المدير. لا تُسجّل إحصاءات الزيارة الاختيارية ونقرات الهاتف وواتساب وعدد النماذج المرسلة بنجاح إلا بعد الموافقة على التحليل، وعلى خادم المكتب فقط. لا تحتوي سجلات التفاعل على الرسائل أو أرقام الهاتف أو عناوين IP. لا يُستخدم Google Analytics أو بكسلات الإعلانات.',
+        body: 'تُستخدم ملفات ضرورية للغة وجلسة المدير. بعد الموافقة، تُحفظ الزيارات ونقرات الهاتف وواتساب وعدد النماذج الناجحة على خادمنا. عند تفعيل GA4، لا تُحمّل علامة Google إلا بعد موافقة جديدة على إشعار يوضح مشاركة البيانات؛ الموافقة السابقة على تحليل الطرف الأول لا تكفي. قد تتلقى Google بيانات الصفحة واللغة والتفاعل وملفات التحليل، وقد ترى عنوان IP عند الاتصال وتعالج البيانات على خوادم خارج البلاد. لا تُضاف محتويات النماذج أو البريد أو أرقام الهاتف أو معاملات البحث في الروابط إلى أحداث GA4. يمكن سحب الموافقة من زر تفضيلات ملفات الارتباط أسفل الصفحة.',
       },
       {
         heading: '3. الخطوط والموارد من طرف ثالث',

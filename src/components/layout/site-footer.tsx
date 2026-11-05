@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { CookieSettingsButton } from '@/components/analytics/cookie-settings-button';
 import { Link } from '@/i18n/navigation';
 import { Monogram } from '@/components/brand/monogram';
 import { LegalDisclaimer } from '@/components/ui/legal-disclaimer';
@@ -107,6 +108,7 @@ export function SiteFooter() {
           </div>
         </div>
 
+        <div className="mt-6"><CookieSettingsButton /></div>
         <LegalDisclaimer surface="navy" className="mt-14 border-rule-invert" />
 
         <p className="mt-10 text-sm text-mist-muted">{t('rights', { year: new Date().getFullYear() })}</p>

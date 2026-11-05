@@ -1,5 +1,6 @@
 # dependencies
 node_modules/
+/.tools/
 .pnp
 .pnp.js
 
@@ -16,6 +17,8 @@ next-env.d.ts
 /.next/cache/
 /.next/trace
 /.next/diagnostics/
+# OneDrive conflict copies are not valid deployment artifacts.
+/.next/**/*-DESKTOP-*
 
 # production
 /build

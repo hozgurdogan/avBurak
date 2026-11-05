@@ -30,31 +30,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/_not-found": {
-      "initialStatus": 404,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/robots.txt": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -104,6 +79,103 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/icon1",
       "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/_not-found": {
+      "initialStatus": 404,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/ar/bolgeler": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/bolgeler",
+      "dataRoute": "/ar/bolgeler.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/bolgeler": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/bolgeler",
+      "dataRoute": "/en/bolgeler.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/bolgeler": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/bolgeler",
+      "dataRoute": "/tr/bolgeler.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -761,7 +833,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/bolgeler": {
+    "/ar/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -774,8 +846,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/bolgeler",
-      "dataRoute": "/ar/bolgeler.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/ar/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -785,7 +857,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/bolgeler": {
+    "/en/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -798,8 +870,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/bolgeler",
-      "dataRoute": "/en/bolgeler.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/en/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -809,7 +881,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/bolgeler": {
+    "/tr/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -822,8 +894,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/bolgeler",
-      "dataRoute": "/tr/bolgeler.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/tr/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1481,78 +1553,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/ar/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/en/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/tr/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/ar/iletisim": {
       "experimentalBypassFor": [
         {
@@ -1697,7 +1697,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/kvkk": {
+    "/ar/profil": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1710,8 +1710,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/ar/kvkk.rsc",
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/ar/profil.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1721,7 +1721,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/kvkk": {
+    "/en/profil": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1734,8 +1734,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/en/kvkk.rsc",
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/en/profil.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1745,7 +1745,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/kvkk": {
+    "/tr/profil": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1758,8 +1758,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/tr/kvkk.rsc",
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/tr/profil.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1841,7 +1841,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/profil": {
+    "/ar/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1854,8 +1854,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/ar/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/ar/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1865,7 +1865,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/profil": {
+    "/en/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1878,8 +1878,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/en/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/en/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1889,7 +1889,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/profil": {
+    "/tr/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1902,8 +1902,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/tr/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/tr/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1915,6 +1915,31 @@
     }
   },
   "dynamicRoutes": {
+    "/[locale]/bolgeler": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/bolgeler(?:/)?$",
+      "dataRoute": "/[locale]/bolgeler.rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/bolgeler\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/[locale]/calisma-alanlari": {
       "experimentalBypassFor": [
         {
@@ -1965,7 +1990,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/bolgeler": {
+    "/[locale]/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1977,10 +2002,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/bolgeler(?:/)?$",
-      "dataRoute": "/[locale]/bolgeler.rsc",
+      "routeRegex": "^/([^/]+?)/gizlilik(?:/)?$",
+      "dataRoute": "/[locale]/gizlilik.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/bolgeler\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/gizlilik\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2006,31 +2031,6 @@
       "dataRoute": "/[locale]/hesaplama-araclari/[slug].rsc",
       "fallback": null,
       "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/[locale]/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/gizlilik(?:/)?$",
-      "dataRoute": "/[locale]/gizlilik.rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/gizlilik\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2090,7 +2090,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/kvkk": {
+    "/[locale]/profil": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2102,10 +2102,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/kvkk(?:/)?$",
-      "dataRoute": "/[locale]/kvkk.rsc",
+      "routeRegex": "^/([^/]+?)/profil(?:/)?$",
+      "dataRoute": "/[locale]/profil.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/kvkk\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/profil\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2140,7 +2140,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/profil": {
+    "/[locale]/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -2152,10 +2152,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/profil(?:/)?$",
-      "dataRoute": "/[locale]/profil.rsc",
+      "routeRegex": "^/([^/]+?)/kvkk(?:/)?$",
+      "dataRoute": "/[locale]/kvkk.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/profil\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/kvkk\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -2168,8 +2168,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "ec0c89d069b53a2f6769dbf44fb4990d",
-    "previewModeSigningKey": "57ba670c7b6622fe414ddbeb21b62b25bc688fc751dce53d33ea9b288618072d",
-    "previewModeEncryptionKey": "a6f80f3beee9ce073759fb966d6f315673a1a9ce18bc51d06d95de3ef40a9191"
+    "previewModeId": "0bc74e8a00522a25abec16e1f477870c",
+    "previewModeSigningKey": "c8d6dde648c40aa99fa03c5f05aea01fcda5559c36f4769c0d70284995746eae",
+    "previewModeEncryptionKey": "dfd0df29f48a8a7cb7b0c4e3252a1b06e3e81bfc41f77c155a9977c9ac3a3f18"
   }
 }

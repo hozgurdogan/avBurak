@@ -746,7 +746,9 @@
       "errorTooLong": "Bu alan çok uzun.",
       "errorRequired": "Bu alan zorunludur.",
       "errorInvalidEmail": "Geçerli bir e-posta adresi girin."
-    }
+    },
+    "hoursLabel": "Çalışma saatleri",
+    "businessProfileLabel": "Google işletme profili"
   },
   "legalPages": {
     "kvkk": {
@@ -785,7 +787,9 @@
     "label": "Çerez Tercihi",
     "body": "Ziyaret istatistiklerini tutabilmemiz için bir çerez kullanmamıza izin verir misiniz? Kabul etmezseniz hiçbir ziyaret verisi kaydedilmez. Ayrıntılar için <link>KVKK Aydınlatma Metni'ne</link> bakabilirsiniz.",
     "accept": "Kabul Et",
-    "decline": "Reddet"
+    "decline": "Reddet",
+    "settings": "Çerez tercihleri",
+    "bodyGa4": "İzninizle ziyaret ve iletişim etkileşimlerini kendi sunucumuzda ve Google Analytics 4 ile ölçeriz. Google’a sayfa, dil ve etkileşim bilgileri ile analiz çerezleri aktarılabilir. Reddetmeniz hâlinde isteğe bağlı analiz çalışmaz. <link>Ayrıntılar</link>."
   },
   "notFound": {
     "label": "Hata 404",

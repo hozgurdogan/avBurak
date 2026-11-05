@@ -746,7 +746,9 @@
       "errorTooLong": "This field is too long.",
       "errorRequired": "This field is required.",
       "errorInvalidEmail": "Enter a valid e-mail address."
-    }
+    },
+    "hoursLabel": "Opening hours",
+    "businessProfileLabel": "Google Business Profile"
   },
   "legalPages": {
     "kvkk": {
@@ -785,7 +787,9 @@
     "label": "Cookie Preference",
     "body": "May we use a cookie to keep basic visit statistics? If you decline, no visit data is recorded. See the <link>KVKK Information Notice</link> for details.",
     "accept": "Accept",
-    "decline": "Decline"
+    "decline": "Decline",
+    "settings": "Cookie preferences",
+    "bodyGa4": "With your permission, we measure visits and contact interactions on our own server and with Google Analytics 4. Page, language, interaction data and analytics cookies may be shared with Google. Optional analytics stays off if you decline. <link>Details</link>."
   },
   "notFound": {
     "label": "Error 404",

@@ -11,6 +11,7 @@ import { reviews } from '@/content/reviews';
 import { OfficeMap } from '@/components/contact/office-map';
 import type { Locale } from '@/i18n/locales';
 import { pageMetadata } from '@/lib/seo';
+import { businessProfile, localizedBusinessDays } from '@/lib/business-profile';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -42,6 +43,7 @@ export default async function ContactPage({ params }: PageProps) {
   const tel = telHref();
   const whatsapp = whatsappHref();
   const localeReviews = reviews[locale as Locale];
+  const profile = businessProfile();
 
   return (
     <section className="bg-canvas-deep">
@@ -111,6 +113,17 @@ export default async function ContactPage({ params }: PageProps) {
             <address className="mt-4 text-md not-italic leading-prose text-ink">
               {formatAddress()}
             </address>
+            {profile.googleUrl ? <a href={profile.googleUrl} target="_blank" rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm text-gold-800 underline">{t('businessProfileLabel')}</a> : null}
+            {profile.hours.length > 0 ? <div className="mt-6">
+              <h3 className="label text-gold-800">{t('hoursLabel')}</h3>
+              <dl className="mt-3 space-y-3 text-sm text-ink-muted">
+                {profile.hours.map((hours, index) => <div key={index}>
+                  <dt>{localizedBusinessDays(hours.days, locale)}</dt>
+                  <dd dir="ltr">{hours.opens}–{hours.closes}</dd>
+                </div>)}
+              </dl>
+            </div> : null}
 
             <p className="label mt-8 border-t border-rule pt-6 text-ink-faint">
               {tFooter('barRegistration', {

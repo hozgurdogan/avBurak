@@ -55,10 +55,10 @@ WHERE publishedAt IS NOT NULL AND updatedAt < publishedAt;
 
 - **Search Console:** DNS alan adı özelliği doğrulaması, sitemap gönderimi, dizinleme ve geliştirmeler raporları. URL-prefix doğrulaması tercih edilirse `GOOGLE_SITE_VERIFICATION` değerini build ortamına ekleyin ve yeniden build alın. Kodda sahte doğrulama değeri yoktur.
 - **Google Business Profile:** gerçek profil URL'si, doğrulanmış çalışma saatleri, kesin büro koordinatları ve varsa baro profil bağlantısı olmadan `sameAs`/açılış saatleri uydurulmadı. Profilin NAP bilgileri siteyle eşleştirilmeli.
-- **GA4:** mevcut birinci taraf sayaçlar çalışır; GA4 hesabı/measurement ID verilmediğinden Google'a aktarım veya GA4 kurulumu yapılmadı. Gerekirse ayrıca veri aktarımı/izin metinleri ve CSP ile birlikte ele alınmalıdır.
+- **GA4:** izin, CSP ve metinleriyle kod entegrasyonu hazırdır; gerçek ölçüm kimliği verilmediği için kapalıdır. Çalışma anında ortam değişkenleriyle açılabilir. Ayrıntılar: [hosting ve analiz tamamlama](hosting-ve-analiz-tamamlama.md).
 - **Core Web Vitals:** PageSpeed Insights mobil ölçümü, gerçek kullanıcı INP/CLS/LCP ve Search Console saha verisi yayın sonrasında incelenmelidir. Ölçülmemiş hız puanı veya hedefe ulaşıldığı iddia edilmez.
 - **Yayın sonrası:** tüm şablonları Rich Results Test / Schema Markup Validator ile, robots ve sitemap'i HTTP 200 ile, http/www/kök/son-slash varyantlarını Location başlıklarıyla yeniden kontrol edin.
-- **Saklama:** mevcut KVKK'daki 13 aylık analiz saklama süresini uygulayan zamanlanmış hosting bakımına `conversion_events` kayıtlarını da dahil edin. Bu çalışma mevcut ziyaret verilerini silmez veya harici hesaplarda ayar değiştirmez.
+- **Saklama:** `node scripts/site-maintenance.mjs` salt okunur kontrol sağlar; `--prune-analytics --apply` 13 takvim ayından eski analiz kayıtlarını temizler. Hazır komutun günlük cron'a eklenmesi hosting erişimi gerektirir. Bu çalışma canlı verileri silmedi.
 
 ## Yerel kontroller
 
