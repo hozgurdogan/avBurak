@@ -1,5 +1,10 @@
 import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { extendTailwindMerge } from 'tailwind-merge';
+
+// Custom CSS font sizes must not be mistaken for text colors and discarded.
+const twMerge = extendTailwindMerge({
+  extend: { theme: { text: ['2xs', 'md', 'display', 'display-sm', 'numeral'] } },
+});
 
 /**
  * Merges conditional class names and resolves Tailwind conflicts, so a variant

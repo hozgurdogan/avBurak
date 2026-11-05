@@ -73,6 +73,8 @@ const nextConfig: NextConfig = {
   // against a regular `next build` output, not a self-contained Docker
   // bundle. See the README section "Deployment".
   reactStrictMode: true,
+  // Emit complete metadata in <head> for every client, including dynamic guides.
+  htmlLimitedBots: /.*/,
   skipTrailingSlashRedirect: true,
   poweredByHeader: false,
   compress: true,

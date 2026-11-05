@@ -64,7 +64,27 @@ type HastNode = {
   value?: string;
   properties?: Record<string, unknown>;
   children?: HastNode[];
+  depth?: number;
 };
+
+function remarkArticleHeadings(titles: readonly string[]) {
+  const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase('tr').replace(/[^\p{L}\p{N}]/gu, '');
+  const repeatedTitles = new Set(titles.map(normalize));
+  return () => (tree: unknown) => {
+    let hasBodyH1 = false;
+    const clean = (node: HastNode) => {
+      node.children = node.children?.filter((child) => !(child.type === 'heading' && child.depth === 1 && repeatedTitles.has(normalize(textOf(child)))));
+      if (node.type === 'heading' && node.depth === 1) hasBodyH1 = true;
+      node.children?.forEach(clean);
+    };
+    clean(tree as HastNode);
+    const shift = (node: HastNode) => {
+      if (node.type === 'heading' && node.depth && hasBodyH1) node.depth = Math.min(6, node.depth + 1);
+      node.children?.forEach(shift);
+    };
+    shift(tree as HastNode);
+  };
+}
 
 /** Concatenates the visible text of a node's subtree. */
 function textOf(node: HastNode): string {
@@ -154,12 +174,13 @@ function rehypeTurkishSlug() {
  * the rendered markup, and the captured text is the heading itself rather
  * than the permalink wrapper.
  */
-export async function renderArticleMarkdown(markdown: string): Promise<RenderedArticle> {
+export async function renderArticleMarkdown(markdown: string, articleTitles: readonly string[] = []): Promise<RenderedArticle> {
   const headings: ArticleHeading[] = [];
 
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
+    .use(remarkArticleHeadings(articleTitles))
     .use(remarkRehype)
     .use(rehypeTurkishSlug)
     .use(() => (tree: unknown) => {

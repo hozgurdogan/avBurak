@@ -29,7 +29,7 @@
   "home": {
     "meta": {
       "title": "Av. Burak Uğur Öztürk",
-      "homeTitle": "Av. Burak Uğur Öztürk | Esenyurt ve Büyükçekmece Hukuk Bürosu",
+      "homeTitle": "Av. Burak Uğur Öztürk | Hukuki Danışmanlık ve Dava Takibi",
       "description": "Esenyurt merkezli; iş, icra, boşanma ve aile, kira, miras ve şirketler hukukunda Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi."
     },
     "hero": {
@@ -197,13 +197,11 @@
   "serviceRegions": {
     "esenyurt": {
       "name": "Esenyurt",
-      "pageTitle": "Esenyurt Avukat ve Hukuki Danışmanlık",
-      "h1": "Esenyurt'ta avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Esenyurt Cumhuriyet Mahallesi’ndeki hukuk bürosunda iş, icra, aile ve kira hukuku. Beycenter Residence adresi, görüşme hazırlığı ve yol tarifi bilgileri.",
+      "pageTitle": "Esenyurt Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Esenyurt Avukat Av. Burak Uğur Öztürk",
+      "summary": "Esenyurt'ta iş, icra, boşanma, kira ve miras uyuşmazlıklarında hukuki danışmanlık ve dava takibi. Av. Burak Uğur Öztürk.",
       "body": [
-        "Büro, Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/İstanbul adresinde hizmet vermektedir; bireysel ve kurumsal müvekkiller randevu alarak ofiste yüz yüze veya talep hâlinde görüntülü/telefon görüşmesi yoluyla kabul edilmektedir.",
-        "İş hukuku, icra hukuku, boşanma ve aile hukuku, kira hukuku, miras hukuku ile şirketler hukuku, tahkim ve kişisel verilerin korunması alanlarının tamamında; hem bireysel hem kurumsal/yabancı müvekkillere Türkçe, İngilizce ve Arapça hizmet sunulmaktadır.",
-        "Adrese toplu taşıma ve özel araçla ulaşım mümkündür; kesin randevu saati ve ulaşım yönlendirmesi için iletişim sayfasındaki telefon veya WhatsApp hattı üzerinden önceden bilgi alınması önerilir."
+        "Esenyurt'ta iş, icra, boşanma ve aile, kira, miras ve şirketler hukuku alanlarında hukuki danışmanlık ve dava takibi hizmeti sunulmaktadır. Her dosya; mevcut belgeler, tarafların talepleri, uygulanacak kurallar ve olası hukuki yollar birlikte değerlendirilerek ele alınır. Görüşmeler Türkçe, İngilizce ve Arapça yapılabilir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -218,17 +216,56 @@
         "tahkim-ve-uyusmazlik-cozumu",
         "kisisel-verilerin-korunmasi"
       ],
-      "directions": "Büro Cumhuriyet Mahallesi, Beycenter Residence K:10 D:79 adresindedir. Görüşme öncesinde bina girişini ve kat bilgisini not edin; adliye işlemleri ile büro görüşmesi farklı adreslerde yürütülür."
+      "cardSummary": "İşçilik alacakları, icra ve aile uyuşmazlıkları.",
+      "sections": [
+        {
+          "id": "is-icra-aile",
+          "title": "İş, icra ve aile hukuku uyuşmazlıkları",
+          "paragraphs": [
+            "İşçilik alacağı başvurusunda iş sözleşmesi, bordrolar, ödeme kayıtları ve fesih belgeleri birlikte incelenir. Sigortasız çalışma iddiasında çalışma dönemini ve ilişkiyi gösteren kayıtlar değerlendirmeye yardımcı olur.",
+            "Ödeme emri, boşanma veya nafaka başvurusunda tebligatın tamamı, tebliğ tarihi, mevcut dosya numarası ve ilgili önceki kararlar hazırlanmalıdır. Başvuru ve itiraz süreleri dosyanın türüne göre ayrı kontrol edilir."
+          ]
+        },
+        {
+          "id": "kira-miras-kurumsal",
+          "title": "Kira, miras ve kurumsal dosyalar",
+          "paragraphs": [
+            "Kira dosyalarında sözleşme ve ödeme kayıtları; miras uyuşmazlıklarında tapu ve mirasçılık belgesi; şirket dosyalarında sözleşmeler, sicil kayıtları ve yetki belgeleri uyuşmazlığın çerçevesini belirlemeye yardımcı olur."
+          ]
+        },
+        {
+          "id": "belge-hazirligi",
+          "title": "Görüşme öncesinde hazırlanacak belgeler",
+          "paragraphs": [
+            "Tebligat ve tebliğ tarihi, sözleşmeler, ödeme kayıtları, mevcut dosya numarası ve ilgili yazışmaları tarih sırasıyla hazırlayın. İlk değerlendirmede eksik belge ve dosyaya özgü süreler ayrıca belirlenir."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Esenyurt hangi adli yargı çevresindedir?",
+          "answer": "Esenyurt, Büyükçekmece Adliyesinin adli yargı çevresindedir. Somut davada görev ve yetki ayrıca incelenir; resmî kaynak ve ayrıntı yukarıdaki adliye bölümündedir."
+        },
+        {
+          "question": "Ödeme emri geldiğinde hangi belgeler gerekir?",
+          "answer": "Ödeme emrinin tamamı, tebliğ belgesi veya tebliğ tarihi, varsa dayanak sözleşme ve ödeme kayıtları hazırlanmalıdır. Süre, takip türüne göre dosya üzerinden değerlendirilir."
+        },
+        {
+          "question": "İş uyuşmazlığında ilk değerlendirme nasıl yapılır?",
+          "answer": "Çalışma dönemi, sigorta kayıtları, sözleşme, ücret ve fesih belgeleri birlikte incelenir. Sigortasız çalışma hakkında hizmet tespiti rehberini inceleyebilirsiniz.",
+          "articleRef": "sigortasiz-calistim-hizmet-tespiti-davasi"
+        }
+      ],
+      "guideLink": "Esenyurt Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Esenyurt hangi adli yargı çevresindedir?"
     },
     "buyukcekmece": {
       "name": "Büyükçekmece",
-      "pageTitle": "Büyükçekmece Avukat ve Hukuki Danışmanlık",
-      "h1": "Büyükçekmece'de avukat: dava ve danışmanlık süreçleri",
-      "summary": "Büyükçekmece’den Esenyurt’taki büroya ulaşım ve görüşme hazırlığı; kira, iş, icra ve aile hukuku uyuşmazlıklarında dosya ve belge değerlendirmesi.",
+      "pageTitle": "Büyükçekmece Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Büyükçekmece Avukat Av. Burak Uğur Öztürk",
+      "summary": "Büyükçekmece'de kira, miras, iş ve aile hukuku dosyalarında hukuki danışmanlık, belge değerlendirmesi ve dava takibi.",
       "body": [
-        "Esenyurt, Beylikdüzü, Çatalca ve Büyükçekmece'nin kendisinde ortaya çıkan birçok hukuki uyuşmazlıkta görevli ve yetkili merci genellikle Büyükçekmece Adliyesi'dir; somut dosyanın türüne göre görevli mahkeme değişebileceğinden bu husus her olayda ayrıca değerlendirilmelidir.",
-        "Bölgede en sık karşılaşılan uyuşmazlıklar arasında işçilik alacakları ve işe iade talepleri, icra takibine itiraz ve haciz işlemleri, boşanma ve velayet davaları, kira tespiti ile tahliye talepleri ve miras paylaşımından doğan anlaşmazlıklar yer almaktadır.",
-        "Bir görüşme öncesinde kimlik belgesi, varsa mevcut sözleşme veya tebligat evrakı, iş ilişkisine dair belgeler (bordro, işe giriş-çıkış bildirgesi) veya tapu/kira sözleşmesi gibi dosyaya özgü belgelerin hazır bulundurulması, ilk değerlendirmenin daha hızlı yapılmasını sağlar."
+        "Büyükçekmece ile ilgili kira, miras, iş ve aile hukuku başvurularında sözleşmeler, tapu kayıtları, ödeme belgeleri ve mevcut dosya evrakı birlikte değerlendirilir. Uyuşmazlığın niteliğine göre danışmanlık ve dava takibi süreci belirlenir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -237,17 +274,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Büyükçekmece’deki taşınmaza ilişkin bir başvuruda, taşınmazın mahalle ve açık adresini sözleşmeyle birlikte hazırlayın. Büyükçekmece Adliyesi’ndeki dosya işlemleri ile Esenyurt’taki büro görüşmesi için ayrı ulaşım planlayın."
+      "cardSummary": "Kira, miras ve aile hukuku süreçleri.",
+      "sections": [
+        {
+          "id": "kira-miras",
+          "title": "Kira ve miras dosyalarında ilk değerlendirme",
+          "paragraphs": [
+            "Kira bedeli uyuşmazlığında sözleşme, ödeme geçmişi ve bildirimler; miras dosyasında mirasçılık belgesi, tapu kayıtları ve varsa devir belgeleri hazırlanır. Birden fazla taşınmaz varsa evrakın taşınmaz bazında ayrılması yararlıdır."
+          ]
+        },
+        {
+          "id": "aile-is",
+          "title": "Aile ve iş hukuku süreçleri",
+          "paragraphs": [
+            "Aile dosyalarında önceki kararlar, protokoller ve malvarlığına ilişkin kayıtlar; iş dosyalarında çalışma ve ücret belgeleri incelenir. Süreler ve başvuru yolu dosyaya göre ayrıca kontrol edilir."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kira bedeli uyuşmazlığında hangi kayıtlar önemlidir?",
+          "answer": "Kira sözleşmesi, ödeme geçmişi, varsa yenileme anlaşması ve ihtarnameler birlikte değerlendirilir.",
+          "articleRef": "tr-makaleler-kira-bedelinin-tespiti-davasi"
+        },
+        {
+          "question": "Mimaroba için ayrı bir konu rehberi var mı?",
+          "answer": "Mimaroba bölge rehberinde site yönetimi, kira ve miras dosyalarının belge hazırlığı ayrıca açıklanır. İlgili bölge bağlantısı bu sayfada yer alır."
+        }
+      ],
+      "guideLink": "Büyükçekmece Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Büyükçekmece hangi adli yargı çevresindedir?"
     },
     "beylikduzu": {
       "name": "Beylikdüzü",
-      "pageTitle": "Beylikdüzü Avukat ve Hukuki Danışmanlık",
-      "h1": "Beylikdüzü'nde avukat: kira, iş ve aile hukuku uyuşmazlıkları",
-      "summary": "Beylikdüzü’nden Esenyurt Cumhuriyet Mahallesi’ndeki büroya ulaşım; kira, iş ve aile hukuku dosyalarında görüşme seçenekleri ve gerekli belgeler.",
+      "pageTitle": "Beylikdüzü Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Beylikdüzü Avukat Av. Burak Uğur Öztürk",
+      "summary": "Beylikdüzü'nde kira, iş, icra ve aile hukuku uyuşmazlıklarında hukuki danışmanlık ve dava takibi. Av. Burak Uğur Öztürk.",
       "body": [
-        "Beylikdüzü, yoğun konut ve işyeri nüfusuyla kira ilişkileri, iş sözleşmesi uyuşmazlıkları ve aile hukukuna ilişkin başvuruların sık görüldüğü bir bölgedir; bölgede ortaya çıkan uyuşmazlıklarda da çoğunlukla Büyükçekmece Adliyesi görevli ve yetkili mercidir.",
-        "Kiracı veya kiraya veren sıfatıyla tahliye, kira tespiti ve depozito uyuşmazlıkları; işçi veya işveren sıfatıyla kıdem-ihbar tazminatı ve fazla mesai alacakları; icra takibine itiraz ve haciz süreçleri bölgeden gelen başvurularda öne çıkan konular arasındadır.",
-        "Görüşmeler talebe göre büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk görüşme öncesinde dosyaya ilişkin belgelerin (kira sözleşmesi, ödeme dekontları, iş sözleşmesi vb.) hazırlanması sürecin verimliliğini artırır."
+        "Beylikdüzü'nde kira, iş, icra, boşanma ve aile hukuku uyuşmazlıklarında hukuki danışmanlık ve dava takibi hizmeti sunulmaktadır. Başvurular; sözleşmeler, tebligatlar, ödeme belgeleri ve dosyaya özgü diğer deliller üzerinden değerlendirilir."
       ],
       "relatedAreas": [
         "kira-hukuku",
@@ -255,17 +319,45 @@
         "bosanma-aile-hukuku",
         "icra-hukuku"
       ],
-      "directions": "Beylikdüzü’ndeki apartman veya site kaynaklı bir uyuşmazlıkta blok ve bağımsız bölüm bilgileri ile varsa yönetim yazışmalarını hazırlayın. Bu bilgiler, aynı site içindeki farklı taşınmazların karıştırılmasını önler."
+      "cardSummary": "Kira, iş ve site yönetimi dosyalarında belge hazırlığı.",
+      "sections": [
+        {
+          "id": "kira-is",
+          "title": "Kira ve iş uyuşmazlıkları",
+          "paragraphs": [
+            "Kiracının erken teslimi, kira bedeli, depozito ve tahliye taleplerinde sözleşme ile teslim ve ödeme kayıtları birlikte değerlendirilir. İş dosyalarında çalışma dönemi, ücret, fesih ve varsa arabuluculuk evrakı incelenir."
+          ]
+        },
+        {
+          "id": "site-belgeleri",
+          "title": "Site ve apartman dosyalarında belge hazırlığı",
+          "paragraphs": [
+            "Site veya apartman dosyalarında site adı, blok, bağımsız bölüm ve yönetim yazışmaları; iş uyuşmazlıklarında bordro, sözleşme ve fesih belgeleri birlikte hazırlanmalıdır. Yönetim planı, ilgili karar ve hesap dökümleri talebin dayanağını değerlendirmeye yardımcı olur."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kiracı erken çıkarsa kalan kiraların tamamını öder mi?",
+          "answer": "Sözleşme ve teslim bilgileri incelenmeden kesin tutar söylenemez. Erken tahliyede kira ilişkisinin nasıl değerlendirildiğini ilgili rehberde inceleyebilirsiniz.",
+          "articleRef": "kiraci-erken-cikarsa-kalan-kira"
+        },
+        {
+          "question": "Tüketici hakem heyeti kararına itiraz için ne hazırlanmalı?",
+          "answer": "Kararın tamamı, tebliğ bilgileri, başvuru dosyası ve işlem belgeleri hazırlanmalıdır. Başvuru yolu ve süre somut dosyaya göre kontrol edilir.",
+          "articleRef": "tuketici-hakem-heyeti-kararina-itiraz"
+        }
+      ],
+      "guideLink": "Beylikdüzü Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Beylikdüzü hangi adli yargı çevresindedir?"
     },
     "avcilar": {
       "name": "Avcılar",
-      "pageTitle": "Avcılar Avukat ve Hukuki Danışmanlık",
-      "h1": "Avcılar'da avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Avcılar’dan Esenyurt bürosuna ulaşım ve uzaktan görüşme seçenekleri; işçilik alacakları, kira ve icra uyuşmazlıklarında belge ve dosya hazırlığı.",
+      "pageTitle": "Avcılar Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Avcılar Avukat Av. Burak Uğur Öztürk",
+      "summary": "Avcılar'da kentsel dönüşüm, kira, iş ve icra uyuşmazlıklarında sözleşme incelemesi, hukuki danışmanlık ve dava takibi.",
       "body": [
-        "Avcılar'da ortaya çıkan hukuki uyuşmazlıklarda görevli ve yetkili mahkeme, uyuşmazlığın türüne ve tarafların yerleşim yerine göre değişebilir; bu husus her dosyada ayrıca değerlendirilir.",
-        "Bölgeden gelen başvurularda en sık karşılaşılan konular arasında işçilik alacakları ve işe iade talepleri, icra takibine itiraz, kira tespiti ve tahliye davaları, boşanma ve velayet uyuşmazlıkları ile miras paylaşımı yer almaktadır.",
-        "Görüşmeler talebe göre Esenyurt'taki büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk değerlendirme için dosyaya ilişkin belgelerin hazır bulundurulması önerilir."
+        "Avcılar ile ilgili başvurularda kentsel dönüşüm sözleşmeleri, kira ilişkileri ve bunlarla bağlantılı ödeme veya tahliye uyuşmazlıkları dosyanın belgeleri üzerinden ele alınır. İş ve icra başvuruları da kendi usul ve süreleri bakımından ayrıca değerlendirilir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -274,17 +366,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Avcılar’da işyeri ile ikamet adresi farklı mahallelerdeyse, başvuru belgelerinde her iki adresi de ayrı belirtin. İş sözleşmesi, bordro ve işverenden gelen bildirimleri görüşmeden önce tarih sırasıyla düzenleyin."
+      "cardSummary": "Kentsel dönüşüm ve kira sözleşmeleri.",
+      "sections": [
+        {
+          "id": "donusum-sozlesme",
+          "title": "Kentsel dönüşüm ve sözleşme incelemesi",
+          "paragraphs": [
+            "Tapu ve bağımsız bölüm bilgileri, sözleşmenin tüm ekleri, paydaş kararları ve bildirimler birlikte hazırlanmalıdır. Teslim, ödeme, temsil yetkisi ve tarafların yükümlülükleri sözleşmenin bütünü içinde incelenir."
+          ]
+        },
+        {
+          "id": "kira-icra",
+          "title": "Kira ve icra dosyaları",
+          "paragraphs": [
+            "Erken teslim, tahliye taahhüdü veya ödeme emri söz konusuysa ilgili belgenin aslı, tebliğ bilgileri ve ödeme kayıtları önem taşır. Farklı takip ve dava türleri için tek bir süre varsayılmaz."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Dönüşüm sözleşmesinin yalnız imza sayfası yeterli mi?",
+          "answer": "Sözleşmenin tamamı, ekleri, tapu bilgileri ve ilgili kararlar birlikte incelenmelidir."
+        },
+        {
+          "question": "Tahliye taahhüdü nasıl değerlendirilir?",
+          "answer": "Belgenin düzenlenme ve teslim koşulları, tarihleri ve kira ilişkisi birlikte ele alınır.",
+          "articleRef": "tahliye-taahhudu-ne-zaman-gecerlidir"
+        }
+      ],
+      "guideLink": "Avcılar Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Avcılar hangi adli yargı çevresindedir?"
     },
     "kucukcekmece": {
       "name": "Küçükçekmece",
-      "pageTitle": "Küçükçekmece Avukat ve Hukuki Danışmanlık",
-      "h1": "Küçükçekmece'de avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Küçükçekmece’den Esenyurt bürosuna ulaşım ve uzaktan görüşme; kira, iş, icra ve aile hukuku dosyalarında ilk değerlendirme için belge hazırlığı.",
+      "pageTitle": "Küçükçekmece Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Küçükçekmece Avukat Av. Burak Uğur Öztürk",
+      "summary": "Küçükçekmece'de konut ve işyeri kirası, tüketici ve icra uyuşmazlıklarında başvuru yolları, hukuki danışmanlık ve dava takibi.",
       "body": [
-        "Küçükçekmece'de ortaya çıkan hukuki uyuşmazlıklarda görevli ve yetkili mahkeme, uyuşmazlığın türüne ve tarafların yerleşim yerine göre değişebilir; bu husus her dosyada ayrıca değerlendirilir.",
-        "Bölgeden gelen başvurularda en sık karşılaşılan konular arasında kira tespiti ve tahliye davaları, icra takibine itiraz ve haciz işlemleri, işçilik alacakları, boşanma ve aile hukuku uyuşmazlıkları ile miras paylaşımı yer almaktadır.",
-        "Görüşmeler talebe göre Esenyurt'taki büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk değerlendirme için dosyaya ilişkin belgelerin hazır bulundurulması önerilir."
+        "Küçükçekmece ile ilgili konut ve işyeri kiraları, tüketici işlemleri ve icra başvurularında işlem belgeleri, bildirimler ve mevcut kararlar değerlendirilir. Başvuru yolu, görev ve yetki dosyanın niteliğine göre belirlenir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -293,17 +412,45 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Küçükçekmece’deki taşınmazın adresi ile tarafların güncel tebligat adreslerini ayrı hazırlayın. Taşınma veya adres değişikliği varsa, sözleşmedeki eski adresle güncel adres arasındaki farkı dosya notunda belirtin."
+      "cardSummary": "Tüketici, kira ve icra başvuruları.",
+      "sections": [
+        {
+          "id": "tuketici",
+          "title": "Tüketici işlemleri ve kararlar",
+          "paragraphs": [
+            "Fatura veya sözleşme, sipariş ve teslim kayıtları, satıcıyla yazışmalar, servis evrakı ve varsa hakem heyeti kararı dosyanın temel belgeleridir. Karar varsa tebliğ bilgileri ayrıca hazırlanmalıdır."
+          ]
+        },
+        {
+          "id": "kira-odeme",
+          "title": "Kira, depozito ve ödeme kayıtları",
+          "paragraphs": [
+            "Kira sözleşmesi ile depozito ve kira ödemelerini gösteren kayıtlar, teslim tutanağı ve yazışmalar birlikte incelenir. İcra dosyası açılmışsa takip evrakı ve dosya numarası değerlendirmeye eklenir."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ayıplı ürün başvurusunda ne hazırlanmalı?",
+          "answer": "Satın alma belgesi, teslim bilgileri, ayıbı gösteren kayıtlar ve satıcı veya servisle yazışmalar birlikte hazırlanır.",
+          "articleRef": "ayipli-mal-tuketici-haklari"
+        },
+        {
+          "question": "Hakem heyeti kararına itirazda hangi tarih önemlidir?",
+          "answer": "Kararın tebliğine ilişkin kayıtlar hazırlanmalıdır; başvuru süresi ve yolu somut karar üzerinden kontrol edilir.",
+          "articleRef": "tuketici-hakem-heyeti-kararina-itiraz"
+        }
+      ],
+      "guideLink": "Küçükçekmece Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Küçükçekmece hangi adli yargı çevresindedir?"
     },
     "silivri": {
       "name": "Silivri",
-      "pageTitle": "Silivri Avukat ve Hukuki Danışmanlık",
-      "h1": "Silivri'de avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Silivri’den Esenyurt bürosuna ulaşım ve uzaktan ilk görüşme; kira, miras ve iş uyuşmazlıklarında taşınmaz, sözleşme ve dosya bilgilerinin hazırlanması.",
+      "pageTitle": "Silivri Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Silivri Avukat Av. Burak Uğur Öztürk",
+      "summary": "Silivri'de miras, paydaşlı taşınmaz, kira ve iş uyuşmazlıklarında belge değerlendirmesi, hukuki danışmanlık ve dava takibi.",
       "body": [
-        "Silivri'de ortaya çıkan hukuki uyuşmazlıklarda görevli ve yetkili mahkeme, uyuşmazlığın türüne ve tarafların yerleşim yerine göre değişebilir; bu husus her dosyada ayrıca değerlendirilir.",
-        "Bölgeden gelen başvurularda en sık karşılaşılan konular arasında kira ve tahliye uyuşmazlıkları, icra takibine itiraz, işçilik alacakları, boşanma ve velayet davaları ile miras paylaşımı yer almaktadır.",
-        "Görüşmeler talebe göre Esenyurt'taki büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk değerlendirme için dosyaya ilişkin belgelerin hazır bulundurulması önerilir."
+        "Silivri ile ilgili miras ve paydaşlı taşınmaz dosyalarında mülkiyet kayıtları, pay oranları, kullanım durumu ve önceki işlemler birlikte incelenir. Kira ve iş uyuşmazlıklarında ise sözleşme, ödeme ve bildirim belgeleri değerlendirilir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -312,17 +459,45 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Silivri’den yüz yüze görüşme için yola çıkmadan önce görüşme saatini ve gerekli belge listesini teyit edin. Taşınmaz birden çok paydaşa aitse her taşınmazın tapu bilgilerini ayrı dosyalamak uzaktan ilk değerlendirmeyi kolaylaştırır."
+      "cardSummary": "Paydaşlı taşınmaz ve miras paylaşımı.",
+      "sections": [
+        {
+          "id": "paydas-tasinmaz",
+          "title": "Paydaşlı taşınmazlarda belge düzeni",
+          "paragraphs": [
+            "Her taşınmaz için tapu bilgileri, paydaş listesi, kullanım veya kira kayıtları ve varsa önceki anlaşmalar ayrı hazırlanmalıdır. Ortaklığın giderilmesi ve kullanım karşılığı talepler farklı koşullara göre değerlendirilir."
+          ]
+        },
+        {
+          "id": "miras-paylasim",
+          "title": "Miras paylaşımı ve devir kayıtları",
+          "paragraphs": [
+            "Mirasçılık belgesi, tapu kayıtları ve önceki devir belgeleri incelenir. Bir payın satışı veya taşınmazın tek kişi tarafından kullanılması söz konusuysa buna ilişkin tarih ve bildirimler de dosyaya eklenir."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Birden fazla taşınmazın evrakı nasıl hazırlanmalı?",
+          "answer": "Her taşınmazın tapu bilgileri ve kullanım belgeleri ayrı dosyalanmalıdır; mirasçılık belgesi ve ilgili devir kayıtları birlikte sunulabilir.",
+          "articleRef": "ortakligin-giderilmesi-davasi"
+        },
+        {
+          "question": "Pay satışı veya tek başına kullanım ayrı değerlendirilir mi?",
+          "answer": "Pay satışı, kullanım ve varsa yapılan bildirimler farklı hukuki taleplerle ilgili olabilir; somut işlemler ayrı incelenir.",
+          "articleRef": "sufa-onalim-hakki-davasi"
+        }
+      ],
+      "guideLink": "Silivri Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Silivri hangi adli yargı çevresindedir?"
     },
     "catalca": {
       "name": "Çatalca",
-      "pageTitle": "Çatalca Avukat ve Hukuki Danışmanlık",
-      "h1": "Çatalca'da avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Çatalca’dan Esenyurt bürosuna ulaşım ve görüşme planlaması; miras ve taşınmazla bağlantılı uyuşmazlıklarda parsel, tapu ve dosya bilgilerinin hazırlanması.",
+      "pageTitle": "Çatalca Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Çatalca Avukat Av. Burak Uğur Öztürk",
+      "summary": "Çatalca'da arazi, miras, kamulaştırma ve kira uyuşmazlıklarında hukuki danışmanlık, dosya değerlendirmesi ve dava takibi.",
       "body": [
-        "Çatalca'da ortaya çıkan birçok hukuki uyuşmazlıkta görevli ve yetkili merci genellikle Büyükçekmece Adliyesi'dir; somut dosyanın türüne göre görevli mahkeme değişebileceğinden bu husus her olayda ayrıca değerlendirilmelidir.",
-        "Bölgeden gelen başvurularda en sık karşılaşılan konular arasında işçilik alacakları ve işe iade talepleri, icra takibine itiraz, kira tespiti ile tahliye talepleri, boşanma ve velayet davaları ve miras paylaşımından doğan anlaşmazlıklar yer almaktadır.",
-        "Görüşmeler talebe göre Esenyurt'taki büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk değerlendirme için dosyaya ilişkin belgelerin hazır bulundurulması önerilir."
+        "Çatalca ile ilgili arazi, miras, kamulaştırma ve kira başvurularında taşınmazın ada-parsel bilgileri, mülkiyet geçmişi ve ilgili işlem belgeleri birlikte değerlendirilir. Görevli ve yetkili merci, başvurunun türüne göre ayrıca belirlenir."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -331,17 +506,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Çatalca’daki bir taşınmaz veya miras başvurusunda yalnızca köy veya mahalle adını değil, ada-parsel bilgilerini de hazırlayın. Farklı yerleşimlerde birden çok taşınmaz varsa belgeleri taşınmaz bazında ayırın."
+      "cardSummary": "Arazi, miras ve kamulaştırma dosyaları.",
+      "sections": [
+        {
+          "id": "arazi-kamulastirma",
+          "title": "Arazi ve kamulaştırma belgeleri",
+          "paragraphs": [
+            "Güncel tapu bilgileri, ada-parsel kayıtları, varsa idari işlem, karar, tebligat ve fiilî kullanım belgeleri hazırlanmalıdır. İdari işlemle fiilî müdahalenin niteliği aynı kabul edilmeden dosya incelenir."
+          ]
+        },
+        {
+          "id": "miras-kira",
+          "title": "Miras ve kira bağlantılı başvurular",
+          "paragraphs": [
+            "Mirasçılık belgesi, pay veya devir kayıtları ve varsa kira sözleşmeleri birlikte değerlendirilir. Farklı yerleşimlerdeki taşınmazlar için belgeleri ada-parsel bazında ayırmak karışıklığı önler."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Arazi için yalnız mahalle adı yeterli mi?",
+          "answer": "Taşınmazı ayırt etmek için ada-parsel ve tapu bilgileri ile ilgili işlem belgeleri hazırlanmalıdır."
+        },
+        {
+          "question": "Kamulaştırmasız el atma başvurusunda ne incelenir?",
+          "answer": "Mülkiyet kaydı, müdahalenin niteliği, idari belgeler ve kullanım durumu birlikte değerlendirilir; başvuru yolu ve süre dosyaya göre belirlenir.",
+          "articleRef": "kamulastirmasiz-el-atma-fiili-hukuki-el-atma"
+        }
+      ],
+      "guideLink": "Çatalca Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Çatalca hangi adli yargı çevresindedir?"
     },
     "mimaroba": {
       "name": "Mimaroba",
-      "pageTitle": "Mimaroba Avukat ve Hukuki Danışmanlık",
-      "h1": "Mimaroba'da avukat: hukuki danışmanlık ve dava takibi",
-      "summary": "Büyükçekmece’nin Mimaroba Mahallesi’nden Esenyurt bürosuna ulaşım; kira, site yönetimi, iş ve aile uyuşmazlıklarında görüşme ve belge hazırlığı.",
+      "pageTitle": "Mimaroba Avukat | Av. Burak Uğur Öztürk",
+      "h1": "Mimaroba Av. Burak Uğur Öztürk",
+      "summary": "Mimaroba'da kira, site yönetimi, miras ve aile hukuku uyuşmazlıklarında hukuki danışmanlık ve dava takibi. Av. Burak Uğur Öztürk.",
       "body": [
-        "Mimaroba, Büyükçekmece ilçesine bağlı bir mahalle olup bölgedeki hukuki uyuşmazlıklarda da genellikle Büyükçekmece Adliyesi görevli ve yetkili mercidir; somut dosyanın türüne göre bu husus ayrıca değerlendirilir.",
-        "Bölgeden gelen başvurularda en sık karşılaşılan konular arasında kira tespiti ve tahliye davaları, işçilik alacakları ve işe iade talepleri, icra takibine itiraz, boşanma ve aile hukuku uyuşmazlıkları ile miras paylaşımı yer almaktadır.",
-        "Görüşmeler talebe göre Esenyurt'taki büroda yüz yüze veya görüntülü/telefon araması ile uzaktan planlanabilir; ilk değerlendirme için dosyaya ilişkin belgelerin hazır bulundurulması önerilir."
+        "Mimaroba'da avukat desteği arayan kişiler için kira, site yönetimi, miras, iş ve aile hukuku uyuşmazlıklarında hukuki danışmanlık ve dava takibi hizmeti sunulmaktadır. İlk değerlendirmede uyuşmazlığın konusu, mevcut belgeler ve izlenebilecek hukuki yollar birlikte ele alınır."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -350,25 +552,66 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Mimaroba, Büyükçekmece ilçesine bağlı bir mahalledir; büro Esenyurt’tadır ve Mimaroba’da ayrı bir şube bulunmamaktadır. Site kaynaklı başvurularda site adı, blok, bağımsız bölüm ve ilgili yönetim kararlarını birlikte hazırlayın."
+      "cardSummary": "Site yönetimi, kira ve miras uyuşmazlıkları.",
+      "sections": [
+        {
+          "id": "site-kira",
+          "title": "Mimaroba'da site yönetimi ve kira uyuşmazlıkları",
+          "paragraphs": [
+            "Aidat ve ortak gider talepleri, yönetim kararları, kira bedeli ve tahliye uyuşmazlıklarında her dosyanın dayanak belgeleri farklıdır. Site yönetimi başvurularında yönetim planı, ilgili karar, hesap dökümü ve ödeme belgeleri; kira dosyalarında sözleşme, dekontlar ve varsa ihtarname birlikte değerlendirilmelidir."
+          ]
+        },
+        {
+          "id": "belge-hazirligi",
+          "title": "Görüşme öncesinde hangi belgeler hazırlanmalı?",
+          "paragraphs": [
+            "Site adı, blok ve bağımsız bölüm bilgileri, uyuşmazlıkla ilgili yazışmalar ve tebligatlar hazırlanmalıdır. Miras dosyalarında mirasçılık belgesi ve taşınmaz kayıtları; iş uyuşmazlıklarında sözleşme, bordro ve fesih belgeleri değerlendirmeye yardımcı olur."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Site aidatına ilişkin talep nasıl değerlendirilir?",
+          "answer": "Talebin dayanağı, yönetim planı, kararlar ve hesap dökümü birlikte incelenir."
+        },
+        {
+          "question": "Kiracı erken çıkarsa kalan kiraların tamamını öder mi?",
+          "answer": "Sözleşme ve teslim bilgileri incelenmeden kesin tutar söylenemez; kiracının erken çıkması rehberi bu konuya ilişkin genel açıklamalar içerir.",
+          "articleRef": "kiraci-erken-cikarsa-kalan-kira"
+        },
+        {
+          "question": "Miras kalan taşınmaz için ilk hangi belgeler gerekir?",
+          "answer": "Mirasçılık belgesi, tapu bilgileri ve varsa paylaşım veya devir belgeleri hazırlanır.",
+          "articleRef": "miras-kalan-ev-ecrimisil-davasi"
+        }
+      ],
+      "guideLink": "Mimaroba Avukat sayfasını inceleyin",
+      "jurisdictionTitle": "Mimaroba hangi adli yargı çevresindedir?"
     }
   },
   "serviceRegionsPage": {
     "meta": {
       "title": "Hizmet Verilen Bölgeler",
-      "description": "Esenyurt, Büyükçekmece ve Beylikdüzü'nde iş hukuku, icra hukuku, boşanma ve aile hukuku, kira hukuku ve miras hukuku alanlarında hukuki destek."
+      "description": "Esenyurt, Beylikdüzü, Büyükçekmece, Mimaroba, Avcılar, Küçükçekmece, Silivri ve Çatalca için bölge rehberleri, ilgili hukuk alanları ve makaleler."
     },
     "label": "Bölgeler",
-    "title": "Hizmet verilen bölgeler",
-    "lead": "Esenyurt merkezli büro; Büyükçekmece ve Beylikdüzü'ndeki müvekkillere de aynı çalışma alanlarında hizmet vermektedir."
+    "title": "Hizmet Verilen Bölgeler",
+    "lead": "Av. Burak Uğur Öztürk; Esenyurt, Beylikdüzü, Büyükçekmece, Mimaroba, Avcılar, Küçükçekmece, Silivri ve Çatalca ile ilgili hukuki uyuşmazlıklarda danışmanlık ve dava takibi hizmeti sunar. Bölge sayfalarında ilgili hukuk alanlarını, hazırlanacak belgeleri ve hukuki süreçlere ilişkin açıklamaları inceleyebilirsiniz."
   },
   "serviceRegionDetail": {
     "back": "Tüm bölgeler",
     "relatedAreasLabel": "İlgili Çalışma Alanları",
     "contactCta": "İletişime geçin",
-    "directionsTitle": "Esenyurt bürosuna ulaşım",
-    "directionsLink": "Yol tarifini görüntüleyin",
-    "mapTitle": "Esenyurt hukuk bürosunun konumu"
+    "tocLabel": "İçindekiler",
+    "faqTitle": "Sık sorulan sorular",
+    "articlesTitle": "İlgili makaleler",
+    "articlesLead": "Bu bölgedeki başvurularla bağlantılı konular için aşağıdaki mevcut rehberleri inceleyebilirsiniz.",
+    "toolsTitle": "İlgili hesaplama araçları",
+    "regionsTitle": "İlgili bölge rehberleri",
+    "jurisdictionText": "Esenyurt, Büyükçekmece Adliyesinin adli yargı çevresindedir. Büyükçekmece Adliyesinin yargı çevresi Büyükçekmece, Beylikdüzü ve Esenyurt ilçelerini kapsar. Bununla birlikte somut dosyada görevli ve yetkili mahkeme; uyuşmazlığın türü, özel yargı çevresi düzenlemeleri ve kanuni yetki kurallarına göre ayrıca belirlenir.",
+    "jurisdictionCaveat": "Bu açıklama, tüm iş, tüketici, ticaret veya ağır ceza dosyalarının mutlaka aynı adliyede görüleceği anlamına gelmez. İlçenin bağlı olduğu yargı çevresi ile belirli bir dava türünün görev ve yetki kuralları birbirinden ayrılmalıdır.",
+    "jurisdictionSource": "Resmî kaynak: Bakırköy Adliyesi 2025 Yılı Faaliyet Raporu, Mart 2026, s. 3",
+    "mimarobaJurisdictionIntro": "Mimaroba, Büyükçekmece ilçesine bağlı bir mahalledir ve Büyükçekmece Adliyesinin adli yargı çevresi kapsamında yer alır."
   },
   "profilePage": {
     "meta": {
@@ -415,7 +658,8 @@
     "relatedLabel": "İlgili Makaleler",
     "authorLabel": "Yazar",
     "authorDescription": "İstanbul Barosu · Sicil No: 84442 · Çalışma dilleri: Türkçe, İngilizce ve Arapça.",
-    "sourcesLabel": "Resmî mevzuat kaynakları"
+    "sourcesLabel": "Resmî mevzuat kaynakları",
+    "regionsLabel": "İlgili bölge rehberleri"
   },
   "toolsPage": {
     "meta": {

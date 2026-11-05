@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-2a54a89c292b4baab2c567dc435d50a2",
+    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-8cc44accf5fa406a8193ad15393db623",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -285,12 +285,12 @@
       "trustHostHeader": false,
       "isExperimentalCompile": false
     },
-    "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
+    "htmlLimitedBots": ".*",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "skipTrailingSlashRedirect": true,
     "turbopack": {
-      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-2a54a89c292b4baab2c567dc435d50a2"
+      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-8cc44accf5fa406a8193ad15393db623"
     },
     "_originalRedirects": [
       {
@@ -310,7 +310,7 @@
       }
     ]
   },
-  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-2a54a89c292b4baab2c567dc435d50a2",
+  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-release-8cc44accf5fa406a8193ad15393db623",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

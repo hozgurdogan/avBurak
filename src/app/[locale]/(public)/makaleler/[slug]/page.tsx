@@ -17,6 +17,7 @@ import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema, buildArticleSchema } from '@/lib/structured-data';
 import { articleExcerpt, articleModifiedAt } from '@/lib/site';
 import { articleSources } from '@/lib/article-sources';
+import { regionsForArticle } from '@/content/region-guides';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -68,7 +69,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     getTranslations('articleDetail'),
     getTranslations('article'),
     getTranslations('nav'),
-    renderArticleMarkdown(article.contentMd),
+    renderArticleMarkdown(article.contentMd, [article.title, article.sourceTitle]),
     getRelatedArticles(
       typedLocale,
       article.categories.map((c) => c.slug),
@@ -90,6 +91,9 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     { name: article.title, path: `makaleler/${slug}` },
   ];
   const sources = articleSources(article.contentMd);
+  const translatedSlugs = await getArticleAlternates(article.groupId);
+  const regions = regionsForArticle(translatedSlugs.tr);
+  const tRegions = await getTranslations('serviceRegions');
 
   return (
     <>
@@ -169,6 +173,14 @@ export default async function ArticleDetailPage({ params }: PageProps) {
               </ul>
             </section>
           ) : null}
+          {regions.length > 0 ? <section className="mt-10 border-t border-rule pt-6">
+            <h2 className="label text-gold-800">{tDetail('regionsLabel')}</h2>
+            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-3">
+              {regions.map((region) => <li key={region}>
+                <Link href={`/bolgeler/${region}`} className="text-sm text-ink-muted underline hover:text-gold-800">{tRegions(`${region}.guideLink`)}</Link>
+              </li>)}
+            </ul>
+          </section> : null}
           <LegalDisclaimer className="mt-16" />
           <aside className="mt-10 border-t border-rule pt-6" aria-label={tDetail('authorLabel')}>
             <p className="label text-gold-800">{tDetail('authorLabel')}</p>

@@ -63,7 +63,8 @@ export default async function ServiceRegionsPage({ params }: PageProps) {
                 <h2 className="mt-3 font-display text-3xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                   {tRegions(`${slug}.name`)}
                 </h2>
-                <p className="mt-3 measure text-md text-ink-muted">{tRegions(`${slug}.summary`)}</p>
+                <p className="mt-3 measure text-md text-ink-muted">{tRegions(`${slug}.cardSummary`)}</p>
+                <p className="mt-4 text-sm text-gold-800 underline">{tRegions(`${slug}.guideLink`)}</p>
               </Link>
             </Reveal>
           ))}

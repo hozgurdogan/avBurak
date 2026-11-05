@@ -1,6 +1,7 @@
 import 'server-only';
 import { prisma } from '@/lib/prisma';
 import { isLocale, type Locale } from '@/i18n/locales';
+import { articleEditorial } from '@/content/article-editorial';
 
 /**
  * Read model for published articles.
@@ -22,6 +23,7 @@ export type ArticleCard = {
 };
 
 export type ArticleDetail = ArticleCard & {
+  sourceTitle: string;
   contentMd: string;
   metaTitle: string | null;
   metaDescription: string | null;
@@ -83,7 +85,7 @@ function toCard(row: RawCard, locale: Locale): ArticleCard {
   return {
     id: row.id,
     slug: row.slug,
-    title: row.title,
+    title: articleEditorial(locale, row.slug)?.title ?? row.title,
     summary: row.summary,
     readMinutes: row.readMinutes,
     publishedAt: row.publishedAt,
@@ -165,8 +167,9 @@ export async function getArticleBySlug(locale: Locale, slug: string): Promise<Ar
 
   return {
     ...toCard(row, locale),
+    sourceTitle: row.title,
     contentMd: row.contentMd,
-    metaTitle: row.metaTitle,
+    metaTitle: articleEditorial(locale, row.slug)?.metaTitle ?? row.metaTitle,
     metaDescription: row.metaDescription,
     groupId: row.groupId,
     updatedAt: row.updatedAt,
@@ -199,6 +202,24 @@ export async function getArticlesByCategory(
     select: cardSelect,
   });
   return rows.map((row) => toCard(row, locale));
+}
+
+export type RegionArticle = ArticleCard & { referenceSlug?: string };
+
+/** Only published translations of the curated articles are linked; no guessed EN/AR slugs. */
+export async function getRegionArticles(locale: Locale, preferredSlugs: readonly string[], take = 4): Promise<RegionArticle[]> {
+  const originals = await prisma.article.findMany({
+    where: { locale: 'tr', status: 'PUBLISHED', slug: { in: [...preferredSlugs] } },
+    select: { groupId: true, slug: true },
+  });
+  if (!originals.length) return [];
+  const rows = await prisma.article.findMany({
+    where: { locale, status: 'PUBLISHED', groupId: { in: originals.map((article) => article.groupId) } },
+    select: { ...cardSelect, groupId: true },
+  });
+  return rows.map((row) => ({ ...toCard(row, locale), referenceSlug: originals.find((article) => article.groupId === row.groupId)?.slug }))
+    .sort((a, b) => preferredSlugs.indexOf(a.referenceSlug ?? '') - preferredSlugs.indexOf(b.referenceSlug ?? ''))
+    .slice(0, take);
 }
 
 /** Other published articles sharing at least one category, for "related articles". */

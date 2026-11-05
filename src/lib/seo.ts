@@ -22,6 +22,7 @@ export function pageMetadata({
   languages,
   ogType = 'website',
   image,
+  brandTitle = true,
 }: {
   locale: Locale;
   path: string;
@@ -33,6 +34,8 @@ export function pageMetadata({
   languages?: Record<string, string>;
   ogType?: 'website' | 'article';
   image?: string | null;
+  /** Region titles already contain the exact editorial brand wording. */
+  brandTitle?: boolean;
 }): Metadata {
   const canonicalPath = `/${locale}${path ? `/${path}` : ''}`;
 
@@ -59,7 +62,7 @@ export function pageMetadata({
   const defaultLanguages = Object.fromEntries(
     routing.locales.map((l) => [l, `/${l}${path ? `/${path}` : ''}`]),
   );
-  const fullTitle = path && title !== SITE_NAME ? `${title} — ${SITE_NAME}` : title;
+  const fullTitle = brandTitle && path && title !== SITE_NAME ? `${title} — ${SITE_NAME}` : title;
 
   return {
     title: { absolute: fullTitle },

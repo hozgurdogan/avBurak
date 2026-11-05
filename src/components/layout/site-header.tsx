@@ -98,11 +98,10 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-5">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3 leading-tight text-ink"
-          aria-label={tSite('monogramLabel')}
+          className="flex min-w-0 items-center gap-3 leading-tight text-ink"
         >
           <Monogram className="h-9 w-auto shrink-0 text-ink" />
-          <span className="flex flex-col whitespace-nowrap">
+          <span className="flex min-w-0 flex-col">
             <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
             <span className="label text-ink-faint">{tSite('role')}</span>
           </span>

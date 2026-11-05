@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-11-05T22:35:13.107Z",
+  "scope": "Public HTTP baseline before deployment; no Search Console data",
+  "pages": [
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/esenyurt",
+      "status": 200,
+      "title": "Esenyurt Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Esenyurt&#x27;ta avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/esenyurt"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/buyukcekmece",
+      "status": 200,
+      "title": "Büyükçekmece Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Büyükçekmece&#x27;de avukat: dava ve danışmanlık süreçleri",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/buyukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/beylikduzu",
+      "status": 200,
+      "title": "Beylikdüzü Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Beylikdüzü&#x27;nde avukat: kira, iş ve aile hukuku uyuşmazlıkları",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/beylikduzu"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/mimaroba",
+      "status": 200,
+      "title": "Mimaroba Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Mimaroba&#x27;da avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/mimaroba"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/avcilar",
+      "status": 200,
+      "title": "Avcılar Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Avcılar&#x27;da avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/avcilar"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/kucukcekmece",
+      "status": 200,
+      "title": "Küçükçekmece Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Küçükçekmece&#x27;de avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/kucukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/silivri",
+      "status": 200,
+      "title": "Silivri Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Silivri&#x27;de avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/silivri"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/tr/bolgeler/catalca",
+      "status": 200,
+      "title": "Çatalca Avukat ve Hukuki Danışmanlık — Av. Burak Uğur Öztürk",
+      "h1": "Çatalca&#x27;da avukat: hukuki danışmanlık ve dava takibi",
+      "canonical": "https://burakugurozturk.av.tr/tr/bolgeler/catalca"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/esenyurt",
+      "status": 200,
+      "title": "Esenyurt Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Esenyurt",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/esenyurt"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/buyukcekmece",
+      "status": 200,
+      "title": "Büyükçekmece Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Dispute resolution and consultancy in Büyükçekmece",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/buyukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/beylikduzu",
+      "status": 200,
+      "title": "Beylikdüzü Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Tenancy, labour and family law support in Beylikdüzü",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/beylikduzu"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/mimaroba",
+      "status": 200,
+      "title": "Mimaroba Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Mimaroba",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/mimaroba"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/avcilar",
+      "status": 200,
+      "title": "Avcılar Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Avcılar",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/avcilar"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/kucukcekmece",
+      "status": 200,
+      "title": "Küçükçekmece Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Küçükçekmece",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/kucukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/silivri",
+      "status": 200,
+      "title": "Silivri Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Silivri",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/silivri"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/en/bolgeler/catalca",
+      "status": 200,
+      "title": "Çatalca Lawyer and Legal Consultancy — Av. Burak Uğur Öztürk",
+      "h1": "Legal consultancy and litigation support in Çatalca",
+      "canonical": "https://burakugurozturk.av.tr/en/bolgeler/catalca"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/esenyurt",
+      "status": 200,
+      "title": "محامي في إسنيورت واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في إسنيورت",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/esenyurt"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/buyukcekmece",
+      "status": 200,
+      "title": "محامي في بيوك تشكمجة واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "حل النزاعات والاستشارات في بيوك تشكمجة",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/buyukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/beylikduzu",
+      "status": 200,
+      "title": "محامي في بيليك دوزو واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "دعم قانوني في الإيجار والعمل والأسرة في بيليك دوزو",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/beylikduzu"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/mimaroba",
+      "status": 200,
+      "title": "محامي في ميماروبا واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في ميماروبا",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/mimaroba"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/avcilar",
+      "status": 200,
+      "title": "محامي في أفجلار واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في أفجلار",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/avcilar"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/kucukcekmece",
+      "status": 200,
+      "title": "محامي في كوتشوك تشكمجة واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في كوتشوك تشكمجة",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/kucukcekmece"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/silivri",
+      "status": 200,
+      "title": "محامي في سيليفري واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في سيليفري",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/silivri"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/ar/bolgeler/catalca",
+      "status": 200,
+      "title": "محامي في تشاتالجا واستشارات قانونية — Av. Burak Uğur Öztürk",
+      "h1": "استشارات قانونية ومتابعة قضايا في تشاتالجا",
+      "canonical": "https://burakugurozturk.av.tr/ar/bolgeler/catalca"
+    }
+  ],
+  "redirects": [
+    {
+      "url": "https://burakugurozturk.av.tr/calisma-alanlari/is-hukuku",
+      "status": 307,
+      "location": "/tr/calisma-alanlari/is-hukuku"
+    },
+    {
+      "url": "https://burakugurozturk.av.tr/bolgeler/beylikduzu",
+      "status": 307,
+      "location": "/tr/bolgeler/beylikduzu"
+    }
+  ]
+}

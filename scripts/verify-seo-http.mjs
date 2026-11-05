@@ -29,7 +29,8 @@ async function main() {
     if (path.endsWith('/esenyurt')) {
       const links = new Set([...html.matchAll(/href="\/tr\/calisma-alanlari\/([^"?#]+)/g)].map((match) => match[1]));
       assert.equal(links.size, 11);
-      assert.ok(html.includes('google.com/maps'));
+      assert.ok(html.includes('rayp.adalet.gov.tr'));
+      assert.ok(!html.includes('google.com/maps/dir/'));
     }
   }
   const robots = await (await get('/robots.txt')).text();

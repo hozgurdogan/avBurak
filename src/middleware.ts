@@ -52,11 +52,12 @@ export default async function middleware(request: NextRequest) {
 
   const isWww = request.headers.get('host')?.split(':')[0] === 'www.burakugurozturk.av.tr';
   const cleanPath = pathname.replace(/\/+$/, '') || '/';
-  if (isWww || cleanPath === '/' || pathname !== cleanPath) {
+  const isLegacyPublic = /^\/(?:bolgeler|calisma-alanlari)(?:\/|$)/.test(cleanPath);
+  if (isWww || cleanPath === '/' || pathname !== cleanPath || isLegacyPublic) {
     const target = isWww
       ? new URL(request.nextUrl.pathname + request.nextUrl.search, 'https://burakugurozturk.av.tr')
       : new URL(request.url);
-    target.pathname = cleanPath === '/' ? '/tr' : cleanPath;
+    target.pathname = isLegacyPublic ? `/tr${cleanPath}` : cleanPath === '/' ? '/tr' : cleanPath;
     return NextResponse.redirect(target, 301);
   }
 

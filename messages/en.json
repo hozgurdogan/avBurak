@@ -29,7 +29,7 @@
   "home": {
     "meta": {
       "title": "Burak Uğur Öztürk, Attorney at Law",
-      "homeTitle": "Burak Uğur Öztürk, Attorney at Law | Esenyurt & Büyükçekmece Law Office",
+      "homeTitle": "Burak Uğur Öztürk, Attorney at Law | Legal Advice and Litigation",
       "description": "Esenyurt-based legal practice: labour, enforcement, divorce and family, tenancy, inheritance and corporate law in Turkish, English and Arabic."
     },
     "hero": {
@@ -197,13 +197,11 @@
   "serviceRegions": {
     "esenyurt": {
       "name": "Esenyurt",
-      "pageTitle": "Esenyurt Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Esenyurt",
-      "summary": "The Esenyurt office, access information, and individual and corporate client intake across every practice area.",
+      "pageTitle": "Esenyurt Lawyer | Burak Uğur Öztürk",
+      "h1": "Esenyurt · Attorney Burak Uğur Öztürk",
+      "summary": "Legal advice and litigation in Esenyurt for employment, enforcement, family, tenancy and inheritance disputes. Attorney Burak Uğur Öztürk.",
       "body": [
-        "The office operates from Cumhuriyet Mahallesi, 1991. Sokak, Beycenter Residence, Esenyurt/Istanbul; individual and corporate clients are received by appointment, in person at the office or, on request, by video/phone call.",
-        "Across labour law, enforcement law, divorce and family law, tenancy law, inheritance law, corporate law, arbitration and data protection alike, both individual and corporate/foreign clients are served in Turkish, English and Arabic.",
-        "The address is reachable by public transport and by car; for the exact appointment time and directions, contacting the office beforehand by phone or WhatsApp (see the contact page) is recommended."
+        "Employment, enforcement, family, tenancy, inheritance and corporate matters concerning Esenyurt are assessed through the available documents, the parties’ requests and possible legal routes. Meetings can be held in Turkish, English or Arabic."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -218,17 +216,50 @@
         "tahkim-ve-uyusmazlik-cozumu",
         "kisisel-verilerin-korunmasi"
       ],
-      "directions": "The office is at Beycenter Residence, floor 10, unit 79, Cumhuriyet Mahallesi. Note the entrance and floor before your visit; courthouse proceedings and office appointments take place at different addresses."
+      "cardSummary": "Employment claims, enforcement and family disputes.",
+      "sections": [
+        {
+          "id": "is-icra-aile",
+          "title": "Employment, enforcement and family disputes",
+          "paragraphs": [
+            "Employment contracts, payslips, payment records and termination documents help establish the working relationship. For enforcement or family matters, prepare the full notice, service date, case number and any earlier decisions."
+          ]
+        },
+        {
+          "id": "kira-miras-kurumsal",
+          "title": "Tenancy, inheritance and corporate files",
+          "paragraphs": [
+            "Tenancy contracts and payments, title records and inheritance certificates, or company records and authority documents help define the issue in the relevant type of file."
+          ]
+        },
+        {
+          "id": "belge-hazirligi",
+          "title": "Documents to prepare",
+          "paragraphs": [
+            "Arrange notices, contracts, payment records and correspondence in date order. Missing documents and case-specific time limits are identified separately."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which judicial district covers Esenyurt?",
+          "answer": "Esenyurt is within the judicial district of Büyükçekmece Courthouse. The court for a particular case still requires a separate jurisdiction assessment."
+        },
+        {
+          "question": "What should accompany a payment order?",
+          "answer": "Prepare the full order, service information, underlying contract if available and payment records. The applicable deadline depends on the proceedings."
+        }
+      ],
+      "guideLink": "Read the Esenyurt legal guide",
+      "jurisdictionTitle": "Which judicial district covers Esenyurt?"
     },
     "buyukcekmece": {
       "name": "Büyükçekmece",
-      "pageTitle": "Büyükçekmece Lawyer and Legal Consultancy",
-      "h1": "Dispute resolution and consultancy in Büyükçekmece",
-      "summary": "Court process, the most common case types, and the documents worth preparing before a meeting, for disputes in and around Büyükçekmece.",
+      "pageTitle": "Büyükçekmece Lawyer | Burak Uğur Öztürk",
+      "h1": "Büyükçekmece · Attorney Burak Uğur Öztürk",
+      "summary": "Legal advice, document assessment and litigation for tenancy, inheritance, employment and family matters concerning Büyükçekmece.",
       "body": [
-        "For many legal disputes arising in Esenyurt, Beylikdüzü, Çatalca and Büyükçekmece itself, the court with jurisdiction is generally the Büyükçekmece Courthouse; the competent court can vary by case type, so this is always confirmed for the specific matter.",
-        "The most common disputes from this area include employee entitlement and reinstatement claims, objections to enforcement proceedings and seizure, divorce and custody cases, rent-determination and eviction claims, and disputes arising from inheritance division.",
-        "Before a meeting, having identification, any existing contract or notice document, employment-related records (payslips, entry/exit declarations), or matter-specific documents such as title deeds or lease agreements ready makes the initial assessment faster."
+        "Büyükçekmece-related tenancy, inheritance, employment and family applications are reviewed through contracts, title records, payments and existing case documents."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -237,17 +268,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "For a property matter in Büyükçekmece, prepare the neighbourhood and full address together with the contract. Plan courthouse visits separately from the appointment at the Esenyurt office."
+      "cardSummary": "Tenancy, inheritance and family proceedings.",
+      "sections": [
+        {
+          "id": "kira-miras",
+          "title": "Initial assessment of tenancy and inheritance files",
+          "paragraphs": [
+            "Prepare the tenancy agreement, payment history and notices, or the inheritance certificate, title and transfer records. Keep documents for different properties separate."
+          ]
+        },
+        {
+          "id": "aile-is",
+          "title": "Family and employment proceedings",
+          "paragraphs": [
+            "Earlier decisions, agreements and asset records matter in family files. Employment files require working and wage records. The route and deadlines are checked for each case."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which records matter in a rent dispute?",
+          "answer": "The agreement, payment history, renewal arrangements and notices are considered together.",
+          "articleRef": "tr-makaleler-kira-bedelinin-tespiti-davasi"
+        },
+        {
+          "question": "Is there a separate Mimaroba guide?",
+          "answer": "The Mimaroba guide focuses on documents for complex management, tenancy and inheritance matters. A regional link appears on this page."
+        }
+      ],
+      "guideLink": "Read the Büyükçekmece legal guide",
+      "jurisdictionTitle": "Which judicial district covers Büyükçekmece?"
     },
     "beylikduzu": {
       "name": "Beylikdüzü",
-      "pageTitle": "Beylikdüzü Lawyer and Legal Consultancy",
-      "h1": "Tenancy, labour and family law support in Beylikdüzü",
-      "summary": "Disputes arising from residential and workplace relationships in Beylikdüzü, and meeting options.",
+      "pageTitle": "Beylikdüzü Lawyer | Burak Uğur Öztürk",
+      "h1": "Beylikdüzü · Attorney Burak Uğur Öztürk",
+      "summary": "Legal advice and litigation for tenancy, employment, enforcement and family disputes concerning Beylikdüzü. Attorney Burak Uğur Öztürk.",
       "body": [
-        "With its dense residential and workplace population, Beylikdüzü is an area where tenancy relationships, employment contract disputes and family-law matters are frequently seen; disputes arising here are also generally within the jurisdiction of the Büyükçekmece Courthouse.",
-        "As a tenant or landlord: eviction, rent-determination and deposit disputes; as an employee or employer: severance/notice pay and overtime claims; and objections to enforcement proceedings and seizure are among the matters most often raised from this area.",
-        "Meetings can be arranged in person at the office or remotely by video/phone call, depending on preference; preparing the relevant documents (lease agreement, payment records, employment contract, etc.) before the first meeting improves efficiency."
+        "Tenancy, employment, enforcement and family applications concerning Beylikdüzü are assessed through contracts, notices, payments and the evidence specific to the file."
       ],
       "relatedAreas": [
         "kira-hukuku",
@@ -255,17 +313,45 @@
         "bosanma-aile-hukuku",
         "icra-hukuku"
       ],
-      "directions": "For an apartment or residential complex matter in Beylikdüzü, bring the block and unit details and management correspondence. These help distinguish separate properties within the same complex."
+      "cardSummary": "Documents for tenancy, employment and complex management matters.",
+      "sections": [
+        {
+          "id": "kira-is",
+          "title": "Tenancy and employment disputes",
+          "paragraphs": [
+            "Early surrender, rent, deposits and eviction requests require the contract, handover and payment records to be reviewed together. Employment matters also involve working periods, wages, termination and any mediation documents."
+          ]
+        },
+        {
+          "id": "site-belgeleri",
+          "title": "Apartment and complex management documents",
+          "paragraphs": [
+            "Prepare the complex name, block and unit details, management correspondence, management plan, relevant decisions and accounts. For employment matters, include payslips and termination records."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does early surrender mean paying every remaining rent instalment?",
+          "answer": "A definite sum cannot be stated without examining the contract and handover records. The relevant guide explains the general assessment.",
+          "articleRef": "kiraci-erken-cikarsa-kalan-kira"
+        },
+        {
+          "question": "What is needed to challenge a consumer arbitration decision?",
+          "answer": "Prepare the complete decision, service information, original application and transaction records. The route and time limit require a case-specific check.",
+          "articleRef": "tuketici-hakem-heyeti-kararina-itiraz"
+        }
+      ],
+      "guideLink": "Read the Beylikdüzü legal guide",
+      "jurisdictionTitle": "Which judicial district covers Beylikdüzü?"
     },
     "avcilar": {
       "name": "Avcılar",
-      "pageTitle": "Avcılar Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Avcılar",
-      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Avcılar.",
+      "pageTitle": "Avcılar Lawyer | Burak Uğur Öztürk",
+      "h1": "Avcılar · Attorney Burak Uğur Öztürk",
+      "summary": "Contract review, legal advice and litigation for urban renewal, tenancy, employment and enforcement matters concerning Avcılar.",
       "body": [
-        "The competent court for a dispute arising in Avcılar depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
-        "The matters most often raised by clients from this area include wage and reinstatement claims, objecting to enforcement proceedings, rent-assessment and eviction cases, divorce and custody disputes, and inheritance-sharing matters.",
-        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+        "Applications concerning Avcılar may involve urban renewal agreements, tenancy relationships and associated payment or possession disputes. Employment and enforcement matters require their own procedural assessment."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -274,17 +360,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "If your workplace and home are in different Avcılar neighbourhoods, list both addresses separately. Arrange employment contracts, payslips and employer notices in date order before the meeting."
+      "cardSummary": "Urban renewal and tenancy contracts.",
+      "sections": [
+        {
+          "id": "donusum-sozlesme",
+          "title": "Urban renewal and contract review",
+          "paragraphs": [
+            "Prepare title and unit details, all contract annexes, co-owner decisions and notices. Delivery, payment, authority and obligations are reviewed in the context of the whole agreement."
+          ]
+        },
+        {
+          "id": "kira-icra",
+          "title": "Tenancy and enforcement records",
+          "paragraphs": [
+            "For early handover, a surrender undertaking or payment order, include the underlying document, service information and payments. Different procedures must not be reduced to a single assumed deadline."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the signature page of a renewal agreement enough?",
+          "answer": "The entire agreement, annexes, title details and relevant decisions should be reviewed."
+        },
+        {
+          "question": "How is an eviction undertaking assessed?",
+          "answer": "Its preparation, delivery conditions, dates and the tenancy relationship are examined together.",
+          "articleRef": "tahliye-taahhudu-ne-zaman-gecerlidir"
+        }
+      ],
+      "guideLink": "Read the Avcılar legal guide",
+      "jurisdictionTitle": "Which judicial district covers Avcılar?"
     },
     "kucukcekmece": {
       "name": "Küçükçekmece",
-      "pageTitle": "Küçükçekmece Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Küçükçekmece",
-      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Küçükçekmece.",
+      "pageTitle": "Küçükçekmece Lawyer | Burak Uğur Öztürk",
+      "h1": "Küçükçekmece · Attorney Burak Uğur Öztürk",
+      "summary": "Legal advice and litigation routes for residential and commercial tenancy, consumer and enforcement matters concerning Küçükçekmece.",
       "body": [
-        "The competent court for a dispute arising in Küçükçekmece depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
-        "The matters most often raised by clients from this area include rent-assessment and eviction cases, objecting to enforcement proceedings and seizure, wage claims, divorce and family-law disputes, and inheritance-sharing matters.",
-        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+        "Residential and commercial tenancy, consumer transactions and enforcement applications concerning Küçükçekmece are assessed through transaction documents, notices and existing decisions."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -293,17 +406,45 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Prepare the Küçükçekmece property address separately from current notification addresses. If you moved, note any difference between the old contractual address and the current address."
+      "cardSummary": "Consumer, tenancy and enforcement applications.",
+      "sections": [
+        {
+          "id": "tuketici",
+          "title": "Consumer transactions and decisions",
+          "paragraphs": [
+            "Prepare invoices or contracts, order and delivery records, correspondence with the seller, service records and any arbitration decision, including service information."
+          ]
+        },
+        {
+          "id": "kira-odeme",
+          "title": "Tenancy, deposits and payments",
+          "paragraphs": [
+            "Review the tenancy agreement, deposit and rent records, handover documents and correspondence together. If enforcement has begun, include the case number and papers."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is needed for a defective-product application?",
+          "answer": "Prepare proof of purchase, delivery details, records of the defect and correspondence with the seller or service provider.",
+          "articleRef": "ayipli-mal-tuketici-haklari"
+        },
+        {
+          "question": "Which date matters when challenging an arbitration decision?",
+          "answer": "Prepare the service records; the route and deadline are checked against the specific decision.",
+          "articleRef": "tuketici-hakem-heyeti-kararina-itiraz"
+        }
+      ],
+      "guideLink": "Read the Küçükçekmece legal guide",
+      "jurisdictionTitle": "Which judicial district covers Küçükçekmece?"
     },
     "silivri": {
       "name": "Silivri",
-      "pageTitle": "Silivri Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Silivri",
-      "summary": "Legal consultancy and litigation support for individual and corporate disputes in Silivri.",
+      "pageTitle": "Silivri Lawyer | Burak Uğur Öztürk",
+      "h1": "Silivri · Attorney Burak Uğur Öztürk",
+      "summary": "Document assessment, advice and litigation for inheritance, co-owned property, tenancy and employment matters concerning Silivri.",
       "body": [
-        "The competent court for a dispute arising in Silivri depends on the type of dispute and the parties' place of residence; this is assessed separately for each case.",
-        "The matters most often raised by clients from this area include tenancy and eviction disputes, objecting to enforcement proceedings, wage claims, divorce and custody cases, and inheritance-sharing matters.",
-        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+        "Inheritance and co-owned property files concerning Silivri involve ownership records, shares, use and previous transactions. Tenancy and employment disputes require their relevant agreements and notices."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -312,17 +453,45 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Before travelling from Silivri, confirm the appointment time and document list. For jointly owned properties, organise each property’s records separately to support an initial remote discussion."
+      "cardSummary": "Co-owned property and inheritance division.",
+      "sections": [
+        {
+          "id": "paydas-tasinmaz",
+          "title": "Organising co-owned property records",
+          "paragraphs": [
+            "Prepare title details, the co-owner list, use or rental records and earlier agreements for each property. Partition and use-related claims have different conditions."
+          ]
+        },
+        {
+          "id": "miras-paylasim",
+          "title": "Inheritance division and transfers",
+          "paragraphs": [
+            "Inheritance certificates, title details and transfer records are reviewed together. If a share was sold or one person uses the property, include the relevant dates and notices."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "How should documents for several properties be organised?",
+          "answer": "Keep each property’s title and use records separate, with the inheritance certificate and relevant transfer papers.",
+          "articleRef": "ortakligin-giderilmesi-davasi"
+        },
+        {
+          "question": "Are a share sale and sole use assessed separately?",
+          "answer": "Sales, use and notices may concern different claims and are examined individually.",
+          "articleRef": "sufa-onalim-hakki-davasi"
+        }
+      ],
+      "guideLink": "Read the Silivri legal guide",
+      "jurisdictionTitle": "Which judicial district covers Silivri?"
     },
     "catalca": {
       "name": "Çatalca",
-      "pageTitle": "Çatalca Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Çatalca",
-      "summary": "Legal consultancy and litigation support in Çatalca, generally under the jurisdiction of Büyükçekmece Courthouse.",
+      "pageTitle": "Çatalca Lawyer | Burak Uğur Öztürk",
+      "h1": "Çatalca · Attorney Burak Uğur Öztürk",
+      "summary": "Legal advice, file assessment and litigation for land, inheritance, expropriation and tenancy matters concerning Çatalca.",
       "body": [
-        "For many disputes arising in Çatalca, Büyükçekmece Courthouse is generally the competent court; the competent court can vary by the specifics of the case, so this should be assessed separately each time.",
-        "The matters most often raised by clients from this area include wage and reinstatement claims, objecting to enforcement proceedings, rent-assessment and eviction claims, divorce and custody cases, and disputes arising from inheritance sharing.",
-        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+        "Land, inheritance, expropriation and tenancy applications concerning Çatalca involve parcel details, ownership history and the relevant administrative or contractual records. The appropriate forum depends on the application."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -331,17 +500,44 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "For a property or inheritance enquiry in Çatalca, include block and parcel numbers rather than only the village or neighbourhood. Separate records for properties in different settlements."
+      "cardSummary": "Land, inheritance and expropriation files.",
+      "sections": [
+        {
+          "id": "arazi-kamulastirma",
+          "title": "Land and expropriation documents",
+          "paragraphs": [
+            "Prepare current title and parcel records, administrative decisions, notices and evidence of use or intervention. Administrative action and physical intervention are not assumed to be identical."
+          ]
+        },
+        {
+          "id": "miras-kira",
+          "title": "Inheritance and tenancy matters",
+          "paragraphs": [
+            "Review the inheritance certificate, share or transfer records and tenancy agreements together. Organising properties by block and parcel avoids confusion across settlements."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is a neighbourhood name enough to identify land?",
+          "answer": "Prepare block, parcel and title information together with the transaction records."
+        },
+        {
+          "question": "What is assessed in an uncompensated taking application?",
+          "answer": "Ownership, the nature of the intervention, administrative records and use are examined together; the route and time limits are case-specific.",
+          "articleRef": "kamulastirmasiz-el-atma-fiili-hukuki-el-atma"
+        }
+      ],
+      "guideLink": "Read the Çatalca legal guide",
+      "jurisdictionTitle": "Which judicial district covers Çatalca?"
     },
     "mimaroba": {
       "name": "Mimaroba",
-      "pageTitle": "Mimaroba Lawyer and Legal Consultancy",
-      "h1": "Legal consultancy and litigation support in Mimaroba",
-      "summary": "Legal consultancy and litigation support for clients in Mimaroba, a neighbourhood of Büyükçekmece.",
+      "pageTitle": "Mimaroba Lawyer | Burak Uğur Öztürk",
+      "h1": "Mimaroba · Burak Uğur Öztürk",
+      "summary": "Legal advice and litigation for tenancy, complex management, inheritance and family disputes concerning Mimaroba. Attorney Burak Uğur Öztürk.",
       "body": [
-        "Mimaroba is a neighbourhood within the Büyükçekmece district, and Büyükçekmece Courthouse is generally the competent court for disputes arising there too; this depends on the specifics of the case.",
-        "The matters most often raised by clients from this area include rent-assessment and eviction cases, wage and reinstatement claims, objecting to enforcement proceedings, divorce and family-law disputes, and inheritance-sharing matters.",
-        "Meetings can be arranged, on request, in person at the Esenyurt office or remotely by video/phone call; preparing the relevant documents in advance makes the initial assessment faster."
+        "People seeking legal assistance for Mimaroba-related tenancy, complex management, inheritance, employment and family matters can obtain advice and litigation support. The initial assessment considers the dispute, available documents and possible legal routes."
       ],
       "relatedAreas": [
         "is-hukuku",
@@ -350,25 +546,66 @@
         "kira-hukuku",
         "miras-hukuku"
       ],
-      "directions": "Mimaroba is a neighbourhood of Büyükçekmece. The office is in Esenyurt, with no separate Mimaroba branch. For complex management matters, prepare the complex name, block, unit and relevant management decisions."
+      "cardSummary": "Complex management, tenancy and inheritance disputes.",
+      "sections": [
+        {
+          "id": "site-kira",
+          "title": "Complex management and tenancy disputes in Mimaroba",
+          "paragraphs": [
+            "Dues, common expenses, management decisions, rent and eviction disputes rely on different documents. Management matters involve the management plan, decisions, accounts and payments; tenancy matters involve the contract, receipts and any formal notices."
+          ]
+        },
+        {
+          "id": "belge-hazirligi",
+          "title": "Which documents should be prepared?",
+          "paragraphs": [
+            "Prepare the complex name, block and unit information, correspondence and notices. Inheritance certificates and title records help with inheritance files; contracts, payslips and termination records assist employment assessments."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "How is a complex dues claim assessed?",
+          "answer": "The basis of the claim, management plan, decisions and accounts are examined together."
+        },
+        {
+          "question": "Must a tenant pay all remaining rent after leaving early?",
+          "answer": "No definite amount can be stated without reviewing the contract and handover details.",
+          "articleRef": "kiraci-erken-cikarsa-kalan-kira"
+        },
+        {
+          "question": "What documents are needed for inherited property?",
+          "answer": "Prepare the inheritance certificate, title details and any division or transfer records.",
+          "articleRef": "miras-kalan-ev-ecrimisil-davasi"
+        }
+      ],
+      "guideLink": "Read the Mimaroba legal guide",
+      "jurisdictionTitle": "Which judicial district covers Mimaroba?"
     }
   },
   "serviceRegionsPage": {
     "meta": {
       "title": "Areas Served",
-      "description": "Legal support in Esenyurt, Büyükçekmece and Beylikdüzü, in labour law, enforcement law, divorce and family law, tenancy law and inheritance law."
+      "description": "Regional legal guides for Esenyurt, Beylikdüzü, Büyükçekmece, Mimaroba, Avcılar, Küçükçekmece, Silivri and Çatalca, with relevant articles."
     },
     "label": "Regions",
-    "title": "Areas served",
-    "lead": "The Esenyurt-based office also serves clients in Büyükçekmece and Beylikdüzü in the same practice areas."
+    "title": "Regions Served",
+    "lead": "Burak Uğur Öztürk provides legal advice and litigation support for matters concerning Esenyurt, Beylikdüzü, Büyükçekmece, Mimaroba, Avcılar, Küçükçekmece, Silivri and Çatalca. The regional guides explain relevant legal fields, documents to prepare and the assessment process."
   },
   "serviceRegionDetail": {
     "back": "All regions",
     "relatedAreasLabel": "Related Practice Areas",
     "contactCta": "Get in touch",
-    "directionsTitle": "Directions to the Esenyurt office",
-    "directionsLink": "View directions",
-    "mapTitle": "Location of the Esenyurt law office"
+    "tocLabel": "On this page",
+    "faqTitle": "Frequently asked questions",
+    "articlesTitle": "Related articles",
+    "articlesLead": "The following published guides cover topics relevant to applications from this region.",
+    "toolsTitle": "Related calculators",
+    "regionsTitle": "Related regional guides",
+    "jurisdictionText": "Esenyurt is within the judicial district of Büyükçekmece Courthouse. That district covers Büyükçekmece, Beylikdüzü and Esenyurt. The competent court for an individual case must nevertheless be determined separately according to the dispute, special judicial district arrangements and statutory jurisdiction rules.",
+    "jurisdictionCaveat": "This does not mean that every employment, consumer, commercial or serious criminal case is heard at the same courthouse. A district’s general judicial area and the jurisdiction of a particular type of case are distinct.",
+    "jurisdictionSource": "Official source: Bakırköy Courthouse 2025 Activity Report, March 2026, p. 3 (Turkish)",
+    "mimarobaJurisdictionIntro": "Mimaroba is a neighbourhood of Büyükçekmece and falls within the judicial district of Büyükçekmece Courthouse."
   },
   "profilePage": {
     "meta": {
@@ -415,7 +652,8 @@
     "relatedLabel": "Related Articles",
     "authorLabel": "Author",
     "authorDescription": "Istanbul Bar Association · Registration no. 84442 · Working languages: Turkish, English and Arabic.",
-    "sourcesLabel": "Official legislation sources (Turkish)"
+    "sourcesLabel": "Official legislation sources (Turkish)",
+    "regionsLabel": "Related regional guides"
   },
   "toolsPage": {
     "meta": {

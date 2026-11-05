@@ -13,10 +13,12 @@
 
      ink        #1E293B on canvas ....... 12.97:1   AAA body
      ink-muted  #4A5568 on canvas ........ 6.67:1   AA  body
-     ink-faint  #616B7B on canvas ........ 4.78:1   AA  body (smallest allowed)
+     ink-faint  #596373 on canvas ........ 5.39:1   AA  body
+     ink-faint  #596373 on canvas-deep ... 4.83:1   AA  body (smallest allowed)
      gold-500   #C5A059 on navy-900 ...... 7.61:1   AAA body  <- gold text lives here
      gold-300   #D9C79A on navy-900 ..... 11.20:1   AAA body
-     gold-800   #84682F on canvas ........ 4.65:1   AA  body  <- gold text on light
+     gold-800   #795D26 on canvas ........ 5.46:1   AA  body  <- gold text on light
+     gold-800   #795D26 on canvas-deep ... 4.90:1   AA  body
      canvas     #F4F1EA on navy-900 ..... 16.57:1   AAA body
      mist       #C9D0DC on navy-900 ..... 12.05:1   AAA body
      mist-muted #9AA6B8 on navy-900 ...... 7.58:1   AAA body
@@ -48,7 +50,7 @@
   /* text on light */
   --color-ink: #1e293b;
   --color-ink-muted: #4a5568;
-  --color-ink-faint: #616b7b;
+  --color-ink-faint: #596373;
 
   /* text on navy */
   --color-mist: #c9d0dc;
@@ -62,7 +64,7 @@
   /* accent - read the contrast note above before using these on text */
   --color-gold-300: #d9c79a;
   --color-gold-500: #c5a059;
-  --color-gold-800: #84682f; /* the only gold permitted on light backgrounds */
+  --color-gold-800: #795d26; /* the only gold permitted on light backgrounds */
 
   /* status - muted, never a saturated UI green/red */
   --color-success: #2f6b4f;
