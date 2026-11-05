@@ -9,6 +9,7 @@ import {
   getDailyPageViewCounts,
   getLocaleBreakdown,
   getTopPages,
+  getConversionCounts,
 } from '@/lib/admin/analytics';
 import { resetAnalytics } from '@/actions/analytics';
 import { VisitorChart } from '@/components/admin/visitor-chart';
@@ -47,13 +48,14 @@ export default async function AdminAnalyticsPage({ searchParams }: PageProps) {
   const { gun } = await searchParams;
   const days = parseDays(gun);
 
-  const [t, summary, dailyVisitorCounts, dailyPageViewCounts, localeBreakdown, topPages] = await Promise.all([
+  const [t, summary, dailyVisitorCounts, dailyPageViewCounts, localeBreakdown, topPages, conversions] = await Promise.all([
     getTranslations('admin.analytics'),
     getAnalyticsSummary(),
     getDailyVisitorCounts(days),
     getDailyPageViewCounts(days),
     getLocaleBreakdown(days),
     getTopPages(days, 10),
+    getConversionCounts(days),
   ]);
 
   const statRows: Array<{ label: string; value: number }> = [
@@ -119,6 +121,15 @@ export default async function AdminAnalyticsPage({ searchParams }: PageProps) {
         </nav>
       </div>
 
+      <section className="mt-10 border-t border-rule pt-8">
+        <h2 className="label text-gold-800">{t('conversionsTitle', { days })}</h2>
+        <dl className="mt-6 grid gap-6 sm:grid-cols-3">
+          {conversions.map((event) => <div key={event.name}>
+            <dt className="text-sm text-ink-muted">{t(event.name)}</dt>
+            <dd className="mt-2 font-display text-3xl text-ink">{event.count}</dd>
+          </div>)}
+        </dl>
+      </section>
       <div className="mt-10 border-t border-rule pt-8">
         <h2 className="label text-gold-800">{t('visitorsChartTitle', { days })}</h2>
         <div className="mt-6">

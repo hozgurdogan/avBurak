@@ -243,3 +243,15 @@ model PageView {
   @@index([path])
   @@map("page_views")
 }
+
+/// Consent-gated conversion counts; no message, phone number, IP or visitor ID.
+model ConversionEvent {
+  id        String   @id @default(cuid())
+  name      String
+  locale    String
+  path      String
+  createdAt DateTime @default(now())
+
+  @@index([name, createdAt])
+  @@map("conversion_events")
+}

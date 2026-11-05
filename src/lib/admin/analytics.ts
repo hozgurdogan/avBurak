@@ -1,6 +1,15 @@
 import 'server-only';
 import { prisma } from '@/lib/prisma';
 
+export async function getConversionCounts(days = 30) {
+  const rows = await prisma.conversionEvent.groupBy({
+    by: ['name'], where: { createdAt: { gte: daysAgo(days - 1) } }, _count: { name: true },
+  });
+  return ['phone_click', 'whatsapp_click', 'contact_submit'].map((name) => ({
+    name, count: rows.find((row) => row.name === name)?._count.name ?? 0,
+  }));
+}
+
 function startOfDay(date: Date): Date {
   const copy = new Date(date);
   copy.setHours(0, 0, 0, 0);

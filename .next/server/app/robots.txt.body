@@ -2,5 +2,8 @@ User-Agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api
+Disallow: /tr/admin
+Disallow: /en/admin
+Disallow: /ar/admin
 
 Sitemap: https://burakugurozturk.av.tr/sitemap.xml

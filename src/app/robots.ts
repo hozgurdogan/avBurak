@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+import { SITE_URL } from '@/lib/site';
 
 /**
  * `/robots.txt` and `/sitemap.xml` returned HTTP 404 before this file - the
@@ -13,7 +12,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/admin', '/api'],
+      disallow: ['/admin', '/api', '/tr/admin', '/en/admin', '/ar/admin'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

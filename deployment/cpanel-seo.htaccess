@@ -1,0 +1,16 @@
+# Merge ABOVE the existing HTTPS redirects and Passenger configuration.
+# Preserve the host's Passenger directives. Requires SSL on www and bare host.
+RewriteEngine On
+
+# Root goes directly to the default language, including HTTP and www requests.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?burakugurozturk\.av\.tr$ [NC]
+RewriteRule ^$ https://burakugurozturk.av.tr/tr [R=301,L,NE]
+
+# Collapse HTTP, www and trailing-slash normalization into one hop.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?burakugurozturk\.av\.tr$ [NC]
+RewriteRule ^(.+?)/+$ https://burakugurozturk.av.tr/$1 [R=301,L,NE]
+
+RewriteCond %{HTTP_HOST} ^www\.burakugurozturk\.av\.tr$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^(?:www\.)?burakugurozturk\.av\.tr$ [NC]
+RewriteRule ^(.+)$ https://burakugurozturk.av.tr/$1 [R=301,L,NE]

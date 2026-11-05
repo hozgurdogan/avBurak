@@ -9,21 +9,18 @@ import { useEffect, useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
-const CONSENT_COOKIE_NAME = 'cookie_consent';
-
-function hasAnsweredConsent(): boolean {
-  return document.cookie
-    .split('; ')
-    .some((entry) => entry.startsWith(`${CONSENT_COOKIE_NAME}=`));
-}
-
 export function CookieConsentBanner() {
   const t = useTranslations('cookieConsent');
   const [visible, setVisible] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
-    if (!hasAnsweredConsent()) setVisible(true);
+    let active = true;
+    void fetch('/api/consent', { cache: 'no-store' })
+      .then((response) => response.json())
+      .then(({ choice }) => { if (active) setVisible(choice !== 'accepted' && choice !== 'declined'); })
+      .catch(() => { if (active) setVisible(true); });
+    return () => { active = false; };
   }, []);
 
   if (!visible) return null;
@@ -31,13 +28,16 @@ export function CookieConsentBanner() {
   const respond = (accepted: boolean) => {
     startTransition(async () => {
       try {
-        await fetch('/api/consent', {
+        const response = await fetch('/api/consent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ accepted }),
         });
-      } finally {
+        if (!response.ok) return;
         setVisible(false);
+        window.dispatchEvent(new Event('consent-updated'));
+      } catch {
+        // Keep the banner available for a retry; failed requests aren't consent.
       }
     });
   };

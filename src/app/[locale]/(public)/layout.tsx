@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
 import { ContactCtaBand } from '@/components/layout/contact-cta-band';
 import { PageViewBeacon } from '@/components/analytics/page-view-beacon';
+import { ConversionBeacon } from '@/components/analytics/conversion-beacon';
 import { CookieConsentBanner } from '@/components/analytics/cookie-consent-banner';
 import { JsonLd } from '@/components/seo/json-ld';
 import { buildLegalServiceSchema } from '@/lib/structured-data';
@@ -43,6 +44,7 @@ export default async function PublicLayout({ children, params }: LayoutProps) {
       <ContactCtaBand />
       <SiteFooter />
       <PageViewBeacon />
+      <ConversionBeacon />
       <CookieConsentBanner />
     </>
   );

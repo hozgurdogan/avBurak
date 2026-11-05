@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 import { localeTags, type Locale } from '@/i18n/locales';
+import { languageAlternates, SITE_NAME } from '@/lib/site';
 
 /**
  * Per-page metadata: canonical URL, and the Open Graph / Twitter fields the
@@ -20,6 +21,7 @@ export function pageMetadata({
   description,
   languages,
   ogType = 'website',
+  image,
 }: {
   locale: Locale;
   path: string;
@@ -30,6 +32,7 @@ export function pageMetadata({
    *  rather than one silently overwriting the other. */
   languages?: Record<string, string>;
   ogType?: 'website' | 'article';
+  image?: string | null;
 }): Metadata {
   const canonicalPath = `/${locale}${path ? `/${path}` : ''}`;
 
@@ -43,9 +46,8 @@ export function pageMetadata({
   // same shared, per-locale image (rather than per-page OG images) matches
   // the simpler scope that route was built for.
   const ogImage = {
-    url: `/${locale}/opengraph-image`,
-    width: 1200,
-    height: 630,
+    url: image ?? `/${locale}/opengraph-image`,
+    ...(!image || image.endsWith('/opengraph-image') || image.endsWith('/share-image') ? { width: 1200, height: 630 } : {}),
     alt: 'Av. Burak Uğur Öztürk',
   };
 
@@ -57,16 +59,17 @@ export function pageMetadata({
   const defaultLanguages = Object.fromEntries(
     routing.locales.map((l) => [l, `/${l}${path ? `/${path}` : ''}`]),
   );
+  const fullTitle = path && title !== SITE_NAME ? `${title} — ${SITE_NAME}` : title;
 
   return {
-    title,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical: canonicalPath,
-      languages: languages ?? defaultLanguages,
+      languages: languageAlternates(languages ?? defaultLanguages),
     },
     openGraph: {
-      title,
+      title: fullTitle,
       description,
       url: canonicalPath,
       siteName: 'Av. Burak Uğur Öztürk',
@@ -82,7 +85,7 @@ export function pageMetadata({
       // (src/app/[locale]/opengraph-image.tsx) - 'summary' renders it as a
       // small thumbnail, wasting the card.
       card: 'summary_large_image',
-      title,
+      title: fullTitle,
       description,
       images: [ogImage.url],
     },

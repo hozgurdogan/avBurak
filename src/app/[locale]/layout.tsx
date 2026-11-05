@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import { getDirection, localeTags, type Locale } from '@/i18n/locales';
 import { fontVariables } from '@/lib/fonts';
 import { SkipLink } from '@/components/layout/skip-link';
+import { SITE_URL } from '@/lib/site';
 import '../globals.css';
 
 type LayoutProps = {
@@ -26,10 +27,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home.meta' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(SITE_URL),
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
     title: {
       default: t('title'),
       // Inner pages append the practice name rather than a marketing strapline.

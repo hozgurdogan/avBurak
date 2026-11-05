@@ -15,6 +15,8 @@ import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema, buildArticleSchema } from '@/lib/structured-data';
+import { articleExcerpt, articleModifiedAt } from '@/lib/site';
+import { articleSources } from '@/lib/article-sources';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -38,6 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       Object.entries(alternates).map(([l, s]) => [l, `/${l}/makaleler/${s}`]),
     ),
     ogType: 'article',
+    image: article.coverImage ?? `/${locale}/makaleler/${slug}/share-image`,
   });
 }
 
@@ -86,6 +89,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     { name: tNav('articles'), path: 'makaleler' },
     { name: article.title, path: `makaleler/${slug}` },
   ];
+  const sources = articleSources(article.contentMd);
 
   return (
     <>
@@ -98,6 +102,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
         description: article.summary,
         datePublished: article.publishedAt,
         dateModified: article.updatedAt,
+        image: article.coverImage ?? `/${locale}/makaleler/${slug}/share-image`,
       })}
     />
     <article className="bg-canvas-deep">
@@ -126,9 +131,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
           {/* Guards against showing a "güncelleme" date earlier than the
               publish date - the same data inconsistency the Article JSON-LD
               clamps in `buildArticleSchema` (src/lib/structured-data.ts). */}
-          {article.publishedAt && article.updatedAt.getTime() > article.publishedAt.getTime() ? (
-            <> · {tArticle('updatedOn', { date: dateFormatter.format(article.updatedAt) })}</>
-          ) : null}
+          <> · {tArticle('updatedOn', { date: dateFormatter.format(articleModifiedAt(article.publishedAt, article.updatedAt)) })}</>
           {' · '}
           <Link href="/profil" className="transition-colors duration-base hover:text-gold-800">
             {tArticle('byAuthor', { name: 'Burak Uğur Öztürk' })}
@@ -156,7 +159,24 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: rendered.html }}
           />
 
+          {sources.length > 0 ? (
+            <section className="mt-12 border-t border-rule pt-6">
+              <h2 className="label text-gold-800">{tDetail('sourcesLabel')}</h2>
+              <ul className="mt-4 space-y-3 text-sm">
+                {sources.map((source) => <li key={source.number}>
+                  <a href={source.url} className="text-ink-muted underline hover:text-gold-800">{source.name}</a>
+                </li>)}
+              </ul>
+            </section>
+          ) : null}
           <LegalDisclaimer className="mt-16" />
+          <aside className="mt-10 border-t border-rule pt-6" aria-label={tDetail('authorLabel')}>
+            <p className="label text-gold-800">{tDetail('authorLabel')}</p>
+            <Link href="/profil" className="mt-3 inline-block text-lg text-ink hover:text-gold-800">
+              Av. Burak Uğur Öztürk
+            </Link>
+            <p className="mt-2 text-sm text-ink-muted">{tDetail('authorDescription')}</p>
+          </aside>
         </div>
       </div>
 
@@ -173,7 +193,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                   <h3 className="font-display text-2xl font-normal text-ink transition-colors duration-base group-hover:text-gold-800">
                     {item.title}
                   </h3>
-                  <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{item.summary}</p>
+                  <p className="mt-3 line-clamp-4 flex-1 text-md text-ink-muted">{articleExcerpt(item.summary)}</p>
                 </Link>
               </Reveal>
             ))}

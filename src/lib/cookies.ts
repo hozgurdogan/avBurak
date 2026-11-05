@@ -6,4 +6,4 @@
  * login or a tracked visit looks identical to "nothing happened" - see the
  * longer note in next.config.ts.
  */
-export const COOKIES_REQUIRE_HTTPS = false;
+export const COOKIES_REQUIRE_HTTPS = process.env.NODE_ENV === 'production';

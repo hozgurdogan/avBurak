@@ -24,11 +24,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '2. Çerezler ve İzleme',
-        body: 'Bu site, üçüncü taraf analiz araçları (ör. Google Analytics), reklam ağları veya izleme pikselleri kullanmamaktadır. Yalnızca dil tercihinizi hatırlamak için zorunlu, birinci taraf bir çerez kullanılmaktadır. Bu kapsam dışında bir çerez kullanılmaya başlanması hâlinde, siteye girişte ziyaretçilerden ayrıca onay alınacaktır.',
+        body: 'Dil tercihi ve yönetici oturumu için gerekli çerezler kullanılır. İsteğe bağlı ziyaret istatistikleri ile telefon, WhatsApp bağlantısı tıklamaları ve başarılı form gönderimi sayıları yalnızca analiz onayı sonrasında büronun kendi sunucusunda tutulur. Etkileşim kayıtlarında mesaj, telefon numarası veya IP adresi saklanmaz. Google Analytics veya reklam pikselleri kullanılmaz.',
       },
       {
         heading: '3. Yazı Tipleri ve Üçüncü Taraf Kaynaklar',
-        body: 'Sitede kullanılan yazı tipleri sunucu üzerinden doğrudan sunulmaktadır; Google Fonts gibi bir üçüncü taraf CDN’e istek gönderilmemektedir. Bu sayede sayfa yüklenirken ziyaretçi IP adresi hiçbir üçüncü tarafla paylaşılmamaktadır. Site, harita, sosyal medya eklentisi veya video oynatıcı gibi üçüncü taraf gömülü içerik barındırmamaktadır.',
+        body: 'Yazı tipleri kendi sunucumuzdan sunulur. İletişim ve bölge sayfalarındaki Google Maps haritası yüklendiğinde Google sunucularına bağlantı kurulur; bu sırada IP adresiniz Google tarafından görülebilir ve Google kendi çerezlerini kullanabilir. Harita, isteğe bağlı birinci taraf ziyaret istatistiklerinden ayrı bir üçüncü taraf hizmetidir.',
       },
       {
         heading: '4. İletişim Formu',
@@ -60,11 +60,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '2. Cookies and Tracking',
-        body: 'This site uses no third-party analytics tools (e.g. Google Analytics), advertising networks or tracking pixels. Only a necessary, first-party cookie is used, to remember your language preference. Should a cookie outside this scope ever be introduced, visitor consent will be obtained separately on entry to the site.',
+        body: 'Necessary cookies support language preferences and administrator sessions. Optional visit statistics and counts of phone clicks, WhatsApp clicks and successful form submissions are recorded on the office’s own server only after analytics consent. Interaction records contain no messages, phone numbers or IP addresses. Google Analytics and advertising pixels are not used.',
       },
       {
         heading: '3. Fonts and Third-Party Resources',
-        body: 'Fonts used on this site are served directly from this server; no request is made to a third-party CDN such as Google Fonts. This means your IP address is never shared with a third party while a page loads. The site embeds no third-party content - no maps, social widgets or video players.',
+        body: 'Fonts are served from our own server. When Google Maps on contact or regional pages loads, your browser connects to Google, which can see your IP address and may use its own cookies. Maps is a separate third-party service from the optional first-party visit statistics.',
       },
       {
         heading: '4. Contact Form',
@@ -96,11 +96,11 @@ export const privacyContent: Record<Locale, LegalPageContent> = {
       },
       {
         heading: '2. ملفات تعريف الارتباط والتتبع',
-        body: 'لا يستخدم هذا الموقع أي أدوات تحليل من طرف ثالث (مثل Google Analytics)، ولا شبكات إعلانية، ولا وسائل تتبع. يُستخدم فقط ملف تعريف ارتباط ضروري من الطرف الأول لحفظ تفضيل اللغة لديكم. وفي حال البدء باستخدام أي ملف تعريف ارتباط خارج هذا النطاق مستقبلاً، ستُؤخَذ موافقة الزوار على ذلك بشكل منفصل عند دخول الموقع.',
+        body: 'تُستخدم ملفات ضرورية لتفضيل اللغة وجلسة المدير. لا تُسجّل إحصاءات الزيارة الاختيارية ونقرات الهاتف وواتساب وعدد النماذج المرسلة بنجاح إلا بعد الموافقة على التحليل، وعلى خادم المكتب فقط. لا تحتوي سجلات التفاعل على الرسائل أو أرقام الهاتف أو عناوين IP. لا يُستخدم Google Analytics أو بكسلات الإعلانات.',
       },
       {
         heading: '3. الخطوط والموارد من طرف ثالث',
-        body: 'تُقدَّم الخطوط المستخدمة في هذا الموقع مباشرة من هذا الخادم؛ ولا يُرسَل أي طلب إلى شبكة توصيل محتوى من طرف ثالث مثل Google Fonts. وهذا يعني أن عنوان IP الخاص بكم لا يُشارَك مع أي طرف ثالث أثناء تحميل الصفحة. لا يتضمن الموقع أي محتوى مضمّن من طرف ثالث - لا خرائط، ولا أدوات تواصل اجتماعي، ولا مشغلات فيديو.',
+        body: 'تُقدّم الخطوط من خادمنا. عند تحميل خرائط Google في صفحات التواصل أو المناطق، يتصل المتصفح بخوادم Google التي قد ترى عنوان IP وتستخدم ملفات تعريف ارتباط خاصة بها. الخرائط خدمة خارجية منفصلة عن إحصاءات الزيارة الاختيارية من الطرف الأول.',
       },
       {
         heading: '4. نموذج التواصل',

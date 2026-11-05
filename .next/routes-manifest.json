@@ -5,13 +5,6 @@
   "basePath": "",
   "redirects": [
     {
-      "source": "/:path+/",
-      "destination": "/:path+",
-      "internal": true,
-      "statusCode": 308,
-      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
-    },
-    {
       "source": "/makaleler",
       "destination": "/tr/makaleler",
       "statusCode": 308,
@@ -55,8 +48,12 @@
           "value": "camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()"
         },
         {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
         }
       ],
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
@@ -251,6 +248,15 @@
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/makaleler/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[locale]/makaleler/[slug]/share-image",
+      "regex": "^/([^/]+?)/makaleler/([^/]+?)/share\\-image(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/makaleler/(?<nxtPslug>[^/]+?)/share\\-image(?:/)?$"
     },
     {
       "page": "/[locale]/opengraph-image",

@@ -31,7 +31,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 // with no in-browser way to undo it short of clearing HSTS state manually.
 // That is exactly what happened during this deployment - see the README
 // section "Deployment" / "Before launch".
-const HTTPS_IS_LIVE = false;
+const HTTPS_IS_LIVE = true;
 
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -43,7 +43,7 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()',
   },
   ...(HTTPS_IS_LIVE
-    ? [{ key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' }]
+    ? [{ key: 'Strict-Transport-Security', value: 'max-age=31536000' }]
     : []),
   {
     key: 'Content-Security-Policy',
@@ -73,6 +73,7 @@ const nextConfig: NextConfig = {
   // against a regular `next build` output, not a self-contained Docker
   // bundle. See the README section "Deployment".
   reactStrictMode: true,
+  skipTrailingSlashRedirect: true,
   poweredByHeader: false,
   compress: true,
   images: {

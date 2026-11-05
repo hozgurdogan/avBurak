@@ -4,8 +4,8 @@ import { routing } from '@/i18n/routing';
 import { practiceAreaSlugs } from '@/content/practice-areas';
 import { serviceRegionSlugs } from '@/content/service-regions';
 import { toolSlugs } from '@/lib/tools/registry';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+import { isLocale } from '@/i18n/locales';
+import { articleModifiedAt, languageAlternates, SITE_URL } from '@/lib/site';
 
 /** Static paths that exist, identically, under every locale. `''` is the
  *  home page. */
@@ -24,6 +24,14 @@ const staticPaths = [
 
 function url(locale: string, path: string): string {
   return `${SITE_URL}/${locale}${path ? `/${path}` : ''}`;
+}
+
+function alternates(path: string) {
+  return {
+    languages: languageAlternates(Object.fromEntries(
+      routing.locales.map((locale) => [locale, url(locale, path)]),
+    )),
+  };
 }
 
 /**
@@ -47,30 +55,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const path of staticPaths) {
       entries.push({
         url: url(locale, path),
+        alternates: alternates(path),
         changeFrequency: path === '' ? 'weekly' : 'monthly',
         priority: path === '' ? 1 : 0.7,
       });
     }
     for (const slug of practiceAreaSlugs) {
-      entries.push({ url: url(locale, `calisma-alanlari/${slug}`), changeFrequency: 'monthly', priority: 0.8 });
+      entries.push({ url: url(locale, `calisma-alanlari/${slug}`), alternates: alternates(`calisma-alanlari/${slug}`), changeFrequency: 'monthly', priority: 0.8 });
     }
     for (const slug of serviceRegionSlugs) {
-      entries.push({ url: url(locale, `bolgeler/${slug}`), changeFrequency: 'monthly', priority: 0.75 });
+      entries.push({ url: url(locale, `bolgeler/${slug}`), alternates: alternates(`bolgeler/${slug}`), changeFrequency: 'monthly', priority: 0.75 });
     }
     for (const slug of toolSlugs) {
-      entries.push({ url: url(locale, `hesaplama-araclari/${slug}`), changeFrequency: 'monthly', priority: 0.6 });
+      entries.push({ url: url(locale, `hesaplama-araclari/${slug}`), alternates: alternates(`hesaplama-araclari/${slug}`), changeFrequency: 'monthly', priority: 0.6 });
     }
   }
 
   const articles = await prisma.article.findMany({
     where: { status: 'PUBLISHED' },
-    select: { locale: true, slug: true, updatedAt: true },
+    select: { locale: true, slug: true, groupId: true, publishedAt: true, updatedAt: true },
   });
 
   for (const article of articles) {
+    if (!isLocale(article.locale)) continue;
+    const languages = languageAlternates(Object.fromEntries(
+      articles.filter((sibling) => sibling.groupId === article.groupId && isLocale(sibling.locale))
+        .map((sibling) => [sibling.locale, url(sibling.locale, `makaleler/${sibling.slug}`)]),
+    ));
     entries.push({
       url: url(article.locale, `makaleler/${article.slug}`),
-      lastModified: article.updatedAt,
+      alternates: { languages },
+      lastModified: articleModifiedAt(article.publishedAt, article.updatedAt),
       changeFrequency: 'monthly',
       priority: 0.65,
     });

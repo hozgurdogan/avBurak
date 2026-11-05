@@ -1,6 +1,7 @@
 import { office, formatAddress } from '@/content/office';
 import { serviceAreaDistricts } from '@/content/service-areas';
 import type { Locale } from '@/i18n/locales';
+import { articleModifiedAt, SITE_URL } from '@/lib/site';
 
 /**
  * JSON-LD builders (schema.org). Plain objects, not components - kept
@@ -10,7 +11,6 @@ import type { Locale } from '@/i18n/locales';
  * here is a new claim.
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
 /**
  * LegalService (a LocalBusiness subtype) with the attorney as `employee` -
@@ -25,6 +25,7 @@ export function buildLegalServiceSchema(locale: Locale) {
     '@id': `${SITE_URL}/${locale}#business`,
     name: 'Av. Burak Uğur Öztürk',
     url: `${SITE_URL}/${locale}`,
+    image: `${SITE_URL}/${locale}/opengraph-image`,
     telephone: office.phone,
     email: office.email,
     address: {
@@ -43,7 +44,7 @@ export function buildLegalServiceSchema(locale: Locale) {
     // Single source of truth with the footer/contact-page district list and
     // the `/bolgeler` pages - see `src/content/service-areas.ts`.
     areaServed: [...serviceAreaDistricts],
-    availableLanguage: ['tr', 'en', 'ar'],
+    knowsLanguage: ['tr', 'en', 'ar'],
     employee: {
       '@type': 'Person',
       name: 'Burak Uğur Öztürk',
@@ -84,6 +85,7 @@ export function buildArticleSchema({
   description,
   datePublished,
   dateModified,
+  image,
 }: {
   locale: Locale;
   path: string;
@@ -91,6 +93,7 @@ export function buildArticleSchema({
   description: string;
   datePublished: Date | null;
   dateModified: Date;
+  image?: string | null;
 }) {
   // A `dateModified` earlier than `datePublished` is a contradiction no
   // reader or crawler should see (flagged live, 16 Ekim 2026, on an article
@@ -98,8 +101,7 @@ export function buildArticleSchema({
   // rather than ship the inconsistency into the page's JSON-LD. This masks
   // the symptom, not the underlying data-entry issue; the article's actual
   // dates still need checking in the admin panel.
-  const safeDateModified =
-    datePublished && dateModified < datePublished ? datePublished : dateModified;
+  const safeDateModified = articleModifiedAt(datePublished, dateModified);
 
   return {
     '@context': 'https://schema.org',
@@ -107,6 +109,8 @@ export function buildArticleSchema({
     headline: title,
     description,
     url: `${SITE_URL}/${locale}/${path}`,
+    mainEntityOfPage: `${SITE_URL}/${locale}/${path}`,
+    image: new URL(image ?? `/${locale}/opengraph-image`, SITE_URL).href,
     inLanguage: locale,
     ...(datePublished ? { datePublished: datePublished.toISOString() } : {}),
     dateModified: safeDateModified.toISOString(),

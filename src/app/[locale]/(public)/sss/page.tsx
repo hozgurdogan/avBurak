@@ -7,6 +7,7 @@ import type { Locale } from '@/i18n/locales';
 import { faqContent } from '@/content/faq';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { pageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/seo/json-ld';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -44,6 +45,16 @@ export default async function FaqPage({ params }: PageProps) {
 
   return (
     <section className="bg-canvas-deep">
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        inLanguage: locale,
+        mainEntity: content.categories.flatMap((category) => category.items.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        }))),
+      }} />
       <div className="mx-auto max-w-wide px-gutter py-section">
         <SectionHeading as="h1" label={content.label} title={content.title} lead={content.lead} />
 

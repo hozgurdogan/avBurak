@@ -107,17 +107,41 @@ function collectHeadings(node: HastNode, into: ArticleHeading[]): void {
  */
 function rehypeTurkishSlug() {
   return (tree: unknown) => {
-    const seen = new Map<string, number>();
+    const used = new Set<string>();
+    const headings: { node: HastNode; text: string }[] = [];
 
     visit(tree as never, 'element', (node: HastNode) => {
-      if (!headingRank(node as never) || (node.properties?.id as string | undefined)) return;
-
-      const base = slugify(hastToString(node as never), 'baslik');
-      const count = seen.get(base) ?? 0;
-      seen.set(base, count + 1);
-
-      node.properties = { ...node.properties, id: count === 0 ? base : `${base}-${count}` };
+      if (!headingRank(node as never)) return;
+      const existing = node.properties?.id;
+      if (typeof existing === 'string') used.add(existing);
+      headings.push({ node, text: hastToString(node as never) });
     });
+
+    for (const { node, text } of headings) {
+      if (node.properties?.id) continue;
+      // Deterministic fallback for non-Latin headings (including Arabic).
+      const fallback = `section-${Array.from(text).map((c) => c.codePointAt(0)!.toString(16)).join('-')}`;
+      const base = slugify(text, 'baslik');
+      const stableBase = /[a-z0-9]/i.test(text.normalize('NFKD')) ? base : fallback;
+      let id = stableBase;
+      let suffix = 1;
+      while (used.has(id)) id = `${stableBase}-${suffix++}`;
+      used.add(id);
+      node.properties = { ...node.properties, id };
+    }
+
+    // Keep old Turkish/combining-dot fragments working without changing ToC IDs.
+    const legacySeen = new Map<string, number>();
+    for (const { node, text } of headings) {
+      const base = text.toLowerCase().replace(/[^\p{L}\p{N}\p{M}\s_-]/gu, '').replace(/ /g, '-');
+      const count = legacySeen.get(base) ?? 0;
+      legacySeen.set(base, count + 1);
+      const legacy = count ? `${base}-${count}` : base;
+      if (legacy && legacy !== node.properties?.id && !used.has(legacy)) {
+        used.add(legacy);
+        node.children = [{ type: 'element', tagName: 'span', properties: { id: legacy }, children: [] }, ...(node.children ?? [])];
+      }
+    }
   };
 }
 

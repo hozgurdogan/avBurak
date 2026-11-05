@@ -39,7 +39,7 @@
       "languagesLabel": "Working Languages",
       "languages": "Turkish · English · Arabic",
       "focusLabel": "Practice Focus",
-      "focus": "Labour Law, Enforcement Law, Divorce and Family Law",
+      "focus": "Lawyer in Esenyurt: employment, enforcement and family law",
       "regionsLabel": "Areas Served",
       "lead": "Our Esenyurt-based law office is active in labour law, enforcement and bankruptcy law, family and divorce law, tenancy law, inheritance law, consumer law, expropriation, compensation law, administrative law and corporate law.",
       "contact": "Contact",
@@ -217,7 +217,8 @@
         "sirketler-hukuku",
         "tahkim-ve-uyusmazlik-cozumu",
         "kisisel-verilerin-korunmasi"
-      ]
+      ],
+      "directions": "The office is at Beycenter Residence, floor 10, unit 79, Cumhuriyet Mahallesi. Note the entrance and floor before your visit; courthouse proceedings and office appointments take place at different addresses."
     },
     "buyukcekmece": {
       "name": "Büyükçekmece",
@@ -235,7 +236,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "For a property matter in Büyükçekmece, prepare the neighbourhood and full address together with the contract. Plan courthouse visits separately from the appointment at the Esenyurt office."
     },
     "beylikduzu": {
       "name": "Beylikdüzü",
@@ -252,7 +254,8 @@
         "is-hukuku",
         "bosanma-aile-hukuku",
         "icra-hukuku"
-      ]
+      ],
+      "directions": "For an apartment or residential complex matter in Beylikdüzü, bring the block and unit details and management correspondence. These help distinguish separate properties within the same complex."
     },
     "avcilar": {
       "name": "Avcılar",
@@ -270,7 +273,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "If your workplace and home are in different Avcılar neighbourhoods, list both addresses separately. Arrange employment contracts, payslips and employer notices in date order before the meeting."
     },
     "kucukcekmece": {
       "name": "Küçükçekmece",
@@ -288,7 +292,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "Prepare the Küçükçekmece property address separately from current notification addresses. If you moved, note any difference between the old contractual address and the current address."
     },
     "silivri": {
       "name": "Silivri",
@@ -306,7 +311,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "Before travelling from Silivri, confirm the appointment time and document list. For jointly owned properties, organise each property’s records separately to support an initial remote discussion."
     },
     "catalca": {
       "name": "Çatalca",
@@ -324,7 +330,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "For a property or inheritance enquiry in Çatalca, include block and parcel numbers rather than only the village or neighbourhood. Separate records for properties in different settlements."
     },
     "mimaroba": {
       "name": "Mimaroba",
@@ -342,7 +349,8 @@
         "bosanma-aile-hukuku",
         "kira-hukuku",
         "miras-hukuku"
-      ]
+      ],
+      "directions": "Mimaroba is a neighbourhood of Büyükçekmece. The office is in Esenyurt, with no separate Mimaroba branch. For complex management matters, prepare the complex name, block, unit and relevant management decisions."
     }
   },
   "serviceRegionsPage": {
@@ -357,7 +365,10 @@
   "serviceRegionDetail": {
     "back": "All regions",
     "relatedAreasLabel": "Related Practice Areas",
-    "contactCta": "Get in touch"
+    "contactCta": "Get in touch",
+    "directionsTitle": "Directions to the Esenyurt office",
+    "directionsLink": "View directions",
+    "mapTitle": "Location of the Esenyurt law office"
   },
   "profilePage": {
     "meta": {
@@ -401,7 +412,10 @@
   "articleDetail": {
     "back": "Back to all articles",
     "tocLabel": "Contents",
-    "relatedLabel": "Related Articles"
+    "relatedLabel": "Related Articles",
+    "authorLabel": "Author",
+    "authorDescription": "Istanbul Bar Association · Registration no. 84442 · Working languages: Turkish, English and Arabic.",
+    "sourcesLabel": "Official legislation sources (Turkish)"
   },
   "toolsPage": {
     "meta": {
@@ -886,7 +900,11 @@
       "pathColumn": "Page",
       "viewsColumn": "Views",
       "resetButton": "Reset Data",
-      "resetConfirm": "All visit statistics (visitors and page views) will be permanently deleted. This cannot be undone. Continue?"
+      "resetConfirm": "All visit statistics (visitors and page views) will be permanently deleted. This cannot be undone. Continue?",
+      "conversionsTitle": "Contact interactions · last {days} days",
+      "phone_click": "Phone link clicks",
+      "whatsapp_click": "WhatsApp link clicks",
+      "contact_submit": "Successful form submissions"
     },
     "messages": {
       "title": "Messages",

@@ -50,6 +50,16 @@ function isExcludedPath(pathname: string): boolean {
 export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  const isWww = request.headers.get('host')?.split(':')[0] === 'www.burakugurozturk.av.tr';
+  const cleanPath = pathname.replace(/\/+$/, '') || '/';
+  if (isWww || cleanPath === '/' || pathname !== cleanPath) {
+    const target = isWww
+      ? new URL(request.nextUrl.pathname + request.nextUrl.search, 'https://burakugurozturk.av.tr')
+      : new URL(request.url);
+    target.pathname = cleanPath === '/' ? '/tr' : cleanPath;
+    return NextResponse.redirect(target, 301);
+  }
+
   if (isExcludedPath(pathname)) {
     return NextResponse.next();
   }

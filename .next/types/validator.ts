@@ -254,10 +254,28 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/[locale]/(public)/makaleler/[slug]/share-image/route.tsx
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/[locale]/makaleler/[slug]/share-image">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/(public)/makaleler/[slug]/share-image/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/api/consent/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/consent">> = Specific
   const handler = {} as typeof import("../../src/app/api/consent/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/api/events/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/events">> = Specific
+  const handler = {} as typeof import("../../src/app/api/events/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

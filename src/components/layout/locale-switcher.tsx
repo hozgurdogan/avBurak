@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { locales, localeNames, type Locale } from '@/i18n/locales';
 import { cn } from '@/lib/cn';
+import { useEffect, useState } from 'react';
 
 /**
  * Three links rather than a dropdown: it is one tab stop per language, needs no
@@ -21,6 +22,14 @@ export function LocaleSwitcher({ surface = 'light' }: { surface?: 'light' | 'nav
   const active = useLocale() as Locale;
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [articleLinks, setArticleLinks] = useState<Record<string, string>>({});
+  const isArticle = /^\/makaleler\/[^/]+$/.test(pathname);
+  useEffect(() => {
+    if (!isArticle) return;
+    const links = Object.fromEntries(Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]'))
+      .map((link) => [link.hreflang, new URL(link.href).pathname.replace(/^\/(tr|en|ar)/, '')]));
+    setArticleLinks(links);
+  }, [pathname, isArticle]);
 
   const query = Object.fromEntries(searchParams.entries());
 
@@ -41,7 +50,7 @@ export function LocaleSwitcher({ surface = 'light' }: { surface?: 'light' | 'nav
                 />
               ) : null}
               <Link
-                href={{ pathname, query }}
+                href={{ pathname: isArticle ? (articleLinks[locale] ?? (isActive ? pathname : '/makaleler')) : pathname, query }}
                 locale={locale}
                 hrefLang={locale}
                 lang={locale}

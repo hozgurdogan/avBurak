@@ -16,6 +16,9 @@ import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema } from '@/lib/structured-data';
+import { practiceAreaSlugs } from '@/content/practice-areas';
+import { OfficeMap } from '@/components/contact/office-map';
+import { office, formatAddress, mapsEmbedSrc } from '@/content/office';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -67,7 +70,9 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
   ]);
 
   const body = tRegions.raw(`${slug}.body`) as string[];
-  const relatedAreas = tRegions.raw(`${slug}.relatedAreas`) as string[];
+  const relatedAreas = slug === 'esenyurt'
+    ? practiceAreaSlugs
+    : tRegions.raw(`${slug}.relatedAreas`) as string[];
 
   const breadcrumbItems = [
     { name: tNav('home'), path: '' },
@@ -108,6 +113,17 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
                   {tDetail('contactCta')}
                 </ActionLink>
               </div>
+              <section className="mt-12 border-t border-rule pt-8">
+                <h2 className="font-display text-2xl text-ink">{tDetail('directionsTitle')}</h2>
+                <p className="mt-4 text-md leading-prose text-ink-muted">{tRegions(`${slug}.directions`)}</p>
+                <p className="mt-3 text-sm text-ink-muted">{formatAddress()}</p>
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${office.address.streetAddress}, Esenyurt İstanbul`)}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className="mt-4 inline-block text-gold-800 underline"
+                >{tDetail('directionsLink')}</a>
+                <OfficeMap src={mapsEmbedSrc()} title={tDetail('mapTitle')} />
+              </section>
             </div>
 
             <aside className="lg:col-span-4">

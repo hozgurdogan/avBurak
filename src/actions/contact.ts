@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma';
 import { contactFormSchema } from '@/lib/validation/contact';
 import { getClientIp, hashIp } from '@/lib/ip';
 import { checkRateLimit } from '@/lib/rate-limit';
+import { recordConversion } from '@/lib/conversions';
 
 // A "use server" file may only export async functions - not a constant, not
 // even a type re-exported as a value. `ContactFormState` is a type (erased at
@@ -91,5 +92,6 @@ export async function submitContactForm(
     return { status: 'error', errorCode: 'generic' };
   }
 
+  await recordConversion('contact_submit', parsed.data.locale, '/iletisim').catch(() => undefined);
   return { status: 'success' };
 }

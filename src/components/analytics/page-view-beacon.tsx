@@ -16,12 +16,15 @@ export function PageViewBeacon() {
   const locale = useLocale();
 
   useEffect(() => {
-    fetch('/api/track', {
+    const record = () => { void fetch('/api/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ path: pathname, locale }),
       keepalive: true,
-    }).catch(() => undefined);
+    }).catch(() => undefined); };
+    record();
+    window.addEventListener('consent-updated', record);
+    return () => window.removeEventListener('consent-updated', record);
   }, [pathname, locale]);
 
   return null;

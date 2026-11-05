@@ -23,6 +23,6 @@ async function requireAdmin() {
  */
 export async function resetAnalytics(): Promise<void> {
   await requireAdmin();
-  await prisma.visitor.deleteMany({});
+  await prisma.$transaction([prisma.visitor.deleteMany({}), prisma.conversionEvent.deleteMany({})]);
   revalidatePath('/[locale]/admin/panel/analiz', 'page');
 }

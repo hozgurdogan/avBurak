@@ -9,6 +9,7 @@ import { articleSchema } from '@/lib/validation/article';
 import { slugify } from '@/lib/slug';
 import { readingTimeMinutes } from '@/lib/reading-time';
 import { isLocale } from '@/i18n/locales';
+import { articleModifiedAt } from '@/lib/site';
 
 async function requireAdmin() {
   const user = await getCurrentUser();
@@ -134,6 +135,8 @@ export async function updateArticle(
 
   try {
     const existing = await prisma.article.findUnique({ where: { id }, select: { publishedAt: true } });
+    const now = new Date();
+    const publishedAt = data.status === 'PUBLISHED' && !existing?.publishedAt ? now : existing?.publishedAt;
 
     await prisma.$transaction([
       prisma.articleCategory.deleteMany({ where: { articleId: id } }),
@@ -148,8 +151,8 @@ export async function updateArticle(
           readMinutes,
           // A first publish stamps the date; re-saving an already-published
           // or still-draft article never moves it.
-          publishedAt:
-            data.status === 'PUBLISHED' && !existing?.publishedAt ? new Date() : existing?.publishedAt,
+          publishedAt,
+          updatedAt: articleModifiedAt(publishedAt ?? null, now),
           categories: { create: data.categoryIds.map((categoryId) => ({ categoryId })) },
         },
       }),

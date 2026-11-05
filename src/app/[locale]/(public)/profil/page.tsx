@@ -79,6 +79,8 @@ export default async function ProfilePage({ params }: PageProps) {
             alt={t('portraitAlt')}
             width={160}
             height={213}
+            fetchPriority="high"
+            decoding="async"
             className="aspect-[3/4] w-40 border border-rule-neutral object-cover"
           />
 
