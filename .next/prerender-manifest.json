@@ -55,35 +55,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/icon1": {
-      "initialHeaders": {
-        "cache-control": "public, immutable, no-transform, max-age=31536000",
-        "content-type": "image/png",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/icon1/layout,_N_T_/icon1/route,_N_T_/icon1"
-      },
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/icon1",
-      "dataRoute": null,
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/robots.txt": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -103,6 +74,35 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/robots.txt",
+      "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/icon1": {
+      "initialHeaders": {
+        "cache-control": "public, immutable, no-transform, max-age=31536000",
+        "content-type": "image/png",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/icon1/layout,_N_T_/icon1/route,_N_T_/icon1"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/icon1",
       "dataRoute": null,
       "allowHeader": [
         "host",
@@ -257,78 +257,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/ar/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/en/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/tr/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/ar/hesaplama-araclari": {
       "experimentalBypassFor": [
         {
@@ -392,6 +320,78 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/[locale]/hesaplama-araclari",
       "dataRoute": "/tr/hesaplama-araclari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/ar/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/ar/gizlilik.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/en/gizlilik.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/tr/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1389,31 +1389,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/gizlilik(?:/)?$",
-      "dataRoute": "/[locale]/gizlilik.rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/gizlilik\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/[locale]/hesaplama-araclari": {
       "experimentalBypassFor": [
         {
@@ -1430,6 +1405,31 @@
       "dataRoute": "/[locale]/hesaplama-araclari.rsc",
       "fallback": null,
       "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/[locale]/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/gizlilik(?:/)?$",
+      "dataRoute": "/[locale]/gizlilik.rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/gizlilik\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1567,8 +1567,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "c8082d83bb9c114ddeb5d8fec03a3807",
-    "previewModeSigningKey": "1ab5992a62480431ab7aa5e9a76bccac842b38fe5c90a104c9bff7b793bf844c",
-    "previewModeEncryptionKey": "41b6134b3910c1123751274636bfe51c46eb62fccb183f706daad17bfd94c14f"
+    "previewModeId": "02d487460fdbcfd173c89acd33bebd0f",
+    "previewModeSigningKey": "553f1c6f2fce28a133c16786efdeea6bbea0c133872941b5ba87bcf8f640a1ac",
+    "previewModeEncryptionKey": "f327e1245d7b351dcdfa2994c6aef6fd1c46d1883c7031208c35b8f86030bfc9"
   }
 }

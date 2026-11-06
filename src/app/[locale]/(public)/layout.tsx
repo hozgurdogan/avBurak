@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
+import { MobileContactBar } from '@/components/layout/mobile-contact-bar';
 import { ContactCtaBand } from '@/components/layout/contact-cta-band';
 import { PageViewBeacon } from '@/components/analytics/page-view-beacon';
 import { ConversionBeacon } from '@/components/analytics/conversion-beacon';
@@ -44,6 +45,7 @@ export default async function PublicLayout({ children, params }: LayoutProps) {
       </main>
       <ContactCtaBand />
       <SiteFooter />
+      <MobileContactBar />
       <PageViewBeacon />
       <ConversionBeacon />
       <Ga4Beacon />

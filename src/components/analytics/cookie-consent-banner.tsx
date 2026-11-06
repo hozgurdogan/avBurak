@@ -61,8 +61,7 @@ export function CookieConsentBanner() {
     <div
       role="region"
       aria-label={t('label')}
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-canvas/95 px-gutter py-5 backdrop-blur-frost"
-      style={{ paddingBottom: 'calc(1.25rem + env(safe-area-inset-bottom, 0px))' }}
+      className="cookie-consent-position fixed inset-x-0 z-50 border-t border-rule bg-canvas/95 px-gutter py-5 backdrop-blur-frost"
     >
       <div className="mx-auto flex max-w-wide flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-2xl text-md text-ink-muted">

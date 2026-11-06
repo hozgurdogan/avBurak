@@ -1,5 +1,17 @@
 @import 'tailwindcss';
 
+/* Keep page content and cookie preferences clear of the mobile contact bar. */
+:root { --mobile-contact-height: calc(4rem + env(safe-area-inset-bottom, 0px)); }
+.mobile-contact-bar { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.mobile-contact-spacer { height: var(--mobile-contact-height); flex-shrink: 0; }
+.cookie-consent-position { bottom: var(--mobile-contact-height); }
+@media (min-width: 64rem) {
+  .cookie-consent-position {
+    bottom: 0;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* ==========================================================================
    Design tokens
    --------------------------------------------------------------------------
