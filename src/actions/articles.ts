@@ -10,6 +10,10 @@ import { slugify } from '@/lib/slug';
 import { readingTimeMinutes } from '@/lib/reading-time';
 import { isLocale } from '@/i18n/locales';
 import { articleModifiedAt } from '@/lib/site';
+import {
+  additionalArticleCategories,
+  editorialCategoryAssignments,
+} from '@/content/additional-article-categories';
 
 async function requireAdmin() {
   const user = await getCurrentUser();
@@ -24,6 +28,98 @@ export type ArticleFormState = {
   errorCode?: 'validation' | 'slug-taken' | 'generic' | 'translation-conflict';
   fieldErrors?: Partial<Record<'title' | 'slug' | 'summary' | 'contentMd', string>>;
 };
+
+export type EditorialCategorySetupState = {
+  status: 'idle' | 'success' | 'error';
+  errorCode?: 'missing-articles' | 'generic';
+  updatedArticles?: number;
+};
+
+/**
+ * Adds the missing editorial categories and repairs the category links for
+ * the three recently published SEO articles. This is intentionally separate
+ * from the full seed so an admin can safely run it on the live database.
+ */
+export async function prepareEditorialCategories(
+  _previousState: EditorialCategorySetupState,
+  _formData: FormData,
+): Promise<EditorialCategorySetupState> {
+  await requireAdmin();
+
+  try {
+    const updatedArticles = await prisma.$transaction(async (tx) => {
+      const articles = await tx.article.findMany({
+        where: { locale: 'tr' },
+        select: { id: true, slug: true, title: true },
+      });
+      const targetBySlug = new Map(articles.map((article) => [article.slug, article]));
+      const coreAssignments = editorialCategoryAssignments.filter(
+        (item) => item.categorySlug !== 'kentsel-donusum-hukuku',
+      );
+      const missing = coreAssignments.filter((item) => !targetBySlug.has(item.articleSlug));
+      const urbanArticles = articles.filter((article) => {
+        const title = article.title.toLocaleLowerCase('tr');
+        return article.slug.includes('kentsel-donusum') || title.includes('kentsel dönüşüm');
+      });
+      if (missing.length > 0 || urbanArticles.length === 0) throw new Error('MISSING_EDITORIAL_ARTICLES');
+
+      const assignments = [
+        ...coreAssignments,
+        ...urbanArticles.map((article) => ({
+          articleSlug: article.slug,
+          categorySlug: 'kentsel-donusum-hukuku',
+        })),
+      ];
+
+      const categoryIds = new Map<string, string>();
+      for (const category of additionalArticleCategories) {
+        const record = await tx.category.upsert({
+          where: { slug: category.slug },
+          update: { position: category.position },
+          create: { slug: category.slug, position: category.position },
+          select: { id: true },
+        });
+        categoryIds.set(category.slug, record.id);
+
+        for (const locale of ['tr', 'en', 'ar'] as const) {
+          await tx.categoryTr.upsert({
+            where: { categoryId_locale: { categoryId: record.id, locale } },
+            update: { name: category.names[locale] },
+            create: { categoryId: record.id, locale, name: category.names[locale] },
+          });
+        }
+      }
+
+      for (const assignment of assignments) {
+        const article = targetBySlug.get(assignment.articleSlug);
+        const categoryId = categoryIds.get(assignment.categorySlug);
+        if (!article || !categoryId) throw new Error('EDITORIAL_CATEGORY_SETUP_INCOMPLETE');
+
+        await tx.articleCategory.deleteMany({ where: { articleId: article.id } });
+        await tx.articleCategory.create({ data: { articleId: article.id, categoryId } });
+      }
+      return assignments.length;
+    });
+
+    revalidatePath('/[locale]/admin/panel/makaleler', 'page');
+    revalidatePath('/[locale]', 'page');
+    revalidatePath('/[locale]/makaleler', 'page');
+    revalidatePath('/[locale]/makaleler/[slug]', 'page');
+    revalidatePath('/[locale]/calisma-alanlari/[slug]', 'page');
+    revalidatePath('/[locale]/bolgeler/[slug]', 'page');
+    revalidatePath('/sitemap.xml');
+
+    return { status: 'success', updatedArticles };
+  } catch (error) {
+    return {
+      status: 'error',
+      errorCode:
+        error instanceof Error && error.message === 'MISSING_EDITORIAL_ARTICLES'
+          ? 'missing-articles'
+          : 'generic',
+    };
+  }
+}
 
 function parseForm(formData: FormData) {
   return articleSchema.safeParse({

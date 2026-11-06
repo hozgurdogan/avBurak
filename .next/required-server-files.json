@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-rev3-8f63f30fba0e4973941f7cd4287665e1",
+    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avBurak-category-build-610f34748054407487ece7075195ab33",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -290,7 +290,7 @@
     "configFileName": "next.config.ts",
     "skipTrailingSlashRedirect": true,
     "turbopack": {
-      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-rev3-8f63f30fba0e4973941f7cd4287665e1"
+      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avBurak-category-build-610f34748054407487ece7075195ab33"
     },
     "_originalRedirects": [
       {
@@ -310,7 +310,7 @@
       }
     ]
   },
-  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-rev3-8f63f30fba0e4973941f7cd4287665e1",
+  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avBurak-category-build-610f34748054407487ece7075195ab33",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
@@ -333,6 +333,6 @@
     ".next\\required-server-files.json"
   ],
   "ignore": [
-    "..\\..\\..\\..\\OneDrive\\Masaüstü\\Webside\\avBurak\\node_modules\\next\\dist\\compiled\\@ampproject\\toolbox-optimizer\\**\\*"
+    "node_modules\\next\\dist\\compiled\\@ampproject\\toolbox-optimizer\\**\\*"
   ]
 }

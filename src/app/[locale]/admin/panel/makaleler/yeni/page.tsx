@@ -7,6 +7,7 @@ import { createArticle } from '@/actions/articles';
 import { ArticleForm } from '@/components/admin/article-form';
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
+export const dynamic = 'force-dynamic';
 
 type PageProps = {
   params: Promise<{ locale: string }>;

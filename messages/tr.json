@@ -1107,7 +1107,13 @@
       "updatedColumn": "Son Güncelleme",
       "statusPublished": "Yayımlandı",
       "statusDraft": "Taslak",
-      "empty": "Henüz makale yok."
+      "empty": "Henüz makale yok.",
+      "categorySetupHelp": "Eksik Tüketici, Ceza ve Kentsel Dönüşüm kategorilerini oluşturur; bu konulardaki yeni yazıları doğru kategoriye bağlar.",
+      "categorySetupButton": "Kategorileri oluştur ve yazıları sınıflandır",
+      "categorySetupPending": "Kategoriler hazırlanıyor…",
+      "categorySetupSuccess": "Üç kategori hazırlandı; {count} makale doğru kategoriye taşındı.",
+      "categorySetupMissing": "Beklenen makaleler bulunamadı; hiçbir değişiklik yapılmadı.",
+      "categorySetupError": "Kategori güncellemesi tamamlanamadı. Lütfen yeniden deneyin."
     },
     "articleForm": {
       "back": "Tüm makaleler",

@@ -17,10 +17,9 @@
  * articles under them are untouched, just no longer linked from here.
  *
  * `tazminat-hukuku`, `kentsel-donusum-hukuku` and `tuketici-hukuku` were
- * added (2026-10-10, at the client's request) the same way the five
- * mid-list areas were: no seeded DB category yet, so their "related
- * articles" section stays empty until something is published under a
- * matching category.
+ * added (2026-10-10, at the client's request). The matching editorial
+ * categories are maintained in `additional-article-categories.ts` and can
+ * be created from the admin panel without running the full content seed.
  */
 export const practiceAreaSlugs = [
   'is-hukuku',

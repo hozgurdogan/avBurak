@@ -3,8 +3,10 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getAdminArticles } from '@/lib/admin/articles';
 import { cn } from '@/lib/cn';
+import { EditorialCategorySetup } from '@/components/admin/editorial-category-setup';
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
+export const dynamic = 'force-dynamic';
 
 export default async function AdminArticlesPage() {
   const [t, articles] = await Promise.all([
@@ -30,6 +32,8 @@ export default async function AdminArticlesPage() {
           {t('newArticle')}
         </Link>
       </div>
+
+      <EditorialCategorySetup />
 
       {articles.length > 0 ? (
         <div className="mt-8 overflow-x-auto">

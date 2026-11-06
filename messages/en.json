@@ -1101,7 +1101,13 @@
       "updatedColumn": "Last Updated",
       "statusPublished": "Published",
       "statusDraft": "Draft",
-      "empty": "No articles yet."
+      "empty": "No articles yet.",
+      "categorySetupHelp": "Creates the missing Consumer, Criminal, and Urban Transformation categories, then assigns the related new articles.",
+      "categorySetupButton": "Create categories and classify articles",
+      "categorySetupPending": "Preparing categories…",
+      "categorySetupSuccess": "Three categories are ready; {count} articles were assigned.",
+      "categorySetupMissing": "The expected articles were not found; no changes were made.",
+      "categorySetupError": "The category update could not be completed. Please try again."
     },
     "articleForm": {
       "back": "All articles",

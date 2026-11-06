@@ -7,6 +7,7 @@ import { AdminShell } from '@/components/admin/admin-shell';
 // Never indexed - middleware already blocks anonymous access, this is a
 // second, independent reason for a crawler to stay out.
 export const metadata: Metadata = { robots: { index: false, follow: false } };
+export const dynamic = 'force-dynamic';
 
 /**
  * The authoritative auth gate. `middleware.ts` already redirected here any

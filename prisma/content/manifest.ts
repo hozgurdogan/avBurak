@@ -12,6 +12,8 @@
  * Arabic title.
  */
 
+import { additionalArticleCategories } from '../../src/content/additional-article-categories';
+
 export type SeedLocale = 'tr' | 'en' | 'ar';
 
 export interface SeedCategory {
@@ -143,6 +145,7 @@ export const seedCategories: SeedCategory[] = [
       ar: 'قانون الإرث',
     },
   },
+  ...additionalArticleCategories,
 ];
 
 export const seedArticleGroups: SeedArticleGroup[] = [

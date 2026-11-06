@@ -30,31 +30,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/_not-found": {
-      "initialStatus": 404,
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/_not-found",
-      "dataRoute": "/_not-found.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/robots.txt": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -104,6 +79,31 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/icon1",
       "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/_not-found": {
+      "initialStatus": 404,
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/_not-found",
+      "dataRoute": "/_not-found.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -248,150 +248,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/[locale]/calisma-alanlari",
       "dataRoute": "/tr/calisma-alanlari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/ar/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/ar/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/en/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/tr/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/ar/hesaplama-araclari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/ar/hesaplama-araclari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/hesaplama-araclari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/en/hesaplama-araclari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/hesaplama-araclari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/tr/hesaplama-araclari.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1049,7 +905,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/kvkk": {
+    "/ar/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1062,8 +918,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/ar/kvkk.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/ar/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1073,7 +929,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/kvkk": {
+    "/en/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1086,8 +942,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/en/kvkk.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/en/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1097,7 +953,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/kvkk": {
+    "/tr/gizlilik": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1110,8 +966,80 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/kvkk",
-      "dataRoute": "/tr/kvkk.rsc",
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/tr/gizlilik.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/ar/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/ar/hesaplama-araclari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/en/hesaplama-araclari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/tr/hesaplama-araclari.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1193,6 +1121,78 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/ar/profil": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/ar/profil.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/profil": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/en/profil.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/profil": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/profil",
+      "dataRoute": "/tr/profil.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/ar/sss": {
       "experimentalBypassFor": [
         {
@@ -1265,7 +1265,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/profil": {
+    "/ar/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1278,8 +1278,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/ar/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/ar/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1289,7 +1289,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/profil": {
+    "/en/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1302,8 +1302,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/en/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/en/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1313,7 +1313,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/profil": {
+    "/tr/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1326,8 +1326,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/profil",
-      "dataRoute": "/tr/profil.rsc",
+      "srcRoute": "/[locale]/kvkk",
+      "dataRoute": "/tr/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1389,6 +1389,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/[locale]/hesaplama-araclari/[slug]": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)(?:/)?$",
+      "dataRoute": "/[locale]/hesaplama-araclari/[slug].rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/[locale]/gizlilik": {
       "experimentalBypassFor": [
         {
@@ -1439,56 +1464,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/hesaplama-araclari/[slug]": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)(?:/)?$",
-      "dataRoute": "/[locale]/hesaplama-araclari/[slug].rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/[locale]/kvkk": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/kvkk(?:/)?$",
-      "dataRoute": "/[locale]/kvkk.rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/kvkk\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/[locale]/iletisim": {
       "experimentalBypassFor": [
         {
@@ -1505,6 +1480,31 @@
       "dataRoute": "/[locale]/iletisim.rsc",
       "fallback": null,
       "dataRouteRegex": "^/([^/]+?)/iletisim\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/[locale]/profil": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/profil(?:/)?$",
+      "dataRoute": "/[locale]/profil.rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/profil\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1539,7 +1539,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/profil": {
+    "/[locale]/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1551,10 +1551,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/profil(?:/)?$",
-      "dataRoute": "/[locale]/profil.rsc",
+      "routeRegex": "^/([^/]+?)/kvkk(?:/)?$",
+      "dataRoute": "/[locale]/kvkk.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/profil\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/kvkk\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1567,8 +1567,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "22d3eab094fc88a8aa75140080af0004",
-    "previewModeSigningKey": "e2ea6840c5d8d981b86370340497213478cbbaa99c4b087c4333639991f78d97",
-    "previewModeEncryptionKey": "0dfdc1c4d7caf2120bfc7b1e74146945ec19df18a158d09c36ae61d82cf90c59"
+    "previewModeId": "cac2470770f436ff71533f50ba38675c",
+    "previewModeSigningKey": "042be35d13c507e5410bbe39b736f8badd1efdd407b45c10fc9dd6e29dd28e7f",
+    "previewModeEncryptionKey": "e19cf274b302bfc201faaa9e84f7eb701e5739793c1151cefc976e278ed5f386"
   }
 }

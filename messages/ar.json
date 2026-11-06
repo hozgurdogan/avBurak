@@ -1101,7 +1101,13 @@
       "updatedColumn": "آخر تحديث",
       "statusPublished": "منشورة",
       "statusDraft": "مسودة",
-      "empty": "لا توجد مقالات بعد."
+      "empty": "لا توجد مقالات بعد.",
+      "categorySetupHelp": "ينشئ فئات قانون المستهلك والقانون الجنائي والتحول الحضري المفقودة، ثم يصنف المقالات الجديدة ذات الصلة.",
+      "categorySetupButton": "إنشاء الفئات وتصنيف المقالات",
+      "categorySetupPending": "جارٍ إعداد الفئات…",
+      "categorySetupSuccess": "تم إعداد ثلاث فئات وتصنيف {count} مقالات.",
+      "categorySetupMissing": "لم يتم العثور على المقالات المطلوبة؛ لم تُجرَ أي تغييرات.",
+      "categorySetupError": "تعذر إكمال تحديث الفئات. يرجى المحاولة مرة أخرى."
     },
     "articleForm": {
       "back": "جميع المقالات",

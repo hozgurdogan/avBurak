@@ -19,6 +19,10 @@ type PageProps = {
   searchParams: Promise<{ kategori?: string; sayfa?: string; q?: string }>;
 };
 
+// Article and category records are managed in the live CMS; render filters
+// and category names from the database on every request.
+export const dynamic = 'force-dynamic';
+
 function isPracticeAreaSlug(value: string): value is PracticeAreaSlug {
   return (practiceAreaSlugs as readonly string[]).includes(value);
 }

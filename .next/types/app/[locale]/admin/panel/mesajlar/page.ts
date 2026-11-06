@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-rev3-8f63f30fba0e4973941f7cd4287665e1\src\app\[locale]\admin\panel\mesajlar\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avBurak-category-build-610f34748054407487ece7075195ab33\src\app\[locale]\admin\panel\mesajlar\page.tsx
 import * as entry from '../../../../../../../src/app/[locale]/admin/panel/mesajlar/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
