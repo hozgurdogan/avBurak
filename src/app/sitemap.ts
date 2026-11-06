@@ -16,6 +16,7 @@ const staticPaths = [
   'makaleler',
   'hesaplama-araclari',
   'bolgeler',
+  'bolgeler/beylikduzu-bosanma-avukati',
   'sss',
   'iletisim',
   'kvkk',

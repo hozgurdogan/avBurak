@@ -8,8 +8,11 @@ import { articleEditorial } from '../src/content/article-editorial';
 import { getRegionArticles } from '../src/lib/articles';
 import { prisma } from '../src/lib/prisma';
 import { cn } from '../src/lib/cn';
+import { editorialRelatedSlugs } from '../src/content/editorial-plan';
 
 async function main() {
+  assert.deepEqual(editorialRelatedSlugs('kiraci-erken-cikarsa-kalan-kira'), ['ev-sahibi-evden-cikmami-istiyor']);
+  assert.deepEqual(editorialRelatedSlugs('tahliye-taahhudu-ne-zaman-gecerlidir'), ['kiraci-kirayi-odemiyor-ne-yapmaliyim', 'ev-sahibi-evden-cikmami-istiyor']);
   assert.ok(cn('font-display text-display-sm font-normal', 'text-ink').includes('text-display-sm'));
   assert.ok(cn('text-md', 'text-ink-muted').includes('text-md'));
   assert.equal(cn('text-display-sm', 'text-display'), 'text-display');

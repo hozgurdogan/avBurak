@@ -95,15 +95,15 @@ export function SiteHeader() {
         </div>
       ) : null}
 
-      <div className="mx-auto flex max-w-wide items-center justify-between gap-6 px-gutter py-5">
+      <div className="mx-auto flex max-w-wide items-center justify-between gap-3 px-gutter py-5 xl:gap-6">
         <Link
           href="/"
-          className="flex min-w-0 items-center gap-3 leading-tight text-ink"
+          className="flex min-w-0 items-center gap-2 leading-tight text-ink sm:gap-3"
         >
-          <Monogram className="h-9 w-auto shrink-0 text-ink" />
+          <Monogram className="h-6 w-auto shrink-0 text-ink sm:h-9" />
           <span className="flex min-w-0 flex-col">
-            <span className="font-display text-base text-ink sm:text-lg">{tSite('attorney')}</span>
-            <span className="label text-ink-faint">{tSite('role')}</span>
+            <span className="font-display text-sm text-ink sm:text-lg">{tSite('attorney')}</span>
+            <span className="label whitespace-nowrap text-ink-faint">{tSite('role')}</span>
           </span>
         </Link>
 
@@ -152,9 +152,9 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className="flex items-center gap-3 lg:hidden"
+            className="flex min-h-11 min-w-11 items-center justify-center gap-3 lg:hidden"
           >
-            <span className="label text-ink-muted">
+            <span className="label sr-only whitespace-nowrap text-ink-muted sm:not-sr-only">
               {menuOpen ? t('closeMenu') : t('openMenu')}
             </span>
             <span aria-hidden="true" className="flex w-6 flex-col gap-[5px]">

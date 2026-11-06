@@ -31,6 +31,7 @@ export const practiceAreaSlugs = [
   'tazminat-hukuku',
   'kentsel-donusum-hukuku',
   'tuketici-hukuku',
+  'ceza-hukuku',
   'sirketler-hukuku',
   'tahkim-ve-uyusmazlik-cozumu',
   'kisisel-verilerin-korunmasi',

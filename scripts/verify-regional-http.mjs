@@ -50,7 +50,7 @@ async function main() {
     assert.equal(new URL(response.headers.get('location'), base).pathname, `/tr${path.replace(/\/$/, '')}`);
   }
   const home = await (await get('/tr')).text();
-  assert.equal(decode(home.match(/<title>(.*?)<\/title>/s)[1]), 'Av. Burak Uğur Öztürk | Hukuki Danışmanlık ve Dava Takibi');
+  assert.equal(decode(home.match(/<title>(.*?)<\/title>/s)[1]), 'Esenyurt Avukat | Av. Burak Uğur Öztürk');
   console.log(`Regional HTTP checks passed: 24 pages, ${articleLinks.size} real fixture article links, single H1 and permanent legacy redirects.`);
 }
 main().catch((error) => { console.error(error); process.exitCode = 1; });

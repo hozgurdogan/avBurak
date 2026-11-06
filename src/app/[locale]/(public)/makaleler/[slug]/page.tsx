@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/locales';
-import { getArticleBySlug, getArticleAlternates, getRelatedArticles } from '@/lib/articles';
+import { getArticleBySlug, getArticleAlternates, getRelatedArticles, getRegionArticles } from '@/lib/articles';
 import { renderArticleMarkdown } from '@/lib/markdown';
 import { ActionLink } from '@/components/ui/action-link';
 import { ArticleToc } from '@/components/ui/article-toc';
@@ -18,6 +18,8 @@ import { buildBreadcrumbSchema, buildArticleSchema } from '@/lib/structured-data
 import { articleExcerpt, articleModifiedAt } from '@/lib/site';
 import { articleSources } from '@/lib/article-sources';
 import { regionsForArticle } from '@/content/region-guides';
+import { editorialRelatedSlugs, plannedArticle } from '@/content/editorial-plan';
+import { ArticleContact } from '@/components/ui/article-contact';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -41,6 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       Object.entries(alternates).map(([l, s]) => [l, `/${l}/makaleler/${s}`]),
     ),
     ogType: 'article',
+    brandTitle: false,
     image: article.coverImage ?? `/${locale}/makaleler/${slug}/share-image`,
   });
 }
@@ -90,8 +93,10 @@ export default async function ArticleDetailPage({ params }: PageProps) {
     { name: tNav('articles'), path: 'makaleler' },
     { name: article.title, path: `makaleler/${slug}` },
   ];
-  const sources = articleSources(article.contentMd);
   const translatedSlugs = await getArticleAlternates(article.groupId);
+  const plan = typedLocale === 'tr' ? plannedArticle(translatedSlugs.tr) : undefined;
+  const sources = articleSources(`${article.contentMd}\n${plan?.lawNumbers.join(' ') ?? ''}`);
+  const editorialLinks = await getRegionArticles(typedLocale, editorialRelatedSlugs(translatedSlugs.tr), 6);
   const regions = regionsForArticle(translatedSlugs.tr);
   const tRegions = await getTranslations('serviceRegions');
 
@@ -153,6 +158,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             label={tDetail('tocLabel')}
             className="lg:sticky lg:top-28"
           />
+
         </aside>
 
         <div className="lg:col-span-7 lg:col-start-1 lg:row-start-1">
@@ -163,6 +169,15 @@ export default async function ArticleDetailPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: rendered.html }}
           />
 
+          {editorialLinks.length > 0 ? <section className="mt-10 border-t border-rule pt-6">
+            <h2 className="label text-gold-800">{tDetail('relatedLabel')}</h2>
+            <ul className="mt-4 space-y-3">
+              {editorialLinks.map((item) => <li key={item.id}>
+                <Link href={`/makaleler/${item.slug}`} className="text-md text-ink-muted underline hover:text-gold-800">{item.title}</Link>
+              </li>)}
+            </ul>
+          </section> : null}
+
           {sources.length > 0 ? (
             <section className="mt-12 border-t border-rule pt-6">
               <h2 className="label text-gold-800">{tDetail('sourcesLabel')}</h2>
@@ -171,6 +186,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
                   <a href={source.url} className="text-ink-muted underline hover:text-gold-800">{source.name}</a>
                 </li>)}
               </ul>
+              {plan ? <p className="mt-4 text-sm text-ink-faint">{tDetail('sourceChecked', { date: dateFormatter.format(new Date(`${plan.sourceCheckedAt}T12:00:00Z`)) })}</p> : null}
             </section>
           ) : null}
           {regions.length > 0 ? <section className="mt-10 border-t border-rule pt-6">
@@ -181,6 +197,8 @@ export default async function ArticleDetailPage({ params }: PageProps) {
               </li>)}
             </ul>
           </section> : null}
+          {plan?.id === 3 ? <p className="mt-6 text-md"><Link href="/bolgeler/beylikduzu-bosanma-avukati" className="text-ink-muted underline hover:text-gold-800">Beylikdüzü boşanma ve aile hukuku dosyaları</Link></p> : null}
+          <ArticleContact title={article.title} plan={plan} />
           <LegalDisclaimer className="mt-16" />
           <aside className="mt-10 border-t border-rule pt-6" aria-label={tDetail('authorLabel')}>
             <p className="label text-gold-800">{tDetail('authorLabel')}</p>

@@ -1,0 +1,311 @@
+[
+  {
+    "id": 1,
+    "wave": 1,
+    "order": 1,
+    "slug": "kiraci-kirayi-odemiyor-ne-yapmaliyim",
+    "title": "Kiracı Kirayı Ödemiyor, Ne Yapmalıyım?",
+    "metaTitle": "Kiracı Kirayı Ödemiyorsa Ne Yapılır? Tahliye ve Takip",
+    "metaDescription": "Kiracı kirayı ödemiyorsa alacak takibi ve tahliye yollarını, ödeme ve itiraz sürelerini, arabuluculuğu ve hazırlanacak belgeleri öğrenin.",
+    "category": "kira-hukuku",
+    "regions": [
+      "esenyurt",
+      "buyukcekmece",
+      "beylikduzu"
+    ],
+    "checklist": "kira",
+    "documents": [
+      "Kira sözleşmesi",
+      "aylık borç dökümü",
+      "banka kayıtları",
+      "önceki ihtarlar ve tebligatlar",
+      "taşınmazda kimin oturduğu bilgisi"
+    ],
+    "related": [
+      "tahliye-taahhudu-ne-zaman-gecerlidir",
+      "kiraci-erken-cikarsa-kalan-kira",
+      "odeme-emrine-itiraz-suresi-ve-sonuclari",
+      "ev-sahibi-evden-cikmami-istiyor"
+    ],
+    "lawNumbers": [
+      "6098",
+      "2004",
+      "6325"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 2,
+    "wave": 1,
+    "order": 2,
+    "slug": "maasim-odenmiyor-hakli-fesih",
+    "title": "Maaşım Ödenmiyor, İşten Ayrılırsam Haklarım Ne Olur?",
+    "metaTitle": "Maaş Ödenmiyorsa Haklı Fesih ve Haklarınız",
+    "metaDescription": "Maaşı ödenmeyen işçinin ücret talebi, iş görmekten kaçınma ve haklı fesih seçenekleri ile kıdem tazminatı ve arabuluculuk sürecini inceleyin.",
+    "category": "is-hukuku",
+    "regions": [
+      "esenyurt",
+      "avcilar",
+      "kucukcekmece"
+    ],
+    "checklist": "is",
+    "documents": [
+      "İş sözleşmesi",
+      "bordrolar",
+      "banka hareketleri",
+      "çalışma başlangıcı, ücret, ödeme günü, eksik aylar ve kısmi ödemeleri gösteren tek çizelge",
+      "varsa fesih bildirimi"
+    ],
+    "related": [
+      "isten-cikarildim-ne-yapmaliyim",
+      "kidem-tazminati-hangi-hallerde-alinir",
+      "sigortasiz-calistim-hizmet-tespiti-davasi"
+    ],
+    "lawNumbers": [
+      "4857",
+      "1475",
+      "7036"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 3,
+    "wave": 1,
+    "order": 3,
+    "slug": "bosanmak-istiyorum-nereden-baslamaliyim",
+    "title": "Boşanmak İstiyorum, Nereden Başlamalıyım?",
+    "metaTitle": "Boşanmak İstiyorum: Nereden Başlamalıyım?",
+    "metaDescription": "Boşanma sürecinde ilk adımlar, çocuk ve geçim için geçici önlemler, gerekli belgeler, adli yardım ve mahkemeye başvuru hakkında rehber.",
+    "category": "bosanma-aile-hukuku",
+    "regions": [
+      "beylikduzu",
+      "mimaroba",
+      "buyukcekmece"
+    ],
+    "checklist": "aile",
+    "documents": [
+      "Kimlik ve evlilik bilgileri",
+      "çocuklara ilişkin kayıtlar",
+      "gelir belgeleri",
+      "mevcut mahkeme kararları",
+      "mal, kredi ve ortak hesap listesi",
+      "hukuka uygun deliller"
+    ],
+    "related": [
+      "anlasmali-bosanma-nasil-yapilir",
+      "anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "bosanmada-mal-paylasimi",
+      "nafaka-artirim-davasi-nasil-acilir"
+    ],
+    "lawNumbers": [
+      "4721",
+      "4787",
+      "6100",
+      "1136",
+      "6284"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 4,
+    "wave": 2,
+    "order": 5,
+    "slug": "miras-kalan-ev-tapu-intikali",
+    "title": "Miras Kalan Evin Tapu İntikali Nasıl Yapılır?",
+    "metaTitle": "Miras Kalan Evin Tapu İntikali Nasıl Yapılır?",
+    "metaDescription": "Miras kalan evin tapu intikali için mirasçılık belgesi, Web Tapu başvurusu, vergi işlemleri ve mirasçılar arasında satış ve paylaşım ayrımı.",
+    "category": "miras-hukuku",
+    "regions": [
+      "buyukcekmece",
+      "catalca",
+      "silivri"
+    ],
+    "checklist": "miras",
+    "documents": [
+      "Mirasçılık belgesi",
+      "kimlik",
+      "varsa temsil belgesi",
+      "tapu bilgileri",
+      "bina için DASK",
+      "ölüm tarihi ve mirasçı listesi",
+      "bilinen borçlar",
+      "varsa vasiyetname"
+    ],
+    "related": [
+      "ortakligin-giderilmesi-davasi",
+      "miras-kalan-ev-ecrimisil-davasi",
+      "mirasin-reddi-uc-aylik-sure-ve-sonuclari"
+    ],
+    "lawNumbers": [
+      "4721",
+      "7338"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 5,
+    "wave": 3,
+    "order": 8,
+    "slug": "ikinci-el-arac-ayipli-cikti",
+    "title": "İkinci El Aldığım Araç Ayıplı Çıktı, Ne Yapmalıyım?",
+    "metaTitle": "İkinci El Araç Ayıplı Çıktı: Ne Yapmalıyım?",
+    "metaDescription": "İkinci el araçta gizlenen hasar ve arıza için satıcının sorumluluğu, ekspertiz, ayıp bildirimi, iade ve bedel indirimi yollarını inceleyin.",
+    "category": "tuketici-hukuku",
+    "regions": [
+      "beylikduzu",
+      "kucukcekmece",
+      "avcilar"
+    ],
+    "checklist": null,
+    "documents": [
+      "Satış ilanı",
+      "mesajlar",
+      "ekspertiz raporu",
+      "noter satış belgesi",
+      "ödeme kayıtları",
+      "servis belgeleri",
+      "arızanın fark edildiği tarih ve kilometre"
+    ],
+    "related": [
+      "ayipli-mal-tuketici-haklari",
+      "tuketici-hakem-heyeti-kararina-itiraz",
+      "arac-deger-kaybi-nasil-alinir"
+    ],
+    "lawNumbers": [
+      "6502",
+      "6098"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 6,
+    "wave": 3,
+    "order": 9,
+    "slug": "ibana-para-gonderdim-dolandirildim",
+    "title": "IBAN ile Para Gönderdim, Dolandırıldım: Ne Yapmalıyım?",
+    "metaTitle": "IBAN ile Dolandırıldım: İlk Adımlar ve Başvuru",
+    "metaDescription": "IBAN üzerinden dolandırıcılık şüphesinde banka bildirimi, dekont ve mesajların korunması, savcılık başvurusu ve para iadesi yolları.",
+    "category": "ceza-hukuku",
+    "regions": [
+      "kucukcekmece",
+      "esenyurt"
+    ],
+    "checklist": null,
+    "documents": [
+      "Dekont",
+      "alıcı hesap bilgisi",
+      "telefon numarası ve kullanıcı adı",
+      "ilan bağlantısı",
+      "yazışmalar",
+      "banka başvuru numarası"
+    ],
+    "related": [
+      "odeme-emrine-itiraz-suresi-ve-sonuclari"
+    ],
+    "lawNumbers": [
+      "5237",
+      "5271"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 7,
+    "wave": 3,
+    "order": 6,
+    "slug": "limited-sirket-ortagi-zarara-ugratti",
+    "title": "Limited Şirket Ortağım Şirketi Zarara Uğrattı, Ne Yapabilirim?",
+    "metaTitle": "Limited Şirket Ortağı Zarara Uğrattıysa Ne Yapılır?",
+    "metaDescription": "Limited şirkette ortağın veya müdürün zarara yol açan işlemleri, bilgi alma, yetkinin sınırlandırılması, sorumluluk ve ortaklıktan çıkma.",
+    "category": "sirketler-hukuku",
+    "regions": [
+      "esenyurt",
+      "beylikduzu",
+      "silivri"
+    ],
+    "checklist": null,
+    "documents": [
+      "Şirket sözleşmesi",
+      "ticaret sicili kayıtları",
+      "müdür atama kararları",
+      "imza yetkileri",
+      "banka hareketleri",
+      "ilgili sözleşmeler. burakugurozturk.av.tr | SEO Makale ve Bölge Planı (Revize) | 6 Kasım 2026 Sayfa 28"
+    ],
+    "related": [
+      "yabanci-yatirimcilar-icin-turkiyede-sirket-kurulusu",
+      "sinir-otesi-sozlesmelerde-tahkim-sartlari"
+    ],
+    "lawNumbers": [
+      "6102",
+      "6183"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 8,
+    "wave": 3,
+    "order": 7,
+    "slug": "kentsel-donusum-sozlesme-kira-yardimi",
+    "title": "Kentsel Dönüşümde Sözleşme ve Kira Yardımında Nelere Dikkat Edilmeli?",
+    "metaTitle": "Kentsel Dönüşümde Sözleşme ve Kira Yardımı",
+    "metaDescription": "Kentsel dönüşümde malik ve kiracının durumu, müteahhit sözleşmesi, kira ve taşınma desteği ile Yarısı Bizden başvurusunda kontrol edilecekler.",
+    "category": "kentsel-donusum-hukuku",
+    "regions": [
+      "avcilar",
+      "kucukcekmece",
+      "buyukcekmece"
+    ],
+    "checklist": null,
+    "documents": [
+      "Tapu kaydı",
+      "risk raporu ve bildirimler",
+      "malik kararları",
+      "sözleşme taslağı",
+      "teknik şartname",
+      "yüklenici teklifleri",
+      "kiracı için kira sözleşmesi ve kullanım belgeleri"
+    ],
+    "related": [
+      "ortakligin-giderilmesi-davasi",
+      "yabancilarin-tasinmaz-edinimi-ve-tapu-sureci"
+    ],
+    "lawNumbers": [
+      "6306"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  },
+  {
+    "id": 9,
+    "wave": 1,
+    "order": 4,
+    "slug": "ev-sahibi-evden-cikmami-istiyor",
+    "title": "Ev Sahibi Evden Çıkmamı İstiyor, Haklarım Neler?",
+    "metaTitle": "Ev Sahibi Evden Çıkmamı İstiyor: Kiracı Hakları",
+    "metaDescription": "Ev sahibinin tahliye talebinde sözleşme bitimi, ihtiyaç, yeni malik ve tahliye taahhüdü ayrımı ile ihtar alan kiracının kontrol edeceği belgeler.",
+    "category": "kira-hukuku",
+    "regions": [
+      "mimaroba",
+      "beylikduzu",
+      "buyukcekmece"
+    ],
+    "checklist": "kira",
+    "documents": [
+      "Kira sözleşmesi",
+      "banka ödemeleri",
+      "önceki yazışmalar",
+      "ihtar, ödeme emri veya mahkeme evrakı ve tebliğ kaydı",
+      "varsa tahliye taahhüdü"
+    ],
+    "related": [
+      "tahliye-taahhudu-ne-zaman-gecerlidir",
+      "kira-depozitosu-iadesi",
+      "tr-makaleler-kira-bedelinin-tespiti-davasi",
+      "kiraci-kirayi-odemiyor-ne-yapmaliyim"
+    ],
+    "lawNumbers": [
+      "6098",
+      "6325"
+    ],
+    "sourceCheckedAt": "2026-11-07"
+  }
+]

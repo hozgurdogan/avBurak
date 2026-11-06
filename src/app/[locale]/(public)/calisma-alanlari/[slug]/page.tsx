@@ -19,6 +19,7 @@ import { pageMetadata } from '@/lib/seo';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { buildBreadcrumbSchema } from '@/lib/structured-data';
+import { localFamilyService } from '@/content/local-family-service';
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -104,9 +105,10 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
           as="h1"
           number={practiceAreaNumber(index)}
           label={tAreasPage('label')}
-          title={tAreas(`${slug}.name`)}
+          title={typedLocale === 'tr' ? `${tAreas(`${slug}.name`)}: Esenyurt’ta Hukuki Danışmanlık` : tAreas(`${slug}.name`)}
           lead={tAreas(`${slug}.summary`)}
         />
+        <p className="mt-5 text-sm text-ink-muted">Av. Burak Uğur Öztürk</p>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-8">
@@ -117,6 +119,7 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
             </div>
 
             <div className="mt-10">
+              {slug === 'bosanma-aile-hukuku' ? <p className="mb-6"><Link href="/bolgeler/beylikduzu-bosanma-avukati" className="text-md text-ink-muted underline hover:text-gold-800">{localFamilyService[typedLocale].title}</Link></p> : null}
               <ActionLink href="/iletisim" variant="solid">
                 {tDetail('contactCta')}
               </ActionLink>

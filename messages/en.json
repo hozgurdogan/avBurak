@@ -175,6 +175,15 @@
         "Under Law No. 6698, the practice covers identifying data controller obligations, preparing a data inventory, and drafting privacy notices and explicit consent texts.",
         "Support is provided in structuring cross-border data transfers in line with the legislation and in data breach notification procedures."
       ]
+    },
+    "ceza-hukuku": {
+      "name": "Criminal Law",
+      "summary": "Legal advice and case handling concerning criminal investigations, trials, fraud allegations, complaints and defence rights.",
+      "body": [
+        "A criminal complaint, investigation, trial and execution of a sentence are distinct stages. The initial review identifies the timeline, available records, notices and the person’s role in the proceedings.",
+        "Where fraud is suspected, notifying the bank, preserving evidence and contacting the authorities are separate steps. Filing a criminal complaint does not guarantee repayment or a particular outcome.",
+        "Defence rights for suspects and defendants, and complaint and participation rights for victims, depend on the case. Deadlines, protective measures and remedies require a review of the actual documents."
+      ]
     }
   },
   "practiceAreasPage": {
@@ -653,7 +662,13 @@
     "authorLabel": "Author",
     "authorDescription": "Istanbul Bar Association · Registration no. 84442 · Working languages: Turkish, English and Arabic.",
     "sourcesLabel": "Official legislation sources (Turkish)",
-    "regionsLabel": "Related regional guides"
+    "regionsLabel": "Related regional guides",
+    "contactTitle": "Request a consultation",
+    "documentsTitle": "Documents to prepare",
+    "downloadChecklist": "Download the document checklist (PDF, Turkish)",
+    "contactLead": "Prepare your documents and contact the office to discuss your case.",
+    "whatsappMessage": "Hello, I read your article “{title}”. I would like to discuss this matter.",
+    "sourceChecked": "Sources checked: {date}"
   },
   "toolsPage": {
     "meta": {

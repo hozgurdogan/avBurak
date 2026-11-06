@@ -56,6 +56,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/[locale]/(public)/bolgeler/beylikduzu-bosanma-avukati/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[locale]/bolgeler/beylikduzu-bosanma-avukati">> = Specific
+  const handler = {} as typeof import("../../src/app/[locale]/(public)/bolgeler/beylikduzu-bosanma-avukati/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/[locale]/(public)/bolgeler/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/[locale]/bolgeler">> = Specific

@@ -23,6 +23,7 @@ import { getRegionArticles } from '@/lib/articles';
 import { articleExcerpt } from '@/lib/site';
 import { practiceAreaToolSlugs } from '@/content/practice-area-tools';
 import { ArticleToc } from '@/components/ui/article-toc';
+import { localFamilyService } from '@/content/local-family-service';
 
 // Related articles come from the live CMS, including their real translated slugs.
 export const dynamic = 'force-dynamic';
@@ -177,6 +178,7 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
               <div className="border-t border-rule pt-8">
                 <h2 className="label text-ink-faint">{tDetail('relatedAreasLabel')}</h2>
                 <ul className="mt-4 flex flex-col gap-3">
+                  {slug === 'beylikduzu' ? <li><Link href="/bolgeler/beylikduzu-bosanma-avukati" className="text-md text-ink underline hover:text-gold-800">{localFamilyService[typedLocale].title}</Link></li> : null}
                   {relatedAreas.map((areaSlug) => (
                     <li key={areaSlug}>
                       <Link

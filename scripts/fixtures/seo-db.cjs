@@ -18,6 +18,21 @@ const rows = [
   article('tr', custody, 'custody', 'Velayetin Değiştirilmesi Davası', '# Velayetin Değiştirilmesi Davası\n\n## Başvuru\n\nDosya belgeleri.\n\n### İnceleme\n\nDosyaya göre değerlendirme.'),
   article('tr', inheritance, 'inheritance', 'Mirastan Mal Kaçırma: Muris Muvazaası', '# Mirastan Mal Kaçırma: Muris Muvazaası\n\n## Tapu kaydı\n\nKayıtlar incelenir.'),
 ];
+if (process.env.EDITORIAL_FIXTURE === '1') {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports -- This fixture is a CommonJS Node preload.
+  const { readFileSync } = require('node:fs');
+  const plan = JSON.parse(readFileSync('src/content/seo-rev3.json', 'utf8'));
+  const messages = JSON.parse(readFileSync('messages/tr.json', 'utf8'));
+  for (const item of plan) {
+    const row = article('tr', item.slug, `rev3-${item.id}`, item.title, readFileSync(`prisma/content/seo-rev3/${item.slug}.md`, 'utf8'));
+    Object.assign(row, { summary: item.metaDescription, metaTitle: item.metaTitle, metaDescription: item.metaDescription,
+      categories: [{ category: { slug: item.category, translations: [{ locale: 'tr', name: messages.practiceAreas[item.category].name }] } }] });
+    rows.push(row);
+  }
+  const appendices = JSON.parse(readFileSync('prisma/content/seo-rev3/appendices.json', 'utf8'));
+  for (const item of appendices) rows.push(article('tr', item.slug, `old-${item.slug}`, item.slug, item.markdown));
+  rows.push({ ...article('tr', 'unpublished-editorial-fixture', 'draft', 'Unpublished draft', 'Draft'), status: 'DRAFT' });
+}
 function matches(row, where = {}) {
   if (where.locale && row.locale !== where.locale) return false;
   if (where.status && row.status !== where.status) return false;
@@ -26,7 +41,10 @@ function matches(row, where = {}) {
   if (typeof where.groupId === 'string' && row.groupId !== where.groupId) return false;
   if (where.groupId?.in && !where.groupId.in.includes(row.groupId)) return false;
   if (where.id?.not && row.id === where.id.not) return false;
-  if (where.categories) return false;
+  if (where.categories) {
+    const slug = where.categories.some?.category?.slug;
+    if (!row.categories.some(({ category }) => typeof slug === 'string' ? category.slug === slug : slug?.in?.includes(category.slug))) return false;
+  }
   return true;
 }
 globalThis.prisma = {

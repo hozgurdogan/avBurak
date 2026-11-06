@@ -79,7 +79,7 @@ export function pageMetadata({
       locale: localeTags[locale].replace('-', '_'),
       type: ogType,
       alternateLocale: routing.locales
-        .filter((l) => l !== locale)
+        .filter((l) => l !== locale && (!languages || l in languages))
         .map((l) => localeTags[l as Locale].replace('-', '_')),
       images: [ogImage],
     },

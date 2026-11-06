@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-mobile-310f1c10f86c4c40b455eee5aec2211a\src\app\[locale]\(public)\calisma-alanlari\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-rev3-8f63f30fba0e4973941f7cd4287665e1\src\app\[locale]\(public)\calisma-alanlari\page.tsx
 import * as entry from '../../../../../../src/app/[locale]/(public)/calisma-alanlari/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

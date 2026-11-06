@@ -6,15 +6,15 @@ import type { PracticeAreaSlug } from './practice-areas';
  * hizmet/makale sayfaları arasında iç link"). Deliberately a manual map
  * rather than a guess from naming: `infaz-hesaplama` (parole/sentence
  * calculation) is criminal-execution law, not `icra-hukuku` (debt
- * enforcement) despite the similar Turkish names, and this site has no
- * criminal-law practice area to link it to yet - so it is left unmapped
- * here rather than attached to the wrong page.
+ * enforcement) despite the similar Turkish names. It belongs to the
+ * criminal-law practice area, added with the November editorial plan.
  */
 export const practiceAreaToolSlugs: Partial<Record<PracticeAreaSlug, readonly string[]>> = {
   'is-hukuku': ['kidem-tazminati', 'yillik-izin', 'fazla-mesai', 'issizlik-maasi', 'is-kazasi-tazminat'],
   'bosanma-aile-hukuku': ['nafaka-artirim'],
   'kira-hukuku': ['kira-artis-orani'],
   'miras-hukuku': ['miras-payi'],
+  'ceza-hukuku': ['infaz-hesaplama'],
 };
 
 /** Reverse lookup for a tool's detail page: which practice area(s) it

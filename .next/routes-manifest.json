@@ -166,6 +166,14 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/bolgeler(?:/)?$"
     },
     {
+      "page": "/[locale]/bolgeler/beylikduzu-bosanma-avukati",
+      "regex": "^/([^/]+?)/bolgeler/beylikduzu\\-bosanma\\-avukati(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/bolgeler/beylikduzu\\-bosanma\\-avukati(?:/)?$"
+    },
+    {
       "page": "/[locale]/bolgeler/[slug]",
       "regex": "^/([^/]+?)/bolgeler/([^/]+?)(?:/)?$",
       "routeKeys": {

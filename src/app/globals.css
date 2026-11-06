@@ -605,6 +605,14 @@
     font-style: italic;
   }
 
+  & > blockquote:first-child {
+    border-inline-start: 3px solid var(--color-gold-800);
+    background: var(--color-paper);
+    padding: 1.25em;
+    color: var(--color-ink);
+    font-style: normal;
+  }
+
   & code {
     border-radius: var(--radius-xs);
     background-color: var(--color-canvas-deep);
@@ -642,6 +650,13 @@
     border-block-end: 1px solid var(--color-rule);
     padding: 0.6em 0.75em;
     text-align: start;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  & th {
+    background: var(--color-canvas-deep);
+    color: var(--color-ink);
   }
 }
 

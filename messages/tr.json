@@ -28,8 +28,8 @@
   },
   "home": {
     "meta": {
-      "title": "Av. Burak Uğur Öztürk",
-      "homeTitle": "Av. Burak Uğur Öztürk | Hukuki Danışmanlık ve Dava Takibi",
+      "title": "Esenyurt Avukat | Av. Burak Uğur Öztürk",
+      "homeTitle": "Esenyurt Avukat | Av. Burak Uğur Öztürk",
       "description": "Esenyurt merkezli; iş, icra, boşanma ve aile, kira, miras ve şirketler hukukunda Türkçe, İngilizce ve Arapça hukuki danışmanlık ve dava takibi."
     },
     "hero": {
@@ -174,6 +174,15 @@
       "body": [
         "6698 sayılı Kanun kapsamında veri sorumlusu yükümlülüklerinin tespiti, veri envanterinin çıkarılması ile aydınlatma ve açık rıza metinlerinin hazırlanması bu alanda yürütülen çalışmalardır.",
         "Yurt dışına veri aktarımı süreçlerinin mevzuata uygun şekilde yapılandırılması ve veri ihlali bildirim süreçlerinde destek sağlanmaktadır."
+      ]
+    },
+    "ceza-hukuku": {
+      "name": "Ceza Hukuku",
+      "summary": "Soruşturma ve kovuşturma süreçleri, dolandırıcılık iddiaları, şikâyet ve savunma hakları hakkında hukuki danışmanlık ve dosya takibi.",
+      "body": [
+        "Ceza hukukunda suç duyurusu, soruşturma, kovuşturma ve infaz birbirinden farklı aşamalardır. İlk değerlendirmede olayların sırası, mevcut belgeler, tebligatlar ve kişinin dosyadaki sıfatı belirlenir.",
+        "Dolandırıcılık şüphesinde banka bildirimi, delillerin korunması ve yetkili mercilere başvuru ayrı işlemlerdir. Ceza başvurusu, para iadesini veya belirli bir soruşturma sonucunu garanti etmez.",
+        "Şüpheli veya sanık bakımından savunma hakkı, mağdur bakımından şikâyet ve katılma hakları somut dosyanın özelliklerine göre değerlendirilir. Süreler, tedbirler ve başvuru yolları eldeki evraka göre incelenir."
       ]
     }
   },
@@ -659,7 +668,13 @@
     "authorLabel": "Yazar",
     "authorDescription": "İstanbul Barosu · Sicil No: 84442 · Çalışma dilleri: Türkçe, İngilizce ve Arapça.",
     "sourcesLabel": "Resmî mevzuat kaynakları",
-    "regionsLabel": "İlgili bölge rehberleri"
+    "regionsLabel": "İlgili bölge rehberleri",
+    "contactTitle": "Görüşme talebi",
+    "documentsTitle": "Görüşmeye getirilecek belgeler",
+    "downloadChecklist": "Belge kontrol listesini indir (PDF)",
+    "contactLead": "Belgelerinizi hazırlayarak dosyanızın değerlendirilmesi için iletişime geçebilirsiniz.",
+    "whatsappMessage": "Merhaba, “{title}” yazınızı okudum. Bu konuda görüşmek istiyorum.",
+    "sourceChecked": "Kaynak kontrolü: {date}"
   },
   "toolsPage": {
     "meta": {

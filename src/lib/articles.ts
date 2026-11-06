@@ -207,7 +207,7 @@ export async function getArticlesByCategory(
 export type RegionArticle = ArticleCard & { referenceSlug?: string };
 
 /** Only published translations of the curated articles are linked; no guessed EN/AR slugs. */
-export async function getRegionArticles(locale: Locale, preferredSlugs: readonly string[], take = 4): Promise<RegionArticle[]> {
+export async function getRegionArticles(locale: Locale, preferredSlugs: readonly string[], take = 5): Promise<RegionArticle[]> {
   const originals = await prisma.article.findMany({
     where: { locale: 'tr', status: 'PUBLISHED', slug: { in: [...preferredSlugs] } },
     select: { groupId: true, slug: true },
