@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { getAdminArticles } from '@/lib/admin/articles';
 import { cn } from '@/lib/cn';
 import { EditorialCategorySetup } from '@/components/admin/editorial-category-setup';
+import { SeoArticleAppendixSetup } from '@/components/admin/seo-article-appendix-setup';
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 export const dynamic = 'force-dynamic';
@@ -34,6 +35,7 @@ export default async function AdminArticlesPage() {
       </div>
 
       <EditorialCategorySetup />
+      <SeoArticleAppendixSetup />
 
       {articles.length > 0 ? (
         <div className="mt-8 overflow-x-auto">

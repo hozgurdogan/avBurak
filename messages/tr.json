@@ -1113,7 +1113,14 @@
       "categorySetupPending": "Kategoriler hazırlanıyor…",
       "categorySetupSuccess": "Üç kategori hazırlandı; {count} makale doğru kategoriye taşındı.",
       "categorySetupMissing": "Beklenen makaleler bulunamadı; hiçbir değişiklik yapılmadı.",
-      "categorySetupError": "Kategori güncellemesi tamamlanamadı. Lütfen yeniden deneyin."
+      "categorySetupError": "Kategori güncellemesi tamamlanamadı. Lütfen yeniden deneyin.",
+      "appendixSetupHelp": "Revize SEO planındaki üç mevcut makaleye ek bölümleri ve kaynak bağlantılarını ekler; tekrar çalıştırıldığında aynı bölümleri çoğaltmaz.",
+      "appendixSetupButton": "Üç makalenin ek bölümlerini uygula",
+      "appendixSetupPending": "Makaleler güncelleniyor…",
+      "appendixSetupSuccess": "{updated} makale güncellendi; {present} makalede ek zaten vardı.",
+      "appendixSetupMissing": "Hedef makalelerden biri bulunamadı; hiçbir değişiklik yapılmadı.",
+      "appendixSetupPartial": "Hedef makalelerden birinde ek bölüm kısmen mevcut. Yinelenen metin oluşturmamak için hiçbir değişiklik yapılmadı; inceleme gerekiyor.",
+      "appendixSetupError": "Makale ekleri uygulanamadı. Hiçbir değişiklik yapılmamış olabilir; lütfen durumu kontrol edin."
     },
     "articleForm": {
       "back": "Tüm makaleler",

@@ -10,6 +10,7 @@ import { slugify } from '@/lib/slug';
 import { readingTimeMinutes } from '@/lib/reading-time';
 import { isLocale } from '@/i18n/locales';
 import { articleModifiedAt } from '@/lib/site';
+import articleAppendices from '../../prisma/content/seo-rev3/appendices.json';
 import {
   additionalArticleCategories,
   editorialCategoryAssignments,
@@ -34,6 +35,83 @@ export type EditorialCategorySetupState = {
   errorCode?: 'missing-articles' | 'generic';
   updatedArticles?: number;
 };
+
+export type SeoArticleAppendixState = {
+  status: 'idle' | 'success' | 'error';
+  errorCode?: 'missing-articles' | 'partial-articles' | 'generic';
+  updatedArticles?: number;
+  alreadyPresent?: number;
+};
+
+/** Apply the three planned SEO addenda to their existing Turkish articles. */
+export async function applySeoArticleAppendices(
+  _previousState: SeoArticleAppendixState,
+  _formData: FormData,
+): Promise<SeoArticleAppendixState> {
+  await requireAdmin();
+
+  try {
+    const result = await prisma.$transaction(async (tx) => {
+      const targets = await tx.article.findMany({
+        where: { locale: 'tr', slug: { in: articleAppendices.map((item) => item.slug) } },
+        select: { id: true, slug: true, contentMd: true, publishedAt: true },
+      });
+      const targetBySlug = new Map(targets.map((article) => [article.slug, article]));
+      if (articleAppendices.some((item) => !targetBySlug.has(item.slug))) {
+        throw new Error('MISSING_APPENDIX_ARTICLES');
+      }
+
+      const pending: { id: string; contentMd: string; publishedAt: Date | null }[] = [];
+      let alreadyPresent = 0;
+      for (const appendix of articleAppendices) {
+        const article = targetBySlug.get(appendix.slug);
+        if (!article) throw new Error('MISSING_APPENDIX_ARTICLES');
+        const normalizedAppendix = appendix.markdown.trim();
+        if (article.contentMd.includes(normalizedAppendix)) {
+          alreadyPresent += 1;
+          continue;
+        }
+        if (article.contentMd.includes(appendix.heading)) {
+          throw new Error('PARTIAL_APPENDIX_ARTICLE');
+        }
+        pending.push({
+          id: article.id,
+          contentMd: `${article.contentMd.trimEnd()}\n\n${normalizedAppendix}\n`,
+          publishedAt: article.publishedAt,
+        });
+      }
+
+      for (const article of pending) {
+        const now = new Date();
+        await tx.article.update({
+          where: { id: article.id },
+          data: {
+            contentMd: article.contentMd,
+            readMinutes: readingTimeMinutes(article.contentMd, 'tr'),
+            updatedAt: articleModifiedAt(article.publishedAt, now),
+          },
+        });
+      }
+      return { updatedArticles: pending.length, alreadyPresent };
+    });
+
+    revalidatePath('/[locale]/admin/panel/makaleler', 'page');
+    revalidatePath('/[locale]/makaleler/[slug]', 'page');
+    revalidatePath('/[locale]/makaleler', 'page');
+    revalidatePath('/sitemap.xml');
+    return { status: 'success', ...result };
+  } catch (error) {
+    return {
+      status: 'error',
+      errorCode:
+        error instanceof Error && error.message === 'MISSING_APPENDIX_ARTICLES'
+          ? 'missing-articles'
+          : error instanceof Error && error.message === 'PARTIAL_APPENDIX_ARTICLE'
+            ? 'partial-articles'
+            : 'generic',
+    };
+  }
+}
 
 /**
  * Adds the missing editorial categories and repairs the category links for

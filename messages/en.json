@@ -1107,7 +1107,14 @@
       "categorySetupPending": "Preparing categories…",
       "categorySetupSuccess": "Three categories are ready; {count} articles were assigned.",
       "categorySetupMissing": "The expected articles were not found; no changes were made.",
-      "categorySetupError": "The category update could not be completed. Please try again."
+      "categorySetupError": "The category update could not be completed. Please try again.",
+      "appendixSetupHelp": "Adds the addenda and source links from the revised SEO plan to three existing articles. Running it again will not duplicate them.",
+      "appendixSetupButton": "Apply the three article addenda",
+      "appendixSetupPending": "Updating articles…",
+      "appendixSetupSuccess": "Updated {updated} articles; the addendum was already present in {present}.",
+      "appendixSetupMissing": "A target article could not be found; no changes were made.",
+      "appendixSetupPartial": "An addendum is partially present in a target article. No changes were made to avoid duplicating text; review is needed.",
+      "appendixSetupError": "The article addenda could not be applied. Please check the result before retrying."
     },
     "articleForm": {
       "back": "All articles",
