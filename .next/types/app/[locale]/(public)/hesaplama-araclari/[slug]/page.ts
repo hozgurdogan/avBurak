@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-seo-e591ac5ef7dc48619e3d334ae539f11d\src\app\[locale]\(public)\hesaplama-araclari\[slug]\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-profile-build-0b77e6328cdc4d52bd96d9281e25d974\src\app\[locale]\(public)\hesaplama-araclari\[slug]\page.tsx
 import * as entry from '../../../../../../../src/app/[locale]/(public)/hesaplama-araclari/[slug]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

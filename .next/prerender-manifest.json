@@ -3,7 +3,7 @@
   "routes": {
     "/icon.svg": {
       "initialHeaders": {
-        "cache-control": "public, immutable, no-transform, max-age=31536000",
+        "cache-control": "no-cache, no-store",
         "content-type": "image/svg+xml",
         "x-next-cache-tags": "_N_T_/layout,_N_T_/icon.svg/layout,_N_T_/icon.svg/route,_N_T_/icon.svg"
       },
@@ -176,150 +176,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/[locale]/bolgeler",
       "dataRoute": "/tr/bolgeler.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/ar/calisma-alanlari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/calisma-alanlari",
-      "dataRoute": "/ar/calisma-alanlari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/calisma-alanlari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/calisma-alanlari",
-      "dataRoute": "/en/calisma-alanlari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/calisma-alanlari": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/calisma-alanlari",
-      "dataRoute": "/tr/calisma-alanlari.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/ar/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/ar/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/en/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/en/gizlilik.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/tr/gizlilik": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/gizlilik",
-      "dataRoute": "/tr/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -977,7 +833,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/ar/hesaplama-araclari": {
+    "/ar/calisma-alanlari": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -990,8 +846,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/ar/hesaplama-araclari.rsc",
+      "srcRoute": "/[locale]/calisma-alanlari",
+      "dataRoute": "/ar/calisma-alanlari.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1001,7 +857,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/en/hesaplama-araclari": {
+    "/en/calisma-alanlari": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1014,8 +870,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/en/hesaplama-araclari.rsc",
+      "srcRoute": "/[locale]/calisma-alanlari",
+      "dataRoute": "/en/calisma-alanlari.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1025,7 +881,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/tr/hesaplama-araclari": {
+    "/tr/calisma-alanlari": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1038,8 +894,80 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/[locale]/hesaplama-araclari",
-      "dataRoute": "/tr/hesaplama-araclari.rsc",
+      "srcRoute": "/[locale]/calisma-alanlari",
+      "dataRoute": "/tr/calisma-alanlari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/ar/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/ar/gizlilik.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/en/gizlilik.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/gizlilik": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/gizlilik",
+      "dataRoute": "/tr/gizlilik.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1112,6 +1040,78 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/[locale]/iletisim",
       "dataRoute": "/tr/iletisim.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/ar/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/ar/hesaplama-araclari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/en/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/en/hesaplama-araclari.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/hesaplama-araclari": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[locale]/hesaplama-araclari",
+      "dataRoute": "/tr/hesaplama-araclari.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1364,6 +1364,31 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/[locale]/hesaplama-araclari/[slug]": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)(?:/)?$",
+      "dataRoute": "/[locale]/hesaplama-araclari/[slug].rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/[locale]/calisma-alanlari": {
       "experimentalBypassFor": [
         {
@@ -1414,7 +1439,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/[locale]/hesaplama-araclari/[slug]": {
+    "/[locale]/iletisim": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -1426,10 +1451,10 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "routeRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)(?:/)?$",
-      "dataRoute": "/[locale]/hesaplama-araclari/[slug].rsc",
+      "routeRegex": "^/([^/]+?)/iletisim(?:/)?$",
+      "dataRoute": "/[locale]/iletisim.rsc",
       "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari/([^/]+?)\\.rsc$",
+      "dataRouteRegex": "^/([^/]+?)/iletisim\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1455,31 +1480,6 @@
       "dataRoute": "/[locale]/hesaplama-araclari.rsc",
       "fallback": null,
       "dataRouteRegex": "^/([^/]+?)/hesaplama\\-araclari\\.rsc$",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/[locale]/iletisim": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "routeRegex": "^/([^/]+?)/iletisim(?:/)?$",
-      "dataRoute": "/[locale]/iletisim.rsc",
-      "fallback": null,
-      "dataRouteRegex": "^/([^/]+?)/iletisim\\.rsc$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -1567,8 +1567,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "8344e8d40410dd0aef1b4ce30665c2f3",
-    "previewModeSigningKey": "2130c2c22dd1c066645a70da426a50b20132aa4d3c5692fd18619fb198b3f19c",
-    "previewModeEncryptionKey": "e7b50d7c628e237972d00d6ddb6ec51c9ad5bd933f3e421f053480c30d58c54c"
+    "previewModeId": "2b0c001cff7170c5adc84793bfa47740",
+    "previewModeSigningKey": "27ea2d7417ea306cb05ddb0716da9ee30fecea18012985b13ee3ac65bb743879",
+    "previewModeEncryptionKey": "f953b6072dd8bc30a7a3edf1c02c6454ca0103f4be0c5aee7cf3c00988de7f81"
   }
 }
