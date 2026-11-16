@@ -1,6 +1,14 @@
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 export type BusinessHours = { days: string[]; opens: string; closes: string };
 
+// Public profile details supplied by the site owner. Keep safe defaults here
+// so they are also included in prebuilt deployments where cPanel does not run
+// a fresh Next.js build. Runtime environment values can still override them.
+const defaultGoogleProfileUrl = 'https://share.google/ZkV4vRMj7cgEFjfVO';
+const defaultBusinessHours: BusinessHours[] = [
+  { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '18:00' },
+];
+
 function officialUrl(value: string | undefined, hosts: string[]) {
   if (!value) return null;
   try {
@@ -10,7 +18,8 @@ function officialUrl(value: string | undefined, hosts: string[]) {
 }
 
 export function businessProfile(env: Record<string, string | undefined> = process.env) {
-  const googleUrl = officialUrl(env.GOOGLE_BUSINESS_PROFILE_URL, ['google.com', 'google.com.tr', 'maps.app.goo.gl']);
+  const googleUrl = officialUrl(env.GOOGLE_BUSINESS_PROFILE_URL ?? defaultGoogleProfileUrl,
+    ['google.com', 'google.com.tr', 'maps.app.goo.gl', 'share.google']);
   const barUrl = officialUrl(env.BAR_PROFILE_URL, ['istanbulbarosu.org.tr']);
   const latitude = Number(env.BUSINESS_LATITUDE);
   const longitude = Number(env.BUSINESS_LONGITUDE);
@@ -18,7 +27,7 @@ export function businessProfile(env: Record<string, string | undefined> = proces
     Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180 ? { latitude, longitude } : null;
   let hours: BusinessHours[] = [];
   try {
-    const parsed: unknown = JSON.parse(env.BUSINESS_HOURS_JSON ?? '[]');
+    const parsed: unknown = JSON.parse(env.BUSINESS_HOURS_JSON ?? JSON.stringify(defaultBusinessHours));
     if (Array.isArray(parsed)) hours = parsed.filter((row): row is BusinessHours => {
       if (!row || typeof row !== 'object') return false;
       const item = row as BusinessHours;
@@ -27,7 +36,9 @@ export function businessProfile(env: Record<string, string | undefined> = proces
         time.test(item.opens) && time.test(item.closes) && item.opens !== item.closes;
     });
   } catch { /* Unverified or malformed values are omitted, never invented. */ }
-  return { googleUrl, barUrl, geo, hours, sameAs: [googleUrl, barUrl].filter((url): url is string => !!url) };
+  const openDays = new Set(hours.flatMap((row) => row.days));
+  const closedDays = hours.length > 0 ? days.filter((day) => !openDays.has(day)) : [];
+  return { googleUrl, barUrl, geo, hours, closedDays, sameAs: [googleUrl, barUrl].filter((url): url is string => !!url) };
 }
 
 export function localizedBusinessDays(dayNames: string[], locale: string) {

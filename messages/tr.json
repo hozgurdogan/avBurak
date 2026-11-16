@@ -1007,6 +1007,7 @@
       "errorInvalidEmail": "Geçerli bir e-posta adresi girin."
     },
     "hoursLabel": "Çalışma saatleri",
+    "closedLabel": "Kapalı",
     "businessProfileLabel": "Google işletme profili"
   },
   "legalPages": {

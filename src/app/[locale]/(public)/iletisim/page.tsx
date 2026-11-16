@@ -122,6 +122,10 @@ export default async function ContactPage({ params }: PageProps) {
                   <dt>{localizedBusinessDays(hours.days, locale)}</dt>
                   <dd dir="ltr">{hours.opens}–{hours.closes}</dd>
                 </div>)}
+                {profile.closedDays.map((day) => <div key={day}>
+                  <dt>{localizedBusinessDays([day], locale)}</dt>
+                  <dd>{t('closedLabel')}</dd>
+                </div>)}
               </dl>
             </div> : null}
 

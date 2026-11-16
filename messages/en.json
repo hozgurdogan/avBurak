@@ -1001,6 +1001,7 @@
       "errorInvalidEmail": "Enter a valid e-mail address."
     },
     "hoursLabel": "Opening hours",
+    "closedLabel": "Closed",
     "businessProfileLabel": "Google Business Profile"
   },
   "legalPages": {

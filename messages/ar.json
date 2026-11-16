@@ -1001,6 +1001,7 @@
       "errorInvalidEmail": "أدخل بريدًا إلكترونيًا صالحًا."
     },
     "hoursLabel": "ساعات العمل",
+    "closedLabel": "مغلق",
     "businessProfileLabel": "الملف التجاري على Google"
   },
   "legalPages": {
