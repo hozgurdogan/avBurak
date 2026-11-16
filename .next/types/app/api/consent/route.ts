@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avBurak-category-build-610f34748054407487ece7075195ab33\src\app\api\consent\route.ts
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-seo-e591ac5ef7dc48619e3d334ae539f11d\src\app\api\consent\route.ts
 import * as entry from '../../../../../src/app/api/consent/route.js'
 import type { NextRequest } from 'next/server.js'
 
