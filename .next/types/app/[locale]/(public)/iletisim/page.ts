@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-home-header-ff8a2ac6a3c346899bf5266c77f5f494\src\app\[locale]\(public)\iletisim\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-home-hero-light-16c192fa32634d84a5f24e8fa1ae95bf\src\app\[locale]\(public)\iletisim\page.tsx
 import * as entry from '../../../../../../src/app/[locale]/(public)/iletisim/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

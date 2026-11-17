@@ -78,27 +78,27 @@ export default async function HomePage({ params }: PageProps) {
       {/* ---------------------------------------------------------------- */}
       {/* Hero                                                              */}
       {/* ---------------------------------------------------------------- */}
-      <section data-surface="navy" className="relative overflow-hidden bg-navy-900">
+      <section data-surface="light" className="relative overflow-hidden bg-paper">
         <div className="relative mx-auto max-w-wide px-gutter py-section">
           <div className="max-w-narrow">
-            <p className="label flex items-center gap-3 text-gold-500">
+            <p className="label flex items-center gap-3 text-gold-800">
               <span className="rule-mark" aria-hidden="true" />
               {tHero('label')}
             </p>
-            <h1 className="mt-6 font-display text-display font-normal text-canvas">
+            <h1 className="mt-6 font-display text-display font-normal text-ink">
               {tHero('title')}
             </h1>
-            <p className="measure mt-8 text-lg text-mist">{tHero('lead')}</p>
-            <p className="measure mt-5 text-lg text-mist">{tHero('leadSecondary')}</p>
+            <p className="measure mt-8 text-lg text-ink-muted">{tHero('lead')}</p>
+            <p className="measure mt-5 text-lg text-ink-muted">{tHero('leadSecondary')}</p>
             <div className="mt-10 flex flex-wrap items-center gap-8">
-              <ActionLink href="/iletisim" variant="solid" surface="navy">
+              <ActionLink href="/iletisim" variant="solid" surface="light">
                 {tHero('contact')}
               </ActionLink>
               {/* Both CTAs lead to the same page, so the secondary one skips
                   straight to the form rather than repeating the primary link.
                   The offset under the sticky header comes from
                   `scroll-padding-block-start` in globals.css. */}
-              <ActionLink href="/iletisim#form" variant="quiet" surface="navy">
+              <ActionLink href="/iletisim#form" variant="quiet" surface="light">
                 {tHero('appointment')}
               </ActionLink>
             </div>
@@ -110,27 +110,27 @@ export default async function HomePage({ params }: PageProps) {
               distinction, which the advertising regulation forbids. Splitting it
               into a hairline-ruled row also gives the hero a base, so the copy
               no longer floats in the upper-left of an empty navy field. */}
-          <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule-invert pt-8 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-section-sm grid gap-x-8 gap-y-8 border-t border-rule pt-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <dt className="label text-gold-500">{tHero('registrationLabel')}</dt>
-              <dd className="mt-3 text-md text-mist">{office.bar.association}</dd>
+              <dt className="label text-gold-800">{tHero('registrationLabel')}</dt>
+              <dd className="mt-3 text-md text-ink-muted">{office.bar.association}</dd>
             </div>
             <div>
-              <dt className="label text-gold-500">{tHero('languagesLabel')}</dt>
-              <dd className="mt-3 text-md text-mist">{tHero('languages')}</dd>
+              <dt className="label text-gold-800">{tHero('languagesLabel')}</dt>
+              <dd className="mt-3 text-md text-ink-muted">{tHero('languages')}</dd>
             </div>
             <div>
-              <dt className="label text-gold-500">{tHero('focusLabel')}</dt>
-              <dd className="mt-3 text-md text-mist">{tHero('focus')}</dd>
+              <dt className="label text-gold-800">{tHero('focusLabel')}</dt>
+              <dd className="mt-3 text-md text-ink-muted">{tHero('focus')}</dd>
             </div>
             <div>
-              <dt className="label text-gold-500">{tHero('regionsLabel')}</dt>
+              <dt className="label text-gold-800">{tHero('regionsLabel')}</dt>
               <dd className="mt-3 flex flex-col gap-1 text-md">
                 {serviceRegionSlugs.map((slug) => (
                   <Link
                     key={slug}
                     href={`/bolgeler/${slug}`}
-                    className="text-mist underline decoration-mist-muted underline-offset-2 transition-colors duration-base hover:text-canvas"
+                    className="text-ink-muted underline decoration-ink-faint underline-offset-2 transition-colors duration-base hover:text-ink"
                   >
                     {tRegions(`${slug}.name`)}
                   </Link>
