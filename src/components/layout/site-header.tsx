@@ -1,7 +1,7 @@
 'use client';
 
-// Client component: the home header changes appearance on scroll, while all
-// other public pages use a navy masthead. It also owns the mobile menu state.
+// Client component: the site uses one navy masthead across public routes and
+// owns the mobile menu's open/closed state.
 
 import { Suspense, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -27,20 +27,9 @@ export function SiteHeader() {
   const tSite = useTranslations('site');
   const tFooter = useTranslations('footer');
   const pathname = usePathname();
-  const isHome = pathname === '/';
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const tel = telHref();
   const whatsapp = whatsappHref();
-
-  // The frosted treatment appears only once the page has left the top, so the
-  // header reads as part of the page at rest and as a surface in motion.
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   // Route change closes the menu; Escape closes it from the keyboard.
   useEffect(() => setMenuOpen(false), [pathname]);
@@ -55,28 +44,21 @@ export function SiteHeader() {
 
   return (
     <header
-      className={cn(
-        'sticky top-0 z-50 transition-colors duration-slow ease-out-editorial',
-        isHome
-          ? scrolled
-            ? 'border-b border-rule bg-canvas/85 backdrop-blur-frost backdrop-saturate-150'
-            : 'border-b border-transparent bg-transparent'
-          : 'border-b border-navy-600 bg-navy-900 text-canvas',
-      )}
-      data-surface={isHome ? 'light' : 'navy'}
+      className="sticky top-0 z-50 border-b border-navy-600 bg-navy-900 text-canvas"
+      data-surface="navy"
     >
       {/* Slim utility strip: direct-contact channels and the locale switcher,
           kept off the main row so the logo and primary nav never have to
           compete with a phone number for space. Desktop only - the mobile
           menu carries the same links in its own, roomier layout. */}
       {tel || whatsapp ? (
-        <div className={cn('hidden border-b lg:block', isHome ? 'border-rule-soft' : 'border-navy-600')}>
+        <div className="hidden border-b border-navy-600 lg:block">
           <div className="mx-auto flex max-w-wide items-center justify-end gap-6 px-gutter py-2">
             {tel ? (
               <a
                 href={tel}
                 dir="ltr"
-                className={cn('label transition-colors duration-base ease-out-editorial', isHome ? 'text-ink-faint hover:text-gold-800' : 'text-mist-muted hover:text-gold-300')}
+                className="label text-mist-muted transition-colors duration-base ease-out-editorial hover:text-gold-300"
               >
                 <span className="sr-only">{tFooter('phone')}: </span>
                 {office.phone}
@@ -87,13 +69,13 @@ export function SiteHeader() {
                 href={whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={cn('label transition-colors duration-base ease-out-editorial', isHome ? 'text-ink-faint hover:text-gold-800' : 'text-mist-muted hover:text-gold-300')}
+                className="label text-mist-muted transition-colors duration-base ease-out-editorial hover:text-gold-300"
               >
                 {tFooter('whatsapp')}
               </a>
             ) : null}
-            <Suspense fallback={<LocaleSwitcherFallback surface={isHome ? 'light' : 'navy'} />}>
-              <LocaleSwitcher surface={isHome ? 'light' : 'navy'} />
+            <Suspense fallback={<LocaleSwitcherFallback surface="navy" />}>
+              <LocaleSwitcher surface="navy" />
             </Suspense>
           </div>
         </div>
@@ -102,12 +84,12 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-wide items-center justify-between gap-3 px-gutter py-5 xl:gap-6">
         <Link
           href="/"
-          className={cn('flex min-w-0 items-center gap-2 leading-tight sm:gap-3', isHome ? 'text-ink' : 'text-canvas')}
+          className="flex min-w-0 items-center gap-2 leading-tight text-canvas sm:gap-3"
         >
-          <Monogram className={cn('h-6 w-auto shrink-0 sm:h-9', isHome ? 'text-ink' : 'text-canvas')} />
+          <Monogram className="h-6 w-auto shrink-0 text-canvas sm:h-9" />
           <span className="flex min-w-0 flex-col">
-            <span className={cn('font-display text-sm sm:text-lg', isHome ? 'text-ink' : 'text-canvas')}>{tSite('attorney')}</span>
-            <span className={cn('label whitespace-nowrap', isHome ? 'text-ink-faint' : 'text-mist-muted')}>{tSite('role')}</span>
+            <span className="font-display text-sm text-canvas sm:text-lg">{tSite('attorney')}</span>
+            <span className="label whitespace-nowrap text-mist-muted">{tSite('role')}</span>
           </span>
         </Link>
 
@@ -123,8 +105,8 @@ export function SiteHeader() {
                     className={cn(
                       'label-lg pb-1 transition-colors duration-base ease-out-editorial',
                       isActive
-                        ? isHome ? 'border-b border-gold-500 text-ink' : 'border-b border-gold-500 text-canvas'
-                        : isHome ? 'border-b border-transparent text-ink-muted hover:text-ink' : 'border-b border-transparent text-mist-muted hover:text-canvas',
+                        ? 'border-b border-gold-500 text-canvas'
+                        : 'border-b border-transparent text-mist-muted hover:text-canvas',
                     )}
                   >
                     {t(item.key)}
@@ -137,7 +119,7 @@ export function SiteHeader() {
 
         <div className="flex shrink-0 items-center gap-5">
           <div className="hidden lg:block">
-            <ActionLink href="/iletisim" variant="outline" surface={isHome ? 'light' : 'navy'} className="whitespace-nowrap">
+            <ActionLink href="/iletisim" variant="outline" surface="navy" className="whitespace-nowrap">
               {t('getInTouch')}
             </ActionLink>
           </div>
@@ -146,8 +128,8 @@ export function SiteHeader() {
               WhatsApp configured, or below the lg breakpoint where that
               strip never renders) so the switcher is never lost entirely. */}
           <div className={cn('hidden sm:block', tel || whatsapp ? 'lg:hidden' : undefined)}>
-            <Suspense fallback={<LocaleSwitcherFallback surface={isHome ? 'light' : 'navy'} />}>
-              <LocaleSwitcher surface={isHome ? 'light' : 'navy'} />
+            <Suspense fallback={<LocaleSwitcherFallback surface="navy" />}>
+              <LocaleSwitcher surface="navy" />
             </Suspense>
           </div>
 
@@ -156,15 +138,15 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className={cn('flex min-h-11 min-w-11 items-center justify-center gap-3 lg:hidden', isHome ? 'text-ink' : 'text-canvas')}
+            className="flex min-h-11 min-w-11 items-center justify-center gap-3 text-canvas lg:hidden"
           >
-            <span className={cn('label sr-only whitespace-nowrap sm:not-sr-only', isHome ? 'text-ink-muted' : 'text-mist-muted')}>
+            <span className="label sr-only whitespace-nowrap text-mist-muted sm:not-sr-only">
               {menuOpen ? t('closeMenu') : t('openMenu')}
             </span>
             <span aria-hidden="true" className="flex w-6 flex-col gap-[5px]">
-              <span className={cn('h-px w-full', isHome ? 'bg-ink' : 'bg-canvas')} />
-              <span className={cn('h-px w-full', isHome ? 'bg-ink' : 'bg-canvas', menuOpen && 'opacity-0')} />
-              <span className={cn('h-px w-full', isHome ? 'bg-ink' : 'bg-canvas')} />
+              <span className="h-px w-full bg-canvas" />
+              <span className={cn('h-px w-full bg-canvas', menuOpen && 'opacity-0')} />
+              <span className="h-px w-full bg-canvas" />
             </span>
           </button>
         </div>
@@ -173,15 +155,15 @@ export function SiteHeader() {
       <div
         id="mobile-menu"
         hidden={!menuOpen}
-        className={cn('border-t lg:hidden', isHome ? 'border-rule bg-canvas' : 'border-navy-600 bg-navy-900')}
+        className="border-t border-navy-600 bg-navy-900 lg:hidden"
       >
         <nav aria-label={t('primary')} className="mx-auto max-w-wide px-gutter py-6">
           <ul className="flex flex-col">
             {navItems.map((item) => (
-              <li key={item.href} className={cn('border-b last:border-b-0', isHome ? 'border-rule-soft' : 'border-navy-600')}>
+              <li key={item.href} className="border-b border-navy-600 last:border-b-0">
                 <Link
                   href={item.href}
-                  className={cn('block py-4 font-display text-2xl', isHome ? 'text-ink' : 'text-canvas')}
+                  className="block py-4 font-display text-2xl text-canvas"
                 >
                   {t(item.key)}
                 </Link>
@@ -190,15 +172,15 @@ export function SiteHeader() {
           </ul>
 
           {tel || whatsapp ? (
-            <div className={cn('mt-6 flex flex-col gap-3 border-b pb-6', isHome ? 'border-rule-soft' : 'border-navy-600')}>
+            <div className="mt-6 flex flex-col gap-3 border-b border-navy-600 pb-6">
               {tel ? (
-                <a href={tel} dir="ltr" className={cn('label-lg', isHome ? 'text-ink' : 'text-canvas')}>
+                <a href={tel} dir="ltr" className="label-lg text-canvas">
                   <span className="sr-only">{tFooter('phone')}: </span>
                   {office.phone}
                 </a>
               ) : null}
               {whatsapp ? (
-                <a href={whatsapp} target="_blank" rel="noopener noreferrer" className={cn('label-lg', isHome ? 'text-ink' : 'text-canvas')}>
+                <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="label-lg text-canvas">
                   {tFooter('whatsapp')}
                 </a>
               ) : null}
@@ -206,8 +188,8 @@ export function SiteHeader() {
           ) : null}
 
           <div className="mt-6 sm:hidden">
-            <Suspense fallback={<LocaleSwitcherFallback surface={isHome ? 'light' : 'navy'} />}>
-              <LocaleSwitcher surface={isHome ? 'light' : 'navy'} />
+            <Suspense fallback={<LocaleSwitcherFallback surface="navy" />}>
+              <LocaleSwitcher surface="navy" />
             </Suspense>
           </div>
         </nav>
