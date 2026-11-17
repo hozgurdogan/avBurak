@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-home-hero-light-16c192fa32634d84a5f24e8fa1ae95bf\src\app\[locale]\admin\panel\mesajlar\page.tsx
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-search-console-redirects-4a51be9369e746a4b65f1d31eb68db14\src\app\[locale]\admin\panel\mesajlar\page.tsx
 import * as entry from '../../../../../../../src/app/[locale]/admin/panel/mesajlar/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

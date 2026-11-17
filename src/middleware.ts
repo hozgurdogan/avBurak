@@ -3,6 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { routing } from '@/i18n/routing';
 import { locales } from '@/i18n/locales';
 import { SESSION_COOKIE_NAME, verifySessionToken } from '@/lib/auth/token';
+import { legacyUrlRedirects } from '@/lib/legacy-url-redirects';
 
 // `alternateLinks: false` is set on `routing` itself (src/i18n/routing.ts)
 // - see the comment there for why.
@@ -52,6 +53,13 @@ export default async function middleware(request: NextRequest) {
 
   const isWww = request.headers.get('host')?.split(':')[0] === 'www.burakugurozturk.av.tr';
   const cleanPath = pathname.replace(/\/+$/, '') || '/';
+  const legacyDestination = legacyUrlRedirects[cleanPath];
+  if (legacyDestination) {
+    const target = new URL(legacyDestination, 'https://burakugurozturk.av.tr');
+    target.search = request.nextUrl.search;
+    return NextResponse.redirect(target, 301);
+  }
+
   const isLegacyPublic = /^\/(?:bolgeler|calisma-alanlari)(?:\/|$)/.test(cleanPath);
   if (isWww || cleanPath === '/' || pathname !== cleanPath || isLegacyPublic) {
     const target = isWww

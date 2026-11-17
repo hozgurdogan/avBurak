@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-home-hero-light-16c192fa32634d84a5f24e8fa1ae95bf",
+    "outputFileTracingRoot": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-search-console-redirects-4a51be9369e746a4b65f1d31eb68db14",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -290,7 +290,7 @@
     "configFileName": "next.config.ts",
     "skipTrailingSlashRedirect": true,
     "turbopack": {
-      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-home-hero-light-16c192fa32634d84a5f24e8fa1ae95bf"
+      "root": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-search-console-redirects-4a51be9369e746a4b65f1d31eb68db14"
     },
     "_originalRedirects": [
       {
@@ -310,7 +310,7 @@
       }
     ]
   },
-  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-home-hero-light-16c192fa32634d84a5f24e8fa1ae95bf",
+  "appDir": "C:\\Users\\Burak\\AppData\\Local\\Temp\\avburak-search-console-redirects-4a51be9369e746a4b65f1d31eb68db14",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
