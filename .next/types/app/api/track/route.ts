@@ -1,4 +1,4 @@
-// File: C:\Users\Burak\AppData\Local\Temp\avburak-header-build-7b12af4b931743d6bf764a82c11f18db\src\app\api\track\route.ts
+// File: C:\Users\Burak\AppData\Local\Temp\avburak-linkedin-build-27db5115fbd04989a4b18290a2258b26\src\app\api\track\route.ts
 import * as entry from '../../../../../src/app/api/track/route.js'
 import type { NextRequest } from 'next/server.js'
 

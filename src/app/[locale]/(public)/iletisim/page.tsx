@@ -93,6 +93,18 @@ export default async function ContactPage({ params }: PageProps) {
                   </a>
                 </li>
               ) : null}
+              {profile.linkedinUrl ? (
+                <li className="py-3">
+                  <a
+                    href={profile.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors duration-base ease-out-editorial hover:text-gold-800"
+                  >
+                    {t('linkedinLabel')}
+                  </a>
+                </li>
+              ) : null}
               {whatsapp ? (
                 <li className="pt-3">
                   <a

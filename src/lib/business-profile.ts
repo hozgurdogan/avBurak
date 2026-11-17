@@ -5,6 +5,7 @@ export type BusinessHours = { days: string[]; opens: string; closes: string };
 // so they are also included in prebuilt deployments where cPanel does not run
 // a fresh Next.js build. Runtime environment values can still override them.
 const defaultGoogleProfileUrl = 'https://share.google/ZkV4vRMj7cgEFjfVO';
+const defaultLinkedInProfileUrl = 'https://www.linkedin.com/in/av-burak-u%C4%9Fur-%C3%B6zt%C3%BCrk-9ba35615a/';
 const defaultBusinessHours: BusinessHours[] = [
   { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '18:00' },
 ];
@@ -20,6 +21,7 @@ function officialUrl(value: string | undefined, hosts: string[]) {
 export function businessProfile(env: Record<string, string | undefined> = process.env) {
   const googleUrl = officialUrl(env.GOOGLE_BUSINESS_PROFILE_URL ?? defaultGoogleProfileUrl,
     ['google.com', 'google.com.tr', 'maps.app.goo.gl', 'share.google']);
+  const linkedinUrl = officialUrl(env.LINKEDIN_PROFILE_URL ?? defaultLinkedInProfileUrl, ['linkedin.com']);
   const barUrl = officialUrl(env.BAR_PROFILE_URL, ['istanbulbarosu.org.tr']);
   const latitude = Number(env.BUSINESS_LATITUDE);
   const longitude = Number(env.BUSINESS_LONGITUDE);
@@ -38,7 +40,15 @@ export function businessProfile(env: Record<string, string | undefined> = proces
   } catch { /* Unverified or malformed values are omitted, never invented. */ }
   const openDays = new Set(hours.flatMap((row) => row.days));
   const closedDays = hours.length > 0 ? days.filter((day) => !openDays.has(day)) : [];
-  return { googleUrl, barUrl, geo, hours, closedDays, sameAs: [googleUrl, barUrl].filter((url): url is string => !!url) };
+  return {
+    googleUrl,
+    linkedinUrl,
+    barUrl,
+    geo,
+    hours,
+    closedDays,
+    sameAs: [googleUrl, linkedinUrl, barUrl].filter((url): url is string => !!url),
+  };
 }
 
 export function localizedBusinessDays(dayNames: string[], locale: string) {
