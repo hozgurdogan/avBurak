@@ -36,6 +36,19 @@ function isServiceRegionSlug(value: string): value is ServiceRegionSlug {
   return (serviceRegionSlugs as readonly string[]).includes(value);
 }
 
+function renderInlineLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([/#][^)]+\))/g);
+  return parts.map((part, index) => {
+    const match = part.match(/^\[([^\]]+)\]\(([/#][^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    if (!label || !href) return part;
+    return href.startsWith('#')
+      ? <a key={index} href={href} className="text-gold-800 underline">{label}</a>
+      : <Link key={index} href={href} className="text-gold-800 underline">{label}</Link>;
+  });
+}
+
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => serviceRegionSlugs.map((slug) => ({ locale, slug })));
 }
@@ -133,7 +146,7 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
               {sections.map((section) => <section key={section.id} id={section.id} className="mt-12 border-t border-rule pt-8">
                 <h2 className="font-display text-2xl text-ink">{section.title}</h2>
                 <div className="measure mt-4 space-y-4 text-md leading-prose text-ink-muted">
-                  {section.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+                  {section.paragraphs.map((paragraph, i) => <p key={i}>{renderInlineLinks(paragraph)}</p>)}
                 </div>
               </section>)}
               {hasJurisdiction ? <section id="adli-yargi-cevresi" className="mt-12 border-t border-rule pt-8">
@@ -150,7 +163,7 @@ export default async function ServiceRegionDetailPage({ params }: PageProps) {
                     const linkedArticle = articles.find((article) => article.referenceSlug === item.articleRef);
                     return <div key={item.question}>
                       <h3 className="text-lg font-medium text-ink">{item.question}</h3>
-                      <p className="measure mt-3 text-md leading-prose text-ink-muted">{item.answer}</p>
+                      <p className="measure mt-3 text-md leading-prose text-ink-muted">{renderInlineLinks(item.answer)}</p>
                       {linkedArticle ? <p className="mt-3"><Link href={`/makaleler/${linkedArticle.slug}`} className="text-sm text-gold-800 underline">{linkedArticle.title}</Link></p> : null}
                     </div>;
                   })}

@@ -253,7 +253,7 @@
       "faq": [
         {
           "question": "Esenyurt hangi adli yargı çevresindedir?",
-          "answer": "Esenyurt, Büyükçekmece Adliyesinin adli yargı çevresindedir. Somut davada görev ve yetki ayrıca incelenir; resmî kaynak ve ayrıntı yukarıdaki adliye bölümündedir."
+          "answer": "Esenyurt, Büyükçekmece Adliyesinin adli yargı çevresindedir. Somut davada görev ve yetki ayrıca incelenir. Resmî kaynak ve ayrıntı için [adli yargı çevresi bölümünü](#adli-yargi-cevresi) inceleyebilirsiniz."
         },
         {
           "question": "Ödeme emri geldiğinde hangi belgeler gerekir?",
@@ -348,8 +348,7 @@
       "faq": [
         {
           "question": "Kiracı erken çıkarsa kalan kiraların tamamını öder mi?",
-          "answer": "Sözleşme ve teslim bilgileri incelenmeden kesin tutar söylenemez. Erken tahliyede kira ilişkisinin nasıl değerlendirildiğini ilgili rehberde inceleyebilirsiniz.",
-          "articleRef": "kiraci-erken-cikarsa-kalan-kira"
+          "answer": "Sözleşme ve teslim bilgileri incelenmeden kesin tutar söylenemez. Erken tahliyede kira ilişkisinin nasıl değerlendirildiğini [Kiracı Evi Erken Boşaltırsa Kalan Kiraları Öder mi?](/makaleler/kiraci-erken-cikarsa-kalan-kira) rehberinde inceleyebilirsiniz."
         },
         {
           "question": "Tüketici hakem heyeti kararına itiraz için ne hazırlanmalı?",
